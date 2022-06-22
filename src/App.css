@@ -1,0 +1,519 @@
+* {
+  font-size: 14px;
+}
+
+a.funge-link {
+  color: #71AFAC !important;
+}
+
+.text-funge {
+  color: #71AFAC;
+}
+
+.fungeBlack {
+  color: #123442 !important;
+}
+
+
+a.defaultBtn {
+  background-color: #71AFAC;
+  color: #FFFFFF;
+  border-radius: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+
+a.nav-link.defaultBtn {
+  background-color: #71AFAC !important;
+  color: #FFFFFF !important;
+  border-radius: 40px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+
+.navbar-container a.nav-link {
+  margin-right: 15px;
+  color: #000000;
+}
+
+input.topbar-search {
+  min-width: 550px;
+  height: 45px;
+  border-color: #E7E8EA !important;
+  text-indent: 30px;
+  border-radius: 12px;
+}
+
+input.navbarSearch::placeholder {
+  color: #A1AEB2;
+}
+
+.search {
+  position: relative;
+}
+
+.search input:focus {
+  box-shadow: none;
+}
+
+.search .fa-search {
+  color: #A1AEB2;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.section1 {
+  background-color: #F2F9F9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 680px;
+}
+
+.header-text {
+  text-align: center;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.header-text h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 54px;
+}
+
+.header-text p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.section2 {
+  margin-top: 350px;
+  padding-bottom: 100px;
+}
+
+.section2-heading {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 26px;
+  text-align: center;
+  color: #123442;
+}
+
+.funge-nav-pills.nav-pills {
+  background-color: #F5F5F5;
+  border-radius: 40px;
+}
+
+.funge-nav-pills.nav-pills .nav-link {
+  color: #000000;
+  border-radius: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.funge-nav-pills.nav-pills .nav-link.active {
+  background-color: #71AFAC;
+}
+
+.card.funge-card {
+  width: 350px;
+  height: 475px;
+  border-radius: 15px !important;
+}
+
+.card.funge-card2 {
+  width: 280px;
+  height: 475px;
+  border-radius: 15px !important;
+}
+
+
+.card.funge-card .card-img-bottom {
+  border-radius: 25px;
+}
+
+.card.funge-card .card-img-top {
+  border-radius: 14px;
+}
+
+.card2.funge-card .card-img-top {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 75%;
+}
+
+.card .defaultBtn {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.card1 {
+  padding: 5px;
+}
+
+.card1-text {
+  font-size: 9px;
+}
+
+.heart-text {
+  font-size: 18px;
+  color: #8A92B2;
+}
+
+.funge-table {
+  width: 80%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05);
+  border-radius: 60px;
+  padding: 25px;
+}
+
+.funge-trow {
+  border-bottom: 1px solid #E3E4E4;
+  margin-bottom: 15px;
+}
+
+.funge-trow.last-row {
+  border-bottom: 0px;
+  margin-bottom: 15px;
+}
+
+.funge-cell {
+  text-align: left;
+  margin-left: 10px;
+  padding: 10px;
+  width: 180px;
+}
+
+.funge-cell.first-cell {
+  width: 60px;
+  padding-top: 18px;
+}
+
+.name-cell-text {
+  color: #202223;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.section3 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #F2F9F9;
+}
+
+.card.funge-default-card {
+  width: 299px;
+  height: 353px;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  border: 0px;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+
+.section4 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #71AFAC;
+}
+
+.section4-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 57px;
+
+  color: #FFFFFF;
+}
+
+.section4 .sub-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.btn.signup-btn {
+  background-color: #FFFFFF;
+  color: black;
+  border-radius: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.section5 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #FFFFFF;
+}
+
+.card.funge-showcase-card {
+  height: 100%;
+  max-height: 870px;
+  margin: 30px;
+  background: #F8F8F8;
+  border-radius: 40px;
+  border: 0px;
+}
+
+.card-screen-holder {
+  background: #FFFFFF;
+  border-radius: 10.0858px;
+  padding: 17px;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+.card-mobile-holder {
+  background: #FFFFFF;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  margin: auto;
+  margin-top: 50px;
+  width: 200px;
+}
+
+.card-screen-holder img {
+
+  max-width: 100%;
+  height: auto;
+
+
+}
+
+.card-mobile-holder img {
+  width: 150px;
+  position: relative;
+  bottom: 30px;
+}
+
+.card.funge-showcase-card h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #000000;
+}
+
+
+/* Sign IN CSS */
+.left-box {
+  background-color: #E4F2F2;
+}
+
+.right-box {
+  background-color: #FFFFFF;
+  height: 100vh;
+}
+
+.inner-left-box {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.inner-left-box h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 39px;
+
+  color: #000000;
+}
+
+.inner-left-box p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+.signin-btn-adv {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 350px;
+  color: #374151;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 36px;
+}
+
+.btn-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.thumb-p {
+  position: relative;
+  text-align: center;
+  color: white;
+
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section6 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #F7F8FA;
+}
+
+.article-btn {
+  background-color: transparent;
+  color: #71AFAC;
+  border: 2px solid #71AFAC;
+  border-radius: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.logo-icon {
+  width: 30px;
+}
+
+.logo-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.funge-footer {
+  background-color: #FFFFFF;
+  padding-top: 100px;
+  min-height: 500px;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+.footer-funge-links a {
+  text-decoration: none;
+  color: #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footer-signup {
+  border: 1px solid #E7E8EA;
+  border-radius: 12px;
+  height: 40px;
+  width: 200px;
+  margin-right: 5px;
+}
+
+.footer-button {
+  background: #71AFAC;
+  border-radius: 10px;
+  border: 0px;
+  color: #FFFFFF;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:25px;
+  padding-right:25px;
+}
+.footer-signup::placeholder {
+  color: #A0A1AB;
+  padding-left:5px
+}
+.icon-row .fa-brands, .icon-row .fa-solid {
+  color: #71AFAC;
+  font-size: 18px;
+  position: relative;
+  top:1px;
+}
+
+.login-button {
+  background: #71AFAC;
+  border-radius: 40px;
+  border: 0px;
+  color: #FFFFFF;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:25px;
+  padding-right:25px;
+}
+.login-input{
+  border: 1px solid #E7E8EA;
+  border-radius: 12px;
+  height: 40px;
+  margin-right: 5px;
+}
+.login-input::placeholder {
+  color: #A0A1AB;
+  padding-left:5px
+}
+.phone-button{
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 40px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:25px;
+  padding-right:25px;
+}
+.loginCard{
+  padding: 20px;
+}
