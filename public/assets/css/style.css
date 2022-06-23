@@ -203,6 +203,7 @@ body {
 .header::before {
     content: '';
     background: #F2F9F9;
+    background-image: url(../images/hiro_img_light.png);
     width: 100%;
     background-size: cover;
     height: 100%;
