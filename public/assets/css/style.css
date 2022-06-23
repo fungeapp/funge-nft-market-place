@@ -63,7 +63,7 @@
 
 .section_heading {
     font-weight: 800;
-    font-size: 32px;
+    font-size: 64px;
     text-align: center;
     color: #123442;
 }
@@ -78,28 +78,27 @@
 
 .btn-primary {
     background-color: #71AFAC !important;
-    border: 2px solid transparent;
+    border: 2px solid;
     border-radius: 10px !important;
     padding: 8px 40px;
+    border-color: #71AFAC !important;
 }
 
 .btn-primary:hover {
     background-color: transparent !important;
     color: #71AFAC !important;
-    border: 2px solid #71AFAC !important;
 }
 
 .btn-primary:focus {
     box-shadow: none !important;
-    border: 2px solid #71AFAC !important;
 }
 
 .btn-secondary {
     background-color: transparent !important;
-    border: 2px solid #71AFAC;
+    border: 2px solid #71AFAC !important;
     border-radius: 10px !important;
-    padding: 8px 40px;
-    color: #71AFAC;
+    padding: 8px 40px !important;
+    color: #71AFAC !important;
 }
 
 .btn-secondary:hover {
@@ -1024,7 +1023,7 @@ body {
     padding: 10px;
     border-radius: 0 5px 5px 0;
 
-    
+
 }
 
 #select_color_switcher_option .bottom a {
@@ -9660,7 +9659,11 @@ ul.pattern .color3 {
     text-align: center;
     line-height: 30px;
 }
-.filter-black{filter: grayscale(100%);}
+
+.filter-black {
+    filter: grayscale(100%);
+}
+
 .text-gray {
     background: #dfebff;
 }
@@ -9668,7 +9671,7 @@ ul.pattern .color3 {
 
 
 .list-of-icon ul li {
-       text-align: center;
+    text-align: center;
     display: inline-block;
     padding: 8px 0;
     border-radius: 16px;
@@ -9682,7 +9685,8 @@ ul.pattern .color3 {
 }
 
 .list-of-icon ul li span {
-    padding-top: 8px;font-size: 14px;
+    padding-top: 8px;
+    font-size: 14px;
 }
 
 .list-of-icon ul li:hover {
@@ -9690,52 +9694,70 @@ ul.pattern .color3 {
 }
 
 
- 
- .list-of-icon ul li .icon input[type="radio"] {
-     display: none;
+
+.list-of-icon ul li .icon input[type="radio"] {
+    display: none;
 }
- .list-of-icon ul li .icon input[type="radio"]:not(:disabled) ~ label {
-     cursor: pointer;
+
+.list-of-icon ul li .icon input[type="radio"]:not(:disabled)~label {
+    cursor: pointer;
 }
- .list-of-icon ul li .icon input[type="radio"]:disabled ~ label {
-     color: rgba(188, 194, 191, 1);
-     border-color: rgba(188, 194, 191, 1);
-     box-shadow: none;
-     cursor: not-allowed;
+
+.list-of-icon ul li .icon input[type="radio"]:disabled~label {
+    color: rgba(188, 194, 191, 1);
+    border-color: rgba(188, 194, 191, 1);
+    box-shadow: none;
+    cursor: not-allowed;
 }
-.list-of-icon ul li .icon input + label {
-     position: relative;
+
+.list-of-icon ul li .icon input+label {
+    position: relative;
 }
-.list-of-icon ul li .icon input[type="radio"]:checked + label {
+
+.list-of-icon ul li .icon input[type="radio"]:checked+label {}
+
+.list-of-icon ul li .icon input[type="radio"]:checked+label::after {
+    color: rgb(255 255 255);
+    font-family: FontAwesome;
+    border: 2px solid rgb(255 255 255);
+    content: "\f00c";
+    font-size: 10px;
+    position: absolute;
+    top: 40px;
+    left: 80%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 20px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 50%;
+    background: #23c68b;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
 }
-.list-of-icon ul li .icon input[type="radio"]:checked + label::after {
-     color: rgb(255 255 255);
-     font-family: FontAwesome;
-     border: 2px solid rgb(255 255 255);
-     content: "\f00c";
-     font-size: 10px;
-     position: absolute;
-     top: 40px;
-     left: 80%;
-     transform: translateX(-50%);
-     height: 20px;
-     width: 20px;
-     line-height: 16px;
-     text-align: center;
-     border-radius: 50%;
-     background: #23c68b;
-     box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
-}
- 
+
 .list-of-icon ul li a {
     text-decoration: none;
     color: #000;
 }
- @media(max-width: 991px){
-    .list-of-icon ul li{width: 24%;}
- }
 
-  @media(max-width: 767px){
-    .list-of-icon ul li{width: 32%;}
-    .list-of-icon ul li span{font-size: 14px;}
- }
+@media(max-width: 991px) {
+    .list-of-icon ul li {
+        width: 24%;
+    }
+}
+
+@media(max-width: 767px) {
+    .list-of-icon ul li {
+        width: 32%;
+    }
+
+    .list-of-icon ul li span {
+        font-size: 14px;
+    }
+}
+
+.signup-btn{
+    border-radius: 40px !important;
+    padding: 9px 24px!important;
+    font-size:14px !important;
+}

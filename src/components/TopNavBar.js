@@ -96,7 +96,7 @@ const TopNavBar = () => {
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="btn btn-primary"
+                                        <a className="btn btn-primary signup-btn"
                                             href="#">
                                             Signup
                                         </a>

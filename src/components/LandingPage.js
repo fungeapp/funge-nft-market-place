@@ -220,7 +220,7 @@ const LandingPage = () => {
                         <div className="col-lg-6 px-5">
                             <h2>Create, Earn, and Connect with the world with your NFTs</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <button className="btn btn-primary">
+                            <button className="btn btn-primary signup-btn">
                                 Sign Up
                             </button>
                         </div>
@@ -322,14 +322,14 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            <div className="footer_top ">
+            <div className="footer_top">
                 <div className="text-center">
                     <h2>Endless Possibilities with Funge</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amet, consectetur
                         adipiscing elit, sed do eiusmod tempor</p>
                     <div className="container-fluid">
-                        <div className="row ">
-                            <div className="col-lg-4 col-md-6 ">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-lg-3 col-md-6 ">
                                 <div className="top_resources ">
                                     <div className="post_box text-start m-0">
                                         <img src="./assets/images/media_post_4.png"
@@ -396,7 +396,7 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-6 ">
+                            <div className="col-lg-3 col-md-6 ">
                                 <div className="top_resources ">
                                     <div className="post_box text-start m-0">
                                         <img src="./assets/images/media_post_5.png"
@@ -463,7 +463,7 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-6 ">
+                            <div className="col-lg-3 col-md-6 ">
                                 <div className="top_resources ">
                                     <div className="post_box text-start m-0">
                                         <img src="./assets/images/media_post_6.png"
@@ -531,9 +531,8 @@ const LandingPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-cent">
-                            <a href=""
-                                className="btn-secondary btn">
+                        <div className="text-center">
+                            <a href="" className="btn btn-secondary">
                                 View more articles
                             </a>
                         </div>
