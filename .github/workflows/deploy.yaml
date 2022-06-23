@@ -19,7 +19,7 @@ jobs:
         comment: Deploy the main branch
         working-directory: /home/ubuntu/
         #command: /bin/sh ./deploy.sh
-        run: |
+        command: |
           cd /var/www/html/dev.fungeapp.com
           sudo git pull origin main
           sudo rm -rf package-lock.json
