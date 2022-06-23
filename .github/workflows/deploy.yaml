@@ -1,24 +1,3 @@
-# on:
-#   push:
-#     branches:
-#       - main
-# name: build react app
-# jobs:
-#   web-build:
-#     name: Build
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Get Latest Code
-#       uses: actions/checkout@v2.3.2
-
-#     - name: Sync Files
-#       uses: Samkirkland/FTP-Deploy-Action@4.0.0
-#       with:
-#         server: hostname
-#         username: ubuntu
-#         password: password
-#         server-dir: /var/www/html/
-
 name: Deploy using AWS SSM Send-Command 
 on:
   push:
@@ -37,6 +16,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
-        comment: Deploy the master branch
+        comment: Deploy the dev branch
         working-directory: /home/ubuntu/
         command: /bin/sh ./deploy.sh
