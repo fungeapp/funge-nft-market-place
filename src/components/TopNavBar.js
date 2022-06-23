@@ -95,6 +95,12 @@ const TopNavBar = () => {
                                             Community
                                         </a>
                                     </li>
+                                    <li className="nav-item">
+                                        <a className="btn btn-primary"
+                                            href="#">
+                                            Signup
+                                        </a>
+                                    </li>
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
                             </div>
