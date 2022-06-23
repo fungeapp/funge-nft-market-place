@@ -1,8 +1,12 @@
 import React from 'react'
+import env from 'react-dotenv'
+import ProfileLogin from './ProfileLogin'
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 const TopNavBar = () => {
     return (
         <>
+        console.log(`${env.AUTH0_DOMAIN} :: ${env.AUTH0_CLIENT_ID} :: ${env.LOGIN_REDIRECT_URL}`)
         <div className="header">
                 <div className="my_nav">
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
@@ -96,10 +100,14 @@ const TopNavBar = () => {
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="btn btn-primary signup-btn"
-                                            href="#">
-                                            Signup
-                                        </a>
+                                    <Auth0Provider
+                                            domain={env.AUTH0_DOMAIN}
+                                            clientId={env.AUTH0_CLIENT_ID}
+                                            redirectUrl={env.LOGIN_REDIRECT_URL}
+                                            onRedirectCallback={env.LOGIN_REDIRECT_URL}
+                                            >
+                                        <ProfileLogin />
+                                    </Auth0Provider>
                                     </li>
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
