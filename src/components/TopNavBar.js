@@ -8,8 +8,10 @@ import logo from '../images/funge-logo.png';
 import env from 'react-dotenv'
 import ProfileLogin from './ProfileLogin'
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
+import '../App.css';
 
 const NavBar = () => {
+    console.log(`${env.AUTH0_DOMAIN} :: ${env.AUTH0_CLIENT_ID} :: ${env.LOGIN_REDIRECT_URL}`)
     return (
         <Navbar expand="sm" className='p-3 shadow-sm'>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,7 +33,7 @@ const NavBar = () => {
                         <Auth0Provider
                                         domain={env.AUTH0_DOMAIN}
                                         clientId={env.AUTH0_CLIENT_ID}
-                                        redirectUrl="http://localhost:3000/"
+                                        redirectUrl={env.LOGIN_REDIRECT_URL}
                         >
                             <ProfileLogin />
                         </Auth0Provider>

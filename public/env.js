@@ -88,5 +88,6 @@ window.env = {
   "npm_node_execpath": "/Users/jaypersanchez/.nvm/versions/node/v16.8.0/bin/node",
   "npm_config_prefix": "/Users/jaypersanchez/.nvm/versions/node/v16.8.0",
   "AUTH0_DOMAIN": "dev-fcx94jmr.us.auth0.com",
-  "AUTH0_CLIENT_ID": "gXFzC5QizhKrk1vJzrOzFwnb8Ue5TQjn"
+  "AUTH0_CLIENT_ID": "gXFzC5QizhKrk1vJzrOzFwnb8Ue5TQjn",
+  "LOGIN_REDIRECT_URL": "http://fungeapp.com"
 };
