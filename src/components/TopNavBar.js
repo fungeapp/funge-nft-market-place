@@ -6,7 +6,6 @@ import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 const TopNavBar = () => {
     return (
         <>
-        console.log(`${env.AUTH0_DOMAIN} :: ${env.AUTH0_CLIENT_ID} :: ${env.LOGIN_REDIRECT_URL}`)
         <div className="header">
                 <div className="my_nav">
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
