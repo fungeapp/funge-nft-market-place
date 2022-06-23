@@ -5,6 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import logo from '../images/funge-logo.png';
+import env from 'react-dotenv'
+import ProfileLogin from './ProfileLogin'
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 const NavBar = () => {
     return (
@@ -25,7 +28,13 @@ const NavBar = () => {
                         <Nav.Link href="/explore">Explore</Nav.Link>
                         <Nav.Link href="/about_us">About us</Nav.Link>
                         <Nav.Link href="/community">Community</Nav.Link>
-                        <Nav.Link className='defaultBtn' href="/community">Signup</Nav.Link>
+                        <Auth0Provider
+                                        domain={env.AUTH0_DOMAIN}
+                                        clientId={env.AUTH0_CLIENT_ID}
+                                        redirectUrl="http://localhost:3000/"
+                        >
+                            <ProfileLogin />
+                        </Auth0Provider>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
