@@ -10,7 +10,7 @@ const ProfileLogin = () => {
 
         if (isAuthenticated) {
             //direct to profile page
-            useHistory.push(env.LOGIN_REDIRECT_URL);
+            //useHistory.push(env.LOGIN_REDIRECT_URL);
         }
         else {
             //stay or redirect to landing page
@@ -18,13 +18,17 @@ const ProfileLogin = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isAuthenticated]);
 
-    
+    function onRedirectCallback() {
+        useHistory.push(env.LOGIN_REDIRECT_URL);
+    }
+
         return(
             <div className="App">
                 <Auth0Provider
                                             domain={env.AUTH0_DOMAIN}
                                             clientId={env.AUTH0_CLIENT_ID}
                                             redirectUrl={env.LOGIN_REDIRECT_URL}
+                                            onRedirectCallback={onRedirectCallback}
                             >
                 <button style={{
                                 backgroundColor: '#71AFAC',
@@ -36,7 +40,7 @@ const ProfileLogin = () => {
                                 paddingRight: '18px'}} 
                         onClick={loginWithPopup}
                 >
-                    Sign-In
+                    Sign-In to Profile
                 </button>
                 </Auth0Provider>
             </div>
