@@ -21,8 +21,9 @@
 
 name: Deploy using AWS SSM Send-Command 
 on:
-	push:
-		branches: [dev]
+  push:
+    branches:
+      - dev
 
 jobs:
 	start:
