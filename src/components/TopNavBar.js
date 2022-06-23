@@ -31,9 +31,10 @@ const NavBar = () => {
                         <Nav.Link href="/about_us">About us</Nav.Link>
                         <Nav.Link href="/community">Community</Nav.Link>
                         <Auth0Provider
-                                        domain={env.AUTH0_DOMAIN}
-                                        clientId={env.AUTH0_CLIENT_ID}
-                                        redirectUrl={env.LOGIN_REDIRECT_URL}
+                                            domain={env.AUTH0_DOMAIN}
+                                            clientId={env.AUTH0_CLIENT_ID}
+                                            redirectUrl={env.LOGIN_REDIRECT_URL}
+                                            onRedirectCallback={env.LOGIN_REDIRECT_URL}
                         >
                             <ProfileLogin />
                         </Auth0Provider>
