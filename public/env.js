@@ -89,5 +89,5 @@ window.env = {
   "npm_config_prefix": "/Users/jaypersanchez/.nvm/versions/node/v16.8.0",
   "AUTH0_DOMAIN": "dev-q680xqzj.us.auth0.com",
   "AUTH0_CLIENT_ID": "EI2DWit2STB39zIu1b6racDhEf2CjInX",
-  "LOGIN_REDIRECT_URL": "https://www.fungeapp.com"
+  "LOGIN_REDIRECT_URL": "https://www.fungeapp.com/profile"
 };
