@@ -2,6 +2,8 @@ import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import { useEffect, useHistory, useState } from 'react';
 import env from 'react-dotenv';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { Avatar } from '@mui/material'
+
 import axios from 'axios'
 
 const CoinMarket = () => {
@@ -14,7 +16,19 @@ const CoinMarket = () => {
     const baseURL = `https://api.coinmarketcap.com/data-api/v3/nft/collections?start=0&limit=10&sort=volume&desc=true`;
 
     const columns = [
-        {field: 'rank', headerName: 'Rank', width:100},
+        {
+            field: 'rank', 
+            headerName: 'Rank', 
+            width:300,
+            renderCell: (params) => {
+                return(
+                    <div>
+                        {params.row.rank}
+                        <img alt="" src={params.row.logo} />
+                    </div>
+                )
+            }
+        },
         {field: 'name', headerName: 'Name', width: 200 },
         {field: 'volume', headerName: 'Volume', width: 200},
         {field: 'volumeChangePercentage', headerName: 'Volume Change', width:200}
