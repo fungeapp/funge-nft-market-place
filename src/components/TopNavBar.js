@@ -101,7 +101,7 @@ const TopNavBar = () => {
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                    <button className='btn btn-primary' onClick={ isAuthenticated ? logout : loginWithPopup}>{ isAuthenticated ? "Lgout" : "Sign In"}</button>
+                                    <button className='btn btn-primary' onClick={ isAuthenticated ? logout : loginWithPopup}>{ isAuthenticated ? "Sign Out" : "Sign In"}</button>
                                     </li>
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
