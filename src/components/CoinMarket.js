@@ -8,14 +8,16 @@ const CoinMarket = () => {
 
     const [id, setrank] = useState();
     const [name, setname] = useState();
-    const [row, setrow] = useState([])
+    const [rows, setrows] = useState([])
 
 
     const baseURL = `https://api.coinmarketcap.com/data-api/v3/nft/collections?start=0&limit=10&sort=volume&desc=true`;
 
     const columns = [
-        {field:'id', headerName:'Rank', width:70},
-        { field: 'name', headerName: 'Name', width: 70 },
+        {field:'id', headerName:'ID', width:70},
+        {field: 'name', headerName: 'Name', width: 70 },
+        {field: 'volume', headerName: 'Volume', width: 70},
+        {field: 'volumeChangePercentage', headerName: 'Volume Change', width:70}
     ]
     /*const rows = [
         {id: 1, name:'my collection'},
@@ -26,21 +28,27 @@ const CoinMarket = () => {
     useEffect(() => {
         axios.get(baseURL)
         .then(response => {
-            const result = response.data;
-            console.log(result.data.collections[0].rank);
-            //setrow(`{ id:${} }`)
-
+            let collections = response.data.data.collections;
+            let counter = 1;
+            collections.map(item => {
+                let index = counter++
+                setrows(`{ id:${index}, name:${item.name}, volume:${item.oneDay.volume}, volumeChangePercentage:${item.volumeChangePercentage} }`)
+                console.log(`{ id:${index}, name:${item.name}, volume:${item.oneDay.volume}, volumeChangePercentage:${item.volumeChangePercentage} }`)
+            })
+            
+            
         })
-    })
+    },[rows])
 
     return(
         <div style={{ height: 400, width: '100%' }}>
+            getRowId={(row) => row._id}
             <DataGrid
-            rows={row}
-            columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
-            
+                rows={rows}
+                columns={columns}
+                getRowId={(row) => row.no}
+                pageSize={5}
+                rowsPerPageOptions={[5]}
             />
         </div>
     );
