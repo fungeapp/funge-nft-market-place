@@ -8,45 +8,47 @@ const CoinMarket = () => {
 
     const [id, setrank] = useState();
     const [name, setname] = useState();
-    const [rows, setrows] = useState([])
+    const [data, setdata] = useState([])
 
 
     const baseURL = `https://api.coinmarketcap.com/data-api/v3/nft/collections?start=0&limit=10&sort=volume&desc=true`;
 
     const columns = [
-        {field:'id', headerName:'ID', width:70},
-        {field: 'name', headerName: 'Name', width: 70 },
-        {field: 'volume', headerName: 'Volume', width: 70},
-        {field: 'volumeChangePercentage', headerName: 'Volume Change', width:70}
+        {field: 'rank', headerName: 'Rank', width:100},
+        {field: 'name', headerName: 'Name', width: 200 },
+        {field: 'volume', headerName: 'Volume', width: 200},
+        {field: 'volumeChangePercentage', headerName: 'Volume Change', width:200}
     ]
-    /*const rows = [
-        {id: 1, name:'my collection'},
-        {id: 2, name:'my collection'},
-        {id: 3, name:'my collection'}
-    ];*/
-
-    useEffect(() => {
+    
+    const rows = data.map((row) => ({
+        rank:row.rank,
+        name:row.name,
+        volume:row.oneDay.volume,
+        volumeChangePercentage: row.oneDay.volumeChangePercentage
+    }))
+       
+    function getMarketData() {
         axios.get(baseURL)
         .then(response => {
             let collections = response.data.data.collections;
-            let counter = 1;
-            collections.map(item => {
-                let index = counter++
-                setrows(`{ id:${index}, name:${item.name}, volume:${item.oneDay.volume}, volumeChangePercentage:${item.volumeChangePercentage} }`)
-                console.log(`{ id:${index}, name:${item.name}, volume:${item.oneDay.volume}, volumeChangePercentage:${item.volumeChangePercentage} }`)
-            })
-            
-            
+            setdata(collections)
+            /*rows = collections.map((row) => ({
+                id: row.rank,
+                name: row.name
+            }))*/
         })
-    },[rows])
+    }
+
+    useEffect(() => {
+        getMarketData();
+    },[])
 
     return(
         <div style={{ height: 400, width: '100%' }}>
-            getRowId={(row) => row._id}
             <DataGrid
+                getRowId={(row) => row.rank}
                 rows={rows}
                 columns={columns}
-                getRowId={(row) => row.no}
                 pageSize={5}
                 rowsPerPageOptions={[5]}
             />
