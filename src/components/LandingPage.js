@@ -1,6 +1,11 @@
 import React from 'react';
-import { TopCollectionsModel} from './topcollection/top-collection-model';
-import TopCollectionsView from './topcollection/top-collection-view';
+import { DataGrid } from '@mui/x-data-grid';
+//import { TopCollectionsModel} from './topcollection/top-collection-model';
+//import TopCollectionsView from './topcollection/top-collection-view';
+import CoinMarket from './CoinMarket';
+import ProfileLogin from './ProfileLogin'
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
+import env from 'react-dotenv'
 
 const LandingPage = () => {
     return (
@@ -18,9 +23,15 @@ const LandingPage = () => {
               adipiscing elit, sed do eiusmod tempor
             </p>
             <div className="d-flex justify-content-center">
-            <button className="btn btn-primary">
-                Get Started
-            </button>
+                                        <Auth0Provider
+                                            domain={env.AUTH0_DOMAIN}
+                                            clientId={env.AUTH0_CLIENT_ID}
+                                            redirectUrl={env.LOGIN_REDIRECT_URL}
+                                            onRedirectCallback={env.LOGIN_REDIRECT_URL}
+                                            >
+                                        <ProfileLogin />
+                                    </Auth0Provider>
+            
               {/* <Wallet btnText="Get Started"/> */}
             </div>
           </div>
@@ -83,80 +94,7 @@ const LandingPage = () => {
                         aria-selected="false">Market value</button>
                 </li>
             </ul>
-            
-
-            
-            <div className="tab-content mt-5" 
-            id="pills-tabContent">
-                <div className="tab-pane  fade "
-                 id="pills-Artists" 
-                 role="tabpanel"
-                  aria-labelledby="pills-Artists-tab">
-
-                    
-                    <div className="container ">
-                        <div className=" table-card shadow  ">
-                            <div className="table-responsive" 
-                            data-pattern="priority-columns">
-                                <table id="" 
-                                className="table">
-                                    <tbody>
-                                       
-                                    {TopCollectionsModel.map((item, index) => (
-                                        <TopCollectionsView detail={item}
-                                         key={index} />
-                                      ))}
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="tab-pane fade show active"
-                 id="pills-Collections"
-                  role="tabpanel"
-                    aria-labelledby="pills-Collections-tab">
-                    <div className="container ">
-                        <div className=" table-card shadow  ">
-                            <div className="table-responsive" 
-                            data-pattern="priority-columns">
-                                <table id="" 
-                                className="table ">
-                                    <tbody>
-                                    {TopCollectionsModel.map((item, index) => (
-                                        <TopCollectionsView detail={item} 
-                                        key={index} />
-                                      ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="tab-pane fade" 
-                id="pills-Market-value"
-                 role="tabpanel"
-                    aria-labelledby="pills-Market value-tab">
-                    
-                    <div className="container ">
-                        <div className=" table-card shadow  ">
-                            <div className="table-responsive" 
-                            data-pattern="priority-columns">
-                                <table id=""
-                                 className="table ">
-                                    <tbody>
-                                    {TopCollectionsModel.map((item, index) => (
-                                        <TopCollectionsView detail={item}
-                                         key={index} />
-                                      ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <CoinMarket />
         </section>
         <section className="endles  pb-5 mt-5">
                 <div className="container">

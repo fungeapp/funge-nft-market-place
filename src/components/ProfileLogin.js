@@ -20,17 +20,7 @@ const ProfileLogin = () => {
 
         return(
             <div className="App">
-                
-                <button style={{
-                                backgroundColor: '#71AFAC',
-                                color: '#FFFFFF',
-                                borderRadius: '40px',
-                                paddingTop: '10px',
-                                paddingBottom: '10px',
-                                paddingLeft: '18px',
-                                paddingRight: '18px'}} 
-                        onClick={loginWithPopup}
-                >
+                <button className='btn-primary' onClick={loginWithRedirect}>
                     Sign-In to Profile
                 </button>
             </div>
