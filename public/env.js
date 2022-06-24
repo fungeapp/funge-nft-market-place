@@ -87,7 +87,7 @@ window.env = {
   "RUBY_VERSION": "ruby-2.5.1",
   "npm_node_execpath": "/Users/jaypersanchez/.nvm/versions/node/v16.8.0/bin/node",
   "npm_config_prefix": "/Users/jaypersanchez/.nvm/versions/node/v16.8.0",
-  "AUTH0_DOMAIN": "dev-fcx94jmr.us.auth0.com",
-  "AUTH0_CLIENT_ID": "gXFzC5QizhKrk1vJzrOzFwnb8Ue5TQjn",
-  "LOGIN_REDIRECT_URL": "http://www.fungeapp.com"
+  "AUTH0_DOMAIN": "dev-q680xqzj.us.auth0.com",
+  "AUTH0_CLIENT_ID": "EI2DWit2STB39zIu1b6racDhEf2CjInX",
+  "LOGIN_REDIRECT_URL": "https://www.fungeapp.com"
 };
