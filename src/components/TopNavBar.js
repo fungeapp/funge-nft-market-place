@@ -4,6 +4,8 @@ import ProfileLogin from './ProfileLogin'
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 const TopNavBar = () => {
+    const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
+
     return (
         <>
         <div className="header">
@@ -99,14 +101,7 @@ const TopNavBar = () => {
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                    <Auth0Provider
-                                            domain={env.AUTH0_DOMAIN}
-                                            clientId={env.AUTH0_CLIENT_ID}
-                                            redirectUrl={env.LOGIN_REDIRECT_URL}
-                                            onRedirectCallback={env.LOGIN_REDIRECT_URL}
-                                            >
-                                        <ProfileLogin />
-                                    </Auth0Provider>
+                                    <button className='btn btn-primary' onClick={ isAuthenticated ? logout : loginWithPopup}>{ isAuthenticated ? "Sign Out" : "Sign In"}</button>
                                     </li>
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
