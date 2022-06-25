@@ -2,6 +2,12 @@
     background-color: #ffffff !important;
 }
 
+/* Funge Default Link */
+a.funge-link {
+    color: #71AFAC !important;
+    text-decoration: none;
+}
+
 /*--------------------------------------------------
 [1. Start Home 24-02-2022]
 --------------------------------------------------*/
@@ -9761,3 +9767,47 @@ ul.pattern .color3 {
     padding: 9px 24px!important;
     font-size:14px !important;
 }
+
+
+/* Funge Footer Start*/
+
+.funge-footer {
+    background-color: #FFFFFF;
+    padding-top: 100px;
+    min-height: 500px;
+}
+
+.footer-logo {
+    width: 120px;
+}
+
+.footer-funge-links a {
+    text-decoration: none;
+    color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer-signup {
+    border: 1px solid #E7E8EA;
+    border-radius: 12px;
+    height: 40px;
+    width: 200px;
+    margin-right: 5px;
+}
+
+.footer-button {
+    background: #71AFAC;
+    border-radius: 10px;
+    border: 0px;
+    color: #FFFFFF;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+}
+.footer-signup::placeholder {
+    color: #A0A1AB;
+    padding-left:5px
+}
+/* Funge Footer End */
