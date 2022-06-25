@@ -42,8 +42,19 @@ const Footer = () => {
                         <a class="funge-link" href="#">Learn More</a>
                         <br />
                         <br />
-                        <h5>Sign up for our newsletter</h5>
-                        <input type="text" class="footer-signup" placeholder="Enter your email here" /><button class="footer-button">Signup</button>
+                        <div className='row'>
+                            <div className='col-12'>
+                                <h5>Sign up for our newsletter</h5>
+                            </div>
+                            <div className='col-8'>
+                                <input type="text" class="footer-signup" placeholder="Enter your email here" />
+
+                            </div>
+                            <div className='col-4'>
+                                <button class="footer-button">Signup</button>
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
