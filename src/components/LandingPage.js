@@ -32,7 +32,7 @@ const LandingPage = () => {
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-md-6'>
-                        <h2 className="collection_heading d-flex align-items-center w-800">
+                            <h2 className="collection_heading d-flex align-items-center w-800">
                                 Top collections over
                                 <span className="nav-link dropdown-toggle main-color"
                                     href="#"
@@ -195,6 +195,21 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="collection my-5 py-5 section-4">
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='col-md-6 text-center my-5'>
+                                <h2 className="collection_heading w-800 my-5">
+                                    Built with the planet in mind
+                                </h2>
+                        </div>
+                        <div className='col-md-6 text-end section-thumb'>
+                            <img className='img-fluid' src='./assets/images/call-to-action.png' />
                         </div>
                     </div>
                 </div>
