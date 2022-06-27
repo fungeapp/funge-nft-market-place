@@ -62,6 +62,8 @@ const ProfileLogin = (props) => {
     const changeWallet = (value) => {
         setWallet(value);
         console.log(`wallet ${user} ${account}`)
+        let chain = Moralis.getChainId();
+        setChain(chain)
         if (chain !== "") {
             setBtnStatus(false);
         }
@@ -135,7 +137,7 @@ const ProfileLogin = (props) => {
         return(
             <>
             {isAuthenticated && btnText === 'Sign-In' ?
-                <button className={"btn btn-success"} onClick={logout}>{account}</button> :
+                <button className={"btn btn-success"} onClick={logout}>{chain}-{account}</button> :
     
                 <button onClick={() => setOpen(true)} className="btn-primary btn">
                     {btnText}
