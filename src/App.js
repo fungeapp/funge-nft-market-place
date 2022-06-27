@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <TopNavBar/>
-      <h1>{ isAuthenticated ? JSON.stringify(user.given_name, null, 2) : ""}</h1>
+      {/* <h1>{ isAuthenticated ? JSON.stringify(user.given_name, null, 2) : ""}</h1> */}
       <LandingPage/>
       <Footer/>
     </div>
