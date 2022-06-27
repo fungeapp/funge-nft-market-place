@@ -24,19 +24,21 @@ import CheckIcon from "@mui/icons-material/Check";
 import { PersonPinCircleOutlined, AddIcon } from '@mui/icons-material';
 import {useChain, useMoralis} from "react-moralis";
 import Moralis from "moralis";
+import Web3 from 'web3/dist/web3.min.js'
 
 
 const ProfileLogin = (props) => {
 
     //const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
     const {authenticate, isAuthenticated, isAuthenticating, user, account, logout} = useMoralis();
-    //let web3 = new Web3();
+    let web3 = new Web3();
     const {btnText} = props;
     const [open, setOpen] = useState(false);
     const [terms, setTerms] = useState(false);
     const [btnStatus, setBtnStatus] = useState(true);
     const [chain, setChain] = useState("");
     const [wallet, setWallet] = useState("");
+    const {switchNetwork} = useChain();
 
     useEffect(() => {
         if (isAuthenticated) {
@@ -50,6 +52,7 @@ const ProfileLogin = (props) => {
     }, [isAuthenticated]);
 
     const changeChain = (value) => {
+        console.log(`change ${value}`)
         setChain(value);
         if (wallet !== "") {
             setBtnStatus(false);
@@ -62,6 +65,14 @@ const ProfileLogin = (props) => {
             setBtnStatus(false);
         }
     };
+
+    const emailAddress = (value) => {
+
+    }
+
+    const phoneNumber = (value) => {
+
+    }
 
     const handleDialogClose = () => {
         setOpen(false);
@@ -107,8 +118,8 @@ const ProfileLogin = (props) => {
                     console.log("logged in user:", user);
                     console.log(user?.get("ethAddress"));
                     if (isAuthenticated) {
-                        //switchNetwork(web3.utils.toHex(network));
-                        console.log(`switched network`)
+                        switchNetwork(web3.utils.toHex(network));
+                        //console.log(`switched network`)
                     }
                     setOpen(false);
                 })
@@ -149,7 +160,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <IconButton
                                                 aria-label="Ethereum"
-                                                disabled={!terms}
+                                                
                                                 onClick={() => changeChain("Ethereum")}
                                             >
                                                 <img alt={''} src={"./assets/images/ETH.png"}/>
@@ -161,7 +172,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <IconButton
                                                 aria-label="Polygon"
-                                                disabled={!terms}
+                                                
                                                 onClick={() => changeChain("Polygon")}
                                             >
                                                 <img src={"./assets/images/polygon.png"}/>
@@ -183,7 +194,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <IconButton
                                                 aria-label="Metamask"
-                                                disabled={!terms}
+                                                
                                                 onClick={() => changeWallet("Metamask")}
                                             >
                                                 <img alt={''} src={"./assets/images/metamask.svg"}/>
@@ -195,7 +206,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <IconButton
                                                 aria-label="WalletConnect"
-                                                disabled={!terms}
+                                                
                                                 onClick={() => changeWallet("WalletConnect")}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
@@ -203,6 +214,39 @@ const ProfileLogin = (props) => {
                                             </IconButton>
                                             <br/>
                                             Wallet Connect
+                                        </Grid>
+                                    </Grid>
+                                </ListItem>
+                                <ListItem>
+                                    <Typography variant="h6" xs={12} color="initial">
+                                    Or sign up with email or mobile number
+                                    </Typography>
+                                </ListItem>
+                                <ListItem>
+                                    <Grid container alignItems={"center"} spacing={2}>
+                                        <Grid item xs={4}>
+                                            <Button
+                                                aria-label="Email"
+                                                className='btn-primary'
+                                                onClick={() => emailAddress("Email")}
+                                            >
+                                                <img alt={''} src={"./assets/images/metamask.svg"}/>
+                                                
+                                            </Button>
+                                            <br/>
+                                            Email Address
+                                        </Grid>
+                                        <Grid item xs={4}>
+                                            <Button
+                                                aria-label="Phone Number"
+                                                className='btn-primary'
+                                                onClick={() => phoneNumber("Phone Number")}
+                                            >
+                                                <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
+                                                
+                                            </Button>
+                                            <br/>
+                                           Phone Number
                                         </Grid>
                                     </Grid>
                                 </ListItem>
