@@ -61,6 +61,7 @@ const ProfileLogin = (props) => {
 
     const changeWallet = (value) => {
         setWallet(value);
+        console.log(`wallet ${user} ${account}`)
         if (chain !== "") {
             setBtnStatus(false);
         }
@@ -133,8 +134,8 @@ const ProfileLogin = (props) => {
 
         return(
             <>
-            {isAuthenticated && btnText === 'Connect Wallet' ?
-                <button className={"btn btn-danger"} onClick={logout}>Disconnect</button> :
+            {isAuthenticated && btnText === 'Sign-In' ?
+                <button className={"btn btn-success"} onClick={logout}>{account}</button> :
     
                 <button onClick={() => setOpen(true)} className="btn-primary btn">
                     {btnText}
