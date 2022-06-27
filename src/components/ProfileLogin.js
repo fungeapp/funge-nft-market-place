@@ -134,24 +134,14 @@ const ProfileLogin = (props) => {
                         fullWidth={true}
                         onClose={handleDialogClose}
                     >
-                        <DialogTitle>Connect Wallet</DialogTitle>
+                        <DialogTitle>Sign In</DialogTitle>
                         <DialogContent>
                             <List>
-                                <ListItem>
-                                    <FormControlLabel
-                                        label="Click here to Agree to our terms"
-                                        control={<Checkbox
-                                            value={terms}
-                                            checked={terms}
-                                            onChange={handleCheckboxChange}
-                                            color="primary"
-                                        />}
-                                    />
-                                </ListItem>
-                                <Divider/>
+                                
+                                
                                 <ListItem>
                                     <Typography variant="h6" xs={12} color="initial">
-                                        Select Chain
+                                    Hey! Welcome to Funge. Choose one of available wallet providers or create a new wallet. What is a wallet?
                                     </Typography>
                                 </ListItem>
                                 <ListItem>
