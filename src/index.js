@@ -5,17 +5,16 @@ import env from 'react-dotenv';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Auth0Provider} from '@auth0/auth0-react';
+import {MoralisProvider} from 'react-moralis';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Auth0Provider
-    domain={env.AUTH0_DOMAIN}
-    clientId={env.AUTH0_CLIENT_ID}
-    redirectUri={window.location.origin}
-  >
-    <App />
-  </Auth0Provider>
+    <MoralisProvider serverUrl={env.MORALIS_DAPP_URL} appId={env.MORALIS_APPLICATION_ID}>
+      <App />
+    </MoralisProvider>
+    
+  
   </React.StrictMode>
 );
 

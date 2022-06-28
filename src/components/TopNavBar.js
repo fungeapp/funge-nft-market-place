@@ -3,6 +3,7 @@ import env from 'react-dotenv'
 import ProfileLogin from './ProfileLogin'
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
+
 const TopNavBar = () => {
     const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
 
@@ -101,7 +102,7 @@ const TopNavBar = () => {
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                    <button className='btn btn-primary' onClick={ isAuthenticated ? logout : loginWithPopup}>{ isAuthenticated ? "Sign Out" : "Sign In"}</button>
+                                        <ProfileLogin btnText={"Sign-In"} />
                                     </li>
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
