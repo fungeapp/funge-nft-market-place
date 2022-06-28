@@ -388,6 +388,12 @@ section#hiro {
     width: 70%;
     height: 50px;
 }
+button.get-started-btn{
+    border-radius: 40px !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 45px;
+}
 
 .hiro_contant .d-flex .btn {
     padding: 8px 60px !important;
@@ -697,7 +703,6 @@ section#hiro {
 }
 
 .footer_top {
-    background: #F7F8FA;
     padding: 64px 0;
     margin-top: 100px;
 }
@@ -9698,6 +9703,10 @@ ul.pattern .color3 {
 
 /* Funge Footer Start*/
 
+.logo-text{
+    font-weight: 500;
+}
+
 .funge-footer {
     background-color: #FFFFFF;
     padding-top: 100px;
@@ -9727,26 +9736,29 @@ ul.pattern .color3 {
 }
 
 .footer-signup {
-    border: 1px solid #E7E8EA;
-    border-radius: 12px;
-    height: 43px;
-    width: 200px;
+    border: 1px solid #E7E8EA !important;
+    border-radius: 12px !important;
     margin-right: 5px;
+    width: 350px !important;
+    height: 50px;
 }
 
 .footer-button {
+    min-width: 150px;
+    height: 50px;
     background: #71AFAC;
     border-radius: 10px;
     border: 0px;
     color: #FFFFFF;
     padding-top:10px;
     padding-bottom:10px;
-    padding-left:25px;
-    padding-right:25px;
+    padding-left:22px;
+    padding-right:22px;
 }
 .footer-signup::placeholder {
     color: #A0A1AB;
-    padding-left:5px
+    padding-left:5px;
+    font-size: 14px;
 }
 /* Funge Footer End */
 
@@ -9754,6 +9766,9 @@ ul.pattern .color3 {
 .card-travelya{
     border-color:#E5EAF4 !important;
     border-radius: 8px !important;
+}
+.card-travelya:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .travelya-icon{
     width: 80px;
@@ -9768,4 +9783,25 @@ ul.pattern .color3 {
 .card-travelya .sub-heading{
     font-size: 14px;
     font-weight: 400;
+}
+
+/* Free Trial Section Start */
+.free-trial{
+    height: 400px;
+    padding-top:100px;
+    padding-bottom:100px;
+    background: url('../images/CTA.png') ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+/* Free Trial Section End */
+
+/* Section 4 */
+.section-4{
+    background-color: #F2F9F9;
+}
+.section-7{
+    background-color: #F2F9F9;
 }

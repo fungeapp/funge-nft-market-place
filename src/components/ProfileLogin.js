@@ -20,8 +20,8 @@ import {
     Checkbox,
     DialogActions
 } from '@mui/material';
-import CheckIcon from "@mui/icons-material/Check";
-import { PersonPinCircleOutlined, AddIcon } from '@mui/icons-material';
+// import CheckIcon from "@mui/icons-material/Check";
+// import { PersonPinCircleOutlined, AddIcon } from '@mui/icons-material';
 import {useChain, useMoralis} from "react-moralis";
 import Moralis from "moralis";
 import Web3 from 'web3/dist/web3.min.js'
@@ -167,7 +167,7 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeChain("Ethereum")}
                                             >
                                                 <img alt={''} src={"./assets/images/ETH.png"}/>
-                                                {chain === "Ethereum" ? (<CheckIcon color="success"/>) : (<></>)}
+                                                {chain === "Ethereum" ? ("+") : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Ethereum
@@ -179,7 +179,7 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeChain("Polygon")}
                                             >
                                                 <img src={"./assets/images/polygon.png"}/>
-                                                {chain === "Polygon" ? (<CheckIcon color="success"/>) : (<></>)}
+                                                {chain === "Polygon" ? ("+") : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Polygon
@@ -201,7 +201,7 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeWallet("Metamask")}
                                             >
                                                 <img alt={''} src={"./assets/images/metamask.svg"}/>
-                                                {wallet === "Metamask" ? (<CheckIcon color="success"/>) : (<></>)}
+                                                {wallet === "Metamask" ? ("+") : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Metamask
@@ -213,7 +213,7 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeWallet("WalletConnect")}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
-                                                {wallet === "WalletConnect" ? (<CheckIcon color="success"/>) : (<></>)}
+                                                {wallet === "WalletConnect" ? ("+") : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Wallet Connect

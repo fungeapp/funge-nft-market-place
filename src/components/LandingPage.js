@@ -1,6 +1,13 @@
 import React from 'react';
 import { TopCollectionsModel } from './topcollection/top-collection-model';
 import TopCollectionsView from './topcollection/top-collection-view';
+import { DataGrid } from '@mui/x-data-grid';
+//import { TopCollectionsModel} from './topcollection/top-collection-model';
+//import TopCollectionsView from './topcollection/top-collection-view';
+import CoinMarket from './CoinMarket';
+import ProfileLogin from './ProfileLogin'
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
+import env from 'react-dotenv'
 
 const LandingPage = () => {
     return (
@@ -131,6 +138,7 @@ const LandingPage = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <CoinMarket />
                             </div>
                         </div>
                     </div>
@@ -141,7 +149,7 @@ const LandingPage = () => {
                     <div className='row justify-content-center'>
                         <div className='col-md-12 text-center'>
                             <h2 className="collection_heading w-800">
-                                Travelya Benefit for User
+                                Benefit for User
                             </h2>
                         </div>
                         <div className='col-sm-12 col-md-6 text-center'>
@@ -200,16 +208,94 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            <section className="collection my-5 py-5 section-4">
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div className='col-md-6 text-center my-5'>
-                                <h2 className="collection_heading w-800 my-5">
-                                    Built with the planet in mind
-                                </h2>
+            <section className="collection my-5 section-4">
+                <div className='container-fluid'>
+                    <div className='row justify-content-end'>
+                        <div className='col-md-5 my-5'>
+                            <br />
+                            <br />
+                            <br />
+                            <h2 className="collection_heading w-800 mt-5 mb-3">
+                                Built with the planet in mind
+                            </h2>
+                            <p>Funge is 100% carbon neutral</p>
+                            <p className='mt-5'><a href='#' className='funge-link me-4'><u>Our mission</u> > </a> | <a href='#' className='funge-link ms-4'><u>Our vision</u> > </a>
+                                <br />
+                                <br />
+                                <img src='./assets/images/climate.png' width={100} />
+                            </p>
                         </div>
-                        <div className='col-md-6 text-end section-thumb'>
+                        <div className='col-md-6 p-0 text-end section-thumb'>
                             <img className='img-fluid' src='./assets/images/call-to-action.png' />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="collection section-5">
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-md-6 my-5'>
+                            <br />
+                            <br />
+                            <br />
+                            <h2 className="collection_heading w-600 mt-5 mb-3">
+                                Measure Impressions
+                                <br />
+                                and Reach Post
+                            </h2>
+                            <p className='sub-heading'>Graphs displaying your performance for metrics like follower evolution,<br /> average engagement rate per post and reach and impressions to give<br /> you the insights.
+                                <br />
+                                <br />
+                                <br />
+                                <a href='#' className='funge-link'>Learn More</a>
+                            </p>
+                        </div>
+                        <div className='col-md-6 p-5 text-end section-thumb'>
+                            <img className='img-fluid p-5' src='./assets/images/impression.png' />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="collection section-6">
+                <div className='container'>
+                    <div className='row justify-content-around'>
+                        <div className='col-md-6 px-5 text-end section-thumb'>
+                            <img className='img-fluid py-5 pe-5' src='./assets/images/schedule.png' />
+                        </div>
+                        <div className='col-md-5 ps-5 py-5'>
+                            <br />
+                            <br />
+                            <br />
+                            <h2 className="collection_heading w-600 mt-5 mb-3">
+                                Schedule Your Post
+                                <br />
+                                Whenever You Want
+                            </h2>
+                            <p className='sub-heading'>Publish your content automatically. Built-in features, such as Best Time to Post, Geolocation, User Tag, and more, ensure that your content reaches the right people.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="collection my-5 section-7">
+                <div className='container-fluid'>
+                    <div className='row justify-content-center'>
+                        <div className='col-md-5 my-5'>
+                            <br />
+                            <br />
+                            <br />
+                            <h2 className="collection_heading w-800 mt-5 mb-3">
+                                Earn up to 70.95% APY<br />
+                                with FUNGE
+                            </h2>
+                            <p>Stake Funge tokens to earn a share of daily<br/> trading fees in WETH, in addition to even more<br/>FUNGE</p>
+                            <br/>
+                            <button className='btn btn-primary get-started-btn'>Start Learning</button>
+                        </div>
+                        <div className='col-md-4 p-5 text-end section-thumb'>
+                            <img src='./assets/images/falling_coins.png' width={500} />
                         </div>
                     </div>
                 </div>
@@ -221,10 +307,11 @@ const LandingPage = () => {
                         <h2>Endless Possibilities with Funge</h2>
                         <p className='sub-heading'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br /> amet, consectetur
                             adipiscing elit, sed do eiusmod tempor</p>
+                        <br />
                         <div className="container-fluid">
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-3">
-                                    <div class="card post-card">
+                                    <div class="card post-card shadow">
                                         <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
                                         <div class="card-body">
                                             <div className="top_resources">
@@ -251,7 +338,7 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <div class="card post-card">
+                                    <div class="card post-card shadow">
                                         <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
                                         <div class="card-body">
                                             <div className="top_resources">
@@ -278,7 +365,7 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <div class="card post-card">
+                                    <div class="card post-card shadow">
                                         <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
                                         <div class="card-body">
                                             <div className="top_resources">
@@ -311,6 +398,22 @@ const LandingPage = () => {
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='free-trial'>
+                <div className='container-fluid'>
+                    <div className='row'>
+                        <div className='col-12 text-center'>
+                            <h2 className='w-600'>Grow your brand<br />
+                                presence on social media.</h2>
+                            <p className='sub-heading mt-3'>Try Ehya free for 14 days. No credit card required.</p>
+                            <br />
+                            <button className="btn btn-primary w-600 get-started-btn">
+                                Sign Up for Free Trial
+                            </button>
                         </div>
                     </div>
                 </div>
