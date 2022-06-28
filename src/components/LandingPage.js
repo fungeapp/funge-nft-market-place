@@ -30,7 +30,7 @@ const LandingPage = () => {
 
                         </div>
                         <div className='col-sm-12 col-md-7'>
-
+                            <img className='px-5 pt-5 pb-3 img-fluid' src='./assets/images/hero.png'/>
                         </div>
                     </div>
                 </div>
