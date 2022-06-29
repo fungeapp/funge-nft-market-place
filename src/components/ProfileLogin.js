@@ -18,10 +18,9 @@ import {
     FormControlLabel,
     Colors,
     Checkbox,
-    DialogActions
+    DialogActions,
 } from '@mui/material';
-// import CheckIcon from "@mui/icons-material/Check";
-// import { PersonPinCircleOutlined, AddIcon } from '@mui/icons-material';
+import MaterialIcon, {colorPalette} from 'material-icons-react';
 import {useChain, useMoralis} from "react-moralis";
 import Moralis from "moralis";
 import Web3 from 'web3/dist/web3.min.js'
@@ -70,7 +69,7 @@ const ProfileLogin = (props) => {
     };
 
     const emailAddress = (value) => {
-
+        console.log(`Register via magic link`)
     }
 
     const phoneNumber = (value) => {
@@ -155,7 +154,7 @@ const ProfileLogin = (props) => {
                                 
                                 <ListItem>
                                     <Typography variant="h6" xs={12} color="initial">
-                                    Hey! Welcome to Funge. Choose one of available wallet providers or create a new wallet. What is a wallet?
+                                    Hey! Welcome to Funge. Choose one of available wallet providers or create a new wallet. What is a wallet? Wallet Connect and Mobile registration still in development.
                                     </Typography>
                                 </ListItem>
                                 <ListItem>
@@ -167,7 +166,7 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeChain("Ethereum")}
                                             >
                                                 <img alt={''} src={"./assets/images/ETH.png"}/>
-                                                {chain === "Ethereum" ? ("+") : (<></>)}
+                                                {chain === "Ethereum" ? (<MaterialIcon icon="done" />) : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Ethereum
@@ -179,10 +178,22 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeChain("Polygon")}
                                             >
                                                 <img src={"./assets/images/polygon.png"}/>
-                                                {chain === "Polygon" ? ("+") : (<></>)}
+                                                {chain === "Polygon" ? (<MaterialIcon icon="done" />) : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Polygon
+                                        </Grid>
+                                        <Grid item xs={4}>
+                                            <IconButton
+                                                aria-label="Polygon"
+                                                
+                                                onClick={() => changeChain("BinanceSC")}
+                                            >
+                                                <img src={"./assets/images/bnb.png"}/>
+                                                {chain === "Binance" ? (<MaterialIcon icon="done" />) : (<></>)}
+                                            </IconButton>
+                                            <br/>
+                                            Binance
                                         </Grid>
                                     </Grid>
                                 </ListItem>
@@ -201,7 +212,7 @@ const ProfileLogin = (props) => {
                                                 onClick={() => changeWallet("Metamask")}
                                             >
                                                 <img alt={''} src={"./assets/images/metamask.svg"}/>
-                                                {wallet === "Metamask" ? ("+") : (<></>)}
+                                                {wallet === "Metamask" ? (<MaterialIcon icon="done" />) : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Metamask
@@ -209,11 +220,11 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <IconButton
                                                 aria-label="WalletConnect"
-                                                
+                                                disabled="true"
                                                 onClick={() => changeWallet("WalletConnect")}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
-                                                {wallet === "WalletConnect" ? ("+") : (<></>)}
+                                                {wallet === "WalletConnect" ? (<MaterialIcon icon="done" />) : (<></>)}
                                             </IconButton>
                                             <br/>
                                             Wallet Connect
@@ -242,6 +253,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <Button
                                                 aria-label="Phone Number"
+                                                disabled="true"
                                                 className='btn-primary'
                                                 onClick={() => phoneNumber("Phone Number")}
                                             >
