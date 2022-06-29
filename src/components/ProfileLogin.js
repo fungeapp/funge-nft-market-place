@@ -21,7 +21,6 @@ import {
     DialogActions,
 } from '@mui/material';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
-
 import {useChain, useMoralis} from "react-moralis";
 import Moralis from "moralis";
 import Web3 from 'web3/dist/web3.min.js'
@@ -70,7 +69,7 @@ const ProfileLogin = (props) => {
     };
 
     const emailAddress = (value) => {
-
+        console.log(`Register via magic link`)
     }
 
     const phoneNumber = (value) => {
@@ -209,7 +208,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <IconButton
                                                 aria-label="WalletConnect"
-                                                
+                                                disabled="true"
                                                 onClick={() => changeWallet("WalletConnect")}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
@@ -242,6 +241,7 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <Button
                                                 aria-label="Phone Number"
+                                                disabled="true"
                                                 className='btn-primary'
                                                 onClick={() => phoneNumber("Phone Number")}
                                             >
