@@ -59,6 +59,7 @@ const Footer = () => {
                         />
                         <p class="pt-3">There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
                     </div>
+                    <div className='col-md-1'></div>
                     <div class="col-md-2 col-sm-12">
                         <h5>Funge</h5>
                         <div class="d-flex flex-column footer-funge-links">
@@ -95,29 +96,9 @@ const Footer = () => {
                             <a href="#">Terms and conditions</a>
                         </div>
                     </div>
-                    <div className='col-md-10'>
+                    <div className='col-md-11'>
                         <small>©2020 Funge. All Rights Reserved</small>
                     </div>
-                    {/* <div class="col-md-3 col-sm-12">
-                        <h5>Earn more with Funge token</h5>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
-                        <a class="funge-link" href="#">Learn More</a>
-                        <br />
-                        <br />
-                        <div className='row'>
-                            <div className='col-12'>
-                                <h5>Sign up for our newsletter</h5>
-                            </div>
-                            <div className='col-8'>
-                                <input type="text" class="footer-signup" placeholder="Enter your email here" />
-                            </div>
-                            <div className='col-4'>
-                                <button class="footer-button">Signup</button>
-                            </div>
-
-                        </div>
-
-                    </div> */}
                 </div>
             </div>
         </>

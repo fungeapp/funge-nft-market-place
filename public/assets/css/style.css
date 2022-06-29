@@ -9710,6 +9710,7 @@ ul.pattern .color3 {
 .funge-footer {
     background-color: #FFFFFF;
     padding-top: 100px;
+    padding-bottom: 50px;
     min-height: 500px;
 }
 
@@ -9804,4 +9805,28 @@ ul.pattern .color3 {
 }
 .section-7{
     background-color: #F2F9F9;
+}
+
+/* Coin Market CSS */
+/* .coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell{
+    min-height: 70px;
+} */
+.coin-market .css-r11z79-MuiDataGrid-root{
+    border:0px;
+    color: #212529;
+    font-size: 18px;
+}
+
+.coin-market .css-levciy-MuiTablePagination-displayedRows{
+    margin-top:14px;
+}
+
+.coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-row div {
+    text-align: center;
+}
+.coin-market .css-17jjc08-MuiDataGrid-footerContainer{
+    border:0px;
+}
+.coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-iconSeparator{
+    color:white;
 }
