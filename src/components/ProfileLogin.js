@@ -154,7 +154,7 @@ const ProfileLogin = (props) => {
                                 
                                 <ListItem>
                                     <Typography variant="h6" xs={12} color="initial">
-                                    Hey! Welcome to Funge. Choose one of available wallet providers or create a new wallet. What is a wallet?
+                                    Hey! Welcome to Funge. Choose one of available wallet providers or create a new wallet. What is a wallet? Wallet Connect and Mobile registration still in development.
                                     </Typography>
                                 </ListItem>
                                 <ListItem>
@@ -182,6 +182,18 @@ const ProfileLogin = (props) => {
                                             </IconButton>
                                             <br/>
                                             Polygon
+                                        </Grid>
+                                        <Grid item xs={4}>
+                                            <IconButton
+                                                aria-label="Polygon"
+                                                
+                                                onClick={() => changeChain("BinanceSC")}
+                                            >
+                                                <img src={"./assets/images/bnb.png"}/>
+                                                {chain === "Binance" ? (<MaterialIcon icon="done" />) : (<></>)}
+                                            </IconButton>
+                                            <br/>
+                                            Binance
                                         </Grid>
                                     </Grid>
                                 </ListItem>
