@@ -2,10 +2,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react'
-import TopNavBar from './components/TopNavBar';
 import LandingPage from './components/LandingPage';
 import { useAuth0 } from '@auth0/auth0-react';
-import Footer from './components/Footer';
 import Signin from "./components/Signin";
 import Profile from "./components/Profile";
 import Feeds from "./components/Feeds";

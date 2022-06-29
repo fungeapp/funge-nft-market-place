@@ -4,12 +4,12 @@ import TopCollectionsView from './topcollection/top-collection-view';
 import { DataGrid } from '@mui/x-data-grid';
 //import { TopCollectionsModel} from './topcollection/top-collection-model';
 //import TopCollectionsView from './topcollection/top-collection-view';
-import CoinMarket from './CoinMarket';
-import ProfileLogin from './ProfileLogin'
+import CoinMarket from './LandingPage/CoinMarket';
+import ProfileLogin from './ProfileLogin';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import env from 'react-dotenv'
-import TopNavBar from './TopNavBar';
-import Footer from './Footer';
+import TopNavBar from './LandingPage/TopNavBar';
+import Footer from './LandingPage/Footer';
 
 const LandingPage = () => {
     return (
@@ -171,7 +171,7 @@ const LandingPage = () => {
 
             <section className="collection section-5">
                 <div className='container'>
-                    <div className='row'>
+                    <div className='row pt-5 pb-3'>
                         <div className='col-md-6 my-5'>
                             <br />
                             <br />
@@ -188,8 +188,8 @@ const LandingPage = () => {
                                 <a href='#' className='funge-link'>Learn More</a>
                             </p>
                         </div>
-                        <div className='col-md-6 p-5 text-end section-thumb'>
-                            <img className='img-fluid p-5' src='./assets/images/impression.png' />
+                        <div className='col-md-6 ps-5 text-end section-thumb'>
+                            <img className='img-fluid ps-5' src='./assets/images/impression.png' />
                         </div>
                     </div>
                 </div>
@@ -197,8 +197,8 @@ const LandingPage = () => {
 
             <section className="collection section-6">
                 <div className='container'>
-                    <div className='row justify-content-around'>
-                        <div className='col-md-6 px-5 text-end section-thumb'>
+                    <div className='row justify-content-between py-5'>
+                        <div className='col-md-6 pe-5 text-end section-thumb'>
                             <img className='img-fluid py-5 pe-5' src='./assets/images/schedule.png' />
                         </div>
                         <div className='col-md-5 ps-5 py-5'>
