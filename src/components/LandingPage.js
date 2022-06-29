@@ -8,10 +8,13 @@ import CoinMarket from './CoinMarket';
 import ProfileLogin from './ProfileLogin'
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import env from 'react-dotenv'
+import TopNavBar from './TopNavBar';
+import Footer from './Footer';
 
 const LandingPage = () => {
     return (
         <>
+            <TopNavBar />
             <section id="hiro">
                 <div className="container">
                     <div className='row'>
@@ -30,7 +33,7 @@ const LandingPage = () => {
 
                         </div>
                         <div className='col-sm-12 col-md-7'>
-                            <img className='px-5 pt-5 pb-3 img-fluid' src='./assets/images/hero.png'/>
+                            <img className='px-5 pt-5 pb-3 img-fluid' src='./assets/images/hero.png' />
                         </div>
                     </div>
                 </div>
@@ -138,7 +141,9 @@ const LandingPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <CoinMarket />
+                                <div className='coin-market'>
+                                    <CoinMarket />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -290,8 +295,8 @@ const LandingPage = () => {
                                 Earn up to 70.95% APY<br />
                                 with FUNGE
                             </h2>
-                            <p>Stake Funge tokens to earn a share of daily<br/> trading fees in WETH, in addition to even more<br/>FUNGE</p>
-                            <br/>
+                            <p>Stake Funge tokens to earn a share of daily<br /> trading fees in WETH, in addition to even more<br />FUNGE</p>
+                            <br />
                             <button className='btn btn-primary get-started-btn'>Start Learning</button>
                         </div>
                         <div className='col-md-4 p-5 text-end section-thumb'>
@@ -300,6 +305,8 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+
+
 
             <section>
                 <div className="footer_top">
@@ -418,6 +425,7 @@ const LandingPage = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     )
 }
