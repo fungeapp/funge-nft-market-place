@@ -30,7 +30,7 @@ const LandingPage = () => {
 
                         </div>
                         <div className='col-sm-12 col-md-7'>
-
+                            <img className='px-5 pt-5 pb-3 img-fluid' src='./assets/images/hero.png'/>
                         </div>
                     </div>
                 </div>
@@ -72,72 +72,7 @@ const LandingPage = () => {
                         <div className='col-md-12'>
                             <div className="tab-content mt-4"
                                 id="pills-tabContent">
-                                <div className="tab-pane  fade "
-                                    id="pills-Artists"
-                                    role="tabpanel"
-                                    aria-labelledby="pills-Artists-tab">
-
-
-                                    <div className="container ">
-                                        <div className="table-card">
-                                            <div className="table-responsive"
-                                                data-pattern="priority-columns">
-                                                <table id=""
-                                                    className="table">
-                                                    <tbody>
-
-                                                        {TopCollectionsModel.map((item, index) => (
-                                                            <TopCollectionsView detail={item}
-                                                                key={index} />
-                                                        ))}
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="tab-pane fade show active"
-                                    id="pills-Collections"
-                                    role="tabpanel"
-                                    aria-labelledby="pills-Collections-tab">
-                                    <div className="table-card">
-                                        <div className="table-responsive"
-                                            data-pattern="priority-columns">
-                                            <table id=""
-                                                className="table collection-table">
-                                                <tbody>
-                                                    {TopCollectionsModel.map((item, index) => (
-                                                        <TopCollectionsView detail={item}
-                                                            key={index} />
-                                                    ))}
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="tab-pane fade"
-                                    id="pills-Market-value"
-                                    role="tabpanel"
-                                    aria-labelledby="pills-Market value-tab">
-
-                                    <div className="container ">
-                                        <div className="table-card">
-                                            <div className="table-responsive"
-                                                data-pattern="priority-columns">
-                                                <table id=""
-                                                    className="table ">
-                                                    <tbody>
-                                                        {TopCollectionsModel.map((item, index) => (
-                                                            <TopCollectionsView detail={item}
-                                                                key={index} />
-                                                        ))}
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <CoinMarket />
                             </div>
                         </div>
