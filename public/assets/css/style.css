@@ -9817,6 +9817,10 @@ ul.pattern .color3 {
     font-size: 18px;
 }
 
+.coin-market .css-levciy-MuiTablePagination-displayedRows{
+    margin-top:14px;
+}
+
 .coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-row div {
     text-align: center;
 }

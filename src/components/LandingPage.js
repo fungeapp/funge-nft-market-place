@@ -75,7 +75,9 @@ const LandingPage = () => {
                         <div className='col-md-12'>
                             <div className="tab-content mt-4"
                                 id="pills-tabContent">
-                                <CoinMarket />
+                                <div className='coin-market'>
+                                    <CoinMarket />
+                                </div>
                             </div>
                         </div>
                     </div>
