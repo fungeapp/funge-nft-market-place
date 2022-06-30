@@ -9808,25 +9808,74 @@ ul.pattern .color3 {
 }
 
 /* Coin Market CSS */
-/* .coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell{
-    min-height: 70px;
-} */
-.coin-market .css-r11z79-MuiDataGrid-root{
+.coin-market div .MuiDataGrid-root{
     border:0px;
     color: #212529;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.coin-market .css-levciy-MuiTablePagination-displayedRows{
+.coin-market .MuiTablePagination-displayedRows{
     margin-top:14px;
 }
-
-.coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-row div {
-    text-align: center;
-}
-.coin-market .css-17jjc08-MuiDataGrid-footerContainer{
+.coin-market .MuiDataGrid-footerContainer{
     border:0px;
 }
-.coin-market .css-r11z79-MuiDataGrid-root .MuiDataGrid-iconSeparator{
+.coin-market div .MuiDataGrid-iconSeparator{
     color:white;
+}
+
+/* signin css */
+.siginin-left-box{
+    background-color: #E4F2F2;
+}
+.signin-btn-adv {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #374151;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 36px;
+    margin-top: 30px;
+}
+.sigin-card-btn{
+    width: 100%;
+}
+.footer-btn{
+    width: 100% !important;
+    padding: 10px 20px;
+}
+@media screen and (min-width: 600px) {
+    .footer-btn{
+        width: 48%;
+    }
+}
+
+.btn-icon img {
+    width: 40px;
+    height: 40px;
+}
+.signin-card{
+    border-radius: 25px !important;
+}
+#logintab .nav-link{
+    font-weight: 600;
+    color: #94A3B8;
+    border: 0px;
+    border-bottom: 1px solid #CBD5E1;
+}
+#logintab.nav-tabs{
+    border-bottom: 1px solid #CBD5E1;
+}
+#logintab .nav-link.active{
+    font-weight: 600;
+    color: #000;
+    border-bottom:1px solid #71AFAC;
 }
