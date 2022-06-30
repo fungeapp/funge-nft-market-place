@@ -189,7 +189,7 @@ const ProfileLogin = (props) => {
                                                 
                                                 onClick={() => changeChain("BinanceSC")}
                                             >
-                                                <img src={"./assets/images/bnb.png"}/>
+                                                <img className='img-fluid' width={45} src={"./assets/images/bnb.png"}/>
                                                 {chain === "Binance" ? (<MaterialIcon icon="done" />) : (<></>)}
                                             </IconButton>
                                             <br/>
