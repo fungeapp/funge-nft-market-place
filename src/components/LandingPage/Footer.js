@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className='funge-footer'>
+            <div className='funge-footer container-fluid'>
                 <div className="row icon-row justify-content-center">
                     <div class="col-sm-12 col-md-1">
                         <i class="fa-brands fa-twitter"></i> <span class="logo-text ms-1">Twitter</span>
