@@ -10,7 +10,6 @@ a.funge-link {
 .sub-heading{
     color:#5A7184 !important;
 }
-
 /*--------------------------------------------------
 [1. Start Home 24-02-2022]
 --------------------------------------------------*/
@@ -9879,3 +9878,46 @@ ul.pattern .color3 {
     color: #000;
     border-bottom:1px solid #71AFAC;
 }
+
+/* Login Page CSS Start */
+.login-button {
+    background: #71AFAC;
+    border-radius: 40px;
+    border: 0px;
+    color: #FFFFFF;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+}
+.login-input{
+    border: 1px solid #E7E8EA;
+    border-radius: 12px;
+    background-color: #E7E8EA;
+    font-size: 14px;
+    padding-left: 14px;
+    padding-top:12px;
+    padding-bottom:10px;
+    padding-right:25px;
+}
+.login-input::placeholder {
+    color: #A0A1AB;
+    padding-left:5px
+}
+.phone-button{
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+}
+.login-btn.btn-primary {
+    border-radius: 40px !important;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+}
+/* Login Page CSS End */

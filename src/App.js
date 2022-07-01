@@ -7,6 +7,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Signin from "./components/Signin";
 import Profile from "./components/Profile";
 import Feeds from "./components/Feeds";
+import Login from "./components/Login";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
           <Route path="feeds" element={<Feeds />} />
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
       {/* <h1>{ isAuthenticated ? JSON.stringify(user.given_name, null, 2) : ""}</h1> */}

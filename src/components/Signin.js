@@ -1,5 +1,6 @@
 import React from 'react';
-import Logo from '../images/funge-logo.png';
+import FungeLogo from './FungeLogo'
+import {Link} from 'react-router-dom'
 
 const Signin = () => {
     return (
@@ -10,7 +11,7 @@ const Signin = () => {
                         <div className='row justify-content-end'>
                             <div className='col-md-11 pt-4 ps-5'>
                                 <br />
-                                <a class="" href="#"><img width="140" src='./assets/images/funge-logo.png' /></a>
+                                <FungeLogo/>
                             </div>
                             <div className='col-md-11 pt-4 ps-5'>
                                 <br />
@@ -30,7 +31,7 @@ const Signin = () => {
                         <div class="d-flex justify-content-end mt-5 me-5">
                             <span class="text-black-50">
                                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                <a class="btn text-black-50" href="#">Back to Home</a></span>
+                                <Link className='btn text-black-50 mb-1' to="/">Back To Home</Link></span>
                         </div>
                         <div class="justify-content-center mt-5">
                             <div className='col-md-12 d-flex justify-content-center'>

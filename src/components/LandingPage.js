@@ -125,7 +125,7 @@ const LandingPage = () => {
                                             <div className='travelya-icon my-4'>
                                                 <img className='img-fluid' src='./assets/icon/medal.svg' />
                                             </div>
-                                            <p className='fw-bold'>Best Offersr</p>
+                                            <p className='fw-bold'>Best Offer</p>
                                             <p className='sub-heading'>Inform you about all best offers<br /> for all destination</p>
                                         </div>
                                     </div>

@@ -1,27 +1,29 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import FungeLogo from '../FungeLogo'
 
 const Footer = () => {
 
     return (
         <>
             <div className='funge-footer'>
-                <div className="row icon-row text-center">
-                    <div class="col-sm-12 col-md-2">
+                <div className="row icon-row justify-content-center">
+                    <div class="col-sm-12 col-md-1">
                         <i class="fa-brands fa-twitter"></i> <span class="logo-text ms-1">Twitter</span>
                     </div>
-                    <div class="col-sm-12 col-md-2">
+                    <div class="col-sm-12 col-md-2 text-center">
                         <i class="fa-brands fa-facebook-f"></i> <span class="logo-text ms-1">Facebook</span>
                     </div>
-                    <div class="col-sm-12 col-md-2">
+                    <div class="col-sm-12 col-md-2 text-center">
                         <i class="fa-solid fa-envelope"></i> <span class="logo-text ms-1">Gmail</span>
                     </div>
-                    <div class="col-sm-12 col-md-2">
+                    <div class="col-sm-12 col-md-2 text-center">
                         <i class="fa-brands fa-slack"></i> <span class="logo-text ms-1">Slack</span>
                     </div>
-                    <div class="col-sm-4 col-md-2">
+                    <div class="col-sm-4 col-md-2 text-center">
                         <i class="fa-brands fa-reddit-alien"></i> <span class="logo-text ms-1">Reddit</span>
                     </div>
-                    <div class="col-sm-4 col-md-2">
+                    <div class="col-sm-4 col-md-1 text-end">
                         <i class="fa-brands fa-youtube"></i> <span class="logo-text ms-1">Youtube</span>
                     </div>
                 </div>
@@ -32,7 +34,7 @@ const Footer = () => {
                             <br />
                             <br />
                             <br />
-                            <a className='funge-link' href='#'>Learn More</a>
+                            <Link className='funge-link' to="/">Learn More</Link>
                         </p>
                     </div>
                     <div className='col-md-5 mt-3'>
@@ -52,52 +54,48 @@ const Footer = () => {
                 <hr className='footer-seprator' />
                 <div class="row justify-content-center p-4">
                     <div class="col-md-2 col-sm-12">
-                        <img
-                            src="./assets/images/logo.svg"
-                            alt=""
-                            className="img-fluid footer-logo"
-                        />
+                        <FungeLogo/>
                         <p class="pt-3">There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
                     </div>
                     <div className='col-md-1'></div>
                     <div class="col-md-2 col-sm-12">
                         <h5>Funge</h5>
                         <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">About Us</a>
-                            <a href="#">Help Center</a>
-                            <a href="#">Careers</a>
-                            <a href="#">Company</a>
+                            <Link to="/">About Us</Link>
+                            <Link to="/">Help Center</Link>
+                            <Link to="/">Careers</Link>
+                            <Link to="/">Company</Link>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <h5>Community</h5>
                         <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">Blog</a>
-                            <a href="#">Funge Token</a>
-                            <a href="#">Suggest feature</a>
-                            <a href="#">Terms and conditions</a>
+                            <Link to="/">Blog</Link>
+                            <Link to="/">Funge Token</Link>
+                            <Link to="/">Suggest feature</Link>
+                            <Link to="/">Terms and conditions</Link>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <h5>Resources</h5>
                         <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">Blog</a>
-                            <a href="#">Funge Token</a>
-                            <a href="#">Suggest feature</a>
-                            <a href="#">Terms and conditions</a>
+                            <Link to="/">Blog</Link>
+                            <Link to="/">Funge Token</Link>
+                            <Link to="/">Suggest feature</Link>
+                            <Link to="/">Terms and conditions</Link>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <h5>Resources</h5>
                         <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">Blog</a>
-                            <a href="#">Funge Token</a>
-                            <a href="#">Suggest feature</a>
-                            <a href="#">Terms and conditions</a>
+                            <Link to="/">Blog</Link>
+                            <Link to="/">Funge Token</Link>
+                            <Link to="/">Suggest feature</Link>
+                            <Link to="/">Terms and conditions</Link>
                         </div>
                     </div>
                     <div className='col-md-11'>
-                        <small>©2020 Funge. All Rights Reserved</small>
+                        <small>©2022 Funge. All Rights Reserved</small>
                     </div>
                 </div>
             </div>
