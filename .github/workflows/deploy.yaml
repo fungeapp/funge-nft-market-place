@@ -19,12 +19,12 @@ jobs:
         comment: Deploy the main branch
         working-directory: /var/www/html/dev.fungeapp.com
         command: |
-          sudo rm package-lock.json
+          sudo rm package-lock.json npm-*.out
           sudo git pull origin main
           sudo rm package-lock.json
           sudo rm -rf node_modules
           sudo rm -rf build
-          sudo npm install
-          sudo npm run build
+          sudo npm install  2>&1 | tee npm-install.out
+          sudo npm run build 2>&1 | tee npm-build.out
           sudo nginx -t
           sudo systemctl restart nginx
