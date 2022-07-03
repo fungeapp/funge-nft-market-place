@@ -40,6 +40,8 @@ const ProfileLogin = (props) => {
     const magic = new Magic(magickey, {
         extensions: [new OAuthExtension()]
     });
+    const [email, setemail] = useState();
+    const [phone, setphone] = useState();
 
     
     useEffect(() => {
@@ -66,8 +68,11 @@ const ProfileLogin = (props) => {
 
     
     const login = async () => {
+        console.log(`login triggered`)
         await magic.oauth.loginWithRedirect({
-            provider: ["google", "facebook"],
+            email: email,
+            showUI: true,
+            redirectURI: "https://dev.fungeapp.com/profile"
         });
     }
 
@@ -100,7 +105,7 @@ const ProfileLogin = (props) => {
                                             <Button
                                                 aria-label="Email"
                                                 className='btn-primary'
-                                                onClick={() => emailAddress("Email")}
+                                                onClick={() => setemail("jaypersanchez@gmail.com")}
                                             >
                                                 <img alt={''} src={"./assets/images/metamask.svg"}/>
                                                 
@@ -112,7 +117,7 @@ const ProfileLogin = (props) => {
                                             <Button
                                                 aria-label="Phone Number"
                                                 className='btn-primary'
-                                                onClick={() => phoneNumber("Phone Number")}
+                                                onClick={() => setphone("7786787565")}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
                                                 
