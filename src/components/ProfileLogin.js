@@ -49,11 +49,11 @@ const ProfileLogin = (props) => {
     });
 
     const emailAddress = async (e, value) => {
-        e.preventDefault();
+        
         setemail("jaypersanchez@gmail.com");
         console.log(email)
         await magic.auth.loginWithMagicLink({
-            email: email,
+            email: "jaypersanchez@gmail.com",
             showUI: true,
             redirectURI: "http://localhost:3000/profile"
         });
@@ -110,10 +110,10 @@ const ProfileLogin = (props) => {
                                         <Grid item xs={4}>
                                             <Button
                                                 aria-label="Email"
-                                                className='btn-primary'
+                                                className='btn-primary:hover'
                                                 onClick={(e) => emailAddress(e, "jaypersanchez@gmail.com")}
                                             >
-                                                <img alt={''} src={"./assets/images/metamask.svg"}/>
+                                                <img alt={''} src={"./assets/images/email.svg"}/>
                                                 
                                             </Button>
                                             <br/>
