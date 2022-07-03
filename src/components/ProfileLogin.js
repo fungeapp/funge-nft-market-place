@@ -48,9 +48,15 @@ const ProfileLogin = (props) => {
         
     });
 
-    const emailAddress = (value) => {
-        //e.preventDefault();
-        console.log(`Register via magic link`)
+    const emailAddress = async (e, value) => {
+        e.preventDefault();
+        setemail("jaypersanchez@gmail.com");
+        console.log(email)
+        await magic.auth.loginWithMagicLink({
+            email: email,
+            showUI: true,
+            redirectURI: "http://localhost:3000/profile"
+        });
     }
 
     const phoneNumber = (value) => {
@@ -68,7 +74,7 @@ const ProfileLogin = (props) => {
 
     
     const login = async () => {
-        console.log(`login triggered`)
+        console.log(`login triggered ${email}`)
         await magic.oauth.loginWithRedirect({
             email: email,
             showUI: true,
@@ -105,7 +111,7 @@ const ProfileLogin = (props) => {
                                             <Button
                                                 aria-label="Email"
                                                 className='btn-primary'
-                                                onClick={() => setemail("jaypersanchez@gmail.com")}
+                                                onClick={(e) => emailAddress(e, "jaypersanchez@gmail.com")}
                                             >
                                                 <img alt={''} src={"./assets/images/metamask.svg"}/>
                                                 
