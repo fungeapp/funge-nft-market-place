@@ -1,25 +1,24 @@
 import React from 'react'
 import env from 'react-dotenv'
-import ProfileLogin from './ProfileLogin'
+import ProfileLogin from '../ProfileLogin'
+import { Link } from 'react-router-dom'
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
+
 const TopNavBar = () => {
-    const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
+    const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
     return (
         <>
-        <div className="header">
+            <div className="header">
                 <div className="my_nav">
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
                         <div className="container-fluid">
-                            <a className="navbar-brand"
-                                href="#">
-                                <img
-                                    src="./assets/images/logo.svg"
-                                    alt=""
-                                    className="img-fluid"
-                                />
-                            </a>
+                            <Link className="navbar-brand" to="/"><img
+                                src="./assets/images/logo.svg"
+                                alt=""
+                                className="img-fluid"
+                            /></Link>
                             <div className="search_sectio">
                                 <div className="input-group">
                                     <span className="input-group-text"
@@ -82,26 +81,17 @@ const TopNavBar = () => {
                             >
                                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                     <li className="nav-item">
-                                        <a className="nav-link"
-                                            href="#">
-                                            Explore
-                                        </a>
+                                    <Link className='nav-link' to="/explore">Explore</Link>
                                     </li>
 
                                     <li className="nav-item">
-                                        <a className="nav-link"
-                                            href="#">
-                                            About Us
-                                        </a>
+                                    <Link className='nav-link' to="/about">About us</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link"
-                                            href="#">
-                                            Community
-                                        </a>
+                                    <Link className='nav-link' to="/community">Community</Link>
                                     </li>
                                     <li className="nav-item">
-                                    <button className='btn btn-primary' onClick={ isAuthenticated ? logout : loginWithPopup}>{ isAuthenticated ? "Sign Out" : "Sign In"}</button>
+                                        <ProfileLogin btnText={"Sign-In"} />
                                     </li>
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>

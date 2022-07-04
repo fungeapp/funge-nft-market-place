@@ -7,10 +7,18 @@ a.funge-link {
     color: #71AFAC !important;
     text-decoration: none;
 }
-.sub-heading{
-    color:#5A7184 !important;
+.funge-color {
+    color: #71AFAC !important;
 }
 
+.sub-heading {
+    color: #5A7184 !important;
+}
+button.post-primary-btn{
+    border-radius: 40px !important;
+    padding: 6px 30px;
+    font-size: 14px !important;
+}
 /*--------------------------------------------------
 [1. Start Home 24-02-2022]
 --------------------------------------------------*/
@@ -138,11 +146,12 @@ a.funge-link {
     padding: 0;
 }
 
-.icon-row .fa-brands, .icon-row .fa-solid {
+.icon-row .fa-brands,
+.icon-row .fa-solid {
     color: #71AFAC;
     font-size: 18px;
     position: relative;
-    top:1px;
+    top: 1px;
 }
 
 .icon_btn:focus {
@@ -383,10 +392,17 @@ section#hiro {
     margin-bottom: 30px;
 }
 
-.hiro_col_left button.get-started-btn{
+.hiro_col_left button.get-started-btn {
     border-radius: 40px !important;
     width: 70%;
     height: 50px;
+}
+
+button.get-started-btn {
+    border-radius: 40px !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 45px;
 }
 
 .hiro_contant .d-flex .btn {
@@ -515,13 +531,15 @@ section#hiro {
 
 /* hiro section style end  */
 /* collection section style start  */
-.collection .dropdown-toggle.filter-dropdown{
+.collection .dropdown-toggle.filter-dropdown {
     background-color: #fff !important;
     color: #71AFAC;
 }
-.collection .filter-dropdown::after{
+
+.collection .filter-dropdown::after {
     border: 0px;
 }
+
 .collection .collection_heading .dropdown-menu {
     background-color: #71AFAC;
 }
@@ -588,9 +606,11 @@ section#hiro {
     overflow-x: auto;
     white-space: nowrap;
 }
-.collection-table tbody tr td, .collection-table tbody tr th{
-    padding-top:30px !important;
-    padding-bottom:30px !important;
+
+.collection-table tbody tr td,
+.collection-table tbody tr th {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
 }
 
 @media(max-width:425px) {
@@ -697,7 +717,6 @@ section#hiro {
 }
 
 .footer_top {
-    background: #F7F8FA;
     padding: 64px 0;
     margin-top: 100px;
 }
@@ -7664,9 +7683,11 @@ ul.pattern .color3 {
 .top_resources {
     /* border-radius: 10px !important; */
 }
-.post-card{
+
+.post-card {
     border-radius: 10px !important;
 }
+
 .top_resources .post_header h2 {
     font-weight: 700;
     font-size: 26px;
@@ -9689,28 +9710,33 @@ ul.pattern .color3 {
     }
 }
 
-.signup-btn{
+.signup-btn {
     border-radius: 40px !important;
-    padding: 9px 24px!important;
-    font-size:14px !important;
+    padding: 9px 24px !important;
+    font-size: 14px !important;
 }
 
 
 /* Funge Footer Start*/
 
+.logo-text {
+    font-weight: 500;
+}
+
 .funge-footer {
     background-color: #FFFFFF;
     padding-top: 100px;
+    padding-bottom: 50px;
     min-height: 500px;
 }
 
-.footer-seprator{
+.footer-seprator {
     margin: 40px 40px;
     border: 1px solid #E3E4E4;
 }
 
 @media(max-width:768px) {
-    .footer-seprator{
+    .footer-seprator {
         margin: 40px 20px;
     }
 }
@@ -9727,45 +9753,260 @@ ul.pattern .color3 {
 }
 
 .footer-signup {
-    border: 1px solid #E7E8EA;
-    border-radius: 12px;
-    height: 43px;
-    width: 200px;
+    border: 1px solid #E7E8EA !important;
+    border-radius: 12px !important;
     margin-right: 5px;
+    width: 350px !important;
+    height: 50px;
 }
 
 .footer-button {
+    min-width: 150px;
+    height: 50px;
     background: #71AFAC;
     border-radius: 10px;
     border: 0px;
     color: #FFFFFF;
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-left:25px;
-    padding-right:25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    padding-right: 22px;
 }
+
 .footer-signup::placeholder {
     color: #A0A1AB;
-    padding-left:5px
+    padding-left: 5px;
+    font-size: 14px;
 }
+
 /* Funge Footer End */
 
 /* Travelya Card */
-.card-travelya{
-    border-color:#E5EAF4 !important;
+.card-travelya {
+    border-color: #E5EAF4 !important;
     border-radius: 8px !important;
 }
-.travelya-icon{
+
+.card-travelya:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.travelya-icon {
     width: 80px;
     height: 80px;
     margin: auto;
     border-radius: 16px;
 }
-.card-travelya:hover{
-    border-color:none;
+
+.card-travelya:hover {
+    border-color: none;
     box-shadow: #0F172A;
 }
-.card-travelya .sub-heading{
+
+.card-travelya .sub-heading {
     font-size: 14px;
     font-weight: 400;
 }
+
+/* Free Trial Section Start */
+.free-trial {
+    height: 400px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url('../images/CTA.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+/* Free Trial Section End */
+
+/* Section 4 */
+.section-4 {
+    background-color: #F2F9F9;
+}
+
+.section-7 {
+    background-color: #F2F9F9;
+}
+
+/* Coin Market CSS */
+.coin-market div .MuiDataGrid-root {
+    border: 0px;
+    color: #212529;
+    font-size: 16px;
+}
+
+.coin-market .MuiTablePagination-displayedRows {
+    margin-top: 14px;
+}
+
+.coin-market .MuiDataGrid-footerContainer {
+    border: 0px;
+}
+
+.coin-market div .MuiDataGrid-iconSeparator {
+    color: white;
+}
+
+/* signin css */
+.siginin-left-box {
+    background-color: #E4F2F2;
+}
+
+.signin-btn-adv {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #374151;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 36px;
+    margin-top: 30px;
+}
+
+.sigin-card-btn {
+    width: 100%;
+}
+
+.footer-btn {
+    width: 100% !important;
+    padding: 10px 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .footer-btn {
+        width: 48%;
+    }
+}
+
+.btn-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.signin-card {
+    border-radius: 25px !important;
+}
+
+#logintab .nav-link {
+    font-weight: 600;
+    color: #94A3B8;
+    border: 0px;
+    border-bottom: 1px solid #CBD5E1;
+}
+
+#logintab.nav-tabs {
+    border-bottom: 1px solid #CBD5E1;
+}
+
+#logintab .nav-link.active {
+    font-weight: 600;
+    color: #000;
+    border-bottom: 1px solid #71AFAC;
+}
+
+/* Login Page CSS Start */
+.login-button {
+    background: #71AFAC;
+    border-radius: 40px;
+    border: 0px;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.login-input {
+    border: 1px solid #E7E8EA;
+    border-radius: 12px;
+    background-color: #E7E8EA;
+    font-size: 14px;
+    padding-left: 14px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+}
+
+.login-input::placeholder {
+    color: #A0A1AB;
+    padding-left: 5px
+}
+.login-input:focus{
+    outline: none;
+    background-color: #f5f3f4;
+}
+
+.phone-button {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.phone-button:hover{
+    background: #f5f3f4;
+}
+
+.login-btn.btn-primary {
+    border-radius: 40px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.phoneModal .modal-content{
+    border-radius: 20px !important;
+    border: 0px;
+}
+
+.funge-modal-close{
+    font-size: 11px !important;
+    padding: 14px 14px !important;
+    border-radius: 50% !important;
+}
+.funge-modal-close:hover{
+    background-color: #f5f3f4;
+}
+input.otp-input{
+    width: 52px;
+    height: 52px;
+    margin-left: 10px;
+}
+
+/* Login Page CSS End */
+
+/* Feeds Page Start */
+
+/* Feed Post */
+.feeds{
+    background-color: #FAFAFA;
+}
+.border-radius {
+    border-radius: 24px !important;
+}
+
+/* Feeds Page End */
+
+/* Posts style Start */
+.post-text-area{
+    border:0px;
+    margin-top: 10px;
+    resize: none;
+    width: 100%;
+}
+.post-text-area:focus-visible{
+    outline:none;
+}
+/* Posts style End */
