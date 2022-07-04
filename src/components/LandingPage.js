@@ -61,14 +61,14 @@ const LandingPage = () => {
                             </h2>
                         </div>
                         <div className='col-md-6 text-end'>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-primary filter-dropdown dropdown-toggle px-3" data-bs-toggle="dropdown">
-                                    <span className='text-dark'>Filter By </span> Collection &nbsp; <i class="fas fa-angle-down"></i>
+                            <div className="dropdown">
+                                <button type="button" className="btn btn-primary filter-dropdown dropdown-toggle px-3" data-bs-toggle="dropdown">
+                                    <span className='text-dark'>Filter By </span> Collection &nbsp; <i className="fas fa-angle-down"></i>
                                 </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Collection 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Collection 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Collection 3</a></li>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Collection 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Collection 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Collection 3</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -234,7 +234,7 @@ const LandingPage = () => {
                             <button className='btn btn-primary get-started-btn'>Start Learning</button>
                         </div>
                         <div className='col-md-4 p-5 text-end section-thumb'>
-                            <img src='./assets/images/falling_coins.png' width={500} />
+                            <img src='./assets/images/falling_coins.png'className='img-fluid' />
                         </div>
                     </div>
                 </div>
@@ -252,9 +252,9 @@ const LandingPage = () => {
                         <div className="container-fluid">
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-3">
-                                    <div class="card post-card shadow">
-                                        <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
-                                        <div class="card-body">
+                                    <div className="card post-card shadow">
+                                        <img className="card-img-top" src="./assets/images/rect.png" alt="Card image" />
+                                        <div className="card-body">
                                             <div className="top_resources">
                                                 <div className="post_box text-start m-0">
                                                     <h2>Tons of rewards from Funge
@@ -279,9 +279,9 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <div class="card post-card shadow">
-                                        <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
-                                        <div class="card-body">
+                                    <div className="card post-card shadow">
+                                        <img className="card-img-top" src="./assets/images/rect.png" alt="Card image" />
+                                        <div className="card-body">
                                             <div className="top_resources">
                                                 <div className="post_box text-start m-0">
                                                     <h2>Tons of rewards from Funge
@@ -306,9 +306,9 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <div class="card post-card shadow">
-                                        <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
-                                        <div class="card-body">
+                                    <div className="card post-card shadow">
+                                        <img className="card-img-top" src="./assets/images/rect.png" alt="Card image" />
+                                        <div className="card-body">
                                             <div className="top_resources">
                                                 <div className="post_box text-start m-0">
                                                     <h2>Tons of rewards from Funge

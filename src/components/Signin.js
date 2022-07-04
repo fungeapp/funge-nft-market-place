@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom'
 const Signin = () => {
     return (
         <>
-            <div class="container-fluid">
-                <div class="row vh-100">
-                    <div class="col-md-4 p-0 siginin-left-box">
+            <div className="container-fluid">
+                <div className="row vh-100">
+                    <div className="col-md-4 p-0 siginin-left-box">
                         <div className='row justify-content-end'>
                             <div className='col-md-11 pt-4 ps-5'>
                                 <br />
@@ -17,23 +17,23 @@ const Signin = () => {
                                 <br />
                                 <br />
                                 <br />
-                                <h2 class="pe-2 w-800">Endless Possibilities<br />
+                                <h2 className="pe-2 w-800">Endless Possibilities<br />
                                     with Funge</h2>
-                                <p class="pe-3 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                <p className="pe-3 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                                <div class="mt-5">
-                                    <img class="float-end img-fluid" src="./assets/images/login_img.png" />
+                                <div className="mt-5">
+                                    <img className="float-end img-fluid" src="./assets/images/login_img.png" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8 p-0">
-                        <div class="d-flex justify-content-end mt-5 me-5">
-                            <span class="text-black-50">
-                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <div className="col-md-8 p-0">
+                        <div className="d-flex justify-content-end mt-5 me-5">
+                            <span className="text-black-50">
+                                <i className="fa-solid fa-arrow-right-to-bracket"></i>
                                 <Link className='btn text-black-50 mb-1' to="/">Back To Home</Link></span>
                         </div>
-                        <div class="justify-content-center mt-5">
+                        <div className="justify-content-center mt-5">
                             <div className='col-md-12 d-flex justify-content-center'>
                                 <div className='col-md-6 col-sm-12 mx-2 p-4'>
                                     <div className='card signin-card'>
@@ -42,36 +42,36 @@ const Signin = () => {
                                         <p className='sub-heading'>
                                             Hey! Welcome to Funge. Choose one of available wallet providers or create a new wallet. <a href='#' className='funge-link'>What is a wallet?</a>
                                         </p>
-                                        <ul class="nav nav-tabs" id="logintab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="ethereum-tab" data-bs-toggle="tab" data-bs-target="#ethereum" type="button" role="tab" aria-controls="ethereum" aria-selected="true"><i class="fab fa-ethereum"></i> Ethereum</button>
+                                        <ul className="nav nav-tabs" id="logintab" role="tablist">
+                                            <li className="nav-item" role="presentation">
+                                                <button className="nav-link active" id="ethereum-tab" data-bs-toggle="tab" data-bs-target="#ethereum" type="button" role="tab" aria-controls="ethereum" aria-selected="true"><i className="fab fa-ethereum"></i> Ethereum</button>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="polygon-tab" data-bs-toggle="tab" data-bs-target="#polygon" type="button" role="tab" aria-controls="polygon" aria-selected="false"><img src="./assets/images/poligon-2.png" /> Polygon</button>
+                                            <li className="nav-item" role="presentation">
+                                                <button className="nav-link" id="polygon-tab" data-bs-toggle="tab" data-bs-target="#polygon" type="button" role="tab" aria-controls="polygon" aria-selected="false"><img src="./assets/images/poligon-2.png" /> Polygon</button>
                                             </li>
                                         </ul>
-                                        <div class="tab-content" id="myTabContent">
+                                        <div className="tab-content" id="myTabContent">
                                             <br />
-                                            <div class="tab-pane fade show active" id="ethereum" role="tabpanel" aria-labelledby="ethereum-tab">
-                                                <button class="signin-btn-adv sigin-card-btn">
-                                                    <span class="btn-icon float-start">
+                                            <div className="tab-pane fade show active" id="ethereum" role="tabpanel" aria-labelledby="ethereum-tab">
+                                                <button className="signin-btn-adv sigin-card-btn">
+                                                    <span className="btn-icon float-start">
                                                         <img className='p-1' src="./assets/images/fox-trans.png" />
                                                     </span>
                                                     Metamask</button>
-                                                <button class="signin-btn-adv sigin-card-btn">
-                                                    <span class="btn-icon float-start">
+                                                <button className="signin-btn-adv sigin-card-btn">
+                                                    <span className="btn-icon float-start">
                                                         <img src="./assets/images/wallet-connect-trans.png" />
                                                     </span>
                                                     Wallet Connect</button>
                                             </div>
-                                            <div class="tab-pane fade" id="polygon" role="tabpanel" aria-labelledby="polygon-tab">
-                                            <button class="signin-btn-adv sigin-card-btn">
-                                                    <span class="btn-icon float-start">
+                                            <div className="tab-pane fade" id="polygon" role="tabpanel" aria-labelledby="polygon-tab">
+                                            <button className="signin-btn-adv sigin-card-btn">
+                                                    <span className="btn-icon float-start">
                                                         <img className='p-1' src="./assets/images/fox-trans.png" />
                                                     </span>
                                                     - Metamask -</button>
-                                                <button class="signin-btn-adv sigin-card-btn">
-                                                    <span class="btn-icon float-start">
+                                                <button className="signin-btn-adv sigin-card-btn">
+                                                    <span className="btn-icon float-start">
                                                         <img src="./assets/images/wallet-connect-trans.png" />
                                                     </span>
                                                     - Wallet Connect -</button>
@@ -91,9 +91,9 @@ const Signin = () => {
                                                 Or sign up with email or mobile number
                                             </p>
                                         </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <button class="signin-btn-adv footer-btn mt-3">
-                                                <span class="btn-icon float-start">
+                                        <div className="col-md-6 col-sm-12">
+                                            <button className="signin-btn-adv footer-btn mt-3">
+                                                <span className="btn-icon float-start">
                                                     <svg width="35" height="16" viewBox="0 0 20 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -104,8 +104,8 @@ const Signin = () => {
                                                 Email Address</button>
                                         </div>
                                         <div className='col-md-6 col-sm-12'>
-                                            <button class="signin-btn-adv footer-btn mt-3">
-                                                <span class="btn-icon float-start">
+                                            <button className="signin-btn-adv footer-btn mt-3">
+                                                <span className="btn-icon float-start">
                                                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M3.5353 1.20698C4.59919 0.568646 5.97417 0.845671 6.70786 1.84617L8.33564 4.06586C9.02846 5.01062 9.13465 6.26354 8.61071 7.31142L8.18391 8.16501C8.06036 8.41212 8.04082 8.69796 8.16721 8.94362C8.39746 9.39119 8.88779 10.1844 9.83237 11.1289C10.7769 12.0735 11.5701 12.5638 12.0177 12.7941C12.2633 12.9205 12.5492 12.9009 12.7963 12.7774L13.6499 12.3506C14.6978 11.8267 15.9507 11.9328 16.8954 12.6257L19.1151 14.2534C20.1156 14.9871 20.3927 16.3621 19.7543 17.426C18.4285 19.6357 15.883 20.7953 13.5766 19.646C11.6327 18.6774 9.14866 17.0743 6.51781 14.4435C3.88696 11.8126 2.28388 9.32862 1.31526 7.38474C0.165965 5.07828 1.32559 2.5328 3.5353 1.20698Z" fill="#71AFAC" />
                                                     </svg>
