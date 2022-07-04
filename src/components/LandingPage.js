@@ -1,9 +1,8 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import { TopCollectionsModel } from './topcollection/top-collection-model';
 import TopCollectionsView from './topcollection/top-collection-view';
 import { DataGrid } from '@mui/x-data-grid';
-//import { TopCollectionsModel} from './topcollection/top-collection-model';
-//import TopCollectionsView from './topcollection/top-collection-view';
 import CoinMarket from './LandingPage/CoinMarket';
 import ProfileLogin from './ProfileLogin';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
@@ -12,6 +11,9 @@ import TopNavBar from './LandingPage/TopNavBar';
 import Footer from './LandingPage/Footer';
 
 const LandingPage = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <TopNavBar />
@@ -27,7 +29,7 @@ const LandingPage = () => {
                                 eiusmod tempor amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                             </p>
-                            <button className="btn btn-primary w-600 get-started-btn">
+                            <button className="btn btn-primary w-600 get-started-btn" onClick={() => {navigate('/signin')}}>
                                 Get Started
                             </button>
 
