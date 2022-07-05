@@ -48,20 +48,18 @@ const ProfileLogin = (props) => {
         
     });
 
-    const emailAddress = async (e, value) => {
-        
-        setemail("jaypersanchez@gmail.com");
-        console.log(email)
+    const emailAddress = async (e) => {
+        console.log(`By email ${email}`)
         await magic.auth.loginWithMagicLink({
-            email: "jaypersanchez@gmail.com",
+            email: email,
             showUI: true,
             redirectURI: "http://localhost:3000/profile"
         });
     }
 
-    const phoneNumber = (value) => {
+    const phoneNumber = (e) => {
         //e.preventDefault();
-        console.log(`Register by phone`)
+        console.log(`By phone ${phone}`)
     }
 
     const handleDialogClose = () => {
@@ -73,14 +71,14 @@ const ProfileLogin = (props) => {
     };
 
     
-    const login = async () => {
+    /*const login = async () => {
         console.log(`login triggered ${email}`)
         await magic.oauth.loginWithRedirect({
             email: email,
             showUI: true,
             redirectURI: "https://dev.fungeapp.com/profile"
         });
-    }
+    }*/
 
         return(
             <>
@@ -104,48 +102,49 @@ const ProfileLogin = (props) => {
                                     Hey! Welcome to Funge. Please login or sign up with your email address or mobile number.
                                     </Typography>
                                 </ListItem>
-                                
+                                <ListItem>
+                                    <TextField id="outlined-basic" label="Email" variant="outlined" onChange={(e) => setemail(e.target.value)}/>
+                                </ListItem>
                                 <ListItem>
                                     <Grid container alignItems={"center"} spacing={2}>
                                         <Grid item xs={4}>
                                             <Button
                                                 aria-label="Email"
                                                 className='btn-primary:hover'
-                                                onClick={(e) => emailAddress(e, "jaypersanchez@gmail.com")}
+                                                onClick={(e) => emailAddress(e)}
                                             >
                                                 <img alt={''} src={"./assets/images/email.svg"}/>
                                                 
                                             </Button>
                                             <br/>
-                                            Email Address
+                                            Login by Email
                                         </Grid>
-                                        <Grid item xs={4}>
+                                        
+                                    </Grid>
+                                </ListItem>
+                                <br/>
+                                <ListItem>
+                                    <TextField id="outlined-basic" label="Mobile" variant="outlined" onChange={(e) => setphone(e.target.value)}/>
+                                </ListItem>
+                                <ListItem>
+                                <Grid container alignItems={"center"} spacing={2}>
+                                <Grid item xs={4}>
                                             <Button
                                                 aria-label="Phone Number"
                                                 className='btn-primary'
-                                                onClick={() => setphone("7786787565")}
+                                                onClick={(e) => phoneNumber(e)}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
                                                 
                                             </Button>
                                             <br/>
-                                           Phone Number
+                                           Login by Mobile Number
                                         </Grid>
-                                    </Grid>
+                                </Grid>
                                 </ListItem>
                             </List>
                         </DialogContent>
-                        <DialogActions>
-                            <Button
-                                disabled={btnStatus}
-                                sx={{float: "right"}}
-                                variant="outlined"
-                                color="primary"
-                                onClick={login}
-                            >
-                                Connect
-                            </Button>
-                        </DialogActions>
+                        
                     </Dialog>
                 </>
         );
