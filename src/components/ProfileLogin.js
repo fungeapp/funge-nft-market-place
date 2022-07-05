@@ -24,7 +24,8 @@ import {
 import MaterialIcon, {colorPalette} from 'material-icons-react';
 import Web3 from 'web3/dist/web3.min.js'
 import { Magic } from 'magic-sdk';
-import { OAuthExtension } from '@magic-ext/oauth'
+import { OAuthExtension } from '@magic-ext/oauth';
+import axios from 'axios';
 
 
 const ProfileLogin = (props) => {
@@ -53,13 +54,21 @@ const ProfileLogin = (props) => {
         await magic.auth.loginWithMagicLink({
             email: email,
             showUI: true,
-            redirectURI: "http://localhost:3000/profile"
-        });
+            redirectURI: `${env.BASE_URL}/profile`
+        })
+        .then(
+            //save email address
+            console.log(`save profile ${env.BASE_URL}`)
+        )
     }
 
-    const phoneNumber = (e) => {
+    const phoneNumber = async (e) => {
         //e.preventDefault();
-        console.log(`By phone ${phone}`)
+        console.log(`By phone ${phone}`);
+        const DID = await magic.auth.loginWithSMS({
+            phoneNumber: `+${phone}`,
+            redirectURI: `http://localhost:3000/profile`
+        });
     }
 
     const handleDialogClose = () => {
@@ -131,7 +140,7 @@ const ProfileLogin = (props) => {
                                 <Grid item xs={4}>
                                             <Button
                                                 aria-label="Phone Number"
-                                                className='btn-primary'
+                                                className='btn-primary:hover'
                                                 onClick={(e) => phoneNumber(e)}
                                             >
                                                 <img alt={''} src={"./assets/images/wallet_connect.svg"}/>
