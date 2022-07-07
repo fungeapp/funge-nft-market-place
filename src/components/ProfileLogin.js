@@ -51,15 +51,42 @@ const ProfileLogin = (props) => {
 
     const emailAddress = async (e) => {
         console.log(`By email ${email}`)
-        await magic.auth.loginWithMagicLink({
-            email: email,
-            showUI: true,
-            redirectURI: `${env.BASE_URL}/profile`
+        //save email info alread
+        axios.get(`http://localhost:3006/users/exist/${email}`)
+        .then(response => {
+            let exist = response.data
+            console.log(`email exist ${exist}`)
+            if(!exist) {
+                //insert nothing else to do if email already exsit.
+                axios({
+                    method: 'post',
+                    url: `http://localhost:3006/users/save`,
+                    data: {
+                            "given_name": "",
+                            "family_name": "",
+                            "phonenumber":"",
+                            "nickname": "",
+                            "name": "",
+                            "picture": "",
+                            "locale": "en",
+                            "updated_at": "",
+                            "email": email,
+                            "email_verified": false,
+                            "sub": ""
+                    }
+                })
+            }
+            return email
         })
-        .then(
-            //save email address
-            console.log(`save profile ${env.BASE_URL}`)
-        )
+        .then( email => {
+            magic.auth.loginWithMagicLink({
+                email: email,
+                showUI: true,
+                redirectURI: `${env.BASE_URL}/feeds`
+            })
+        })
+        
+        
     }
 
     const phoneNumber = async (e) => {
@@ -67,7 +94,7 @@ const ProfileLogin = (props) => {
         console.log(`By phone ${phone}`);
         const DID = await magic.auth.loginWithSMS({
             phoneNumber: `+${phone}`,
-            redirectURI: `http://localhost:3000/profile`
+            redirectURI: `${env.BASE_URL}/profile`
         });
     }
 
