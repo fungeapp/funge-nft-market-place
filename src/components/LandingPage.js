@@ -242,8 +242,6 @@ const LandingPage = () => {
                 </div>
             </section>
 
-
-
             <section>
                 <div className="footer_top">
                     <div className="text-center">

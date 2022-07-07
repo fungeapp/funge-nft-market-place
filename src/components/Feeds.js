@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{state, useState} from 'react';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
 
 const Feeds = () => {
+
+  const [isActive,setActive] = useState("home");
 
   return (
     <>
@@ -14,58 +16,58 @@ const Feeds = () => {
             <ul className="list-unstyled ps-0">
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                  <i class="fas fa-align-left me-3 funge-color"></i>Feeds
+                  <i className="fas fa-align-left me-3 funge-color"></i>Feeds <i className="fas fa-angle-up float-end"></i>
                 </button>
                 <div className="collapse show" id="home-collapse">
                   <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" className="link-dark rounded">Home</a></li>
-                    <li><a href="#" className="link-dark rounded">Notifications</a></li>
-                    <li><a href="#" className="link-dark rounded">Messages</a></li>
-                    <li><a href="#" className="link-dark rounded">Saved</a></li>
-                    <li><a href="#" className="link-dark rounded">Profile</a></li>
+                    <li><a href="#" className={` ${isActive === "home" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</a></li>
+                    <li><a href="#" className={` ${isActive === "notifications" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</a></li>
+                    <li><a href="#" className={` ${isActive === "messages" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</a></li>
+                    <li><a href="#" className={` ${isActive === "saved" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Saved</a></li>
+                    <li><a href="#" className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</a></li>
                   </ul>
                 </div>
               </li>
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" data-bs-toggle="collapse" data-bs-target="#explore-collapse" aria-expanded="true">
-                <i class="fas fa-store me-3 funge-color"></i> Explore
+                <i className="fas fa-store me-3 funge-color"></i> Explore <i className="fas fa-angle-down float-end"></i>                
                 </button>
                 <div className="collapse" id="explore-collapse">
                   <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" className="link-dark rounded">Home</a></li>
-                    <li><a href="#" className="link-dark rounded">Notifications</a></li>
-                    <li><a href="#" className="link-dark rounded">Messages</a></li>
+                    <li><a href="#" className={` ${isActive === "home1" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</a></li>
+                    <li><a href="#" className={` ${isActive === "notifications1" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</a></li>
+                    <li><a href="#" className={` ${isActive === "messages1" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</a></li>
                   </ul>
                 </div>
-              </li>
+              </li> 
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i class="fas fa-wallet me-3 funge-color"></i> Wallet
+                <i className="fas fa-chart-pie me-3 funge-color"></i> Wallet
                 </button>
               </li>
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i class="fas fa-wallet me-3 funge-color"></i> Analytics
+                <i className="fa fa-folder-open me-3 funge-color"></i>Analytics
                 </button>
               </li>
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i class="fas fa-wallet me-3 funge-color"></i> Media
+                <i className="fa fa-briefcase me-3 funge-color"></i> Media
                 </button>
               </li>
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i class="fas fa-wallet me-3 funge-color"></i> Refer and Earn
+                <i className="fa fa-briefcase me-3 funge-color"></i> Refer and Earn
                 </button>
               </li>
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i class="fas fa-wallet me-3 funge-color"></i> Hire
+                <i className="fa fa-briefcase me-3 funge-color"></i> Hire
                 </button>
               </li>
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i class="fas fa-wallet me-3 funge-color"></i> Rewards
+                <i className="fa fa-briefcase me-3 funge-color"></i> Rewards
                 </button>
               </li>
             </ul>

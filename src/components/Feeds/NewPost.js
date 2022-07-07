@@ -16,7 +16,7 @@ const NewPost = (props) => {
                             </div>
                         </div>
                         <div className="row mb-2 mt-4 px-2">
-                            <div className="col-4 d-flex justify-content-between align-self-center">
+                            <div className="col-4 d-flex justify-content-between align-self-center newpost-controls">
                                 <i className="fas fa-image"></i>
                                 <i className="fas fa-user-plus"></i>
                                 <i className="far fa-smile"></i>

@@ -1,12 +1,7 @@
 import React from 'react'
-import env from 'react-dotenv'
-import ProfileLogin from './ProfileLogin'
 import { Link } from 'react-router-dom'
-import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
-
 
 const TopBar = () => {
-    const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
     return (
         <>
@@ -51,7 +46,7 @@ const TopBar = () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        placeholder="Feeds"
+                                        placeholder="Search NFT,Creator,Collections"
                                         aria-label="Username"
                                         aria-describedby="basic-addon1"
                                     />
@@ -79,20 +74,40 @@ const TopBar = () => {
                                 className="collapse align-items-center navbar-collapse"
                                 id="navbarSupportedContent"
                             >
-                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                                     <li className="nav-item">
-                                    <Link className='nav-link' to="/explore">Explore</Link>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm dropdown-toggle lang-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i className="fas fa-globe funge-color p-2 bg-white"></i> English
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li className="dropdown-item">English 1</li>
+                                                <li className="dropdown-item">English 2</li>
+                                                <li className="dropdown-item">English 3</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-envelope funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-bell funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-cog funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-wallet funge-color border-end"></i>
+                                    </li>
+                                    <span className="funge-color mx-3">|</span>
+                                    <li className="nav-item">
+                                        <i className="fas fa-shopping-cart funge-color"></i>
                                     </li>
 
                                     <li className="nav-item">
-                                    <Link className='nav-link' to="/about">About us</Link>
+                                        <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="25" height="25" />
                                     </li>
-                                    <li className="nav-item">
-                                    <Link className='nav-link' to="/community">Community</Link>
-                                    </li>
-                                    <li className="nav-item">
-                                    <Link className='nav-link' to="/community">Community</Link>
-                                    </li>
+
                                     {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
                             </div>

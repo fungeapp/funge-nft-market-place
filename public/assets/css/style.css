@@ -9996,6 +9996,18 @@ input.otp-input{
 .border-radius {
     border-radius: 24px !important;
 }
+.newpost-controls i{
+    color: #71AFAC;
+    border-radius: 50%;
+}
+.newpost-controls i:hover{
+    color: #B9C3C6;
+    cursor: pointer;
+}
+.feedpost-controls i:hover{
+    color: #71AFAC;
+    cursor: pointer;
+}
 
 /* Feeds Page End */
 
@@ -10010,3 +10022,14 @@ input.otp-input{
     outline:none;
 }
 /* Posts style End */
+
+/* topbar start */
+.lang-dropdown{
+    background-color: #F7F7F8 !important;
+    padding: 4px 10px !important;
+    border-radius: 8px !important;
+}
+.lang-dropdown i{
+    border-radius: 8px;
+}
+/* topbar end */

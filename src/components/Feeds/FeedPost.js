@@ -15,11 +15,15 @@ const FeedPost = (props) => {
 
         if (props.imagePath) {
             return <>
-                <img src={props.imagePath} className="img-fluid border-radius w-100" alt="Post Image" />
+                <div className="row mb-2">
+                    <div className="col-md-12">
+                        <img src={props.imagePath} className="img-fluid border-radius w-100" alt="Post Image" />
+                    </div>
+                </div>
             </>;
         }
     }
-    
+
     return (
         <>
 
@@ -36,15 +40,11 @@ const FeedPost = (props) => {
                                 {props.text}
                             </div>
                         </div>
-                        <div className="row mb-2">
-                            <div className="col-md-12">
-                                <PostImage imagePath={props.image} />
-                            </div>
-                        </div>
+                        <PostImage imagePath={props.image} />
                         <div className="row mb-2 mt-4 px-2">
-                            <div className="col-12 d-flex justify-content-between">
+                            <div className="col-12 d-flex justify-content-between feedpost-controls">
                                 <i className="fa fa-heart"></i>
-                                <i className="fa fa-commenting"> 128</i>
+                                <i className="fa fa-commenting">&nbsp; 128</i>
                                 <i className="fa fa-share"></i>
                                 <i className="fa fa-retweet"></i>
                             </div>

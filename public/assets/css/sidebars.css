@@ -44,8 +44,7 @@
   padding-left: 1.75rem;
   text-decoration: none;
 }
-.btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
+.btn-toggle-nav a:hover, .btn-toggle-nav a.active-link{
   color: #71AFAC;
   border-color:#71AFAC;
 }
