@@ -52,7 +52,7 @@ const ProfileLogin = (props) => {
     const emailAddress = async (e) => {
         console.log(`By email ${email}`)
         //save email info alread
-        axios.get(`http://localhost:3006/users/exist/${email}`)
+        axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/exist/${email}`)
         .then(response => {
             let exist = response.data
             console.log(`email exist ${exist}`)
@@ -60,7 +60,7 @@ const ProfileLogin = (props) => {
                 //insert nothing else to do if email already exsit.
                 axios({
                     method: 'post',
-                    url: `http://localhost:3006/users/save`,
+                    url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
                     data: {
                             "given_name": "",
                             "family_name": "",
@@ -94,7 +94,7 @@ const ProfileLogin = (props) => {
         console.log(`By phone ${phone}`);
         const DID = await magic.auth.loginWithSMS({
             phoneNumber: `+${phone}`,
-            redirectURI: `${env.BASE_URL}/profile`
+            redirectURI: `${env.BASE_URL}/feeds`
         });
     }
 
