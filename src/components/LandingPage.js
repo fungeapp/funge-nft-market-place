@@ -1,9 +1,8 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import { TopCollectionsModel } from './topcollection/top-collection-model';
 import TopCollectionsView from './topcollection/top-collection-view';
 import { DataGrid } from '@mui/x-data-grid';
-//import { TopCollectionsModel} from './topcollection/top-collection-model';
-//import TopCollectionsView from './topcollection/top-collection-view';
 import CoinMarket from './LandingPage/CoinMarket';
 import ProfileLogin from './ProfileLogin';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
@@ -12,6 +11,9 @@ import TopNavBar from './LandingPage/TopNavBar';
 import Footer from './LandingPage/Footer';
 
 const LandingPage = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <TopNavBar />
@@ -27,7 +29,7 @@ const LandingPage = () => {
                                 eiusmod tempor amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                             </p>
-                            <button className="btn btn-primary w-600 get-started-btn">
+                            <button className="btn btn-primary w-600 get-started-btn" onClick={() => {navigate('/signin')}}>
                                 Get Started
                             </button>
 
@@ -61,14 +63,14 @@ const LandingPage = () => {
                             </h2>
                         </div>
                         <div className='col-md-6 text-end'>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-primary filter-dropdown dropdown-toggle px-3" data-bs-toggle="dropdown">
-                                    <span className='text-dark'>Filter By </span> Collection &nbsp; <i class="fas fa-angle-down"></i>
+                            <div className="dropdown">
+                                <button type="button" className="btn btn-primary filter-dropdown dropdown-toggle px-3" data-bs-toggle="dropdown">
+                                    <span className='text-dark'>Filter By </span> Collection &nbsp; <i className="fas fa-angle-down"></i>
                                 </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Collection 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Collection 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Collection 3</a></li>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Collection 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Collection 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Collection 3</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -234,13 +236,11 @@ const LandingPage = () => {
                             <button className='btn btn-primary get-started-btn'>Start Learning</button>
                         </div>
                         <div className='col-md-4 p-5 text-end section-thumb'>
-                            <img src='./assets/images/falling_coins.png' width={500} />
+                            <img src='./assets/images/falling_coins.png'className='img-fluid' />
                         </div>
                     </div>
                 </div>
             </section>
-
-
 
             <section>
                 <div className="footer_top">
@@ -252,9 +252,9 @@ const LandingPage = () => {
                         <div className="container-fluid">
                             <div className="row d-flex justify-content-center">
                                 <div className="col-md-3">
-                                    <div class="card post-card shadow">
-                                        <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
-                                        <div class="card-body">
+                                    <div className="card post-card shadow">
+                                        <img className="card-img-top" src="./assets/images/rect.png" alt="Card image" />
+                                        <div className="card-body">
                                             <div className="top_resources">
                                                 <div className="post_box text-start m-0">
                                                     <h2>Tons of rewards from Funge
@@ -279,9 +279,9 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <div class="card post-card shadow">
-                                        <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
-                                        <div class="card-body">
+                                    <div className="card post-card shadow">
+                                        <img className="card-img-top" src="./assets/images/rect.png" alt="Card image" />
+                                        <div className="card-body">
                                             <div className="top_resources">
                                                 <div className="post_box text-start m-0">
                                                     <h2>Tons of rewards from Funge
@@ -306,9 +306,9 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <div class="card post-card shadow">
-                                        <img class="card-img-top" src="./assets/images/rect.png" alt="Card image" />
-                                        <div class="card-body">
+                                    <div className="card post-card shadow">
+                                        <img className="card-img-top" src="./assets/images/rect.png" alt="Card image" />
+                                        <div className="card-body">
                                             <div className="top_resources">
                                                 <div className="post_box text-start m-0">
                                                     <h2>Tons of rewards from Funge
