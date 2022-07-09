@@ -1,24 +1,26 @@
 import React from 'react'
 import env from 'react-dotenv'
 import ProfileLogin from '../ProfileLogin'
-import { Link } from 'react-router-dom'
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 
 
 const TopNavBar = () => {
-    const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+    const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
 
     return (
         <>
-            <div className="header">
+        <div className="header">
                 <div className="my_nav">
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
                         <div className="container-fluid">
-                            <Link className="navbar-brand" to="/"><img
-                                src="./assets/images/logo.svg"
-                                alt=""
-                                className="img-fluid"
-                            /></Link>
+                            <a className="navbar-brand"
+                                href="#">
+                                <img
+                                    src="./assets/images/logo.svg"
+                                    alt=""
+                                    className="img-fluid"
+                                />
+                            </a>
                             <div className="search_sectio">
                                 <div className="input-group">
                                     <span className="input-group-text"
@@ -81,14 +83,23 @@ const TopNavBar = () => {
                             >
                                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                     <li className="nav-item">
-                                    <Link className='nav-link' to="/explore">Explore</Link>
+                                        <a className="nav-link"
+                                            href="#">
+                                            Explore
+                                        </a>
                                     </li>
 
                                     <li className="nav-item">
-                                    <Link className='nav-link' to="/about">About us</Link>
+                                        <a className="nav-link"
+                                            href="#">
+                                            About Us
+                                        </a>
                                     </li>
                                     <li className="nav-item">
-                                    <Link className='nav-link' to="/community">Community</Link>
+                                        <a className="nav-link"
+                                            href="#">
+                                            Community
+                                        </a>
                                     </li>
                                     <li className="nav-item">
                                         <ProfileLogin btnText={"Sign-In"} />

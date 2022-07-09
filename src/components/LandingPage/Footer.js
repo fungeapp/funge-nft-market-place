@@ -1,6 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import FungeLogo from '../FungeLogo'
 
 const Footer = () => {
 
@@ -34,7 +32,7 @@ const Footer = () => {
                             <br />
                             <br />
                             <br />
-                            <Link className='funge-link' to="/">Learn More</Link>
+                            <a className='funge-link' href='#'>Learn More</a>
                         </p>
                     </div>
                     <div className='col-md-5 mt-3'>
@@ -95,7 +93,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='col-md-11'>
-                        <small>©2022 Funge. All Rights Reserved</small>
+                        <small>©2020 Funge. All Rights Reserved</small>
                     </div>
                 </div>
             </div>
