@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/funge-logo.png';
+import { Link } from 'react-router-dom';
 
 const Signin = () => {
     return (
