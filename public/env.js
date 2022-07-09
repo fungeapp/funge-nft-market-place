@@ -93,6 +93,6 @@ window.env = {
   "MORALIS_DAPP_URL": "https://lksowllmpfnb.usemoralis.com:2053/server",
   "MORALIS_APPLICATION_ID": "w0DTTvMzz7QxZfeQb1FUmEYH1xTpEHaDbPoBsqnY",
   "MAGIC_LINK_API_KEY": "pk_live_0D6F4DE8C1F3E37C",
-  "BASE_URL": "http://localhost:3001",
+  "BASE_URL": "http://localhost:3000",
   "FUNGE_EXPRESSJS_SERVER_BASE_URL": "http://localhost:3006"
 };
