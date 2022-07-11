@@ -1,4 +1,4 @@
-import React,{state, useState} from 'react';
+import React,{state, useEffect, useState} from 'react';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
@@ -6,6 +6,16 @@ import NewPost from './Feeds/NewPost';
 const Feeds = () => {
 
   const [isActive,setActive] = useState("home");
+  const [profileemail, setprofileemail] = useState()
+
+  useEffect(() => {
+        let currentprofile = sessionStorage.getItem("profilesession");
+        setprofileemail(currentprofile);
+  });
+
+  const handleWalletConnect = async (e) => {
+      
+  }
 
   return (
     <>
@@ -41,7 +51,7 @@ const Feeds = () => {
                 </div>
               </li> 
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" onClick={handleWalletConnect}>
                 <i className="fas fa-chart-pie me-3 funge-color"></i> Wallet
                 </button>
               </li>

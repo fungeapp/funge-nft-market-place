@@ -18,7 +18,9 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
-          <Route path="feeds" element={<Feeds />} />
+          <Route path="feeds" element={
+              <Feeds />
+          } />
         </Routes>
       </BrowserRouter>
       {/* <h1>{ isAuthenticated ? JSON.stringify(user.given_name, null, 2) : ""}</h1> */}
