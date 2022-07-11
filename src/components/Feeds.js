@@ -2,19 +2,38 @@ import React,{state, useEffect, useState} from 'react';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
+import { useMetaMask, useConnectedMetaMask } from 'metamask-react';
 
 const Feeds = () => {
 
   const [isActive,setActive] = useState("home");
   const [profileemail, setprofileemail] = useState()
+  const { status, connect, account, chainId, ethereum, switchChain, addChain } = useMetaMask();
+  const {
+    _account,
+    _chainId
+  } = useMetaMask();
 
   useEffect(() => {
         let currentprofile = sessionStorage.getItem("profilesession");
         setprofileemail(currentprofile);
-  });
+        setupMetamask();
+        console.log(`Status Wallet Connection ${status} :: ${account} :: ${chainId}`)
+        
+  },[status]);
 
-  const handleWalletConnect = async (e) => {
-      
+  const setupMetamask = async (e) => {
+    if (status === "initializing") return `Synchronisation with MetaMask ongoing...`
+
+    if (status === "unavailable") return `MetaMask not available`
+
+    if (status === "notConnected") return `Not Connected`
+
+    if (status === "connecting") return `Connecting`
+
+    if (status === "connected") return `Connected`
+
+    return null;
   }
 
   return (
@@ -51,7 +70,7 @@ const Feeds = () => {
                 </div>
               </li> 
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" onClick={handleWalletConnect}>
+                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
                 <i className="fas fa-chart-pie me-3 funge-color"></i> Wallet
                 </button>
               </li>
