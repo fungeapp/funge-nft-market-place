@@ -10,9 +10,9 @@ import {MoralisProvider} from 'react-moralis';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MoralisProvider serverUrl={env.MORALIS_DAPP_URL} appId={env.MORALIS_APPLICATION_ID}>
+   
       <App />
-    </MoralisProvider>
+    
     
   
   </React.StrictMode>
