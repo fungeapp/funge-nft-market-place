@@ -19,9 +19,9 @@ jobs:
         comment: Deploy the main branch
         working-directory: /var/www/html/dev.fungeapp.com
         command: |
-          sudo rm package-lock.json npm-*.out
+          sudo rm npm-*.out
+          sudo git stash
           sudo git pull origin main
-          sudo rm package-lock.json
           sudo mv /var/www/html/dev.fungeapp.com/node_modules/react-scripts/config/webpack.config.js /var/www/html/dev.fungeapp.com/tmp/.
           sudo rm -rf node_modules
           sudo rm -rf build
