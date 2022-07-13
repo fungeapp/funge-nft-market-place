@@ -6,6 +6,7 @@ import { MetaMaskProvider } from 'metamask-react';
 import LandingPage from './components/LandingPage';
 import { useAuth0 } from '@auth0/auth0-react';
 import Signin from "./components/Signin";
+import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Feeds from "./components/Feeds";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="login" element={<Login />} />
           <Route path="feeds" element={
               <MetaMaskProvider>
               <Feeds />
