@@ -48,7 +48,7 @@ function ConnectModal({ handleClose }) {
             onClick={handleDisconnect}
           >
             <span className="btn-icon float-start">
-              <img className="p-1" src="./assets/images/fox-trans.png" />
+              <img className="p-1" src="./assets/images/fox-trans.png" alt="" />
             </span>
             Disconnect
           </button>
