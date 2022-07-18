@@ -5,11 +5,11 @@ const FeedContainer = (props) => {
 
     return (
         <>
-            <FeedPost image="./assets/images/design.png" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit, sed do eiusmod
+            <FeedPost shadow={props.shadow} image="./assets/images/design.png" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit, sed do eiusmod
                     tempor amet, consectetur dipiscing elit,sed do eiusmod tempor"/>
-            <FeedPost image="./assets/images/nft--7.png" postText="Lorem ipsum dolor sit amet consectetur, adipisicing elit, sed do eiusmod
+            <FeedPost shadow={props.shadow} image="./assets/images/nft--7.png" postText="Lorem ipsum dolor sit amet consectetur, adipisicing elit, sed do eiusmod
                     tempor amet, consectetur dipiscing elit,sed do eiusmod tempor" />
-            <FeedPost text="Lorem ipsum dolor sit amet consectetur, adipisicing elit, sed do eiusmod
+            <FeedPost shadow={props.shadow} text="Lorem ipsum dolor sit amet consectetur, adipisicing elit, sed do eiusmod
                     tempor amet, consectetur dipiscing elit,sed do eiusmod tempor"/>
         </>
     )

@@ -14,7 +14,7 @@ const Profile = () => {
             <LeftSidebar myState='profile' />
             <div className='container-fluid main-div'>
                 <div className='row justify-content-center' style={{ marginLeft: 220 }}>
-                    <div className='col-md-12 m-3'>
+                    <div className='col-md-12 m-3 ps-0'>
                         <div className='card profile-card px-4 pt-4 border-0'>
                             <div className='cover-profile'>
                                 <img src='./assets/images/profile_pic1.png' className='profile-pic rounded-circle' />
@@ -45,11 +45,15 @@ const Profile = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-4 col-sm-12 px-0'>
                         <div className='card funge-card social-card'>
                             <div className='card-body'>
                                 <h6 className='w-600'>Wallet Address</h6>
-                                <input type={'text'} placeholder={'1F1tAassdadsd...GNn4xqXw6'} />
+                                <div class="input-group input-wallet mb-3">
+                                    <span class="input-group-text icon"><img src='./assets/images/fox.png' /></span>
+                                    <input type={'text'} placeholder={'1F1tAassdadsd...GNn4xqXw6'} className='form-control border-0' />
+                                    <span class="input-group-text bg-transparent border-0 fa-rotate-270"><i class="fas fa-clone"></i></span>
+                                </div>
                                 <hr />
                                 <h6 className='w-600'>Bio</h6>
                                 <p>
@@ -59,25 +63,24 @@ const Profile = () => {
                                 <h6 className='w-600'>Social Media</h6>
                                 <div className='container-fluid p-0'>
                                     <div className='row p-0'>
-                                        <div className='col-sm-12 col-md-12 col-lg-6 p-0'>
-                                            <a className='btn btn-secondary'>Joechris</a>
+                                        <div className='col-sm-12 col-md-6 px-1'>
+                                            <div class="d-grid gap-3">
+                                                <button class="btn btn-secondary" type="button"><img src='./assets/images/fb.png' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris</button>
+                                                <button class="btn btn-secondary" type="button"><img src='./assets/images/insta.png' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris</button>
+                                            </div>
                                         </div>
-                                        <div className='col-sm-12 col-md-12 col-lg-6 p-0'>
-                                            <a className='btn btn-secondary'>Joechris</a>
-                                        </div>
-                                        <div className='col-sm-12 col-md-12 col-lg-6 p-0'>
-                                            <a className='btn btn-secondary'>Joechris</a>
-                                        </div>
-                                        <div className='col-sm-12 col-md-12 col-lg-6 p-0'>
-                                            <a className='btn btn-secondary'>Joechris</a>
+                                        <div className='col-sm-12 col-md-6 px-1'>
+                                            <div class="d-grid gap-3">
+                                                <button class="btn btn-secondary" type="button"><img className='float-start' src='./assets/images/twitter.png' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris</button>
+                                                <button class="btn btn-secondary" type="button"><img src='./assets/images/discord.png' /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-8'>
+                    <div className='col-md-8 col-sm-12'>
                         <div className='card funge-card'>
                             <ul class="nav nav-pills profile-pills mt-4 mx-4">
                                 <li class="nav-item">
