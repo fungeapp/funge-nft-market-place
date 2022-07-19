@@ -36,32 +36,34 @@ const LeftSidebar = (props) => {
                 </div>
               </li> 
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <Link to="/wallet">
+                <button className={`btn btn-toggle align-items-center rounded collapsed w-100 text-start ${isActive === "wallet" ? 'funge-color' : ''}`}>
                 <i className="fas fa-chart-pie me-3 funge-color"></i> Wallet
                 </button>
+                </Link>
               </li>
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <button className={`btn btn-toggle align-items-center rounded collapsed w-100 text-start ${isActive === "analytics" ? 'funge-color' : ''}`}>
                 <i className="fa fa-folder-open me-3 funge-color"></i>Analytics
                 </button>
               </li>
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <button className={`btn btn-toggle align-items-center rounded collapsed w-100 text-start ${isActive === "media" ? 'funge-color' : ''}`}>
                 <i className="fa fa-briefcase me-3 funge-color"></i> Media
                 </button>
               </li>
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <button className={`btn btn-toggle align-items-center rounded collapsed w-100 text-start ${isActive === "refer" ? 'funge-color' : ''}`}>
                 <i className="fa fa-briefcase me-3 funge-color"></i> Refer and Earn
                 </button>
               </li>
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <button className={`btn btn-toggle align-items-center rounded collapsed w-100 text-start ${isActive === "hire" ? 'funge-color' : ''}`}>
                 <i className="fa fa-briefcase me-3 funge-color"></i> Hire
                 </button>
               </li>
               <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
+                <button className={`btn btn-toggle align-items-center rounded collapsed w-100 text-start ${isActive === "rewards" ? 'funge-color' : ''}`}>
                 <i className="fa fa-briefcase me-3 funge-color"></i> Rewards
                 </button>
               </li>
