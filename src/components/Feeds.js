@@ -12,7 +12,7 @@ const Feeds = () => {
     <>
       <TopBar />
       <LeftSidebar myState='home'/>
-      <div className='container-fluid main-div'>
+      <div className='container-fluid main-div min-vh-100'>
       <div className='row justify-content-between' style={{ marginLeft: 220 }}>
           <div className='col-md-6'>
             <NewPost />

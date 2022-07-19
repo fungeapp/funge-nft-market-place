@@ -9,6 +9,7 @@ import Signin from "./components/Signin";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Feeds from "./components/Feeds";
+import Wallet from "./components/Wallet";
 
 
 function App() {
@@ -18,8 +19,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="*" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="wallet" element={<Wallet />} />
           <Route path="login" element={<Login />} />
           <Route path="feeds" element={
               <MetaMaskProvider>
