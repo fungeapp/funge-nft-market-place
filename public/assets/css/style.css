@@ -109,9 +109,9 @@ button.post-primary-btn{
 
 .btn-primary {
     background-color: #71AFAC !important;
-    border: 2px solid;
-    border-radius: 10px !important;
-    padding: 8px 40px;
+    border: 2px solid #71AFAC !important;
+    border-radius: 20px !important;
+    padding: 8px 40px !important;
     border-color: #71AFAC !important;
 }
 
@@ -127,7 +127,7 @@ button.post-primary-btn{
 .btn-secondary {
     background-color: transparent !important;
     border: 2px solid #71AFAC !important;
-    border-radius: 10px !important;
+    border-radius: 20px !important;
     padding: 8px 40px !important;
     color: #71AFAC !important;
 }
@@ -135,7 +135,6 @@ button.post-primary-btn{
 .btn-secondary:hover {
     background-color: #71AFAC !important;
     border: 2px solid transparent !important;
-    border-radius: 10px !important;
     color: white !important;
 }
 
