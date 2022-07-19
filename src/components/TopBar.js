@@ -1,19 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import FungeLogo from './FungeLogo'
 
 const TopBar = () => {
 
     return (
         <>
             <div className="header">
-                <div className="my_nav">
+                <div className="my_nav position-relative"  style={{ zIndex: 999 }}>
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
                         <div className="container-fluid">
-                            <Link className="navbar-brand" to="/"><img
-                                src="./assets/images/logo.svg"
-                                alt=""
-                                className="img-fluid"
-                            /></Link>
+                            <FungeLogo/>
                             <div className="search_sectio">
                                 <div className="input-group">
                                     <span className="input-group-text"
@@ -107,8 +103,6 @@ const TopBar = () => {
                                     <li className="nav-item">
                                         <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="25" height="25" />
                                     </li>
-
-                                    {/* <Wallet btnText={"Connect Wallet"} /> */}
                                 </ul>
                             </div>
                         </div>

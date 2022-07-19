@@ -7,6 +7,11 @@ a.funge-link {
     color: #71AFAC !important;
     text-decoration: none;
 }
+.card.funge-card{
+    padding: 20px;
+    border-radius: 25px;
+    border: 0px;
+}
 .funge-color {
     color: #71AFAC !important;
 }
@@ -18,6 +23,10 @@ button.post-primary-btn{
     border-radius: 40px !important;
     padding: 6px 30px;
     font-size: 14px !important;
+}
+
+.main-div{
+    background-color: #FAFAFA;
 }
 
 /*--------------------------------------------------
@@ -9991,9 +10000,7 @@ input.otp-input{
 /* Feeds Page Start */
 
 /* Feed Post */
-.feeds{
-    background-color: #FAFAFA;
-}
+
 .border-radius {
     border-radius: 24px !important;
 }
@@ -10034,3 +10041,88 @@ input.otp-input{
     border-radius: 8px;
 }
 /* topbar end */
+
+/* Profile Page Start */
+
+.profile-card{
+    border-radius: 25px !important;
+}
+.edit-profile-btn {
+    border-radius: 25px !important;
+}
+.profile-card .card-title{
+    font-size: 24px;
+}
+.profile-card .card-title small{
+    font-size: 14px;
+    font-weight: 600;
+}
+.cover-profile{
+    position: relative;
+    background: url('../images/profile_cover.png');
+    background-size: cover;
+    height: 220px;
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px !important;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 140px;
+    left: 45px;
+    border: 12px solid white;
+}
+.card-body.profile-card-body{
+    margin-left: 240px !important;
+}
+
+.profile-card .btn.btn-secondary {
+    border-radius: 25px !important;
+    border-color: #E2E8F0 !important;
+    color: #11142D !important;
+    margin: 4px;
+}
+.profile-card .btn.btn-secondary:hover {
+    background-color: #E2E8F0 !important;
+}
+.social-card .btn.btn-secondary {
+    position: relative;
+    border-radius: 45px !important;
+    border-color: #E2E8F0 !important;
+    color: #11142D !important;
+    padding: 14px 14px !important;
+    width: 100% !important;
+}
+.social-card .btn.btn-secondary img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:8px;
+    left:10px;
+}
+.social-card .btn.btn-secondary:hover {
+    background-color: #E2E8F0 !important;
+}
+
+.profile-pills.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background: #71AFAC;
+}
+.profile-pills.nav-pills .nav-link{
+    color: #011C23;
+    font-weight: 500;
+
+}
+.input-wallet{
+    border: 1px solid #E2E8F0;
+    border-radius: 100px;
+    padding: 7px 10px;
+}
+.input-wallet .icon{
+    background: transparent;
+    border: 0px;
+    padding: 0px 2px;
+}
+/* Profile Page End */
