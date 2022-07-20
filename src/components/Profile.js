@@ -12,7 +12,7 @@ const Profile = () => {
         <>
             <TopBar />
             <LeftSidebar myState='profile' />
-            <div className='container-fluid main-div'>
+            <div className='container-fluid main-div min-vh-100'>
                 <div className='row justify-content-center' style={{ marginLeft: 220 }}>
                     <div className='col-md-12 m-3 ps-0'>
                         <div className='card profile-card px-4 pt-4 border-0'>
