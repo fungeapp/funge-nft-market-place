@@ -25,7 +25,7 @@ const Profile = () => {
                                         <div className='col-6'>
                                             <table>
                                                 <tr>
-                                                    <td><h5 class="card-title w-800 d-inline-block">Joe Chris <br /><small className='main-color'>@Joe Chris</small></h5> </td>
+                                                    <td><h5 class="card-title w-800 d-inline-block">Joe Chris <br /><small className='funge-color'>@Joe Chris</small></h5> </td>
                                                     <td className='align-top'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" class="btn btn-primary edit-profile-btn px-3">Edit Profile</a></td>
                                                 </tr>
                                                 <tr>

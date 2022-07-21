@@ -46,13 +46,13 @@ const LandingPage = () => {
                         <div className='col-md-6'>
                             <h2 className="collection_heading d-flex align-items-center w-800">
                                 Top collections over
-                                <span className="nav-link dropdown-toggle main-color"
+                                <span className="nav-link dropdown-toggle funge-color"
                                     href="#"
                                     id="navbarDropdown"
                                     role="button"
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false">
-                                    in 7days <i className="bi bi-chevron-down main-color"></i>
+                                    in 7days <i className="bi bi-chevron-down funge-color"></i>
                                 </span>
                                 <ul className="dropdown-menu"
                                     aria-labelledby="navbarDropdown">

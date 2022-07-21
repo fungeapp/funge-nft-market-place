@@ -31,7 +31,7 @@ const TopCollectionsView = (props) => {
   
           <td className="font-14">
             24h Vol% <br />
-            <div className=" font-16 w-600 main-color d-flex w-600">
+            <div className=" font-16 w-600 funge-color d-flex w-600">
             {props.detail.vol2}{" "}
               <img
                 src={"./assets/icon/up_arrow_green.svg"}
