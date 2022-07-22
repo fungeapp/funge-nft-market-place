@@ -231,7 +231,7 @@ const LandingPageV0 = () => {
                                                         <div className='col-6 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
+                                                                    <img src='./assets/images/livestream-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
                                                                     <p className='fw-bold mb-0 fs-14px'>Live streaming</p>
@@ -242,7 +242,7 @@ const LandingPageV0 = () => {
                                                         <div className='col-6 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
+                                                                    <img src='./assets/images/livestream-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
                                                                     <p className='fw-bold mb-0 fs-14px'>File sharing</p>
@@ -255,7 +255,7 @@ const LandingPageV0 = () => {
                                                         <div className='col-6 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
+                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
                                                                     <p className='fw-bold mb-0 fs-14px'>Push Notifications</p>
@@ -266,7 +266,7 @@ const LandingPageV0 = () => {
                                                         <div className='col-6 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
+                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
                                                                     <p className='fw-bold mb-0 fs-14px'>Internal trading &amp; giveaways</p>
@@ -279,10 +279,10 @@ const LandingPageV0 = () => {
                                                         <div className='col-6 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
+                                                                    <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Voice hat rooms</p>
+                                                                    <p className='fw-bold mb-0 fs-14px'>Configurable bots</p>
                                                                     <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
@@ -290,10 +290,10 @@ const LandingPageV0 = () => {
                                                         <div className='col-6 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
+                                                                    <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Voice hat rooms</p>
+                                                                    <p className='fw-bold mb-0 fs-14px'>Events Calendar</p>
                                                                     <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
