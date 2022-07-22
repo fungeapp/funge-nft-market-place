@@ -15,7 +15,7 @@ const Wallet = () => {
                     <div className='col-md-12 m-3 ps-0'>
                         <h3 className='m-3 w-800'>Wallet</h3>
                     </div>
-                    <div className='col-md-12 col-sm-12 ps-0 mb-4'>
+                    <div className='col-md-12 col-sm-12 ps-0 mb-3'>
                         <div className='card funge-card'>
                             <div className='card-body'>
                                 <div className="container-fluid">
@@ -40,80 +40,96 @@ const Wallet = () => {
                     <div className='col-md-8 col-sm-12 ps-0 pe-3 mb-4'>
                         <div className='card funge-card p-5'>
                             <div className='card-body'>
-                                <div className='card funge-card funge-bggrey mb-4'>
-                                    <div className='row'>
-                                        <div className='col-1'>
-                                            <img src='./assets/images/polygon.png' className='img-fluid mt-1' />
-                                        </div>
-                                        <div className='col-11 pe-4'>
-                                            <p className='mb-0'>
-                                                <small>Polygon (MATIC)</small><br />
-                                                <span className='w-600'>$0.000003</span>
-                                                <span className='float-end'>$0.73 MATIC</span>
-                                            </p>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                        <ul className='nav funge-nav-pills nav-pills nav-justified mb-5'>
+                                            <li className='nav-item'>
+                                                <a className='nav-link active' data-bs-toggle='pill' href='#crypto'>Crypto</a>
+                                            </li>
+                                            <li className='nav-item'>
+                                                <a className='nav-link' data-bs-toggle='pill' href='#nft'>Nft</a>
+                                            </li>
+                                        </ul>
+                                        <div className='tab-content'>
+                                            <div className='tab-pane container p-0 active' id='crypto'>
+                                                <div className='card funge-card funge-bggrey mb-4'>
+                                                    <div className='row'>
+                                                        <div className='col-1'>
+                                                            <img src='./assets/images/polygon.png' className='img-fluid mt-1' />
+                                                        </div>
+                                                        <div className='col-11 pe-4'>
+                                                            <p className='mb-0'>
+                                                                <small>Polygon (MATIC)</small><br />
+                                                                <span className='w-600'>$0.000003</span>
+                                                                <span className='float-end'>$0.73 MATIC</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='card funge-card funge-bggrey mb-4'>
+                                                    <div className='row'>
+                                                        <div className='col-1'>
+                                                            <img src='./assets/images/ETH_wallet.png' className='img-fluid mt-1' />
+                                                        </div>
+                                                        <div className='col-11 pe-4'>
+                                                            <p className='mb-0'>
+                                                                <small>Ethereum Wallet</small><br />
+                                                                <span className='w-600'>$0.000003</span>
+                                                                <span className='float-end'>$0.73 ETH</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='card funge-card funge-bggrey mb-4'>
+                                                    <div className='row'>
+                                                        <div className='col-1'>
+                                                            <img src='./assets/images/lite_wallet.png' className='img-fluid mt-1' />
+                                                        </div>
+                                                        <div className='col-11 pe-4'>
+                                                            <p className='mb-0'>
+                                                                <small>Litcoin Wallet</small><br />
+                                                                <span className='w-600'>$0.000003</span>
+                                                                <span className='float-end'>$0.73 LTC</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='card funge-card manage-wallet-card mb-3'>
+                                                    <div className='row'>
+                                                        <div className='col-12'>
+                                                            <p className='mb-0 text-center'>
+                                                                <img src='./assets/images/manage_wallet.png' className='img-fluid mt-1' />
+                                                                &nbsp; <span>Manage Wallet</span><br />
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='tab-pane container' id='nft'>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='card funge-card funge-bggrey mb-4'>
-                                    <div className='row'>
-                                        <div className='col-1'>
-                                            <img src='./assets/images/ETH_wallet.png' className='img-fluid mt-1' />
-                                        </div>
-                                        <div className='col-11 pe-4'>
-                                            <p className='mb-0'>
-                                                <small>Ethereum Wallet</small><br />
-                                                <span className='w-600'>$0.000003</span>
-                                                <span className='float-end'>$0.73 ETH</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='card funge-card funge-bggrey mb-4'>
-                                    <div className='row'>
-                                        <div className='col-1'>
-                                            <img src='./assets/images/lite_wallet.png' className='img-fluid mt-1' />
-                                        </div>
-                                        <div className='col-11 pe-4'>
-                                            <p className='mb-0'>
-                                                <small>Litcoin Wallet</small><br />
-                                                <span className='w-600'>$0.000003</span>
-                                                <span className='float-end'>$0.73 LTC</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='card funge-card manage-wallet-card mb-2'>
-                                    <div className='row'>
-                                        <div className='col-12'>
-                                            <p className='mb-0 text-center'>
-                                            <img src='./assets/images/manage_wallet.png' className='img-fluid mt-1' />
-                                                &nbsp; <span>Manage Wallet</span><br />
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
                         </div>
                     </div>
                     <div className='col-md-4 col-sm-12 ps-0 mb-4'>
@@ -229,10 +245,10 @@ const Wallet = () => {
                                 </div>
                             </div>
                         </div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                     </div>
                 </div>
             </div>

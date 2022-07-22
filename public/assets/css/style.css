@@ -7,22 +7,26 @@ a.funge-link {
     color: #71AFAC !important;
     text-decoration: none;
 }
-.card.funge-card{
+
+.card.funge-card {
     padding: 20px;
     border-radius: 25px;
     border: 0px;
 }
+
 .funge-color {
     color: #71AFAC !important;
 }
+
 .funge-bgcolor {
     background-color: #71AFAC !important;
 }
+
 .funge-bghover {
     background-color: #F2F9F9 !important;
 }
 
-.funge-bggrey{
+.funge-bggrey {
     background-color: #F1F5F9 !important;
 }
 
@@ -30,19 +34,23 @@ a.funge-link {
     color: #5A7184 !important;
 }
 
-.fs-12px{
+.fs-12px {
     font-size: 12px !important;
 }
-.fs-13px{
+
+.fs-13px {
     font-size: 13px !important;
 }
-.fs-14px{
+
+.fs-14px {
     font-size: 14px !important;
 }
-.fs-16px{
+
+.fs-16px {
     font-size: 16px !important;
 }
-.fs-42px{
+
+.fs-42px {
     font-size: 42px !important;
 }
 
@@ -52,11 +60,11 @@ button.post-primary-btn {
     font-size: 14px !important;
 }
 
-.main-div{
+.main-div {
     background-color: #FAFAFA;
 }
 
-.funge-list li::marker{
+.funge-list li::marker {
     font-size: 24px;
     color: #71AFAC;
 }
@@ -66,6 +74,7 @@ button.post-primary-btn {
     color: #71AFAC !important;
     background-color: #F2F9F9 !important;
 }
+
 .accordion-button:focus {
     border-color: transparent !important;
     box-shadow: none !important;
@@ -74,9 +83,30 @@ button.post-primary-btn {
 .accordion-button::after {
     background-image: url("https://img.icons8.com/android/24/000000/plus.png") !important;
 }
+
 .accordion-button:not(.collapsed)::after {
     background-image: url("https://img.icons8.com/android/24/000000/minus.png") !important;
 }
+
+/* bootstrap nav-pills toggleable */
+.funge-nav-pills.nav-pills {
+    background-color: #E4F2F2 !important;
+    border-radius: 8px;
+}
+.funge-nav-pills.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #71AFAC !important;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.funge-nav-pills.nav-pills .nav-link,
+.nav-pills .show>.nav-link {
+    color: #000;
+    font-weight: 600;
+}
+
 
 /*--------------------------------------------------
 [1. Start Home 24-02-2022]
@@ -10011,7 +10041,8 @@ ul.pattern .color3 {
     color: #A0A1AB;
     padding-left: 5px
 }
-.login-input:focus{
+
+.login-input:focus {
     outline: none;
     background-color: #f5f3f4;
 }
@@ -10025,7 +10056,8 @@ ul.pattern .color3 {
     padding-left: 25px;
     padding-right: 25px;
 }
-.phone-button:hover{
+
+.phone-button:hover {
     background: #f5f3f4;
 }
 
@@ -10037,20 +10069,22 @@ ul.pattern .color3 {
     padding-right: 25px;
 }
 
-.phoneModal .modal-content{
+.phoneModal .modal-content {
     border-radius: 20px !important;
     border: 0px;
 }
 
-.funge-modal-close{
+.funge-modal-close {
     font-size: 11px !important;
     padding: 14px 14px !important;
     border-radius: 50% !important;
 }
-.funge-modal-close:hover{
+
+.funge-modal-close:hover {
     background-color: #f5f3f4;
 }
-input.otp-input{
+
+input.otp-input {
     width: 52px;
     height: 52px;
     margin-left: 10px;
@@ -10065,15 +10099,18 @@ input.otp-input{
 .border-radius {
     border-radius: 24px !important;
 }
-.newpost-controls i{
+
+.newpost-controls i {
     color: #71AFAC;
     border-radius: 50%;
 }
-.newpost-controls i:hover{
+
+.newpost-controls i:hover {
     color: #B9C3C6;
     cursor: pointer;
 }
-.feedpost-controls i:hover{
+
+.feedpost-controls i:hover {
     color: #71AFAC;
     cursor: pointer;
 }
@@ -10081,44 +10118,52 @@ input.otp-input{
 /* Feeds Page End */
 
 /* Posts style Start */
-.post-text-area{
-    border:0px;
+.post-text-area {
+    border: 0px;
     margin-top: 10px;
     resize: none;
     width: 100%;
 }
-.post-text-area:focus-visible{
-    outline:none;
+
+.post-text-area:focus-visible {
+    outline: none;
 }
+
 /* Posts style End */
 
 /* topbar start */
-.lang-dropdown{
+.lang-dropdown {
     background-color: #F7F7F8 !important;
     padding: 4px 10px !important;
     border-radius: 8px !important;
 }
-.lang-dropdown i{
+
+.lang-dropdown i {
     border-radius: 8px;
 }
+
 /* topbar end */
 
 /* Profile Page Start */
 
-.profile-card{
+.profile-card {
     border-radius: 25px !important;
 }
+
 .edit-profile-btn {
     border-radius: 25px !important;
 }
-.profile-card .card-title{
+
+.profile-card .card-title {
     font-size: 24px;
 }
-.profile-card .card-title small{
+
+.profile-card .card-title small {
     font-size: 14px;
     font-weight: 600;
 }
-.cover-profile{
+
+.cover-profile {
     position: relative;
     background: url('../images/profile_cover.png');
     background-size: cover;
@@ -10135,7 +10180,8 @@ input.otp-input{
     left: 45px;
     border: 12px solid white;
 }
-.card-body.profile-card-body{
+
+.card-body.profile-card-body {
     margin-left: 240px !important;
 }
 
@@ -10145,9 +10191,11 @@ input.otp-input{
     color: #11142D !important;
     margin: 4px;
 }
+
 .profile-card .btn.btn-secondary:hover {
     background-color: #E2E8F0 !important;
 }
+
 .social-card .btn.btn-secondary {
     position: relative;
     border-radius: 45px !important;
@@ -10156,40 +10204,48 @@ input.otp-input{
     padding: 14px 14px !important;
     width: 100% !important;
 }
+
 .social-card .btn.btn-secondary img {
     width: 35px;
     height: 35px;
     position: absolute;
-    top:8px;
-    left:10px;
+    top: 8px;
+    left: 10px;
 }
+
 .social-card .btn.btn-secondary:hover {
     background-color: #E2E8F0 !important;
 }
 
-.profile-pills.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.profile-pills.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     color: #fff;
     background: #71AFAC;
 }
-.profile-pills.nav-pills .nav-link{
+
+.profile-pills.nav-pills .nav-link {
     color: #011C23;
     font-weight: 500;
 
 }
-.input-wallet{
+
+.input-wallet {
     border: 1px solid #E2E8F0;
     border-radius: 100px;
     padding: 7px 10px;
 }
-.input-wallet .icon{
+
+.input-wallet .icon {
     background: transparent;
     border: 0px;
     padding: 0px 2px;
 }
+
 /* Profile Page End */
 /* Wallet Page Start */
-.manage-wallet-card{
+.manage-wallet-card {
     color: #9DA8B6 !important;
     border: 2px dashed #71AFAC !important;
 }
+
 /* Wallet Page End */
