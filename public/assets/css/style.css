@@ -33,11 +33,17 @@ a.funge-link {
 .fs-12px{
     font-size: 12px !important;
 }
+.fs-13px{
+    font-size: 13px !important;
+}
 .fs-14px{
     font-size: 14px !important;
 }
 .fs-16px{
     font-size: 16px !important;
+}
+.fs-42px{
+    font-size: 42px !important;
 }
 
 button.post-primary-btn {
@@ -10181,3 +10187,9 @@ input.otp-input{
     padding: 0px 2px;
 }
 /* Profile Page End */
+/* Wallet Page Start */
+.manage-wallet-card{
+    color: #9DA8B6 !important;
+    border: 2px dashed #71AFAC !important;
+}
+/* Wallet Page End */
