@@ -69,7 +69,7 @@ const LandingPageV0 = () => {
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
                             <p className='ps-5 my-5'>
-                                <ul>
+                                <ul className='funge-list'>
                                     <li>Stay up-to-date with trending NFT discussions and topics</li>
                                     <li>Connect with fellow users through built-in direct messaging</li>
                                     <li>Mint verified NFTs from your social feed with ease</li>
@@ -110,7 +110,7 @@ const LandingPageV0 = () => {
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
                             <p className='ps-5 my-5'>
-                                <ul>
+                                <ul className='funge-list'>
                                     <li>Stay up-to-date with trending NFT discussions and topics</li>
                                     <li>Connect with fellow users through built-in direct messaging</li>
                                     <li>Mint verified NFTs from your social feed with ease</li>
@@ -151,7 +151,7 @@ const LandingPageV0 = () => {
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
                             <p className='ps-5 my-5'>
-                                <ul>
+                                <ul className='funge-list'>
                                     <li>Stay up-to-date with trending NFT discussions and topics</li>
                                     <li>Connect with fellow users through built-in direct messaging</li>
                                     <li>Mint verified NFTs from your social feed with ease</li>
@@ -776,7 +776,53 @@ const LandingPageV0 = () => {
                     <br />
                     <div className='row'>
                         <div className='col-12'>
-                            Q2 2021
+                            <div class="accordion" id="faq-accord">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Q2 2021
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-accord">
+                                        <div class="accordion-body">
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Q2 2021
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq-accord">
+                                        <div class="accordion-body">
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Q2 2021
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq-accord">
+                                        <div class="accordion-body">
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
