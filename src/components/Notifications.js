@@ -1,7 +1,5 @@
 import React, { state, useState } from 'react';
 import TopBar from './TopBar';
-import FeedContainer from './Feeds/FeedContainer';
-import NewPost from './Feeds/NewPost';
 import LeftSidebar from './LeftSidebar';
 import NewNotifictions from './Notifications/NewNotifications';
 
@@ -95,12 +93,12 @@ const Notifications = () => {
                                                     <span className='w-700'>1</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -111,12 +109,12 @@ const Notifications = () => {
                                                     <span className='w-700'>2</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_2.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -127,12 +125,12 @@ const Notifications = () => {
                                                     <span className='w-700'>3</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_3.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -143,12 +141,12 @@ const Notifications = () => {
                                                     <span className='w-700'>4</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_4.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -159,12 +157,12 @@ const Notifications = () => {
                                                     <span className='w-700'>5</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_5.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -175,12 +173,12 @@ const Notifications = () => {
                                                     <span className='w-700'>6</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_6.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -191,12 +189,12 @@ const Notifications = () => {
                                                     <span className='w-700'>7</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_7.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
@@ -207,12 +205,12 @@ const Notifications = () => {
                                                     <span className='w-700'>8</span>
                                                 </td>
                                                 <td>
-                                                    <img src='./assets/images/collaction_table_1.png' className='img-fluid float-start' />
+                                                    <img src='./assets/images/collaction_table_8.png' className='img-fluid ms-2' />
                                                 </td>
                                                 <td className='w-600'>
-                                                    <span className='p-0'>Meebits</span>
+                                                    <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i class="fab fa-ethereum"></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
                                                     <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
