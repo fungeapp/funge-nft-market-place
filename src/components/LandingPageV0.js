@@ -222,7 +222,7 @@ const LandingPageV0 = () => {
                                             </div>
                                             <div className='col-md-6 col-sm-12'>
                                                 <div className='container'>
-                                                    <div className='row community-feature my-5'>
+                                                    <div className='row community-feature my-4'>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
@@ -246,7 +246,7 @@ const LandingPageV0 = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className='row community-feature my-5'>
+                                                    <div className='row community-feature my-4'>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
@@ -270,31 +270,7 @@ const LandingPageV0 = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className='row community-feature my-5'>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Push Notifications</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Internal trading &amp; giveaways</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='row community-feature my-5'>
+                                                    <div className='row community-feature my-4'>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
@@ -313,6 +289,30 @@ const LandingPageV0 = () => {
                                                                 </div>
                                                                 <div className='col-9 p-1'>
                                                                     <p className='fw-bold mb-0 fs-14px'>Events Calendar</p>
+                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='row community-feature my-4'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
+                                                            <div className='row'>
+                                                                <div className='col-3 p-1'>
+                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
+                                                                </div>
+                                                                <div className='col-9 p-1'>
+                                                                    <p className='fw-bold mb-0 fs-14px'>Push Notifications</p>
+                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
+                                                            <div className='row'>
+                                                                <div className='col-3 p-1'>
+                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
+                                                                </div>
+                                                                <div className='col-9 p-1'>
+                                                                    <p className='fw-bold mb-0 fs-14px'>Internal trading &amp; giveaways</p>
                                                                     <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
