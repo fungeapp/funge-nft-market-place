@@ -13,9 +13,6 @@ const Wallet = () => {
             <div className='container-fluid main-div min-vh-100'>
                 <div className='row justify-content-center' style={{ marginLeft: 220 }}>
                     <div className='col-md-12 m-3 ps-0'>
-<<<<<<< Updated upstream
-                        <h3 className='m-3 w-800'>Wallet</h3>
-=======
                         <h2 className='m-3 w-800 d-inline'>Wallet</h2>
                         <span className='float-end'>
                             <div class="btn-group poly-dropdown">
@@ -35,7 +32,6 @@ const Wallet = () => {
                                 </ul>
                             </div>
                         </span>
->>>>>>> Stashed changes
                     </div>
                     <div className='col-md-12 col-sm-12 ps-0 mb-3'>
                         <div className='card funge-card'>
@@ -116,11 +112,7 @@ const Wallet = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-<<<<<<< Updated upstream
-                                                <div className='card funge-card manage-wallet-card mb-3'>
-=======
                                                 <div className='card funge-card manage-wallet-card mb-3 '>
->>>>>>> Stashed changes
                                                     <div className='row'>
                                                         <div className='col-12'>
                                                             <p className='mb-0 text-center'>
@@ -132,11 +124,7 @@ const Wallet = () => {
                                                 </div>
                                             </div>
                                             <div className='tab-pane container' id='nft'>
-<<<<<<< Updated upstream
-
-=======
                                                 <h1 className='text-center'>Nft</h1>
->>>>>>> Stashed changes
                                             </div>
                                         </div>
                                     </div>

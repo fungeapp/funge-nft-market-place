@@ -11,23 +11,13 @@ const Feeds = () => {
   return (
     <>
       <TopBar />
-<<<<<<< Updated upstream
-      <LeftSidebar myState='home'/>
-      <div className='container-fluid main-div min-vh-100'>
-      <div className='row justify-content-between' style={{ marginLeft: 220 }}>
-=======
       <LeftSidebar myState='home' />
       <div className='container-fluid main-div min-vh-100'>
         <div className='row justify-content-around' style={{ marginLeft: 220 }}>
->>>>>>> Stashed changes
           <div className='col-md-6'>
             <NewPost />
             <FeedContainer />
           </div>
-<<<<<<< Updated upstream
-          <div className='col-md-3'>
-
-=======
           <div className='col-md-4 mt-4'>
             <div className='card funge-card p-5'>
               <div className='card-body p-0'>
@@ -161,7 +151,6 @@ const Feeds = () => {
                 </div>
               </div>
             </div>
->>>>>>> Stashed changes
           </div>
         </div>
       </div>

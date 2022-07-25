@@ -10,11 +10,7 @@ const TopBar = () => {
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
                         <div className="container-fluid">
                             <FungeLogo/>
-<<<<<<< Updated upstream
-                            <div className="search_sectio">
-=======
                             <div className="search_sectio ms-5">
->>>>>>> Stashed changes
                                 <div className="input-group">
                                     <span className="input-group-text"
                                         id="basic-addon1">

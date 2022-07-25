@@ -9,6 +9,7 @@ import Signin from "./components/Signin";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Feeds from "./components/Feeds";
+import Notifications from "./components/Notifications";
 import Wallet from "./components/Wallet";
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="*" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="notifications" element={<Notifications />} />
           <Route path="wallet" element={<Wallet />} />
           <Route path="login" element={<Login />} />
           <Route path="feeds" element={
