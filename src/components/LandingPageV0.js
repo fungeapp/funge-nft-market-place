@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import CoinMarket from './LandingPage/CoinMarket';
 import TopNavBarV0 from './LandingPage/TopNavBarV0';
 import Footer from './LandingPage/Footer';
 
@@ -19,15 +18,35 @@ const LandingPageV0 = () => {
                                 Your Gateway to the Creative Economy
                             </p>
                             <h2 className="section_heading hiro_heading">
-                                Trade, Connect and Earn     Like Never Before.
+                                Trade, Connect and Earn Like Never Before.
                             </h2>
                             <br />
                             <br />
                             <br />
                             <br />
-                            <button className="btn btn-primary w-600 waitlist-btn">
+                            <button className="btn btn-primary w-600 waitlist-btn" data-bs-toggle="modal" data-bs-target="#waitListModal">
                                 Join the Waitlist
                             </button>
+                            <div className="modal fade phoneModal" id="waitListModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header border-0">
+                                            <button type="button" className="btn-close funge-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body px-5">
+                                            <h4 className="w-700">Join the Waitlist</h4>
+                                            <p className="text-black-50">
+                                                Enter your Email to continue
+                                            </p>
+                                            <input type="text" className="login-input mb-4 w-100" placeholder="Email" />
+                                            <button className='btn btn-primary w-100'>Subscribe</button>
+                                            <br />
+                                            <br />
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -68,13 +87,13 @@ const LandingPageV0 = () => {
                             </div>
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
-                            <p className='ps-5 my-5'>
+                            <div className='ps-5 my-5'>
                                 <ul className='funge-list'>
                                     <li>Stay up-to-date with trending NFT discussions and topics</li>
                                     <li>Connect with fellow users through built-in direct messaging</li>
                                     <li>Mint verified NFTs from your social feed with ease</li>
                                 </ul>
-                            </p>
+                            </div>
                             <div className='card funge-card funge-bggrey my-4 p-5'>
                                 <img className='img-fluid' src='./assets/images/robust_parallax.png' />
                             </div>
@@ -109,13 +128,13 @@ const LandingPageV0 = () => {
                             </div>
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
-                            <p className='ps-5 my-5'>
+                            <div className='ps-5 my-5'>
                                 <ul className='funge-list'>
                                     <li>Stay up-to-date with trending NFT discussions and topics</li>
                                     <li>Connect with fellow users through built-in direct messaging</li>
                                     <li>Mint verified NFTs from your social feed with ease</li>
                                 </ul>
-                            </p>
+                            </div>
                             <div className='card funge-card funge-bggrey my-4 p-5'>
                                 <img className='img-fluid' src='./assets/images/robust_parallax.png' />
                             </div>
@@ -150,13 +169,13 @@ const LandingPageV0 = () => {
                             </div>
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
-                            <p className='ps-5 my-5'>
+                            <div className='ps-5 my-5'>
                                 <ul className='funge-list'>
                                     <li>Stay up-to-date with trending NFT discussions and topics</li>
                                     <li>Connect with fellow users through built-in direct messaging</li>
                                     <li>Mint verified NFTs from your social feed with ease</li>
                                 </ul>
-                            </p>
+                            </div>
                             <div className='card funge-card funge-bggrey my-4 p-5'>
                                 <img className='img-fluid' src='./assets/images/robust_parallax.png' />
                             </div>
@@ -188,8 +207,8 @@ const LandingPageV0 = () => {
                                     <div className='container'>
                                         <div className='row'>
                                             <div className='col-md-6 col-sm-12 border-end'>
-                                                <div className='feature1 px-5'>
-                                                    <p className='p-5'>
+                                                <div className='feature1'>
+                                                    <div className='p-5'>
                                                         <h2 className='badge rounded-pill funge-bgcolor px-3 py-2 fs-6 w-600'>Coming Soon</h2>
                                                         <h2 className="collection_heading w-600 my-3">
                                                             Commmunity Builder
@@ -198,13 +217,13 @@ const LandingPageV0 = () => {
                                                             platform where you can find and share ideas  in private chats or on community
                                                             channels using voice, video calls, text messages and other media.
                                                         </p>
-                                                    </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-6 col-sm-12'>
                                                 <div className='container'>
                                                     <div className='row community-feature my-5'>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/user-icon.png' className='img-fluid' />
@@ -215,7 +234,7 @@ const LandingPageV0 = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/user-icon.png' className='img-fluid' />
@@ -228,7 +247,7 @@ const LandingPageV0 = () => {
                                                         </div>
                                                     </div>
                                                     <div className='row community-feature my-5'>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/livestream-icon.png' className='img-fluid' />
@@ -239,7 +258,7 @@ const LandingPageV0 = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/livestream-icon.png' className='img-fluid' />
@@ -252,7 +271,7 @@ const LandingPageV0 = () => {
                                                         </div>
                                                     </div>
                                                     <div className='row community-feature my-5'>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
@@ -263,7 +282,7 @@ const LandingPageV0 = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
@@ -276,7 +295,7 @@ const LandingPageV0 = () => {
                                                         </div>
                                                     </div>
                                                     <div className='row community-feature my-5'>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
@@ -287,7 +306,7 @@ const LandingPageV0 = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-6 container px-3'>
+                                                        <div className='col-md-6 col-sm-12 container px-3'>
                                                             <div className='row border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
@@ -316,12 +335,12 @@ const LandingPageV0 = () => {
                                     <div className='container'>
                                         <div className='row'>
                                             <div className='col-sm-12 col-md-6 border-end'>
-                                                <div className='feature1 px-5'>
+                                                <div className='feature1'>
                                                     <br />
                                                     <br />
                                                     <br />
                                                     <br />
-                                                    <p className='p-4'>
+                                                    <div className='p-4'>
                                                         <h2 className="collection_heading w-600 my-3">
                                                             Talent Marketplace
                                                         </h2>
@@ -329,7 +348,7 @@ const LandingPageV0 = () => {
                                                             efficient way to source top Web3 talent. Seek and hire experts in smart contract
                                                             development, web design, tokenomics creation, discord management, marketing, and more.
                                                         </p>
-                                                    </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className='col-sm-12 col-md-6 text-center'>
@@ -352,12 +371,12 @@ const LandingPageV0 = () => {
                                     <div className='container'>
                                         <div className='row'>
                                             <div className='col-sm-12 col-md-6 border-end'>
-                                                <div className='feature1 px-5'>
+                                                <div className='feature1'>
                                                     <br />
                                                     <br />
                                                     <br />
                                                     <br />
-                                                    <p className='p-4'>
+                                                    <div className='p-4'>
                                                         <h2 className="collection_heading w-600 my-3">
                                                             In-house Wallet
                                                         </h2>
@@ -365,7 +384,7 @@ const LandingPageV0 = () => {
                                                             and manage your tokens. Each user receives a built-in Funge wallet
                                                             that allows them easily monitor, send and receive their crypto assets.
                                                         </p>
-                                                    </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className='col-sm-12 col-md-6 text-center'>
@@ -453,7 +472,7 @@ const LandingPageV0 = () => {
                         <div className='col-md-1'>
 
                         </div>
-                        <div className='col-md-4 my-5'>
+                        <div className='col-md-4 my-4'>
                             <br />
                             <br />
                             <br />
@@ -573,7 +592,7 @@ const LandingPageV0 = () => {
                     <br />
                     <br />
                     <div className='row'>
-                        <div className='col-6'>
+                        <div className='col-md-6 col-sm-12'>
                             <h2>Funge Token Allocation</h2>
                             <p className='mt-4'>Total Supply: 100,000,000</p>
                             <br />
@@ -592,7 +611,7 @@ const LandingPageV0 = () => {
                                 <b>9%</b> Community Allocation (900k) <br />
                             </p>
                         </div>
-                        <div className='col-6'>
+                        <div className='col-md-6 col-sm-12'>
                             <img src='./assets/images/piechart.png' className='img-fluid p-3' />
                         </div>
                     </div>
@@ -620,8 +639,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Claudio Giglieri</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
                                     </p>
                                 </div>
                             </div>
@@ -636,8 +655,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Elsie Mendoza</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; VP of BukaDagang <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Co-founder at Slack <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; VP of BukaDagang <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-founder at Slack <br />
                                     </p>
                                 </div>
                             </div>
@@ -650,8 +669,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Philip Castro</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; CEO at Berkarya <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; CEO at Berkarya <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
                                     </p>
                                 </div>
                             </div>
@@ -666,8 +685,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Carrie Angela</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
                                     </p>
                                 </div>
                             </div>
@@ -682,8 +701,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Claudio Giglieri</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
                                     </p>
                                 </div>
                             </div>
@@ -698,8 +717,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Elsie Mendoza</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; VP of BukaDagang <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Co-founder at Slack <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; VP of BukaDagang <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-founder at Slack <br />
                                     </p>
                                 </div>
                             </div>
@@ -712,8 +731,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Philip Castro</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; CEO at Berkarya <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; CEO at Berkarya <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
                                     </p>
                                 </div>
                             </div>
@@ -728,8 +747,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Carrie Angela</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
                                     </p>
                                 </div>
                             </div>
@@ -744,8 +763,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Claudio Giglieri</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
                                     </p>
                                 </div>
                             </div>
@@ -758,8 +777,8 @@ const LandingPageV0 = () => {
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Carrie Angela</h2>
                                     <p>
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
-                                        <i class="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
+                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
                                     </p>
                                 </div>
                             </div>
@@ -776,15 +795,15 @@ const LandingPageV0 = () => {
                     <br />
                     <div className='row'>
                         <div className='col-12'>
-                            <div class="accordion" id="faq-accord">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div className="accordion" id="faq-accord">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Q2 2021
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-accord">
-                                        <div class="accordion-body">
+                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-accord">
+                                        <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
@@ -792,14 +811,14 @@ const LandingPageV0 = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingTwo">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             Q2 2021
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq-accord">
-                                        <div class="accordion-body">
+                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq-accord">
+                                        <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
@@ -807,14 +826,14 @@ const LandingPageV0 = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingThree">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             Q2 2021
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq-accord">
-                                        <div class="accordion-body">
+                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq-accord">
+                                        <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
