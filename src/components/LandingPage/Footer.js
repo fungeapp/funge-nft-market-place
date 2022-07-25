@@ -44,7 +44,7 @@ const Footer = () => {
                                 <input type="text" className="form-control footer-signup" placeholder='Enter your email here'/>
                             </div>
                             <div className="col-auto">
-                            <input type='button' className='btn btn-primary footer-button' value='Sign Up' />
+                            <button type='button' className='btn btn-primary waitlist-btn'>Sign Up</button>
                             </div>
                         </div>
 

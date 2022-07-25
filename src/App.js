@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react'
 import { MetaMaskProvider } from 'metamask-react';
 import LandingPage from './components/LandingPage';
+import LandingPageV0 from './components/LandingPageV0';
 import { useAuth0 } from '@auth0/auth0-react';
 import Signin from "./components/Signin";
 import Login from "./components/Login";
@@ -18,8 +19,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="*" element={<LandingPage />} />
+          <Route path="/" element={<LandingPageV0 />} />
+          <Route path="*" element={<LandingPageV0 />} />
+          <Route path="v0" element={<LandingPageV0 />} />
+          <Route path="v1" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
           <Route path="wallet" element={<Wallet />} />
