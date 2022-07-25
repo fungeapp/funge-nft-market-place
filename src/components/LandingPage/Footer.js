@@ -1,28 +1,30 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import FungeLogo from '../FungeLogo';
 
 const Footer = () => {
 
     return (
         <>
-            <div className='funge-footer'>
-                <div className="row icon-row text-center">
-                    <div class="col-sm-12 col-md-2">
-                        <i class="fa-brands fa-twitter"></i> <span class="logo-text ms-1">Twitter</span>
+            <div className='funge-footer container-fluid'>
+                <div className="row icon-row justify-content-center">
+                    <div className="col-sm-12 col-md-1">
+                        <i className="fa-brands fa-twitter"></i> <span className="logo-text ms-1">Twitter</span>
                     </div>
-                    <div class="col-sm-12 col-md-2">
-                        <i class="fa-brands fa-facebook-f"></i> <span class="logo-text ms-1">Facebook</span>
+                    <div className="col-sm-12 col-md-2 text-center">
+                        <i className="fa-brands fa-facebook-f"></i> <span className="logo-text ms-1">Facebook</span>
                     </div>
-                    <div class="col-sm-12 col-md-2">
-                        <i class="fa-solid fa-envelope"></i> <span class="logo-text ms-1">Gmail</span>
+                    <div className="col-sm-12 col-md-2 text-center">
+                        <i className="fa-solid fa-envelope"></i> <span className="logo-text ms-1">Gmail</span>
                     </div>
-                    <div class="col-sm-12 col-md-2">
-                        <i class="fa-brands fa-slack"></i> <span class="logo-text ms-1">Slack</span>
+                    <div className="col-sm-12 col-md-2 text-center">
+                        <i className="fa-brands fa-slack"></i> <span className="logo-text ms-1">Slack</span>
                     </div>
-                    <div class="col-sm-4 col-md-2">
-                        <i class="fa-brands fa-reddit-alien"></i> <span class="logo-text ms-1">Reddit</span>
+                    <div className="col-sm-4 col-md-2 text-center">
+                        <i className="fa-brands fa-reddit-alien"></i> <span className="logo-text ms-1">Reddit</span>
                     </div>
-                    <div class="col-sm-4 col-md-2">
-                        <i class="fa-brands fa-youtube"></i> <span class="logo-text ms-1">Youtube</span>
+                    <div className="col-sm-4 col-md-1 text-end">
+                        <i className="fa-brands fa-youtube"></i> <span className="logo-text ms-1">Youtube</span>
                     </div>
                 </div>
                 <div className='row my-5 justify-content-center'>
@@ -37,11 +39,11 @@ const Footer = () => {
                     </div>
                     <div className='col-md-5 mt-3'>
                         <p className='w-600 mb-3'>Signup for our newsletter</p>
-                        <div class="row g-3 align-items-center">
-                            <div class="col-auto p-0">
-                                <input type="text" class="form-control footer-signup" placeholder='Enter your email here'/>
+                        <div className="row g-3 align-items-center">
+                            <div className="col-auto p-0">
+                                <input type="text" className="form-control footer-signup" placeholder='Enter your email here'/>
                             </div>
-                            <div class="col-auto">
+                            <div className="col-auto">
                             <input type='button' className='btn btn-primary footer-button' value='Sign Up' />
                             </div>
                         </div>
@@ -50,50 +52,46 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr className='footer-seprator' />
-                <div class="row justify-content-center p-4">
-                    <div class="col-md-2 col-sm-12">
-                        <img
-                            src="./assets/images/logo.svg"
-                            alt=""
-                            className="img-fluid footer-logo"
-                        />
-                        <p class="pt-3">There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
+                <div className="row justify-content-center p-4">
+                    <div className="col-md-2 col-sm-12">
+                        <FungeLogo/>
+                        <p className="pt-3">There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
                     </div>
                     <div className='col-md-1'></div>
-                    <div class="col-md-2 col-sm-12">
+                    <div className="col-md-2 col-sm-12">
                         <h5>Funge</h5>
-                        <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">About Us</a>
-                            <a href="#">Help Center</a>
-                            <a href="#">Careers</a>
-                            <a href="#">Company</a>
+                        <div className="d-flex flex-column footer-funge-links">
+                            <Link to="/">About Us</Link>
+                            <Link to="/">Help Center</Link>
+                            <Link to="/">Careers</Link>
+                            <Link to="/">Company</Link>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-12">
+                    <div className="col-md-2 col-sm-12">
                         <h5>Community</h5>
-                        <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">Blog</a>
-                            <a href="#">Funge Token</a>
-                            <a href="#">Suggest feature</a>
-                            <a href="#">Terms and conditions</a>
+                        <div className="d-flex flex-column footer-funge-links">
+                            <Link to="/">Blog</Link>
+                            <Link to="/">Funge Token</Link>
+                            <Link to="/">Suggest feature</Link>
+                            <Link to="/">Terms and conditions</Link>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-12">
+                    <div className="col-md-2 col-sm-12">
                         <h5>Resources</h5>
-                        <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">Blog</a>
-                            <a href="#">Funge Token</a>
-                            <a href="#">Suggest feature</a>
-                            <a href="#">Terms and conditions</a>
+                        <div className="d-flex flex-column footer-funge-links">
+                            <Link to="/">Blog</Link>
+                            <Link to="/">Funge Token</Link>
+                            <Link to="/">Suggest feature</Link>
+                            <Link to="/">Terms and conditions</Link>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-12">
+                    <div className="col-md-2 col-sm-12">
                         <h5>Resources</h5>
-                        <div class="d-flex flex-column footer-funge-links">
-                            <a href="#">Blog</a>
-                            <a href="#">Funge Token</a>
-                            <a href="#">Suggest feature</a>
-                            <a href="#">Terms and conditions</a>
+                        <div className="d-flex flex-column footer-funge-links">
+                            <Link to="/">Blog</Link>
+                            <Link to="/">Funge Token</Link>
+                            <Link to="/">Suggest feature</Link>
+                            <Link to="/">Terms and conditions</Link>
                         </div>
                     </div>
                     <div className='col-md-11'>
