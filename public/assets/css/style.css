@@ -18,13 +18,10 @@ a.funge-link {
     color: #71AFAC !important;
 }
 
-<<<<<<< Updated upstream
-=======
 .funge-grey{
     color: #B8C2C5 !important;
 }
 
->>>>>>> Stashed changes
 .funge-bgcolor {
     background-color: #71AFAC !important;
 }
@@ -391,11 +388,7 @@ section#hiro {
 }
 
 .my_nav .navbar-nav .nav-item {
-<<<<<<< Updated upstream
-    margin: 0 25px;
-=======
     margin: 0 20px;
->>>>>>> Stashed changes
 }
 
 
@@ -10258,8 +10251,6 @@ input.otp-input {
     color: #9DA8B6 !important;
     border: 2px dashed #71AFAC !important;
 }
-<<<<<<< Updated upstream
-=======
 .recent-news{
     color: #94A3B8;
 }
@@ -10279,6 +10270,5 @@ input.otp-input {
 .poly-dropdown button:focus{
     box-shadow: none;
 }
->>>>>>> Stashed changes
 
 /* Wallet Page End */
