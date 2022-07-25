@@ -8,6 +8,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Signin from "./components/Signin";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import EditProfile from "./components/EditProfile";
 import Feeds from "./components/Feeds";
 import Notifications from "./components/Notifications";
 import Wallet from "./components/Wallet";
@@ -23,6 +24,7 @@ function App() {
           <Route path="*" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="edit_profile" element={<EditProfile />} />
           <Route path="notifications" element={<Notifications />} />
           <Route path="wallet" element={<Wallet />} />
           <Route path="login" element={<Login />} />
