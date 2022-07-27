@@ -78,11 +78,8 @@ const EditProfile = () => {
                   src="./assets/images/profile_pic1.png"
                   className="profile-pic rounded-circle"
                 />
-                <button
-                 
-                  class="btn btn-primary float-end me-4 mt-4 my-3 bg-light border-0 "
-                >
-                     <i class="fa fa-camera funge-color me-4"></i>
+                <button class="btn btn-primary float-end me-4 mt-4 my-3 bg-light border-0 ">
+                  <i class="fa fa-camera funge-color me-4"></i>
                   <span className="w-600 funge-color">Add cover Photo</span>
                 </button>
               </div>
@@ -163,7 +160,7 @@ const EditProfile = () => {
                         <div className="w-600">Connect Social Media</div>
                         <br />
                         <div className="input-group flex-nowrap mb-3">
-                          <span className="input-group-text funge-addon">
+                          <span className="input-group-text funge-pre-addon">
                             <img
                               src="./assets/images/facebook.png"
                               width={15}
@@ -177,7 +174,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="input-group flex-nowrap mb-3">
-                          <span className="input-group-text funge-addon">
+                          <span className="input-group-text funge-pre-addon">
                             <img
                               src="./assets/images/instagram.png"
                               width={15}
@@ -191,13 +188,13 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="input-group flex-nowrap mb-3">
-                          <span className="input-group-text funge-addon">
+                          <span className="input-group-text funge-pre-addon">
                             <img
                               src="./assets/images/twitter-grey.png"
                               width={15}
                             />
                           </span>
-                          <input
+                          <input       
                             type="text"
                             class="form-control funge-input"
                             placeholder="Twitter Userme"
@@ -205,16 +202,15 @@ const EditProfile = () => {
                           />
                         </div>
                         <br />
-                        <div className="w-600">Wallet Adress</div>
+                        <div className="w-600">Wallet Adress</div>   
                         <br />
-                        <div class="form-group mb-3">
+                        <div class="input-group mb-3">
                           <input
+                            type="text"
                             class="form-control funge-input"
                             placeholder="0x4E1f41613c9084FdB9E34E11fAE9412427480e56"
                           />
-                          <div className="funge-color">
-                            <i class="far fa-clone sub-heading float-end"></i>
-                          </div>
+                          <span class="input-group-text funge-post-addon"><i class="far fa-clone sub-heading float-end"></i></span>
                         </div>
                         <br />
                         <button type="Save" class="btn btn-primary ">

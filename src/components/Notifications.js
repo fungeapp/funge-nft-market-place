@@ -34,6 +34,7 @@ const Notifications = () => {
                                     <div className='col-12'>
                                         <NewNotifictions/>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>

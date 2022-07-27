@@ -58,12 +58,20 @@ a.funge-link {
     font-size: 42px !important;
 }
 
-.funge-addon{
+.funge-pre-addon{
     background-color: #F7F7F8 !important;
     border: 1px solid #E7E8EA !important;
     border-top-left-radius: 8px !important;
     border-bottom-left-radius: 8px !important;
     border-right: 0px !important;
+}
+
+.funge-post-addon{
+    background-color: #F7F7F8 !important;
+    border: 1px solid #E7E8EA !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-left: 0px !important;
 }
 
 input.funge-input, textarea.funge-input{
@@ -72,6 +80,10 @@ input.funge-input, textarea.funge-input{
     border-radius: 8px;
     font-size: 12px !important;
     font-weight: 400;
+}
+
+input.funge-input:focus, textarea.funge-input:focus{
+    box-shadow: none !important;
 }
 
 button.post-primary-btn {
@@ -10288,3 +10300,14 @@ input.otp-input {
 }
 
 /* Wallet Page End */
+
+.post-toggle-menu .dropdown-toggle::after {
+    border:0px !important;
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border: 0px !important;
+}
+.post-toggle-menu .dropdown-item {
+    min-width: 300px !important;
+}
