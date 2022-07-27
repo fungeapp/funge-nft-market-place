@@ -11,8 +11,8 @@ const Notifications = () => {
         <>
             <TopBar />
             <LeftSidebar myState='notifications' />
-            <div className='container-fluid main-div min-vh-100'>
-                <div className='row justify-content-around' style={{ marginLeft: 220 }}>
+            <div className='container-fluid main-div min-vh-100 ps-0'>
+                <div className='row justify-content-around mainbox'>
                     <div className='col-md-8 mt-3 ps-0'>
                         <h2 className='w-800 mx-3 mb-2'>Notifications</h2>
                         <div className='card funge-card p-4'>

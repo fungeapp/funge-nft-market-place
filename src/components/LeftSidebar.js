@@ -7,7 +7,7 @@ const LeftSidebar = (props) => {
 
   return (
     <>
-      <div className="position-absolute flex-shrink-0 p-3 bg-white pt-5 min-vh-100 h-100" style={{ maxWidth: 280 }}>
+      <div className="position-absolute flex-shrink-0 p-3 bg-white pt-5 min-vh-100 h-100 left_sidebar" style={{ maxWidth: 280 }}>
             <ul className="list-unstyled ps-0">
               <li className="mb-2">
                 <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">

@@ -11,8 +11,8 @@ const Feeds = () => {
     <>
       <TopBar />
       <LeftSidebar myState="home" />
-      <div className="container-fluid main-div min-vh-100">
-        <div className="row justify-content-around" style={{ marginLeft: 220 }}>
+      <div className="container-fluid main-div min-vh-100 ps-0">
+        <div className="row justify-content-around mainbox">
           <div className="col-md-6">
             <NewPost />
             <FeedContainer />
@@ -257,17 +257,16 @@ const Feeds = () => {
                 </div>
               </div>
             </div>
-
             <div className="card funge-card mt-4">
               <div className="container">
                 <div className="row pt-2">
-                  <div className="col-2 p-0">
+                  <div className="col-1 p-0">
                     <img
                       src="./assets/images/profile_new.png"
-                      className="img-fluid mt-3"
+                      className="img-fluid mt-3 ms-2"
                     />
                   </div>
-                  <div className="col-10">
+                  <div className="col-11 ps-4">
                     <p className="w-400 ms-2 ">
                       <p className="w-400 mb-2 my-3 mb-2">
                         Today is a good day to post Nfts
@@ -277,30 +276,62 @@ const Feeds = () => {
                   </div>
                 </div>
                 <div className="row pt-2">
-                  <div className="col-4">
+                  <div className="col-6">
                     <img
                       src="./assets/images/Rectangle .png"
                       class="img-fluid w-100"
                       alt="Post Image"
                     />
+                    <span className="fs-3 position-absolute" style={{top:136,left:60}}>
+                      <i class="fas fa-times-circle funge-color"></i>
+                    </span>
                   </div>
-                  <div className="col-4">
+                  <div className="col-6">
                     <img
                       src="./assets/images/Rectangle 864.png"
                       class="img-fluid  w-100"
                       alt="Post Image"
                     />
                   </div>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <span className="w-700">
-                  <a href="#" class="funge-link w-700">Tag people</a>
-                  </span>
+                  <br />
+                  <div className="row pt-2 ms-2 my-2">
+                    <div className="col-1 p-0">
+                      <img
+                        src="./assets/images/User.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                    <div className="col-11 p-0">
+                      <a href="#" class="funge-link w-700 me-5">
+                        Tag people
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <br/>
-                  <hr/>
+                <hr className="funge-grey" />
+              </div>
+              <div className="row pt-2 px-5">
+                <div className="col-1 p-0">
+                  <img src="./assets/images/Image.png" className="img-fluid" />
+                </div>
+                <div className="col-1 p-0">
+                  <img
+                    src="./assets/images/user+.png"
+                    className="img-fluid  "
+                  />
+                </div>
+                <div className="col-1 p-0">
+                  <img src="./assets/images/Smile.png" className="img-fluid " />
+                </div>
+                <div className="col-1 p-0">
+                  <img
+                    src="./assets/images/Location.png"
+                    className="img-fluid  "
+                  />
+                </div>
+                <div className="col-8 p-0 text-end">
+                  <button class="btn btn-primary">Funge it</button>
+                </div>
               </div>
             </div>
           </div>

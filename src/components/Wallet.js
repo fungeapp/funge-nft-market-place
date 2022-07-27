@@ -10,8 +10,8 @@ const Wallet = () => {
         <>
             <TopBar />
             <LeftSidebar myState='wallet' />
-            <div className='container-fluid main-div min-vh-100'>
-                <div className='row justify-content-center' style={{ marginLeft: 220 }}>
+            <div className='container-fluid main-div min-vh-100 ps-0'>
+                <div className='row justify-content-center mainbox'>
                     <div className='col-md-12 m-3 ps-0'>
                         <h2 className='m-3 w-800 d-inline'>Wallet</h2>
                         <span className='float-end'>
@@ -45,9 +45,8 @@ const Wallet = () => {
                                         </div>
                                         <div className="col d-flex justify-content-end">
                                             <div className='align-self-end'>
-                                                <button className='btn btn-primary'>Deposit</button>
-                                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                                <button className='btn btn-secondary'>Withdraw</button>
+                                                <button className='btn btn-primary m-2'>Deposit</button>
+                                                <button className='btn btn-secondary m-2'>Withdraw</button>
                                             </div>
                                         </div>
                                     </div>
@@ -72,10 +71,10 @@ const Wallet = () => {
                                             <div className='tab-pane container p-0 active' id='crypto'>
                                                 <div className='card funge-card funge-bggrey mb-4'>
                                                     <div className='row'>
-                                                        <div className='col-1'>
+                                                        <div className='col-sm-2 col-md-1'>
                                                             <img src='./assets/images/polygon.png' className='img-fluid mt-1' />
                                                         </div>
-                                                        <div className='col-11 pe-4'>
+                                                        <div className='col-sm-10 col-md-11 pe-4'>
                                                             <p className='mb-0'>
                                                                 <small>Polygon (MATIC)</small><br />
                                                                 <span className='w-600'>$0.000003</span>
@@ -86,10 +85,10 @@ const Wallet = () => {
                                                 </div>
                                                 <div className='card funge-card funge-bggrey mb-4'>
                                                     <div className='row'>
-                                                        <div className='col-1'>
+                                                        <div className='col-sm-2 col-md-1'>
                                                             <img src='./assets/images/ETH_wallet.png' className='img-fluid mt-1' />
                                                         </div>
-                                                        <div className='col-11 pe-4'>
+                                                        <div className='col-sm-10 col-md-11 pe-4'>
                                                             <p className='mb-0'>
                                                                 <small>Ethereum Wallet</small><br />
                                                                 <span className='w-600'>$0.000003</span>
@@ -100,10 +99,10 @@ const Wallet = () => {
                                                 </div>
                                                 <div className='card funge-card funge-bggrey mb-4'>
                                                     <div className='row'>
-                                                        <div className='col-1'>
+                                                        <div className='col-sm-2 col-md-1'>
                                                             <img src='./assets/images/lite_wallet.png' className='img-fluid mt-1' />
                                                         </div>
-                                                        <div className='col-11 pe-4'>
+                                                        <div className='col-sm-10 col-md-11 pe-4'>
                                                             <p className='mb-0'>
                                                                 <small>Litcoin Wallet</small><br />
                                                                 <span className='w-600'>$0.000003</span>

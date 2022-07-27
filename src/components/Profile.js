@@ -12,8 +12,8 @@ const Profile = () => {
     <>
       <TopBar />
       <LeftSidebar myState="profile" />
-      <div className="container-fluid main-div min-vh-100">
-        <div className="row justify-content-center" style={{ marginLeft: 220 }}>
+      <div className="container-fluid main-div min-vh-100 ps-0">
+        <div className="row justify-content-center mainbox">
           <div className="col-md-12 m-3 ps-0">
             <div className="card profile-card px-4 pt-4 border-0">
               <div className="cover-profile">
@@ -25,7 +25,7 @@ const Profile = () => {
               <div class="card-body profile-card-body">
                 <div className="container-fluid">
                   <div className="row justify-content-end">
-                    <div className="col-6">
+                    <div className="col-sm-12 col-md-6">
                       <table>
                         <tr>
                           <td>
@@ -54,7 +54,7 @@ const Profile = () => {
                         </tr>
                       </table>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-12 col-md-6">
                       <p className="pt-5">
                         <a href="#" class="btn btn-secondary">
                           <b>1,400</b> Follower
@@ -99,7 +99,7 @@ const Profile = () => {
                 <div className="container-fluid p-0">
                   <div className="row p-0">
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div class="d-grid gap-3">
+                      <div class="d-grid gap-3 mt-3">
                         <button class="btn btn-secondary" type="button">
                           <img src="./assets/images/fb.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
@@ -108,10 +108,17 @@ const Profile = () => {
                           <img src="./assets/images/insta.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
+                        <button class="btn btn-secondary" type="button">
+                          <img
+                            className="float-start"
+                            src="./assets/images/twitter.png"
+                          />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
+                        </button>
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div class="d-grid gap-3">
+                      <div class="d-grid gap-3 mt-3">
                         <button class="btn btn-secondary" type="button">
                           <img
                             className="float-start"
@@ -126,18 +133,6 @@ const Profile = () => {
                       </div>
                     </div>
 
-                    <div className="col-sm-12 col-md-6 px-1">
-                      <br />
-                      <div class="d-grid gap-3">
-                        <button class="btn btn-secondary" type="button">
-                          <img
-                            className="float-start"
-                            src="./assets/images/twitter.png"
-                          />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
-                        </button>
-                      </div>
-                    </div>
                   </div>
                   <br />
                   <hr />

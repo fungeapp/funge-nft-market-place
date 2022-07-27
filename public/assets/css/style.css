@@ -101,6 +101,42 @@ button.post-primary-btn {
     color: #71AFAC;
 }
 
+/* Left Sidebar */
+
+.mainbox{
+    margin-left: 220px !important;
+}
+
+
+
+@media(max-width:500px) {
+    .left_sidebar{
+        display: none !important;
+    }
+    .mainbox{
+        margin-left: 0px !important;
+    }
+    .mainbox div.ps-0{
+
+        margin-left: 0px;
+        margin-right: 0px !important;
+        
+    }
+
+    /* .mainbox .funge-card{
+        padding:0px !important;
+    } */
+
+    .mainbox .funge-card .card-body .container-fluid{
+        padding:0px !important;
+    }
+
+    .card-body.profile-card-body{
+        margin-left: 0px !important;
+        margin-top: 80px !important;
+    }
+}
+
 /* bootstrap accordion start */
 .accordion-button:not(.collapsed) {
     color: #71AFAC !important;
@@ -10214,7 +10250,7 @@ input.otp-input {
 }
 
 .card-body.profile-card-body {
-    margin-left: 240px !important;
+    margin-left: 240px;
 }
 
 .profile-card .btn.btn-secondary {
@@ -10311,3 +10347,5 @@ input.otp-input {
 .post-toggle-menu .dropdown-item {
     min-width: 300px !important;
 }
+
+/* route/notifications css for responsiveness */

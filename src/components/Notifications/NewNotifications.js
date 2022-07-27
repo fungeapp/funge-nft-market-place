@@ -5,7 +5,7 @@ const NewNotifictions = () => {
 
     return (
         <>
-            <table>
+            <table className='notification_table'>
                 {/* Set props to single noti */}
                 <SingleNoti />
                 <tr>
