@@ -201,6 +201,22 @@ button.post-primary-btn {
     }
 }
 
+@media screen and (max-width: 760px) {
+    .funge-footer{
+        padding-top:20px !important;
+        text-align: center !important;
+    }
+    .funge-footer div{
+        padding-bottom: 16px;
+    }
+    .funge-footer .text-end{
+        text-align: center !important;
+    }
+    .feature-card .card-body{
+        padding: 0px;
+    }
+}
+
 .feature1 {
     padding-left: 3rem;
     padding-right: 3rem;
