@@ -202,6 +202,16 @@ button.post-primary-btn {
 }
 
 @media screen and (max-width: 760px) {
+    .feature-card .border-end{
+        border-right: 0px !important;
+    }
+    .section-thumb.ps-5{
+        padding-left: 1rem !important;
+    }
+    .tokenomics{
+        padding-left:26px;
+        padding-right:26px;
+    }
     .card-travelya{
         margin-bottom:15px;
     }
