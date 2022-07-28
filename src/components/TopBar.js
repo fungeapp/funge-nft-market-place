@@ -72,11 +72,11 @@ const TopBar = () => {
                             >
                                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                                     <li className="nav-item">
-                                        <div class="btn-group">
-                                            <button class="btn btn-sm dropdown-toggle lang-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div className="btn-group">
+                                            <button className="btn btn-sm dropdown-toggle lang-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i className="fas fa-globe funge-color p-2 bg-white"></i> English
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul className="dropdown-menu">
                                                 <li className="dropdown-item">English 1</li>
                                                 <li className="dropdown-item">English 2</li>
                                                 <li className="dropdown-item">English 3</li>

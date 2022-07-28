@@ -63,7 +63,7 @@ const Feeds = () => {
                     />
                   </div>
                   <div className="col-10">
-                    <p className="w-400 ms-2">
+                    <div className="w-400 ms-2">
                       <p className="w-700 mb-2">Daily Challenge</p>
                       There are many variations of passages of Lorem Ipsum
                       <br />
@@ -71,7 +71,7 @@ const Feeds = () => {
                       <a href="#" className="funge-link w-700">
                         Read more
                       </a>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,167 +91,169 @@ const Feeds = () => {
                   </div>
                   <div className="col-12 p-0">
                     <table>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
-                            <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                      <tbody>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
                             </span>
-                          </small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
-                            <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
                             </span>
-                          </small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
                             <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
                             </span>
-                          </small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
+                            </span>
                             <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
                             </span>
-                          </small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
+                            </span>
                             <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
                             </span>
-                          </small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
+                            </span>
                             <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
                             </span>
-                          </small>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td width={110} className="pb-3 ps-2">
-                          <img
-                            src="./assets/images/Rectangle.png"
-                            className="img-fluid mt-1"
-                          />
-                        </td>
-                        <td className="pb-3 me-2 align-middle">
-                          <span className="w-600 ms-4 ">
-                            Lil Pump Enlists soulja Boy
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
+                            </span>
                             <br />
-                          </span>
-                          <span className="w-600 ms-4">
-                            for new song "Mona Lisa"
-                          </span>
-                          <br />
-                          <small>
-                            <span className="w-400 recent-news ms-4">
-                              Feb 14, 2022 . 4 min read
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
                             </span>
-                          </small>
-                        </td>
-                      </tr>
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
+                            </span>
+                            <br />
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width={110} className="pb-3 ps-2">
+                            <img
+                              src="./assets/images/Rectangle.png"
+                              className="img-fluid mt-1"
+                            />
+                          </td>
+                          <td className="pb-3 me-2 align-middle">
+                            <span className="w-600 ms-4 ">
+                              Lil Pump Enlists soulja Boy
+                              <br />
+                            </span>
+                            <span className="w-600 ms-4">
+                              for new song "Mona Lisa"
+                            </span>
+                            <br />
+                            <small>
+                              <span className="w-400 recent-news ms-4">
+                                Feb 14, 2022 . 4 min read
+                              </span>
+                            </small>
+                          </td>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                 </div>
@@ -267,29 +269,32 @@ const Feeds = () => {
                     />
                   </div>
                   <div className="col-11 ps-4">
-                    <p className="w-400 ms-2 ">
+                    <div className="w-400 ms-2 ">
                       <p className="w-400 mb-2 my-3 mb-2">
                         Today is a good day to post Nfts
                       </p>
                       <p className="w-500 mb-2  funge-color">#Newcollection</p>
-                    </p>
+                    </div>
                   </div>
                 </div>
                 <div className="row pt-2">
                   <div className="col-6">
                     <img
                       src="./assets/images/Rectangle .png"
-                      class="img-fluid w-100"
+                      className="img-fluid w-100"
                       alt="Post Image"
                     />
-                    <span className="fs-3 position-absolute" style={{top:136,left:60}}>
-                      <i class="fas fa-times-circle funge-color"></i>
+                    <span
+                      className="fs-3 position-absolute"
+                      style={{ top: 136, left: 60 }}
+                    >
+                      <i className="fas fa-times-circle funge-color"></i>
                     </span>
                   </div>
                   <div className="col-6">
                     <img
                       src="./assets/images/Rectangle 864.png"
-                      class="img-fluid  w-100"
+                      className="img-fluid  w-100"
                       alt="Post Image"
                     />
                   </div>
@@ -302,7 +307,7 @@ const Feeds = () => {
                       />
                     </div>
                     <div className="col-11 p-0">
-                      <a href="#" class="funge-link w-700 me-5">
+                      <a href="#" className="funge-link w-700 me-5">
                         Tag people
                       </a>
                     </div>
@@ -330,7 +335,7 @@ const Feeds = () => {
                   />
                 </div>
                 <div className="col-8 p-0 text-end">
-                  <button class="btn btn-primary">Funge it</button>
+                  <button className="btn btn-primary">Funge it</button>
                 </div>
               </div>
             </div>

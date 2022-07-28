@@ -20,7 +20,7 @@ const Notifications = () => {
                                 <button className='btn btn-primary'>All</button>
                                 &nbsp; &nbsp; &nbsp; &nbsp;
                                 <button className='btn btn-secondary'>Unread</button>
-                                <span className='float-end'><i class="fas fa-cog fs-5 funge-grey my-3"></i></span>
+                                <span className='float-end'><i className="fas fa-cog fs-5 funge-grey my-3"></i></span>
                                 <br />
                                 <br />
                                 <hr />
@@ -99,10 +99,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -115,10 +115,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -131,10 +131,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -147,10 +147,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -163,10 +163,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -179,10 +179,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -195,10 +195,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum "></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -211,10 +211,10 @@ const Notifications = () => {
                                                 <td className='w-600'>
                                                     <span className='p-0 ms-2'>Meebits</span>
                                                     <br />
-                                                    <i class="fab fa-ethereum"></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
+                                                    <i className="fab fa-ethereum"></i>3.75 &nbsp; | <span className='funge-color'>18.18%</span>
                                                 </td>
                                                 <td>
-                                                    <i class="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
+                                                    <i className="fa fa-angle-right float-end funge-grey" aria-hidden="true"></i>
                                                 </td>
                                             </tr>
                                         </table>

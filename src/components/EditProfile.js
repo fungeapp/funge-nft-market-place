@@ -15,8 +15,8 @@ const EditProfile = () => {
             <div className="card funge-card social-card">
               <div className="card-body">
                 <h6 className="w-600">Wallet Address</h6>
-                <div class="input-group input-wallet mb-3">
-                  <span class="input-group-text icon">
+                <div className="input-group input-wallet mb-3">
+                  <span className="input-group-text icon">
                     <img src="./assets/images/fox.png" />
                   </span>
                   <input
@@ -24,8 +24,8 @@ const EditProfile = () => {
                     placeholder={"1F1tAassdadsd...GNn4xqXw6"}
                     className="form-control border-0"
                   />
-                  <span class="input-group-text bg-transparent border-0 fa-rotate-270">
-                    <i class="fas fa-clone"></i>
+                  <span className="input-group-text bg-transparent border-0 fa-rotate-270">
+                    <i className="fas fa-clone"></i>
                   </span>
                 </div>
                 <hr />
@@ -40,27 +40,27 @@ const EditProfile = () => {
                 <div className="container-fluid p-0">
                   <div className="row p-0">
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div class="d-grid gap-3">
-                        <button class="btn btn-secondary" type="button">
+                      <div className="d-grid gap-3">
+                        <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/fb.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
-                        <button class="btn btn-secondary" type="button">
+                        <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/insta.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div class="d-grid gap-3">
-                        <button class="btn btn-secondary" type="button">
+                      <div className="d-grid gap-3">
+                        <button className="btn btn-secondary" type="button">
                           <img
                             className="float-start"
                             src="./assets/images/twitter.png"
                           />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
-                        <button class="btn btn-secondary" type="button">
+                        <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/discord.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
@@ -78,19 +78,19 @@ const EditProfile = () => {
                   src="./assets/images/profile_pic1.png"
                   className="profile-pic rounded-circle"
                 />
-                <button class="btn btn-primary float-end me-4 mt-4 my-3 bg-light border-0 ">
-                  <i class="fa fa-camera funge-color me-4"></i>
+                <button className="btn btn-primary float-end me-4 mt-4 my-3 bg-light border-0 ">
+                  <i className="fa fa-camera funge-color me-4"></i>
                   <span className="w-600 funge-color">Add cover Photo</span>
                 </button>
               </div>
-              <div class="card-body profile-card-body">
+              <div className="card-body profile-card-body">
                 <div className="container-fluid">
                   <div className="row justify-content-start">
                     <div className="col-12">
                       <table>
                         <tr>
                           <td>
-                            <h5 class="card-title w-800 d-inline-block">
+                            <h5 className="card-title w-800 d-inline-block">
                               Joe Chris <br />
                               <small className="funge-color">@Joe Chris</small>
                             </h5>
@@ -100,7 +100,7 @@ const EditProfile = () => {
                     </div>
                     <div className="col-10 mt-5">
                       <form>
-                        <div class="form-group mb-3">
+                        <div className="form-group mb-3">
                           <label
                             for="exampleInputEmail1"
                             className="sub-heading fs-14px"
@@ -109,14 +109,14 @@ const EditProfile = () => {
                           </label>
                           <input
                             type="text"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             id="username"
                             aria-describedby="usernameHelp"
                             placeholder="Abz"
                           />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div className="form-group mb-3">
                           <label
                             for="exampleInputEmail1"
                             className="sub-heading fs-14px"
@@ -125,24 +125,25 @@ const EditProfile = () => {
                           </label>
                           <input
                             type="email"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             id="exampleInputPassword1"
                             placeholder="Johndoe@gmail.com"
                           />
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div className="form-group mb-3">
                           <label for="user_bio" className="sub-heading fs-14px">
                             Bio
                           </label>
                           <textarea
                             id="user_bio"
                             className="form-control funge-input"
+                            placeholder="Write Here..."
                           >
-                            Write Here...
+                            
                           </textarea>
                         </div>
-                        <div class="form-group mb-3">
+                        <div className="form-group mb-3">
                           <label
                             for="exampleInputEmail1"
                             className="sub-heading fs-14px"
@@ -151,7 +152,7 @@ const EditProfile = () => {
                           </label>
                           <input
                             type="email"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             id="exampleInputPassword1"
                             placeholder="English"
                           />
@@ -168,7 +169,7 @@ const EditProfile = () => {
                           </span>
                           <input
                             type="text"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             placeholder="Facebook Username"
                             aria-describedby="addon-wrapping"
                           />
@@ -182,7 +183,7 @@ const EditProfile = () => {
                           </span>
                           <input
                             type="text"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             placeholder="Instagram Userme"
                             aria-describedby="addon-wrapping"
                           />
@@ -196,7 +197,7 @@ const EditProfile = () => {
                           </span>
                           <input       
                             type="text"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             placeholder="Twitter Userme"
                             aria-describedby="addon-wrapping"
                           />
@@ -204,16 +205,16 @@ const EditProfile = () => {
                         <br />
                         <div className="w-600">Wallet Adress</div>   
                         <br />
-                        <div class="input-group mb-3">
+                        <div className="input-group mb-3">
                           <input
                             type="text"
-                            class="form-control funge-input"
+                            className="form-control funge-input"
                             placeholder="0x4E1f41613c9084FdB9E34E11fAE9412427480e56"
                           />
-                          <span class="input-group-text funge-post-addon"><i class="far fa-clone sub-heading float-end"></i></span>
+                          <span className="input-group-text funge-post-addon"><i className="far fa-clone sub-heading float-end"></i></span>
                         </div>
                         <br />
-                        <button type="Save" class="btn btn-primary ">
+                        <button type="Save" className="btn btn-primary ">
                           Save
                         </button>
                       </form>

@@ -15,11 +15,11 @@ const Wallet = () => {
                     <div className='col-md-12 m-3 ps-0'>
                         <h2 className='m-3 w-800 d-inline'>Wallet</h2>
                         <span className='float-end'>
-                            <div class="btn-group poly-dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div className="btn-group poly-dropdown">
+                                <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src='./assets/images/polygon.png' /> &nbsp; Polygon &nbsp;
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul className="dropdown-menu">
                                     <li className="dropdown-item py-2">
                                         <img src='./assets/images/fox.png' width={30}/> &nbsp; Funge 1
                                     </li>

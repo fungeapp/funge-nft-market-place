@@ -22,14 +22,14 @@ const Profile = () => {
                   className="profile-pic rounded-circle"
                 />
               </div>
-              <div class="card-body profile-card-body">
+              <div className="card-body profile-card-body">
                 <div className="container-fluid">
                   <div className="row justify-content-end">
                     <div className="col-sm-12 col-md-6">
                       <table>
                         <tr>
                           <td>
-                            <h5 class="card-title w-800 d-inline-block">
+                            <h5 className="card-title w-800 d-inline-block">
                               Joe Chris <br />
                               <small className="funge-color">@Joe Chris</small>
                             </h5>
@@ -38,7 +38,7 @@ const Profile = () => {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <Link
                               to="/edit_profile"
-                              class="btn btn-primary edit-profile-btn px-3"
+                              className="btn btn-primary edit-profile-btn px-3"
                             >
                               Edit Profile
                             </Link>
@@ -46,9 +46,9 @@ const Profile = () => {
                         </tr>
                         <tr>
                           <td colSpan={2} className="pt-2">
-                            <p class="card-text">
-                              Joined November 2021 | Floor <b><i class="fab fa-ethereum funge-color"></i> 3.75</b> | Volume
-                              <b><i class="fab fa-ethereum funge-color"></i> 3.75</b>
+                            <p className="card-text">
+                              Joined November 2021 | Floor <b><i className="fab fa-ethereum funge-color"></i> 3.75</b> | Volume
+                              <b><i className="fab fa-ethereum funge-color"></i> 3.75</b>
                             </p>
                           </td>
                         </tr>
@@ -56,11 +56,11 @@ const Profile = () => {
                     </div>
                     <div className="col-sm-12 col-md-6">
                       <p className="pt-5">
-                        <a href="#" class="btn btn-secondary">
+                        <a href="#" className="btn btn-secondary">
                           <b>1,400</b> Follower
                         </a>
                         &nbsp;
-                        <a href="#" class="btn btn-secondary">
+                        <a href="#" className="btn btn-secondary">
                           <b>1,400</b> Following
                         </a>
                       </p>
@@ -74,8 +74,8 @@ const Profile = () => {
             <div className="card funge-card social-card">
               <div className="card-body">
                 <h6 className="w-600">Wallet Address</h6>
-                <div class="input-group input-wallet mb-3">
-                  <span class="input-group-text icon">
+                <div className="input-group input-wallet mb-3">
+                  <span className="input-group-text icon">
                     <img src="./assets/images/fox.png" />
                   </span>
                   <input
@@ -83,8 +83,8 @@ const Profile = () => {
                     placeholder={"1F1tAassdadsd...GNn4xqXw6"}
                     className="form-control border-0"
                   />
-                  <span class="input-group-text bg-transparent border-0 fa-rotate-270">
-                    <i class="fas fa-clone"></i>
+                  <span className="input-group-text bg-transparent border-0 fa-rotate-270">
+                    <i className="fas fa-clone"></i>
                   </span>
                 </div>
                 <hr />
@@ -99,16 +99,16 @@ const Profile = () => {
                 <div className="container-fluid p-0">
                   <div className="row p-0">
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div class="d-grid gap-3 mt-3">
-                        <button class="btn btn-secondary" type="button">
+                      <div className="d-grid gap-3 mt-3">
+                        <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/fb.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
-                        <button class="btn btn-secondary" type="button">
+                        <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/insta.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
-                        <button class="btn btn-secondary" type="button">
+                        <button className="btn btn-secondary" type="button">
                           <img
                             className="float-start"
                             src="./assets/images/twitter.png"
@@ -118,15 +118,15 @@ const Profile = () => {
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div class="d-grid gap-3 mt-3">
-                        <button class="btn btn-secondary" type="button">
+                      <div className="d-grid gap-3 mt-3">
+                        <button className="btn btn-secondary" type="button">
                           <img
                             className="float-start"
                             src="./assets/images/twitter.png"
                           />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
-                        <button class="btn btn-secondary" type="button">
+                        <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/discord.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
@@ -138,7 +138,7 @@ const Profile = () => {
                   <hr />
                   <br/>
                   <div className="w-500">
-                  <i class="fas fa-globe fa-rotate-180"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>www.mynfts.com</span><i class="fas fa-external-link float-end funge-color"></i>
+                  <i className="fas fa-globe fa-rotate-180"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>www.mynfts.com</span><i className="fas fa-external-link float-end funge-color"></i>
                   </div>
                 </div>
               </div>
@@ -146,44 +146,44 @@ const Profile = () => {
           </div>
           <div className="col-md-8 col-sm-12">
             <div className="card funge-card">
-              <ul class="nav nav-pills profile-pills mt-4 mx-4">
-                <li class="nav-item">
+              <ul className="nav nav-pills profile-pills mt-4 mx-4">
+                <li className="nav-item">
                   <a
-                    class="nav-link active"
+                    className="nav-link active"
                     data-bs-toggle="pill"
                     href="#socialPosts"
                   >
                     Social Posts
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="pill" href="#collections">
+                <li className="nav-item">
+                  <a className="nav-link" data-bs-toggle="pill" href="#collections">
                     Collections
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="pill" href="#creations">
+                <li className="nav-item">
+                  <a className="nav-link" data-bs-toggle="pill" href="#creations">
                     Creations
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="pill" href="#savedPosts">
+                <li className="nav-item">
+                  <a className="nav-link" data-bs-toggle="pill" href="#savedPosts">
                     Saved posts
                   </a>
                 </li>
               </ul>
 
-              <div class="tab-content">
-                <div class="tab-pane container active" id="socialPosts">
+              <div className="tab-content">
+                <div className="tab-pane container active" id="socialPosts">
                   <FeedContainer />
                 </div>
-                <div class="tab-pane container fade" id="collections">
+                <div className="tab-pane container fade" id="collections">
                   <h1 className="text-center m-5">Collections</h1>
                 </div>
-                <div class="tab-pane container fade" id="creations">
+                <div className="tab-pane container fade" id="creations">
                   <h1 className="text-center m-5">Creations</h1>
                 </div>
-                <div class="tab-pane container fade" id="savedPosts">
+                <div className="tab-pane container fade" id="savedPosts">
                   <h1 className="text-center m-5">Saved Posts</h1>
                 </div>
               </div>

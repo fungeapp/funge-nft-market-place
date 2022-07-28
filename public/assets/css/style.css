@@ -10178,10 +10178,31 @@ input.otp-input {
     cursor: pointer;
 }
 
-.feedpost-controls i:hover {
+.post-controls i:hover {
     color: #71AFAC;
     cursor: pointer;
 }
+
+.post-toggle-menu .dropdown-toggle::after {
+    border:0px !important;
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border: 0px !important;
+}
+.post-toggle-menu .dropdown-menu {
+    border-radius:20px;
+    border: none;
+    padding:0px;
+}
+.post-toggle-menu .dropdown-item {
+    min-width: 300px !important;
+    border-radius:20px;
+}
+.post-toggle-menu .dropdown-item:active {
+    background-color: #e9ecef;
+}
+
 
 /* Feeds Page End */
 
@@ -10337,15 +10358,6 @@ input.otp-input {
 
 /* Wallet Page End */
 
-.post-toggle-menu .dropdown-toggle::after {
-    border:0px !important;
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    border: 0px !important;
-}
-.post-toggle-menu .dropdown-item {
-    min-width: 300px !important;
-}
+
 
 /* route/notifications css for responsiveness */
