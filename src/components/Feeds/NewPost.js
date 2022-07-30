@@ -4,7 +4,7 @@ const NewPost = (props) => {
 
     return (
         <>
-            <div className="card border-radius my-4 border-0">
+            <div className="card funge-card shadow-sm my-4">
                 <div className="card-body">
                     <div className="container-fluid p-0">
                         <div className="row">
@@ -12,7 +12,7 @@ const NewPost = (props) => {
                                 <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
                             </div>
                             <div className="col-md-11 my-2 align-self-end">
-                                <textarea autoFocus className="post-text-area" placeholder='Type Text Here'></textarea>
+                                <textarea rows={4} autoFocus className="post-text-area" placeholder='Type Text Here'></textarea>
                             </div>
                         </div>
                         <div className="row mb-2 mt-4 px-2">

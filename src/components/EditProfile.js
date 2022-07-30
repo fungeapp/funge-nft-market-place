@@ -9,10 +9,10 @@ const EditProfile = () => {
     <>
       <TopBar />
       <LeftSidebar myState="profile" />
-      <div className="container-fluid main-div min-vh-100">
-        <div className="row justify-content-center" style={{ marginLeft: 220 }}>
+      <div className="container-fluid main-div min-vh-100 ps-0">
+        <div className="row justify-content-center mainbox">
           <div className="col-md-4 mt-3 col-sm-12 ps-0">
-            <div className="card funge-card social-card">
+          <div className="card funge-card social-card">
               <div className="card-body">
                 <h6 className="w-600">Wallet Address</h6>
                 <div className="input-group input-wallet mb-3">
@@ -40,7 +40,7 @@ const EditProfile = () => {
                 <div className="container-fluid p-0">
                   <div className="row p-0">
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div className="d-grid gap-3">
+                      <div className="d-grid gap-3 mt-3">
                         <button className="btn btn-secondary" type="button">
                           <img src="./assets/images/fb.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
@@ -49,10 +49,17 @@ const EditProfile = () => {
                           <img src="./assets/images/insta.png" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
                         </button>
+                        <button className="btn btn-secondary" type="button">
+                          <img
+                            className="float-start"
+                            src="./assets/images/twitter.png"
+                          />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joechris
+                        </button>
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 px-1">
-                      <div className="d-grid gap-3">
+                      <div className="d-grid gap-3 mt-3">
                         <button className="btn btn-secondary" type="button">
                           <img
                             className="float-start"
@@ -66,6 +73,13 @@ const EditProfile = () => {
                         </button>
                       </div>
                     </div>
+
+                  </div>
+                  <br />
+                  <hr />
+                  <br/>
+                  <div className="w-500">
+                  <i className="fas fa-globe fa-rotate-180"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>www.mynfts.com</span><i className="fas fa-external-link float-end funge-color"></i>
                   </div>
                 </div>
               </div>
@@ -78,7 +92,7 @@ const EditProfile = () => {
                   src="./assets/images/profile_pic1.png"
                   className="profile-pic rounded-circle"
                 />
-                <button className="btn btn-primary float-end me-4 mt-4 my-3 bg-light border-0 ">
+                <button className="btn-primary float-end me-4 mt-4 bg-light border-0 ">
                   <i className="fa fa-camera funge-color me-4"></i>
                   <span className="w-600 funge-color">Add cover Photo</span>
                 </button>
@@ -98,7 +112,7 @@ const EditProfile = () => {
                         </tr>
                       </table>
                     </div>
-                    <div className="col-10 mt-5">
+                    <div className="col-sm-12 col-md-10 mt-5">
                       <form>
                         <div className="form-group mb-3">
                           <label
@@ -115,7 +129,6 @@ const EditProfile = () => {
                             placeholder="Abz"
                           />
                         </div>
-
                         <div className="form-group mb-3">
                           <label
                             for="exampleInputEmail1"
@@ -130,7 +143,6 @@ const EditProfile = () => {
                             placeholder="Johndoe@gmail.com"
                           />
                         </div>
-
                         <div className="form-group mb-3">
                           <label for="user_bio" className="sub-heading fs-14px">
                             Bio
@@ -140,7 +152,6 @@ const EditProfile = () => {
                             className="form-control funge-input"
                             placeholder="Write Here..."
                           >
-                            
                           </textarea>
                         </div>
                         <div className="form-group mb-3">

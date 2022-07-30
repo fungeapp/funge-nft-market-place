@@ -28,7 +28,7 @@ const Post = (props) => {
 
   return (
     <>
-      <div className="card border-radius my-4 border-0">
+      <div className="card funge-card my-4 shadow-sm">
         <div className="card-body">
           <div className="container-fluid p-0">
             <div className="row">

@@ -12,6 +12,7 @@ import EditProfile from "./components/EditProfile";
 import Feeds from "./components/Feeds";
 import Notifications from "./components/Notifications";
 import Wallet from "./components/Wallet";
+import CreateNewItem from './components/CreateNewItem';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="edit_profile" element={<EditProfile />} />
           <Route path="notifications" element={<Notifications />} />
+          <Route path="new_item" element={<CreateNewItem />} />
           <Route path="wallet" element={<Wallet />} />
           <Route path="login" element={<Login />} />
           <Route path="feeds" element={

@@ -15,7 +15,7 @@ const Profile = () => {
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-12 m-3 ps-0">
-            <div className="card profile-card px-4 pt-4 border-0">
+            <div className="card profile-card px-4 pt-4 border-0 shadow-sm">
               <div className="cover-profile">
                 <img
                   src="./assets/images/profile_pic1.png"
@@ -47,8 +47,8 @@ const Profile = () => {
                         <tr>
                           <td colSpan={2} className="pt-2">
                             <p className="card-text">
-                              Joined November 2021 | Floor <b><i className="fab fa-ethereum funge-color"></i> 3.75</b> | Volume
-                              <b><i className="fab fa-ethereum funge-color"></i> 3.75</b>
+                              Joined November 2021 | Floor <b><img src="./assets/images/Ethereum.png" /> 3.75</b> | Volume&nbsp;
+                              <b><img src="./assets/images/Ethereum.png" /> 3.75</b>
                             </p>
                           </td>
                         </tr>
@@ -70,8 +70,8 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4 col-sm-12 px-0">
-            <div className="card funge-card social-card">
+          <div className="col-md-4 col-sm-12 ps-0 pe-2">
+            <div className="card funge-card social-card shadow-sm">
               <div className="card-body">
                 <h6 className="w-600">Wallet Address</h6>
                 <div className="input-group input-wallet mb-3">
@@ -145,8 +145,8 @@ const Profile = () => {
             </div>
           </div>
           <div className="col-md-8 col-sm-12">
-            <div className="card funge-card">
-              <ul className="nav nav-pills profile-pills mt-4 mx-4">
+            <div className="card funge-card shadow-sm">
+              <ul className="nav nav-pills profile-pills mt-4 mx-4 justify-content-center">
                 <li className="nav-item">
                   <a
                     className="nav-link active"
@@ -174,16 +174,16 @@ const Profile = () => {
               </ul>
 
               <div className="tab-content">
-                <div className="tab-pane container active" id="socialPosts">
+                <div className="tab-pane container active" id="socialPosts" style={{maxWidth:700}}>
                   <FeedContainer />
                 </div>
-                <div className="tab-pane container fade" id="collections">
+                <div className="tab-pane container fade" id="collections" style={{maxWidth:700}}>
                   <h1 className="text-center m-5">Collections</h1>
                 </div>
-                <div className="tab-pane container fade" id="creations">
+                <div className="tab-pane container fade" id="creations" style={{maxWidth:700}}>
                   <h1 className="text-center m-5">Creations</h1>
                 </div>
-                <div className="tab-pane container fade" id="savedPosts">
+                <div className="tab-pane container fade" id="savedPosts" style={{maxWidth:700}}>
                   <h1 className="text-center m-5">Saved Posts</h1>
                 </div>
               </div>

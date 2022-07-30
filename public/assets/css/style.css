@@ -73,6 +73,13 @@ a.funge-link {
     border-bottom-right-radius: 8px !important;
     border-left: 0px !important;
 }
+.bg-white.funge-post-addon{
+    background-color: #FFFFFF !important;
+    border: 1px solid #E7E8EA !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-left: 0px !important;
+}
 
 input.funge-input, textarea.funge-input{
     background: #F7F7F8 !important;
@@ -83,6 +90,22 @@ input.funge-input, textarea.funge-input{
 }
 
 input.funge-input:focus, textarea.funge-input:focus{
+    box-shadow: none !important;
+}
+
+input.new_item_input, textarea.new_item_input{
+    padding: 10px 12px;
+    border: 1px solid #E7E8EA !important;
+    border-radius: 12px;
+    font-size: 12px !important;
+    font-weight: 400;
+}
+
+input.new_item_input::placeholder,textarea.new_item_input::placeholder{
+    color:#A0A1AB;
+}
+
+input.new_item_input:focus, textarea.new_item_input:focus{
     box-shadow: none !important;
 }
 
@@ -104,10 +127,22 @@ button.post-primary-btn {
 /* Left Sidebar */
 
 .mainbox{
-    margin-left: 220px !important;
+    margin-left: 226px !important;
 }
 
+.left_sidebar{
+    border-bottom-right-radius: 20px;
+}
 
+.max-550{
+    max-width: 550px !important;
+}
+.max-600{
+    max-width: 600px !important;
+}
+.max-700{
+    max-width: 700px !important;
+}
 
 @media(max-width:500px) {
     .left_sidebar{
@@ -10345,7 +10380,11 @@ input.otp-input {
     border-radius: 80px;
     min-width: 180px !important;
 }
+.poly-dropdown .btn.dropdown-toggle{
+    border-radius: 12px;
+}
 .poly-dropdown ul.dropdown-menu{
+    width: 180px;
     border-radius: 20px;
     border-color: transparent;
 }
@@ -10354,6 +10393,13 @@ input.otp-input {
 }
 .poly-dropdown button:focus{
     box-shadow: none;
+}
+.poly-dropdown .dropdown-item:hover{
+    border-radius: 8px;
+}
+.poly-dropdown .dropdown-item:active{
+    background-color: #e9ecef;
+    color: #000;
 }
 
 /* Wallet Page End */

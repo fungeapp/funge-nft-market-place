@@ -42,7 +42,7 @@ const TopBar = () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        placeholder="Search, Explore and collections"
+                                        placeholder=" Search NFT, Creator, Collectiions"
                                         aria-label="Username"
                                         aria-describedby="basic-addon1"
                                     />
@@ -70,7 +70,7 @@ const TopBar = () => {
                                 className="collapse align-items-center navbar-collapse"
                                 id="navbarSupportedContent"
                             >
-                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center d-md-flex d-none">
                                     <li className="nav-item">
                                         <div className="btn-group">
                                             <button className="btn btn-sm dropdown-toggle lang-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -102,6 +102,24 @@ const TopBar = () => {
 
                                     <li className="nav-item">
                                         <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="25" height="25" />
+                                    </li>
+                                </ul>
+                                <ul className="navbar-nav ms-auto flex-row d-md-none funge-bggrey justify-content-evenly pe-0 py-3
+                                ">
+                                    <li className="nav-item">
+                                        <i className="fas fa-envelope funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-bell funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-cog funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-wallet funge-color border-end"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-shopping-cart funge-color"></i>
                                     </li>
                                 </ul>
                             </div>
