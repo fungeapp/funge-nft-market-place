@@ -14,11 +14,24 @@ a.funge-link {
     border: 0px;
 }
 
+.min-vh-75{
+    min-height: 75vh;
+}
+.max-vh-75{
+    max-height: 75vh;
+}
+.min-vh-100{
+    min-height: 100vh;
+}
+.max-vh-100{
+    max-height: 100vh;
+}
+
 .funge-color {
     color: #71AFAC !important;
 }
 
-.funge-grey{
+.funge-grey {
     color: #B8C2C5 !important;
 }
 
@@ -58,7 +71,7 @@ a.funge-link {
     font-size: 42px !important;
 }
 
-.funge-pre-addon{
+.funge-pre-addon {
     background-color: #F7F7F8 !important;
     border: 1px solid #E7E8EA !important;
     border-top-left-radius: 8px !important;
@@ -66,14 +79,15 @@ a.funge-link {
     border-right: 0px !important;
 }
 
-.funge-post-addon{
+.funge-post-addon {
     background-color: #F7F7F8 !important;
     border: 1px solid #E7E8EA !important;
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
     border-left: 0px !important;
 }
-.bg-white.funge-post-addon{
+
+.bg-white.funge-post-addon {
     background-color: #FFFFFF !important;
     border: 1px solid #E7E8EA !important;
     border-top-right-radius: 8px !important;
@@ -81,7 +95,8 @@ a.funge-link {
     border-left: 0px !important;
 }
 
-input.funge-input, textarea.funge-input{
+input.funge-input,
+textarea.funge-input {
     background: #F7F7F8 !important;
     border: 1px solid #E7E8EA !important;
     border-radius: 8px;
@@ -89,11 +104,13 @@ input.funge-input, textarea.funge-input{
     font-weight: 400;
 }
 
-input.funge-input:focus, textarea.funge-input:focus{
+input.funge-input:focus,
+textarea.funge-input:focus {
     box-shadow: none !important;
 }
 
-input.new_item_input, textarea.new_item_input{
+input.new_item_input,
+textarea.new_item_input {
     padding: 10px 12px;
     border: 1px solid #E7E8EA !important;
     border-radius: 12px;
@@ -101,11 +118,13 @@ input.new_item_input, textarea.new_item_input{
     font-weight: 400;
 }
 
-input.new_item_input::placeholder,textarea.new_item_input::placeholder{
-    color:#A0A1AB;
+input.new_item_input::placeholder,
+textarea.new_item_input::placeholder {
+    color: #A0A1AB;
 }
 
-input.new_item_input:focus, textarea.new_item_input:focus{
+input.new_item_input:focus,
+textarea.new_item_input:focus {
     box-shadow: none !important;
 }
 
@@ -126,47 +145,51 @@ button.post-primary-btn {
 
 /* Left Sidebar */
 
-.mainbox{
+.mainbox {
     margin-left: 226px !important;
 }
 
-.left_sidebar{
+.left_sidebar {
     border-bottom-right-radius: 20px;
 }
 
-.max-550{
+.max-550 {
     max-width: 550px !important;
 }
-.max-600{
+
+.max-600 {
     max-width: 600px !important;
 }
-.max-700{
+
+.max-700 {
     max-width: 700px !important;
 }
 
 @media(max-width:500px) {
-    .left_sidebar{
+    .left_sidebar {
         display: none !important;
     }
-    .mainbox{
+
+    .mainbox {
         margin-left: 0px !important;
     }
-    .mainbox div.ps-0{
+
+    .mainbox div.ps-0 {
 
         margin-left: 0px;
         margin-right: 0px !important;
-        
+
     }
 
     /* .mainbox .funge-card{
         padding:0px !important;
     } */
 
-    .mainbox .funge-card .card-body .container-fluid{
-        padding:0px !important;
+    .mainbox .funge-card .card-body .container-fluid {
+        padding: 0px !important;
     }
 
-    .card-body.profile-card-body{
+    .card-body.profile-card-body {
         margin-left: 0px !important;
         margin-top: 80px !important;
     }
@@ -196,6 +219,7 @@ button.post-primary-btn {
     background-color: #E4F2F2 !important;
     border-radius: 8px;
 }
+
 .funge-nav-pills.nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
@@ -10219,21 +10243,24 @@ input.otp-input {
 }
 
 .post-toggle-menu .dropdown-toggle::after {
-    border:0px !important;
+    border: 0px !important;
     display: inline-block;
     margin-left: 0.255em;
     vertical-align: 0.255em;
     border: 0px !important;
 }
+
 .post-toggle-menu .dropdown-menu {
-    border-radius:20px;
+    border-radius: 20px;
     border: none;
-    padding:0px;
+    padding: 0px;
 }
+
 .post-toggle-menu .dropdown-item {
     min-width: 300px !important;
-    border-radius:20px;
+    border-radius: 20px;
 }
+
 .post-toggle-menu .dropdown-item:active {
     background-color: #e9ecef;
 }
@@ -10371,39 +10398,105 @@ input.otp-input {
     color: #9DA8B6 !important;
     border: 2px dashed #71AFAC !important;
 }
-.recent-news{
+
+.recent-news {
     color: #94A3B8;
 }
 
-.poly-dropdown{
+.poly-dropdown {
     background-color: #ffffff;
     border-radius: 80px;
     min-width: 180px !important;
 }
-.poly-dropdown .btn.dropdown-toggle{
+
+.poly-dropdown .btn.dropdown-toggle {
     border-radius: 12px;
 }
-.poly-dropdown ul.dropdown-menu{
+
+.poly-dropdown ul.dropdown-menu {
     width: 180px;
     border-radius: 20px;
     border-color: transparent;
 }
-.poly-dropdown button{
-    padding:0px 15px;
+
+.poly-dropdown button {
+    padding: 0px 15px;
 }
-.poly-dropdown button:focus{
+
+.poly-dropdown button:focus {
     box-shadow: none;
 }
-.poly-dropdown .dropdown-item:hover{
+
+.poly-dropdown .dropdown-item:hover {
     border-radius: 8px;
 }
-.poly-dropdown .dropdown-item:active{
+
+.poly-dropdown .dropdown-item:active {
     background-color: #e9ecef;
     color: #000;
 }
 
 /* Wallet Page End */
 
+/* Messages Page Start */
+.messages_search_bar .input-group-text {
+    border-radius: 20px;
+    background-color: #F7F7F8;
+    border-right: 0px;
+    border-color: #E7E8EA;
+}
+
+.messages_search_bar input {
+    padding: 8px 6px;
+    border-radius: 20px;
+    background-color: #F7F7F8;
+    border-left: 0px;
+    color: #A0A1AB;
+    border-color: #E7E8EA;
+}
+
+.messages_search_bar input:focus {
+    box-shadow: none;
+    background-color: #F7F7F8 !important;
+    border-color: #E7E8EA;
+}
+
+.chat-msg {
+    height: 54px;
+    width: 255px;
+    padding: 16px;
+    border-radius: 20px;
+}
+.chat-msg.sMsg {
+    border-bottom-right-radius: 0px;
+}
+.chat-msg.rMsg {
+    border-bottom-left-radius: 0px;
+}
+
+.message-box {
+    background: #FFFFFF;
+    padding: 12px 16px 12px;
+    color: #A0A1AB;
+    border: 1px solid #D0D7D9;
+    border-radius: 12px;
+}
+
+.message-box input {
+    background: #FFFFFF;
+    padding: 12px 16px 12px;
+    color: #A0A1AB;
+    border: 0px;
+}
+
+.message-box input.send-btn {
+    width: 90px;
+    height: 38px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 12px !important;
 
 
-/* route/notifications css for responsiveness */
+}
+
+/* Messages Page End */

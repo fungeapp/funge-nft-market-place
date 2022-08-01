@@ -17,7 +17,7 @@ const LeftSidebar = (props) => {
                   <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li><Link to="/feeds" className={` ${isActive === "home" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</Link></li>
                     <li><Link to="/notifications" className={` ${isActive === "notifications" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</Link></li>
-                    <li><Link to="/messages" className={` ${isActive === "messages" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</Link></li>
+                    <li><Link to="/inbox" className={` ${isActive === "messages" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</Link></li>
                     <li><Link to="/saved" className={` ${isActive === "saved" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Saved</Link></li>
                     <li><Link to="/profile" className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</Link></li>
                   </ul>
