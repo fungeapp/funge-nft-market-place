@@ -57,7 +57,7 @@ const ProfileLogin = (props) => {
             let exist = response.data
             console.log(`email exist ${exist}`)
             if(!exist) {
-                //insert nothing else to do if email already exsit.
+                //insert nothing else to do if email already exist.
                 axios({
                     method: 'post',
                     url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
@@ -86,7 +86,14 @@ const ProfileLogin = (props) => {
             })
             return email;
         })
-        
+        .then(email => {
+            axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${email}`)
+            .then(response => {
+                console.log(`profile ${response.data[0].id}`)
+                //save localStorage for session management.  Magic opens to a new tab so sessionStorage is not persisted after email verification
+                localStorage.setItem('user_session',JSON.stringify(`{user_id: ${response.data[0].id}, email:${email}}`))
+            })
+        })
     }
 
     const phoneNumber = async (e) => {
