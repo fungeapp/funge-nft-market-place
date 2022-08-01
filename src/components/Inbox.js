@@ -1,10 +1,10 @@
 import React, { state, useState } from "react";
 import TopBar from "./TopBar";
 import LeftSidebar from "./LeftSidebar";
-import NewMessages from "./Messages/NewMessages";
-import SingleChat from "./Messages/SingleChat";
-import MessagesSearchBar from "./Messages/MessagesSearchBar";
-import SingleMessage from "./Messages/SingleMessage";
+import NewMessages from "./Inbox/NewMessages";
+import SingleChat from "./Inbox/SingleChat";
+import MessagesSearchBar from "./Inbox/MessagesSearchBar";
+import SingleMessage from "./Inbox/SingleMessage";
 
 const Messages = () => {
   const [isActive, setActive] = useState("messages");

@@ -286,22 +286,6 @@ const Wallet = () => {
                   </div>
                 </div>
               </div>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
             </div>
           </div>
           <div className="col-md-4 col-sm-12 ps-0 mb-4">
