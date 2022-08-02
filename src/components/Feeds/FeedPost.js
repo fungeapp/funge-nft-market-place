@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useHistory, useState } from 'react';
+import env from 'react-dotenv';
 
 const FeedPost = (props) => {
 
@@ -9,6 +10,15 @@ const FeedPost = (props) => {
 
             </>;
         }
+    }
+
+    useEffect(() => {
+        getAllPost();
+
+    });
+
+    const getAllPost = async => {
+        
     }
 
     const PostImage = (props) => {
@@ -33,7 +43,7 @@ const FeedPost = (props) => {
                         <div className="row">
                             <div className="col-md-12 mt-3 my-2">
                                 <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
-                                <span className="fw-bold">Dotdot</span>
+                                <span className="fw-bold">Dotdotttt</span>
                                 <span className="float-end "><i className="fa fa-ellipsis-h fw-bold "></i></span>
                             </div>
                             <div className="col-md-12 my-2">
