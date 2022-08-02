@@ -32,14 +32,14 @@ const NewPost = (props) => {
     });
 
     const savePost = async (e) => {
-        let sessionProfile = localStorage.getItem("user_session");
-        let x = sessionProfile.user_id
-        console.log(`post content by ${sessionProfile.user_id}`)
+        let sessionUserId = localStorage.getItem("user_id");
+        let sessionEmail = localStorage.getItem("user_email")
+        
             axios({
                     method: 'post',
                     url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/save`,
                     data: {
-                        "user_id": sessionProfile.user_id,
+                        "user_id": sessionUserId,
                         "post_content": postcontent,
                         "post_date": "2016-06-23 19:10:25-07",
                         "post_tm": "2016-06-23 19:10:25-07"

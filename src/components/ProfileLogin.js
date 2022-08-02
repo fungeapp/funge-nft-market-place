@@ -91,7 +91,8 @@ const ProfileLogin = (props) => {
             .then(response => {
                 console.log(`profile ${response.data[0].id}`)
                 //save localStorage for session management.  Magic opens to a new tab so sessionStorage is not persisted after email verification
-                localStorage.setItem('user_session',JSON.stringify(`{user_id: ${response.data[0].id}, email:${email}}`))
+                localStorage.setItem("user_id", response.data[0].id)
+                localStorage.setItem('user_email',email)
             })
         })
     }
