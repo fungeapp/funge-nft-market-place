@@ -47,6 +47,7 @@ const Messages = () => {
                                   <SingleChat />
                                   <SingleChat />
                                   <SingleChat />
+                                  <SingleChat />
                                 </tbody>
                               </table>
                             </div>
@@ -65,9 +66,30 @@ const Messages = () => {
 
                         <div className="container p-0 min-vh-75">
                           <div className="row">
-                            <SingleMessage rMsg msgText="Hello there! What's Up?12" msgTime="15:20" />
-                            <SingleMessage sMsg msgText="Hello there! What's Up?12" msgTime="14:20" />
+                            <SingleMessage rMsg msgText="Hello there! What's Up" msgTime="15:20" />
+                            <SingleMessage sMsg msgText="Nothing...Just chilling watching Tiktok.What about you tobias??" msgTime="14:20" />
+                            <SingleMessage rMsg msgText="Some here!Been watching Tiktok for the past 3 hours despite of having so much to do!" msgTime="15:20" />
+                            <SingleMessage rMsg msgText="It's hard to be productive,man.that,s make me bad!" msgTime="15:20" />
+                            <SingleMessage sMsg msgText="That's true,i,m in the same position with you wahahaha" msgTime="14:20" />
                           </div>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
                         </div>
                         <div className="container p-0">
                           <div className="row">
@@ -77,13 +99,13 @@ const Messages = () => {
 
                                   <input
                                     type="text"
-                                    className="form-control ps-4"
+                                    className="form-control ps-4 "
                                     placeholder="Type your message ..."
                                     aria-label="Username"
                                     aria-describedby="basic-addon1"
                                   />
 
-                                  <input tyype='button' className="btn btn-primary btn-sm send-btn" value='Send' />
+                                  <input tyype='button' className="btn btn-primary btn-sm send-btn me-4" value='Send' />
                                 </div>
                               </div>
                             </div>

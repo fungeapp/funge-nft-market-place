@@ -47,8 +47,14 @@ const Profile = () => {
                         <tr>
                           <td colSpan={2} className="pt-2">
                             <p className="card-text">
-                              Joined November 2021 | Floor <b><img src="./assets/images/Ethereum.png" /> 3.75</b> | Volume&nbsp;
-                              <b><img src="./assets/images/Ethereum.png" /> 3.75</b>
+                              Joined November 2021 | Floor{" "}
+                              <b>
+                                <img src="./assets/images/Ethereum.png" /> 3.75
+                              </b>{" "}
+                              | Volume&nbsp;
+                              <b>
+                                <img src="./assets/images/Ethereum.png" /> 3.75
+                              </b>
                             </p>
                           </td>
                         </tr>
@@ -132,13 +138,15 @@ const Profile = () => {
                         </button>
                       </div>
                     </div>
-
                   </div>
                   <br />
                   <hr />
-                  <br/>
+                  <br />
                   <div className="w-500">
-                  <i className="fas fa-globe fa-rotate-180"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>www.mynfts.com</span><i className="fas fa-external-link float-end funge-color"></i>
+                    <i className="fas fa-globe fa-rotate-180"></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>www.mynfts.com</span>
+                    <i className="fas fa-external-link float-end funge-color"></i>
                   </div>
                 </div>
               </div>
@@ -157,34 +165,243 @@ const Profile = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" data-bs-toggle="pill" href="#collections">
+                  <a
+                    className="nav-link"
+                    data-bs-toggle="pill"
+                    href="#collections"
+                  >
                     Collections
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" data-bs-toggle="pill" href="#creations">
+                  <a
+                    className="nav-link"
+                    data-bs-toggle="pill"
+                    href="#creations"
+                  >
                     Creations
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" data-bs-toggle="pill" href="#savedPosts">
+                  <a
+                    className="nav-link"
+                    data-bs-toggle="pill"
+                    href="#savedPosts"
+                  >
                     Saved posts
                   </a>
                 </li>
               </ul>
 
-              <div className="tab-content">
-                <div className="tab-pane container active" id="socialPosts" style={{maxWidth:700}}>
+              <div className="tab-content mt-4">
+                <div
+                  className="tab-pane container active"
+                  id="socialPosts"
+                  style={{ maxWidth: 700 }}
+                >
                   <FeedContainer />
                 </div>
-                <div className="tab-pane container fade" id="collections" style={{maxWidth:700}}>
-                  <h1 className="text-center m-5">Collections</h1>
+                <div
+                  className="tab-pane container fade"
+                  id="collections"
+                  style={{ maxWidth: 900 }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-3 col-sm-4 mt-4">
+                        <img
+                          src="./assets/images/social_post.png"
+                          className="img-fluid mt-1"
+                        />
+                        <span
+                          className="position-absolute"
+                          style={{ bottom: 128, left: 175 }}
+                        >
+                          <span className="mb-3 w-400 text-white">
+                            <img src="./assets/images/meebits10.png" /> Meebits
+                          </span>
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-5 mt-4 ">
+                        <img
+                          src="./assets/images/social_post-1.png"
+                          className="img-fluid mt-1"
+                        />
+                        <span
+                          className="position-absolute"
+                          style={{ bottom: 128, left: 380 }}
+                        >
+                          <span className="mb-3 w-400 text-white">
+                            <img src="./assets/images/meebits10.png" /> Meebits
+                          </span>
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6 mt-4 ">
+                        <img
+                          src="./assets/images/social_post-2.png"
+                          className="img-fluid mt-1"
+                        />
+                        <span
+                          className="position-absolute"
+                          style={{ bottom: 128, left: 586 }}
+                        >
+                          <span className="mb-3 w-400 text-white">
+                            <img src="./assets/images/meebits10.png" /> Meebits
+                          </span>
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6 mt-4 ">
+                        <img
+                          src="./assets/images/social_post-3.png"
+                          className="img-fluid mt-1"
+                        />
+                        <span
+                          className="position-absolute"
+                          style={{ bottom: 128, left: 795 }}
+                        >
+                          <span className="mb-3 w-400 text-white">
+                            <img src="./assets/images/meebits10.png" /> Meebits
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="tab-pane container fade" id="creations" style={{maxWidth:700}}>
-                  <h1 className="text-center m-5">Creations</h1>
+                <br />
+                <div
+                  className="tab-pane container fade"
+                  id="creations"
+                  style={{ maxWidth: 900 }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-3 col-sm-6 mb-5 ">
+                        <img
+                          src="./assets/images/kitty2.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6 mb-5 ">
+                        <img
+                          src="./assets/images/kitty1.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6 mb-5 ">
+                        <img
+                          src="./assets/images/kitty.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6 mb-5 ">
+                        <img
+                          src="./assets/images/kitty4.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="tab-pane container fade" id="savedPosts" style={{maxWidth:700}}>
-                  <h1 className="text-center m-5">Saved Posts</h1>
+                <br />
+                <div
+                  className="tab-pane container fade"
+                  id="savedPosts"
+                  style={{ maxWidth: 900 }}
+                >
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-3 col-sm-6">
+                        <img
+                          src="./assets/images/kitty2.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6 mb-5">
+                        <img
+                          src="./assets/images/kitty1.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6">
+                        <img
+                          src="./assets/images/kitty.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                      <div className="col-md-3 col-sm-6">
+                        <img
+                          src="./assets/images/kitty4.png"
+                          className="img-fluid mt-1"
+                        />
+                        <br />
+                        <br />
+                        <p className="w-500 ms-2 mb-0">Kitty#4454 </p>
+                        <span className="ms-2 mb-2 w-500">
+                          <img src="./assets/images/ethlight.png" /> 0.001
+                        </span>
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                  </div>
                 </div>
               </div>
             </div>

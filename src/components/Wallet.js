@@ -352,15 +352,14 @@ const Wallet = () => {
                 <div className="row">
                   <div className="card funge-card shadow-sm mb-4 text-center">
                     <br />
-                    <div className="card funge-card funge-bggrey mb-4 text-center">
+                    <div className="card funge-card funge-bggrey mb-4 text-center d-block">
                       <br />
-                      <span className="w-400 bg-white btn">
-                        {" "}
+                      <span className="btn bg-white rounded-pill px-4">
                         <img
                           src="./assets/images/polygon_dark.png"
-                          className="img-fluid mt-1"
+                          className="img-fluid me-2"
                         />
-                        &nbsp;&nbsp;&nbsp;&nbsp;Polygon Matic
+                        Polygon Matic
                         <br />
                       </span>
                       <div className="w-600 fs-42px mt-3">$20,000.00</div>
@@ -370,14 +369,14 @@ const Wallet = () => {
                       </small>
                       <br />
                     </div>
-                    <div className="row">
-                      <button class="btn btn-secondary w-25 ms-5 border-3 rounded-pill">
+                    <div className="row justify-content-center">
+                      <button class="btn btn-secondary w-25 rounded-pill">
                         <i class="fas fa-arrow-up me-3"></i>Buy
                       </button>
-                      <button class="btn btn-secondary w-25 ms-5 border-3 rounded-pill">
+                      <button class="btn btn-secondary w-25 rounded-pill mx-3">
                         <i class="fas fa-arrow-down me-3"></i>Deposit
                       </button>
-                      <button class="btn btn-secondary w-25 ms-5 border-3 rounded-pill">
+                      <button class="btn btn-secondary w-25 rounded-pill">
                         <i class="fas fa-arrow-down me-3"></i>Withdraw
                       </button>
                     </div>

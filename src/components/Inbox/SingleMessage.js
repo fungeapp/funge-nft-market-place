@@ -5,10 +5,10 @@ const SingleMessage = (props) => {
     if (props.rMsg) {
         return (
             <>
-                <div className="col-md-12 py-4 ps-2">
+                <div className="col-md-12 py-3 ps-2">
                     <img
                         width={30}
-                        src="./assets/images/profile-1.png"
+                        src="./assets/images/msgDP.png"
                         alt=""
                         className="pt-3"
                     />
@@ -26,7 +26,7 @@ const SingleMessage = (props) => {
     if (props.sMsg) {
         return (
             <>
-                <div className="col-md-12 ps-4">
+                <div className="col-md-12 py-3 ps-4">
                     &nbsp;
                     <span className="fs-12px funge-grey pt-3">{props.msgTime}</span>
                     <div className="sMsg chat-msg funge-bggrey fs-14px w-400 float-end">
