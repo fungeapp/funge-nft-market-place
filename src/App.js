@@ -8,7 +8,12 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Signin from "./components/Signin";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import EditProfile from "./components/EditProfile";
 import Feeds from "./components/Feeds";
+import Notifications from "./components/Notifications";
+import Wallet from "./components/Wallet";
+import Inbox from './components/Inbox';
+import CreateNewItem from './components/CreateNewItem';
 
 
 function App() {
@@ -18,8 +23,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="*" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="edit_profile" element={<EditProfile />} />
+          <Route path="notifications" element={<Notifications />} />
+          <Route path="inbox" element={<Inbox />} />
+          <Route path="new_item" element={<CreateNewItem />} />
+          <Route path="wallet" element={<Wallet />} />
           <Route path="login" element={<Login />} />
           <Route path="feeds" element={
               <MetaMaskProvider>

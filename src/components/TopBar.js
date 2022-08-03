@@ -1,20 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import FungeLogo from './FungeLogo'
 
 const TopBar = () => {
 
     return (
         <>
             <div className="header">
-                <div className="my_nav">
+                <div className="my_nav position-relative"  style={{ zIndex: 999 }}>
                     <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
                         <div className="container-fluid">
-                            <Link className="navbar-brand" to="/"><img
-                                src="./assets/images/logo.svg"
-                                alt=""
-                                className="img-fluid"
-                            /></Link>
-                            <div className="search_sectio">
+                            <FungeLogo/>
+                            <div className="search_sectio ms-5">
                                 <div className="input-group">
                                     <span className="input-group-text"
                                         id="basic-addon1">
@@ -46,7 +42,7 @@ const TopBar = () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        placeholder="Search NFT,Creator,Collections"
+                                        placeholder=" Search NFT, Creator, Collectiions"
                                         aria-label="Username"
                                         aria-describedby="basic-addon1"
                                     />
@@ -74,13 +70,13 @@ const TopBar = () => {
                                 className="collapse align-items-center navbar-collapse"
                                 id="navbarSupportedContent"
                             >
-                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center d-md-flex d-none">
                                     <li className="nav-item">
-                                        <div class="btn-group">
-                                            <button class="btn btn-sm dropdown-toggle lang-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div className="btn-group">
+                                            <button className="btn btn-sm dropdown-toggle lang-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i className="fas fa-globe funge-color p-2 bg-white"></i> English
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul className="dropdown-menu">
                                                 <li className="dropdown-item">English 1</li>
                                                 <li className="dropdown-item">English 2</li>
                                                 <li className="dropdown-item">English 3</li>
@@ -107,8 +103,24 @@ const TopBar = () => {
                                     <li className="nav-item">
                                         <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="25" height="25" />
                                     </li>
-
-                                    {/* <Wallet btnText={"Connect Wallet"} /> */}
+                                </ul>
+                                <ul className="navbar-nav ms-auto flex-row d-md-none funge-bggrey justify-content-evenly pe-0 py-3
+                                ">
+                                    <li className="nav-item">
+                                        <i className="fas fa-envelope funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-bell funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-cog funge-color"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-wallet funge-color border-end"></i>
+                                    </li>
+                                    <li className="nav-item">
+                                        <i className="fas fa-shopping-cart funge-color"></i>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

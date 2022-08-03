@@ -10,7 +10,7 @@ const Signin = () => {
                         <div className='row justify-content-end'>
                             <div className='col-md-11 pt-4 ps-5'>
                                 <br />
-                                <a class="" href="#"><img width="140" src='./assets/images/funge-logo.png' /></a>
+                                <a className="" href="#"><img width="140" src='./assets/images/funge-logo.png' /></a>
                             </div>
                             <div className='col-md-11 pt-4 ps-5'>
                                 <br />

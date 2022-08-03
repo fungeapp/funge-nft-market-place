@@ -1,90 +1,116 @@
-import React,{state, useState} from 'react';
-import TopBar from './TopBar';
-import FeedContainer from './Feeds/FeedContainer';
-import NewPost from './Feeds/NewPost';
+import React, { state, useState } from "react";
+import TopBar from "./TopBar";
+import FeedContainer from "./Feeds/FeedContainer";
+import NewPost from "./Feeds/NewPost";
+import MakeAPost from "./Feeds/MakeAPost";
+import LeftSidebar from "./LeftSidebar";
+import DailyChallenge from "./Feeds/DailyChallenge";
+import RecentNews from "./Feeds/RecentNews";
 
 const Feeds = () => {
-
-  const [isActive,setActive] = useState("home");
+  const [isActive, setActive] = useState("home");
 
   return (
     <>
       <TopBar />
-      <div className='container-fluid feeds'>
-        <div className='row justify-content-between'>
-          <div className="col-md-2 flex-shrink-0 p-3 bg-white pt-5" style={{ maxWidth: 280 }}>
-            <ul className="list-unstyled ps-0">
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                  <i className="fas fa-align-left me-3 funge-color"></i>Feeds <i className="fas fa-angle-up float-end"></i>
-                </button>
-                <div className="collapse show" id="home-collapse">
-                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" className={` ${isActive === "home" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</a></li>
-                    <li><a href="#" className={` ${isActive === "notifications" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</a></li>
-                    <li><a href="#" className={` ${isActive === "messages" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</a></li>
-                    <li><a href="#" className={` ${isActive === "saved" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Saved</a></li>
-                    <li><a href="#" className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start" data-bs-toggle="collapse" data-bs-target="#explore-collapse" aria-expanded="true">
-                <i className="fas fa-store me-3 funge-color"></i> Explore <i className="fas fa-angle-down float-end"></i>                
-                </button>
-                <div className="collapse" id="explore-collapse">
-                  <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" className={` ${isActive === "home1" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</a></li>
-                    <li><a href="#" className={` ${isActive === "notifications1" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</a></li>
-                    <li><a href="#" className={` ${isActive === "messages1" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</a></li>
-                  </ul>
-                </div>
-              </li> 
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i className="fas fa-chart-pie me-3 funge-color"></i> Wallet
-                </button>
-              </li>
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i className="fa fa-folder-open me-3 funge-color"></i>Analytics
-                </button>
-              </li>
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i className="fa fa-briefcase me-3 funge-color"></i> Media
-                </button>
-              </li>
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i className="fa fa-briefcase me-3 funge-color"></i> Refer and Earn
-                </button>
-              </li>
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i className="fa fa-briefcase me-3 funge-color"></i> Hire
-                </button>
-              </li>
-              <li className="mb-2">
-                <button className="btn btn-toggle align-items-center rounded collapsed w-100 text-start">
-                <i className="fa fa-briefcase me-3 funge-color"></i> Rewards
-                </button>
-              </li>
-            </ul>
+      <LeftSidebar myState="home" />
+      <div className="container-fluid main-div min-vh-100 ps-0">
+        <div className="row justify-content-center mainbox">
+          <div className="col-md-6 max-700">
+            <NewPost />
+            <FeedContainer />
           </div>
-          <div className='col-md-4'>
-            <NewPost/>
-            <FeedContainer/>
-          </div>
-          <div className='col-md-3'>
-
+          <div className="col-md-4 mt-4 max-550">
+            <MakeAPost/>
+            <br />
+            <DailyChallenge/>
+            <br />
+            <RecentNews/>
+            <div className="card funge-card mt-4">
+              <div className="container">
+                <div className="row pt-2">
+                  <div className="col-1 p-0">
+                    <img
+                      src="./assets/images/profile_new.png"
+                      className="img-fluid mt-3 ms-2"
+                    />
+                  </div>
+                  <div className="col-11 ps-4">
+                    <div className="w-400 ms-2 ">
+                      <p className="w-400 mb-2 my-3 mb-2">
+                        Today is a good day to post Nfts
+                      </p>
+                      <p className="w-500 mb-2  funge-color">#Newcollection</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row pt-2">
+                  <div className="col-6">
+                    <img
+                      src="./assets/images/Rectangle.png"
+                      className="img-fluid w-100"
+                      alt="Post Image"
+                    />
+                    <span
+                      className="fs-3 position-absolute"
+                      style={{ top: 136, left: 60 }}
+                    >
+                      <i className="fas fa-times-circle funge-color"></i>
+                    </span>
+                  </div>
+                  <div className="col-6">
+                    <img
+                      src="./assets/images/Rectangle 864.png"
+                      className="img-fluid  w-100"
+                      alt="Post Image"
+                    />
+                  </div>
+                  <br />
+                  <div className="row pt-2 ms-2 my-2">
+                    <div className="col-1 p-0">
+                      <img
+                        src="./assets/images/User.png"
+                        className="img-fluid"
+                      />
+                    </div>
+                    <div className="col-11 p-0">
+                      <a href="#" className="funge-link w-700 me-5">
+                        Tag people
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <hr className="funge-grey" />
+              </div>
+              <div className="row pt-2 px-5">
+                <div className="col-1 p-0">
+                  <img src="./assets/images/Image.png" className="img-fluid" />
+                </div>
+                <div className="col-1 p-0">
+                  <img
+                    src="./assets/images/user+.png"
+                    className="img-fluid  "
+                  />
+                </div>
+                <div className="col-1 p-0">
+                  <img src="./assets/images/Smile.png" className="img-fluid " />
+                </div>
+                <div className="col-1 p-0">
+                  <img
+                    src="./assets/images/Location.png"
+                    className="img-fluid  "
+                  />
+                </div>
+                <div className="col-8 p-0 text-end">
+                  <button className="btn btn-primary">Funge it</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </>
-  )
-
-}
-
+  );
+};
 
 export default Feeds;
