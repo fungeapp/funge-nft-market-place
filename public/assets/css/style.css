@@ -142,9 +142,6 @@ button.post-primary-btn {
 }
 
 /* V0 styling start */
-.v0#hiro {
-    background: none;
-}
 
 .v0.section_pera {
     font-weight: normal;
@@ -155,9 +152,9 @@ button.post-primary-btn {
 
 .unlock-heading {
     font-family: Inter;
-    font-size: 78px;
+    font-size: 60px;
     font-weight: 800;
-    line-height: 100px;
+    line-height: 78px;
     letter-spacing: 0px;
     text-align: left;
 }
@@ -173,8 +170,8 @@ button.post-primary-btn {
 
 @media screen and (max-width: 480px) {
     .unlock-heading {
-        font-size: 44px;
-        line-height: 50px;
+        font-size: 32px;
+        line-height: 36px;
     }
 
     .tools-heading {
@@ -219,10 +216,34 @@ button.post-primary-btn {
     height: 45px;
 }
 
+.rare {
+    background-color: #F2F2F2 !important;
+}
+
+.rare .card-travelya {
+    background-color:#F2F2F2 !important;
+    border:none !important;
+}
+
+.rare .para{
+    font-size: 22px;
+}
+.rare .para h4{
+    font-size: 50px;
+}
+.rare .para h4 span{
+    color:white;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 0px 14px;
+}
+
+
+
 /* V0 styling end */
 
 .section_heading {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 45px;
     color: #123442;
 }
@@ -373,21 +394,21 @@ body {
 }
 
 /* header style start  */
-/* .header::before {
+.header::before {
     content: '';
     background: #F2F9F9;
-    background-image: url(../images/hiro_img_light.png);
+    background-image: url(../images/01_Hero_Section_01_009_wBg_wo_cards.png);
     width: 100%;
     background-size: cover;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: -1;
-} */
+}
 section#hiro {
     content: '';
     background: #F2F9F9;
-    background-image: url(../images/hiro_img_light.png);
+    background-image: url(../images/01_Hero_Section_01_009_wBg_wo_cards.png);
     width: 100%;
     background-size: cover;
     height: 100%;
@@ -539,6 +560,11 @@ section#hiro {
 /* hiro section style start  */
 .hiro_col_left {
     margin-top: 100px !important;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+.hiro_col_right {
+    margin-top: 80px !important;
     padding-bottom: 50px;
     margin-bottom: 30px;
 }

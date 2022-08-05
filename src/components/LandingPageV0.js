@@ -13,18 +13,16 @@ const LandingPageV0 = () => {
             <section id="hiro" className='v0'>
                 <div className="container">
                     <div className='row'>
-                        <div className='col-sm-12 col-md-5 hiro_col_left mx-auto text-center'>
-                            <p className="section_pera v0">
+                        <div className='col-sm-12 col-md-5 hiro_col_left'>
+                            <p className="section_pera v0 mt-5">
                                 Your Gateway to the Creative Economy
                             </p>
                             <h2 className="section_heading hiro_heading">
-                                Trade, Connect and Earn Like Never Before.
+                                Trade, connect and earn like never before.
                             </h2>
                             <br />
                             <br />
-                            <br />
-                            <br />
-                            <button className="btn btn-primary w-600 waitlist-btn" data-bs-toggle="modal" data-bs-target="#waitListModal">
+                            <button className="btn btn-primary w-600 waitlist-btn px-5" data-bs-toggle="modal" data-bs-target="#waitListModal">
                                 Join the Waitlist
                             </button>
                             <div className="modal fade phoneModal" id="waitListModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -49,15 +47,21 @@ const LandingPageV0 = () => {
                             </div>
 
                         </div>
+                        <div className='col-sm-12 col-md-5 hiro_col_right d-none d-md-block'>
+                            <p className="section_pera v0 text-center">
+                                <img src='./assets/images/hiro1.png'/>
+                                <img src='./assets/images/hiro2.png' className='position-absolute' style={{top:150, right:450 }}/>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section>
+            <section className='mt-5'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-12'>
-                            <p className='w-800 unlock-heading p-5'>
-                                Unlock a world of possibilities with our one-stop NFT trading and social media platform.
+                            <p className='w-600 unlock-heading p-4'>
+                            Funge is an all-in-one solution for the blockchain community, bringing together NFT trading and social media, into one comprehensive platform.
                             </p>
                         </div>
                     </div>
@@ -466,7 +470,7 @@ const LandingPageV0 = () => {
                 </div>
             </section>
 
-            <section className="collection my-5 section-4">
+            <section className="collection my-5">
                 <div className='container-fluid'>
                     <div className='row justify-content-between'>
                         <div className='col-md-1'>
@@ -476,7 +480,7 @@ const LandingPageV0 = () => {
                             <br />
                             <br />
                             <br />
-                            <h2 className="collection_heading w-800 mt-5 mb-3">
+                            <h2 className="collection_heading w-800 mt-3 mb-3">
                                 Built on planet earth, for<br /> planet earth
                             </h2>
                             <p className='pe-5'>Being earth-conscious and taking responsibility for
@@ -497,18 +501,23 @@ const LandingPageV0 = () => {
                         <div className='col-md-1'>
 
                         </div>
-                        <div className='col-md-6 p-0 text-end section-thumb'>
-                            <img className='img-fluid' src='./assets/images/call-to-action.png' />
+                        <div className='col-md-6 mt-5 text-center section-thumb'>
+                            <img className='img-fluid mt-5' src='./assets/videos/eco_funge_section.gif' />
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className='rare my-5 py-5'>
+            <section className='rare mt-5 py-5'>
                 <div className='container-fluid'>
                     <div className='row'>
-                        <div className='col-12'>
-                            <img src='./assets/images/rarebg.png' className='img-fluid' />
+                        <div className='col-12 text-center'>
+                            <img src='./assets/videos/token_section.gif' className='img-fluid' />
+                            <p className='para'>
+                                <br/>
+                                INTRODUCING
+                                <h4 className='w-600'><span>$</span> FUNGE</h4>
+                            </p>
                         </div>
                     </div>
                     <div className='row mt-5 pt-5 justify-content-center'>
@@ -525,9 +534,11 @@ const LandingPageV0 = () => {
                         </div>
                     </div>
                 </div>
+                <br/>
+                <br/>
             </section>
 
-            <section className="collection my-5 py-5">
+            <section className="collection mb-5 py-5 rare">
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-md-12 text-center'>
@@ -583,6 +594,8 @@ const LandingPageV0 = () => {
                         </div>
                     </div>
                 </div>
+                <br/>
+                <br/>
             </section>
 
             <section className='tokenomics mt-5 pt-5'>
