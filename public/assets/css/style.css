@@ -198,6 +198,35 @@ button.post-primary-btn {
     }
 }
 
+@media screen and (max-width: 760px) {
+    .feature-card .border-end{
+        border-right: 0px !important;
+    }
+    .section-thumb.ps-5{
+        padding-left: 1rem !important;
+    }
+    .tokenomics{
+        padding-left:26px;
+        padding-right:26px;
+    }
+    .card-travelya{
+        margin-bottom:15px;
+    }
+    .funge-footer{
+        padding-top:20px !important;
+        text-align: center !important;
+    }
+    .funge-footer div{
+        padding-bottom: 16px;
+    }
+    .funge-footer .text-end{
+        text-align: center !important;
+    }
+    .feature-card .card-body{
+        padding: 0px;
+    }
+}
+
 .feature1 {
     padding-left: 3rem;
     padding-right: 3rem;
