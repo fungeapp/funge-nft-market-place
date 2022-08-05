@@ -423,7 +423,7 @@ body {
 }
 
 /* header style start  */
-.header::before {
+/* .header::before {
     content: '';
     background: #F2F9F9;
     background-image: url(../images/01_Hero_Section_01_009_wBg_wo_cards.png);
@@ -433,15 +433,14 @@ body {
     position: absolute;
     top: 0;
     z-index: -1;
-}
+} */
 section#hiro {
     content: '';
     background: #F2F9F9;
     background-image: url(../images/01_Hero_Section_01_009_wBg_wo_cards.png);
+    background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
-    height: 100%;
-    padding-bottom: 40px;
 }
 
 /* header style end */
@@ -588,12 +587,12 @@ section#hiro {
 
 /* hiro section style start  */
 .hiro_col_left {
-    margin-top: 100px !important;
+    margin-top: 150px !important;
     padding-bottom: 50px;
     margin-bottom: 30px;
 }
 .hiro_col_right {
-    margin-top: 80px !important;
+    margin-top: 130px !important;
     padding-bottom: 50px;
     margin-bottom: 30px;
 }

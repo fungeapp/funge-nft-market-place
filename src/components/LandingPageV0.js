@@ -13,14 +13,13 @@ const LandingPageV0 = () => {
             <section id="hiro" className='v0'>
                 <div className="container">
                     <div className='row'>
-                        <div className='col-sm-12 col-md-5 hiro_col_left'>
+                        <div className='col-sm-12 col-md-6 hiro_col_left px-5'>
                             <p className="section_pera v0 mt-5">
                                 Your Gateway to the Creative Economy
                             </p>
                             <h2 className="section_heading hiro_heading">
                                 Trade, connect and earn like never before.
                             </h2>
-                            <br />
                             <br />
                             <button className="btn btn-primary w-600 waitlist-btn px-5" data-bs-toggle="modal" data-bs-target="#waitListModal">
                                 Join the Waitlist
@@ -59,8 +58,8 @@ const LandingPageV0 = () => {
             <section className='mt-5'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-12'>
-                            <p className='w-600 unlock-heading p-4'>
+                        <div className='col-12 mt-5'>
+                            <p className='w-600 unlock-heading p-4 mt-5'>
                             Funge is an all-in-one solution for the blockchain community, bringing together NFT trading and social media, into one comprehensive platform.
                             </p>
                         </div>
