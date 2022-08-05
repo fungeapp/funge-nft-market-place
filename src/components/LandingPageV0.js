@@ -48,9 +48,9 @@ const LandingPageV0 = () => {
 
                         </div>
                         <div className='col-sm-12 col-md-5 hiro_col_right d-none d-md-block'>
-                            <p className="section_pera v0 text-center">
+                            <p className="section_pera v0 text-center position-relative">
                                 <img src='./assets/images/hiro1.png'/>
-                                <img src='./assets/images/hiro2.png' className='position-absolute' style={{top:150, right:450 }}/>
+                                <img src='./assets/images/hiro2.png' className='position-absolute' style={{bottom:4, right:-60 }}/>
                             </p>
                         </div>
                     </div>
