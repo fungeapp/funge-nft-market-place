@@ -14,7 +14,7 @@ const FeedContainer = (props) => {
         setuserid(id)
         setuseremail(user)
         getAllPost();
-    },[userid, useremail]);
+    });
 
     const getAllPost = async(e) => {
         console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
