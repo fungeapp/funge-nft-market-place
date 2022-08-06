@@ -2,10 +2,10 @@ name: Build and Deploy React App using AWS SSM Send-Command
 on:
   push:
     branches:
-      - main
+      - main-v0
 jobs:
   build-job:
-    name: Build React App
+    name: Build New Landing Page
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -16,17 +16,17 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
-        comment: Deploy the main branch
-        working-directory: /var/www/html/dev.fungeapp.com
+        comment: Deploy the main-v0 branch
+        working-directory: /var/www/html/fungeapp.com/funge-nft-market-place
         command: |
           sudo rm npm-*.out
           sudo git stash
           sudo git pull origin main
-          sudo mv /var/www/html/dev.fungeapp.com/node_modules/react-scripts/config/webpack.config.js /var/www/html/dev.fungeapp.com/tmp/.
+          sudo mv /var/www/html/fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/webpack.config.js /var/www/html/fungeapp.com/funge-nft-market-place/tmp/.
           sudo rm -rf node_modules
           sudo rm -rf build
           sudo npm install  2>&1 | tee npm-install.out
-          sudo mv /var/www/html/dev.fungeapp.com/tmp/webpack.config.js /var/www/html/dev.fungeapp.com/node_modules/react-scripts/config/.
+          sudo mv /var/www/html/fungeapp.com/funge-nft-market-place/tmp/webpack.config.js /var/www/html/fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/.
           sudo npm i stream-browserify --save
           sudo npm i crypto-browserify --save
           sudo npm i stream-http --save
