@@ -21,7 +21,7 @@ jobs:
         command: |
           sudo rm npm-*.out
           sudo git stash
-          sudo git pull origin main
+          sudo git pull origin main-v0
           sudo mv /var/www/html/fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/webpack.config.js /var/www/html/fungeapp.com/funge-nft-market-place/tmp/.
           sudo rm -rf node_modules
           sudo rm -rf build
