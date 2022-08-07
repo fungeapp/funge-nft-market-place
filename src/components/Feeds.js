@@ -1,12 +1,35 @@
-import React, { state, useState } from 'react';
+import React, { state, useState, useEffect, useMemo } from 'react';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
+import FeedPost from './Feeds/FeedPost';
 import LeftSidebar from './LeftSidebar';
+import env from 'react-dotenv';
+import axios from 'axios';
 
 const Feeds = () => {
 
   const [isActive, setActive] = useState("home");
+  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
+  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [posts, setposts] = useState([]);
+
+  useMemo(() => {
+    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+    if(userid !== 'undefined') {
+      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+      .then((response) => {
+          for(let post of response.data) {
+            console.log(`${post.post_content}`)
+            let content = post.post_content
+            setposts(<FeedPost text={content} />)
+          }
+      })
+      .catch(function(error) {
+        console.log(`GET user post error :: ${error}`)
+      })
+    }
+  },[posts, userid]);
 
   return (
     <>
@@ -16,7 +39,7 @@ const Feeds = () => {
         <div className='row justify-content-around' style={{ marginLeft: 220 }}>
           <div className='col-md-6'>
             <NewPost />
-            <FeedContainer />
+            {posts}
           </div>
           <div className='col-md-4 mt-4'>
             <div className='card funge-card p-5'>
