@@ -63,6 +63,7 @@ const Profile = () => {
                           </td>
                           <td className="align-top">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                             <Link
                               to="/edit_profile"
                               class="btn btn-primary edit-profile-btn px-3"
