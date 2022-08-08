@@ -496,7 +496,7 @@ const LandingPageV0 = () => {
                             </p>
                         </div>
                         <div className='col-md-6 mt-5 text-center section-thumb'>
-                            <img className='img-fluid mt-5' src='./assets/videos/eco_funge_section.gif' />
+                            <img className='img-fluid mt-4' src='./assets/videos/eco_funge_section.gif' />
                         </div>
                     </div>
                 </div>
