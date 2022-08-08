@@ -191,10 +191,10 @@ const LandingPageV0 = () => {
             </section>
 
             <section>
-                <div className='container'>
+                <div className='container py-5'>
                     <div className='row'>
-                        <div className='col-9'>
-                            <p className='w-800 tools-heading p-5'>
+                        <div className='col-12'>
+                            <p className='w-600 tools-heading text-center p-5'>
                                 Tools designed for the growing wave of forward-thinking creators, innovators, and traders.
                             </p>
                         </div>
@@ -337,7 +337,13 @@ const LandingPageV0 = () => {
                                 <div className='card-body'>
                                     <div className='container'>
                                         <div className='row'>
-                                            <div className='col-sm-12 col-md-6 border-end'>
+                                            <div className='col-sm-12 col-md-6 border-end text-center'>
+                                            <div className='p-5'>
+                                                    <img src='./assets/images/talentGraph.png' className='img-fluid ms-3' />
+                                                </div>
+                                            </div>
+                                            <div className='col-sm-12 col-md-6'>
+                                                
                                                 <div className='feature1'>
                                                     <br />
                                                     <br />
@@ -352,11 +358,6 @@ const LandingPageV0 = () => {
                                                             development, web design, tokenomics creation, discord management, marketing, and more.
                                                         </p>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div className='col-sm-12 col-md-6 text-center'>
-                                                <div className='p-5'>
-                                                    <img src='./assets/images/talentGraph.png' className='img-fluid ms-3' />
                                                 </div>
                                             </div>
                                         </div>
@@ -472,23 +473,20 @@ const LandingPageV0 = () => {
             <section className="collection my-5">
                 <div className='container-fluid'>
                     <div className='row justify-content-between'>
-                        <div className='col-md-1'>
-
-                        </div>
-                        <div className='col-md-4 my-4'>
+                        <div className='col-md-5 my-4 ms-5 ps-4'>
                             <br />
                             <br />
                             <br />
                             <h2 className="collection_heading w-800 mt-3 mb-3">
-                                Built on planet earth, for<br /> planet earth
+                                Built on planet earth, <br />for planet earth
                             </h2>
-                            <p className='pe-5'>Being earth-conscious and taking responsibility for
+                            <p className='pe-4'>Being earth-conscious and taking responsibility for
                                 climate change is at the core of who we are and what
                                 we do.
                                 <br />
                                 <br />
                                 That’s why we are 100% carbon neutral,
-                                counterbalancing the entirety of our CO2 footprint
+                                counterbalancing the <br/> entirety of our CO2 footprint
                                 for a net-zero output.
                             </p>
                             <p className='mt-4'><a href='#' className='funge-link me-4'><u>Our mission</u> > </a> | <a href='#' className='funge-link ms-4'><u>Our vision</u> > </a>
@@ -496,9 +494,6 @@ const LandingPageV0 = () => {
                                 <br />
                                 <img src='./assets/images/climate.png' width={100} />
                             </p>
-                        </div>
-                        <div className='col-md-1'>
-
                         </div>
                         <div className='col-md-6 mt-5 text-center section-thumb'>
                             <img className='img-fluid mt-5' src='./assets/videos/eco_funge_section.gif' />
@@ -515,7 +510,7 @@ const LandingPageV0 = () => {
                             <p className='para'>
                                 <br/>
                                 INTRODUCING
-                                <h4 className='w-600'><span>$</span> FUNGE</h4>
+                                <h4 className='w-600 mt-2'><span>$</span> FUNGE</h4>
                             </p>
                         </div>
                     </div>
@@ -598,8 +593,8 @@ const LandingPageV0 = () => {
             </section>
 
             <section className='tokenomics mt-5 pt-5'>
-                <div className='container'>
-                    <h1 className='w-800 text-center mb-4'>Tokenomics</h1>
+                <div className='container mt-5'>
+                    <h1 className='w-800 text-center my-4'>Tokenomics</h1>
                     <br />
                     <br />
                     <br />
@@ -624,7 +619,7 @@ const LandingPageV0 = () => {
                             </p>
                         </div>
                         <div className='col-md-6 col-sm-12'>
-                            <img src='./assets/images/piechart.png' className='img-fluid p-3' />
+                            <img src='./assets/images/piechart.png' className='img-fluid' />
                         </div>
                     </div>
                 </div>
@@ -806,7 +801,7 @@ const LandingPageV0 = () => {
                     <br />
                     <br />
                     <div className='row'>
-                        <div className='col-12'>
+                        <div className='col-11 mx-auto'>
                             <div className="accordion" id="faq-accord">
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingOne">
