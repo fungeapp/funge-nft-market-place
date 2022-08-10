@@ -171,6 +171,11 @@ button.post-primary-btn {
 }
 
 @media screen and (max-width: 480px) {
+
+    .collection .sticky-top{
+        position: relative;
+        top: auto;
+    }
     .unlock-heading {
         font-size: 28px;
         line-height: 32px;
