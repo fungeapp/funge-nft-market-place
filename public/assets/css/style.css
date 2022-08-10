@@ -34,6 +34,9 @@ a.funge-link {
     color: #5A7184 !important;
 }
 
+.fs-11px {
+    font-size: 11px !important;
+}
 .fs-12px {
     font-size: 12px !important;
 }
@@ -152,37 +155,37 @@ button.post-primary-btn {
 
 .unlock-heading {
     font-family: Inter;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 78px;
+    font-size: 3.4rem;
+    font-weight: 600;
+    line-height: 74px;
     letter-spacing: 0px;
     text-align: left;
 }
 
 .tools-heading {
     font-family: Inter;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 58px;
+    font-size: 2.9rem;
+    font-weight: 600;
+    line-height: 56px;
     letter-spacing: 0px;
-    text-align: left;
 }
 
 @media screen and (max-width: 480px) {
     .unlock-heading {
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 28px;
+        line-height: 32px;
     }
 
     .tools-heading {
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 28px;
+        line-height: 32px;
     }
 
     .feature1 {
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     .funge-footer{
         padding-top:20px !important;
         text-align: center !important;
@@ -9926,6 +9929,12 @@ ul.pattern .color3 {
     border-radius: 40px !important;
     padding: 9px 24px !important;
     font-size: 14px !important;
+}
+
+.pie_img{
+    width: 380px;
+    height: 380px;
+    margin-top: 50px;
 }
 
 

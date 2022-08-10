@@ -48,8 +48,8 @@ const LandingPageV0 = () => {
                         </div>
                         <div className='col-sm-12 col-md-5 hiro_col_right d-none d-md-block'>
                             <p className="section_pera v0 text-center position-relative">
-                                <img src='./assets/images/hiro1.png'/>
-                                <img src='./assets/images/hiro2.png' className='position-absolute' style={{bottom:4, right:-60 }}/>
+                                <img src='./assets/images/hiro1.png' />
+                                <img src='./assets/images/hiro2.png' className='position-absolute' style={{ bottom: 4, right: -60 }} />
                             </p>
                         </div>
                     </div>
@@ -59,8 +59,8 @@ const LandingPageV0 = () => {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-12 mt-5'>
-                            <p className='w-600 unlock-heading p-4 mt-5'>
-                            Funge is an all-in-one solution for the blockchain community, bringing together NFT trading and social media, into one comprehensive platform.
+                            <p className='unlock-heading p-4 mt-5 text-center'>
+                                Funge is an all-in-one solution for the blockchain community, bringing together NFT trading and social media, into one comprehensive platform.
                             </p>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ const LandingPageV0 = () => {
                 <div className='container'>
                     <div className='row pt-5 pb-3 justify-content-around'>
                         <div className='col-md-4 sticky-top align-self-start'>
-                            <div className='card funge-card funge-bghover mt-5 px-5'>
+                            <div className='card funge-card mt-5 px-0'>
                                 <br />
                                 <span className='funge-color'>Collector Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
@@ -79,24 +79,20 @@ const LandingPageV0 = () => {
                                     <br />
                                     Features
                                 </h2>
-                                <p className='sub-heading small'>Use our wide range of social tools to find &<br />Connect with user who are passionate about<br /> NFTs.Creat eye-catching content, keep up with<br />current trends,and mints NFTs all within one<br />social feed built specifically for the blockchain<br />community.
+                                <p className='sub-heading small'>Use our wide range of social tools to find & connect with users who are passionate about NFTs. Create eye-catching content, keep up with current trends, and mint NFTs all within one social feed built specifically for the blockchain community.
                                     <br />
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <br />
+                                    <div className='my-5'>
+                                        <ul className='funge-list'>
+                                            <li>Stay up-to-date with trending NFT discussions and topics</li>
+                                            <li>Connect with fellow users through built-in direct messaging</li>
+                                            <li>Mint verified NFTs from your social feed with ease</li>
+                                        </ul>
+                                    </div>
                                     <br />
                                 </p>
                             </div>
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
-                            <div className='ps-5 my-5'>
-                                <ul className='funge-list'>
-                                    <li>Stay up-to-date with trending NFT discussions and topics</li>
-                                    <li>Connect with fellow users through built-in direct messaging</li>
-                                    <li>Mint verified NFTs from your social feed with ease</li>
-                                </ul>
-                            </div>
                             <div className='card funge-card funge-bggrey my-4 p-5'>
                                 <img className='img-fluid' src='./assets/images/robust_parallax.png' />
                             </div>
@@ -112,7 +108,7 @@ const LandingPageV0 = () => {
                 <div className='container'>
                     <div className='row pt-5 pb-3 justify-content-around'>
                         <div className='col-md-4 sticky-top align-self-start'>
-                            <div className='card funge-card funge-bghover mt-5 px-5'>
+                            <div className='card funge-card mt-5 px-0'>
                                 <br />
                                 <span className='funge-color'>Trader Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
@@ -122,22 +118,19 @@ const LandingPageV0 = () => {
                                 </h2>
                                 <p className='sub-heading small'>A complete and comprehensive toolset for all your NFT needs. Explore the limits of Web3 with our feature-packed peer-to-peer trading tools, cross-platform transactions, live NFT analytics, and more.
                                     <br />
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <br />
+                                    <div className='my-5'>
+                                        <ul className='funge-list'>
+                                            <li>Advanced market insights, analytics, and alerts </li>
+                                            <li>Compare floor prices across different platforms</li>
+                                            <li>Conduct private sales </li>
+                                            <li>Batch buy multiple NFT’s</li>
+                                        </ul>
+                                    </div>
                                     <br />
                                 </p>
                             </div>
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
-                            <div className='ps-5 my-5'>
-                                <ul className='funge-list'>
-                                    <li>Stay up-to-date with trending NFT discussions and topics</li>
-                                    <li>Connect with fellow users through built-in direct messaging</li>
-                                    <li>Mint verified NFTs from your social feed with ease</li>
-                                </ul>
-                            </div>
                             <div className='card funge-card funge-bggrey my-4 p-5'>
                                 <img className='img-fluid' src='./assets/images/robust_parallax.png' />
                             </div>
@@ -153,7 +146,7 @@ const LandingPageV0 = () => {
                 <div className='container'>
                     <div className='row pt-5 pb-3 justify-content-around'>
                         <div className='col-md-4 sticky-top align-self-start'>
-                            <div className='card funge-card funge-bghover mt-5 px-5'>
+                            <div className='card funge-card mt-5 px-0'>
                                 <br />
                                 <span className='funge-color'>Reward Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
@@ -163,7 +156,14 @@ const LandingPageV0 = () => {
                                 </h2>
                                 <p className='sub-heading small'>Our Tokenomics system turns users into owners by rewarding them for creating valuable content and participating on the platform.
                                     <br />
-                                    <br />
+                                    <div className='my-5'>
+                                        <ul className='funge-list'>
+                                            <li>Earn tokens when the community engages with your content</li>
+                                            <li>Receive $FUNGE rewards for every NFT you trade</li>
+                                            <li>Stake $FUNGE tokens and receive up to 445% APY</li>
+                                            <li>Earn additional commission for every friend you refer</li>
+                                        </ul>
+                                    </div>
                                     <br />
                                     <br />
                                     <br />
@@ -172,13 +172,6 @@ const LandingPageV0 = () => {
                             </div>
                         </div>
                         <div className='col-md-6 ps-5 mt-5 section-thumb'>
-                            <div className='ps-5 my-5'>
-                                <ul className='funge-list'>
-                                    <li>Stay up-to-date with trending NFT discussions and topics</li>
-                                    <li>Connect with fellow users through built-in direct messaging</li>
-                                    <li>Mint verified NFTs from your social feed with ease</li>
-                                </ul>
-                            </div>
                             <div className='card funge-card funge-bggrey my-4 p-5'>
                                 <img className='img-fluid' src='./assets/images/robust_parallax.png' />
                             </div>
@@ -193,8 +186,8 @@ const LandingPageV0 = () => {
             <section>
                 <div className='container py-5'>
                     <div className='row'>
-                        <div className='col-12'>
-                            <p className='w-600 tools-heading text-center p-5'>
+                        <div className='col-12 py-5'>
+                            <p className='tools-heading text-center py-5'>
                                 Tools designed for the growing wave of forward-thinking creators, innovators, and traders.
                             </p>
                         </div>
@@ -209,9 +202,11 @@ const LandingPageV0 = () => {
                                 <div className='card-body'>
                                     <div className='container'>
                                         <div className='row'>
-                                            <div className='col-md-6 col-sm-12 border-end'>
+                                            <div className='col-md-6 col-sm-12'>
                                                 <div className='feature1'>
-                                                    <div className='p-5'>
+                                                    <div className='py-5 px-2'>
+                                                        <br/>
+                                                        <br/>
                                                         <h2 className='badge rounded-pill funge-bgcolor px-3 py-2 fs-6 w-600'>Coming Soon</h2>
                                                         <h2 className="collection_heading w-600 my-3">
                                                             Commmunity Builder
@@ -223,76 +218,76 @@ const LandingPageV0 = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='col-md-6 col-sm-12'>
-                                                <div className='container'>
+                                            <div className='col-md-6 col-sm-12 p-0'>
+                                                <div className='container p-0'>
                                                     <div className='row community-feature my-4'>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
+                                                            <div className='row pb-3 border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/user-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0'>Voice hat rooms</p>
-                                                                    <span className='sub-heading fs-12px'>Set up and manage your business</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Voice hat rooms</p>
+                                                                    <span className='sub-heading fs-11px'>Set up and manage your business</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
+                                                            <div className='row pb-3 border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/user-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0'>Voice hat rooms</p>
-                                                                    <span className='sub-heading fs-12px'>Set up and manage your business</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Voice hat rooms</p>
+                                                                    <span className='sub-heading fs-11px'>Set up and manage your business</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className='row community-feature my-4'>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
+                                                            <div className='row pb-3 border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/livestream-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Live streaming</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Live streaming</p>
+                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
+                                                            <div className='row pb-3 border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/livestream-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>File sharing</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>File sharing</p>
+                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className='row community-feature my-4'>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
+                                                            <div className='row pb-3 border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Configurable bots</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Configurable bots</p>
+                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row border-bottom'>
+                                                            <div className='row pb-3 border-bottom'>
                                                                 <div className='col-3 p-1'>
                                                                     <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Events Calendar</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Events Calendar</p>
+                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -304,8 +299,8 @@ const LandingPageV0 = () => {
                                                                     <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Push Notifications</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Push Notifications</p>
+                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -315,8 +310,8 @@ const LandingPageV0 = () => {
                                                                     <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
                                                                 </div>
                                                                 <div className='col-9 p-1'>
-                                                                    <p className='fw-bold mb-0 fs-14px'>Internal trading &amp; giveaways</p>
-                                                                    <span className='sub-heading fs-12px'>Gravida gravida nisi, magna blandit</span>
+                                                                    <p className='fs-13px fw-bold mb-0'>Internal trading &amp; giveaways</p>
+                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -337,13 +332,13 @@ const LandingPageV0 = () => {
                                 <div className='card-body'>
                                     <div className='container'>
                                         <div className='row'>
-                                            <div className='col-sm-12 col-md-6 border-end text-center'>
-                                            <div className='p-5'>
+                                            <div className='col-sm-12 col-md-6 text-center'>
+                                                <div className='p-5'>
                                                     <img src='./assets/images/talentGraph.png' className='img-fluid ms-3' />
                                                 </div>
                                             </div>
                                             <div className='col-sm-12 col-md-6'>
-                                                
+
                                                 <div className='feature1'>
                                                     <br />
                                                     <br />
@@ -374,7 +369,7 @@ const LandingPageV0 = () => {
                                 <div className='card-body'>
                                     <div className='container'>
                                         <div className='row'>
-                                            <div className='col-sm-12 col-md-6 border-end'>
+                                            <div className='col-sm-12 col-md-6'>
                                                 <div className='feature1'>
                                                     <br />
                                                     <br />
@@ -415,6 +410,8 @@ const LandingPageV0 = () => {
                         <div className='col-sm-12 col-md-6 text-center'>
                             <p className='sub-heading'>Taking care of our commmunity is at the core of everything we do.
                                 <br />
+                                <br />  
+                                <br />  
                             </p>
                         </div>
                         <div className='col-md-12 text-center mt-4'>
@@ -486,7 +483,7 @@ const LandingPageV0 = () => {
                                 <br />
                                 <br />
                                 That’s why we are 100% carbon neutral,
-                                counterbalancing the <br/> entirety of our CO2 footprint
+                                counterbalancing the <br /> entirety of our CO2 footprint
                                 for a net-zero output.
                             </p>
                             <p className='mt-4'><a href='#' className='funge-link me-4'><u>Our mission</u> > </a> | <a href='#' className='funge-link ms-4'><u>Our vision</u> > </a>
@@ -508,7 +505,7 @@ const LandingPageV0 = () => {
                         <div className='col-12 text-center'>
                             <img src='./assets/videos/token_section.gif' className='img-fluid' />
                             <p className='para'>
-                                <br/>
+                                <br />
                                 INTRODUCING
                                 <h4 className='w-600 mt-2'><span>$</span> FUNGE</h4>
                             </p>
@@ -528,8 +525,8 @@ const LandingPageV0 = () => {
                         </div>
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br />
+                <br />
             </section>
 
             <section className="collection mb-5 py-5 rare">
@@ -588,8 +585,8 @@ const LandingPageV0 = () => {
                         </div>
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br />
+                <br />
             </section>
 
             <section className='tokenomics mt-5 pt-5'>
@@ -599,7 +596,7 @@ const LandingPageV0 = () => {
                     <br />
                     <br />
                     <div className='row'>
-                        <div className='col-md-6 col-sm-12'>
+                        <div className='col-md-6 col-sm-12 ps-4'>
                             <h2>Funge Token Allocation</h2>
                             <p className='mt-4'>Total Supply: 100,000,000</p>
                             <br />
@@ -618,8 +615,8 @@ const LandingPageV0 = () => {
                                 <b>9%</b> Community Allocation (900k) <br />
                             </p>
                         </div>
-                        <div className='col-md-6 col-sm-12'>
-                            <img src='./assets/images/piechart.png' className='img-fluid' />
+                        <div className='col-md-6 col-sm-12 text-center'>
+                            <img src='./assets/images/pie_new.png' className='img-fluid pie_img' />
                         </div>
                     </div>
                 </div>
