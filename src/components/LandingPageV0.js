@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopNavBarV0 from './LandingPage/TopNavBarV0';
-import Footer from './LandingPage/Footer';
+import FooterV0 from './LandingPage/FooterV0';
 
 const LandingPageV0 = () => {
 
@@ -866,7 +866,7 @@ const LandingPageV0 = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            <FooterV0 />
         </>
     )
 }
