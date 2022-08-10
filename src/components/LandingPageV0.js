@@ -469,8 +469,8 @@ const LandingPageV0 = () => {
 
             <section className="collection my-5">
                 <div className='container-fluid'>
-                    <div className='row justify-content-between'>
-                        <div className='col-md-5 my-4 ms-5 ps-4'>
+                    <div className='row justify-content-center'>
+                        <div className='col-md-5 my-4 ps-4'>
                             <br />
                             <br />
                             <br />
@@ -483,7 +483,7 @@ const LandingPageV0 = () => {
                                 <br />
                                 <br />
                                 That’s why we are 100% carbon neutral,
-                                counterbalancing the <br /> entirety of our CO2 footprint
+                                counterbalancing the entirety of our CO2 footprint
                                 for a net-zero output.
                             </p>
                             <p className='mt-4'><a href='#' className='funge-link me-4'><u>Our mission</u> > </a> | <a href='#' className='funge-link ms-4'><u>Our vision</u> > </a>
