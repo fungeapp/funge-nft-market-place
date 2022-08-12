@@ -75,9 +75,7 @@ const LandingPageV0 = () => {
                                 <br />
                                 <span className='funge-color w-600'>Collector Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
-                                    Robust social
-                                    <br />
-                                    Features
+                                    Robust Social Features
                                 </h2>
                                 <p className='sub-heading small'>Use our wide range of social tools to find & connect with users who are passionate about NFTs. Create eye-catching content, keep up with current trends, and mint NFTs all within one social feed built specifically for the blockchain community.
                                     <br />
@@ -112,9 +110,7 @@ const LandingPageV0 = () => {
                                 <br />
                                 <span className='funge-color w-600'>Trader Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
-                                    Powerful NFT
-                                    <br />
-                                    Tools & Solutions
+                                    Powerful NFT Tools & Solutions
                                 </h2>
                                 <p className='sub-heading small'>A complete and comprehensive toolset for all your NFT needs. Explore the limits of Web3 with our feature-packed peer-to-peer trading tools, cross-platform transactions, live NFT analytics, and more.
                                     <br />
@@ -150,9 +146,7 @@ const LandingPageV0 = () => {
                                 <br />
                                 <span className='funge-color w-600'>Reward Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
-                                    Engagement
-                                    <br />
-                                    Incentives
+                                    Engagement Incentives
                                 </h2>
                                 <p className='sub-heading small'>Our Tokenomics system turns users into owners by rewarding them for creating valuable content and participating on the platform.
                                     <br />
