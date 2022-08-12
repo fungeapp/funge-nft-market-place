@@ -59,7 +59,7 @@ const LandingPageV0 = () => {
                 <div className='container'>
                     <div className='row'>
                         <div className='col-12 mt-5'>
-                            <p className='unlock-heading p-4 mt-5 text-center'>
+                            <p className='unlock-heading p-4 mt-4 text-center'>
                                 Funge is an all-in-one solution for the blockchain community, bringing together NFT trading and social media, into one comprehensive platform.
                             </p>
                         </div>
@@ -145,7 +145,7 @@ const LandingPageV0 = () => {
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
                                 <span className='funge-color w-600'>Reward Spotlight</span>
-                                <h2 className="collection_heading w-600 mt-3 mb-3">
+                                <h2 className="collection_heading w-600 mt-3 mb-3 fs-30px">
                                     Engagement Incentives
                                 </h2>
                                 <p className='sub-heading small'>Our Tokenomics system turns users into owners by rewarding them for creating valuable content and participating on the platform.

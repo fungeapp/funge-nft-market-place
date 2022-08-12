@@ -55,6 +55,10 @@ a.funge-link {
     font-size: 16px !important;
 }
 
+.fs-30px {
+    font-size: 30px !important;
+}
+
 button.post-primary-btn {
     border-radius: 40px !important;
     padding: 6px 30px;
