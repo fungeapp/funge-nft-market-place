@@ -493,7 +493,7 @@ const LandingPageV0 = () => {
                             </p>
                         </div>
                         <div className='col-md-6 mt-5 text-center section-thumb'>
-                            <img className='img-fluid mt-4' width={1400} src='./assets/videos/Eco-Friendly_Section.gif' />
+                            <img className='img-fluid mt-4' width={1400} src='./assets/videos/eco_funge_section_low.gif' />
                         </div>
                     </div>
                 </div>
