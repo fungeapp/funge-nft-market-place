@@ -5,9 +5,10 @@ const FungeLogo = () => {
     return (
         <>
             <Link to="/"><img
-                src="./assets/images/logo.svg"
+                src="./assets/images/funge-logo-horizontal.png"
                 alt=""
                 className="img-fluid"
+                width={150}
             /></Link>
         </>
     )

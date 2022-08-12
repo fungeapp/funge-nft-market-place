@@ -16,9 +16,10 @@ const TopNavBar = () => {
                             <a className="navbar-brand"
                                 href="#">
                                 <img
-                                    src="./assets/images/logo.svg"
+                                    src="./assets/images/funge-logo-horizontal.png"
                                     alt=""
                                     className="img-fluid"
+                                    width={150}
                                 />
                             </a>
 

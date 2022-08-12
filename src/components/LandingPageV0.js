@@ -73,7 +73,7 @@ const LandingPageV0 = () => {
                         <div className='col-md-4 sticky-top align-self-start'>
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
-                                <span className='funge-color'>Collector Spotlight</span>
+                                <span className='funge-color w-600'>Collector Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
                                     Robust social
                                     <br />
@@ -110,7 +110,7 @@ const LandingPageV0 = () => {
                         <div className='col-md-4 sticky-top align-self-start'>
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
-                                <span className='funge-color'>Trader Spotlight</span>
+                                <span className='funge-color w-600'>Trader Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
                                     Powerful NFT
                                     <br />
@@ -148,7 +148,7 @@ const LandingPageV0 = () => {
                         <div className='col-md-4 sticky-top align-self-start'>
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
-                                <span className='funge-color'>Reward Spotlight</span>
+                                <span className='funge-color w-600'>Reward Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
                                     Engagement
                                     <br />
@@ -493,7 +493,7 @@ const LandingPageV0 = () => {
                             </p>
                         </div>
                         <div className='col-md-6 mt-5 text-center section-thumb'>
-                            <img className='img-fluid mt-4' src='./assets/videos/eco_funge_section.gif' />
+                            <img className='img-fluid mt-4' width={1400} src='./assets/videos/Eco-Friendly_Section.gif' />
                         </div>
                     </div>
                 </div>
@@ -503,7 +503,7 @@ const LandingPageV0 = () => {
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-12 text-center'>
-                            <img src='./assets/videos/token_section.gif' className='img-fluid' />
+                            <img src='./assets/videos/token_section.gif' width={1000} className='img-fluid' />
                             <p className='para'>
                                 <br />
                                 INTRODUCING
@@ -589,7 +589,7 @@ const LandingPageV0 = () => {
                 <br />
             </section>
 
-            <section className='tokenomics mt-5 pt-5'>
+            <section className='tokenomics py-5'>
                 <div className='container mt-5'>
                     <h1 className='w-800 text-center my-4'>Tokenomics</h1>
                     <br />
@@ -597,8 +597,8 @@ const LandingPageV0 = () => {
                     <br />
                     <div className='row'>
                         <div className='col-md-6 col-sm-12 ps-4'>
-                            <h2>Funge Token Allocation</h2>
-                            <p className='mt-4'>Total Supply: 100,000,000</p>
+                            <h2 className='w-600'>Funge Token Allocation</h2>
+                            <p className='mt-4 w-600'>Total Supply: 100,000,000</p>
                             <br />
                             <p>
                                 <b>8%</b> Seed Stage 1 (800k) <br />
@@ -796,17 +796,16 @@ const LandingPageV0 = () => {
                     <h1 className='w-800 text-center mb-4'>Our plan for the future</h1>
                     <br />
                     <br />
-                    <br />
                     <div className='row'>
                         <div className='col-11 mx-auto'>
-                            <div className="accordion" id="faq-accord">
+                            <div className="accordion mb-3" id="faq-accord1">
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingOne">
                                         <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Q2 2021
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-accord">
+                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-accord1">
                                         <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
@@ -815,13 +814,16 @@ const LandingPageV0 = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className="accordion mb-3" id="faq-accord2">
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingTwo">
-                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                             Q2 2021
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq-accord">
+                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq-accord2">
                                         <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
@@ -830,13 +832,16 @@ const LandingPageV0 = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div className="accordion mb-3" id="faq-accord3">
                                 <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingThree">
-                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                             Q2 2021
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq-accord">
+                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq-accord3">
                                         <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />
