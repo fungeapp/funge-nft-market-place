@@ -89,10 +89,8 @@ const ProfileLogin = (props) => {
         .then(email => {
             axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${email}`)
             .then(response => {
-                console.log(`profile ${response.data[0].id}`)
-                //save localStorage for session management.  Magic opens to a new tab so sessionStorage is not persisted after email verification
-                localStorage.setItem("user_id", response.data[0].id)
-                localStorage.setItem('user_email',email)
+                //console.log(`profile ${response.data[0].id}`)
+                saveUserProfile(response.data[0]);
             })
         })
     }
@@ -104,6 +102,13 @@ const ProfileLogin = (props) => {
             phoneNumber: `+${phone}`,
             redirectURI: `${env.BASE_URL}/feeds`
         });
+    }
+
+    const saveUserProfile = async(response) => {
+            //save localStorage for session management.  Magic opens to a new tab so sessionStorage is not persisted after email verification
+            console.log(`Profile ${response.id} :: ${email} :: ${response.picture} :: ${response.email} :: ${response.nickname}`)
+            localStorage.setItem("user_id", response.id)
+            localStorage.setItem('user_email',email)
     }
 
     const handleDialogClose = () => {

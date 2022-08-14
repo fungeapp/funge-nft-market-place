@@ -5,7 +5,7 @@ import { useWeb3React } from '@web3-react/core'
 //local dependencies
 import ConnectModal from './Wallet/ConnectModal'
 
-const TopBar = () => {
+const TopBar = (props) => {
   const wallet = useWeb3React()
   const [walletModalShow, setWalletModalShow] = useState(false)
 

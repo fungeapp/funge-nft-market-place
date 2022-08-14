@@ -9,12 +9,13 @@ import axios from 'axios';
 
 const Feeds = () => {
 
+  const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
   const [userid, setuserid] = useState(localStorage.getItem("user_id"));
   const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
   const [posts, setposts] = useState([]);
 
-  useMemo(() => {
+  useEffect(() => {
     console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
     if(userid !== 'undefined') {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
@@ -24,12 +25,13 @@ const Feeds = () => {
             let content = post.post_content
             setposts(<FeedPost text={content} />)
           }
+          //setisloading(false)
       })
       .catch(function(error) {
         console.log(`GET user post error :: ${error}`)
       })
     }
-  },[posts, userid]);
+  },[]);
 
   return (
     <>
@@ -39,7 +41,12 @@ const Feeds = () => {
         <div className='row justify-content-around' style={{ marginLeft: 220 }}>
           <div className='col-md-6'>
             <NewPost />
-            {posts}
+            {
+              posts.map((postitem, index) => (
+                {postitem}
+              ))
+            }
+            
           </div>
           <div className='col-md-4 mt-4'>
             <div className='card funge-card p-5'>
