@@ -14,19 +14,27 @@ const Feeds = () => {
   const [userid, setuserid] = useState(localStorage.getItem("user_id"));
   const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
   const [posts, setposts] = useState([]);
-
+  const [loadpost, setloadpost] = useState([])
+  
   useEffect(() => {
+    setisloading(true);
     console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
     if(userid !== 'undefined') {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
       .then((response) => {
-          for(let post of response.data) {
-            console.log(`${post.post_content}`)
-            let content = post.post_content
-            setposts(<FeedPost text={content} />)
-          }
-          //setisloading(false)
+          response.data.forEach( post => {
+            let text = post.post_content
+            console.log(text)
+            setposts(text)
+          })
       })
+      /*.then((data) => {
+        const posts = [];
+        for(const postitem in data) {
+          console.log(`Post Content :: ${postitem}`)
+        }
+        setisloading(false);
+      })*/
       .catch(function(error) {
         console.log(`GET user post error :: ${error}`)
       })
@@ -41,12 +49,7 @@ const Feeds = () => {
         <div className='row justify-content-around' style={{ marginLeft: 220 }}>
           <div className='col-md-6'>
             <NewPost />
-            {
-              posts.map((postitem, index) => (
-                {postitem}
-              ))
-            }
-            
+            <FeedPost text={posts} />
           </div>
           <div className='col-md-4 mt-4'>
             <div className='card funge-card p-5'>
