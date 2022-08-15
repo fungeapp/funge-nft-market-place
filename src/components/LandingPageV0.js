@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopNavBarV0 from './LandingPage/TopNavBarV0';
 import FooterV0 from './LandingPage/FooterV0';
+import axios from 'axios';
+import env from 'react-dotenv';
 
 const LandingPageV0 = () => {
 
     const navigate = useNavigate();
+    const [registeredemail, setregisteredemail] = useState();
+
+    const registerEmail = (e) => {
+        console.log(registeredemail);
+        axios.post(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users//register/${registeredemail}`)
+        .then(response => {
+                console.log(`registered ${response}`)
+        })
+    }
 
     return (
         <>
@@ -35,8 +46,11 @@ const LandingPageV0 = () => {
                                             <p className="text-black-50">
                                                 Enter your Email to continue
                                             </p>
-                                            <input type="text" className="login-input mb-4 w-100" placeholder="Email" />
-                                            <button className='btn btn-primary w-100'>Subscribe</button>
+                                            <input type="text" className="login-input mb-4 w-100" placeholder="Email" onChange={(e) => setregisteredemail(e.target.value)}  />
+                                            <button className='btn btn-primary w-100'  
+                                                onClick={(e) => registerEmail(e)}>
+                                                Subscribe
+                                            </button>
                                             <br />
                                             <br />
                                             <br />
