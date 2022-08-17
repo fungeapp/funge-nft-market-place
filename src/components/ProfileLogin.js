@@ -107,8 +107,11 @@ const ProfileLogin = (props) => {
     const saveUserProfile = async(response) => {
             //save localStorage for session management.  Magic opens to a new tab so sessionStorage is not persisted after email verification
             console.log(`Profile ${response.id} :: ${email} :: ${response.picture} :: ${response.email} :: ${response.nickname}`)
+            //need to improve for user session management, Wang currently working on this
             localStorage.setItem("user_id", response.id)
             localStorage.setItem('user_email',email)
+            
+
     }
 
     const handleDialogClose = () => {
