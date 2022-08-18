@@ -89,7 +89,7 @@ window.env = {
   "npm_config_prefix": "/Users/jaypersanchez/.nvm/versions/node/v16.8.0",
   "AUTH0_DOMAIN": "dev-q680xqzj.us.auth0.com",
   "AUTH0_CLIENT_ID": "EI2DWit2STB39zIu1b6racDhEf2CjInX",
-  "LOGIN_REDIRECT_URL": "https://www.fungeapp.com/profile",
+  "LOGIN_REDIRECT_URL": "https://www.fungeapp.com/feeds",
   "MORALIS_DAPP_URL": "https://lksowllmpfnb.usemoralis.com:2053/server",
   "MORALIS_APPLICATION_ID": "w0DTTvMzz7QxZfeQb1FUmEYH1xTpEHaDbPoBsqnY",
   "MAGIC_LINK_API_KEY": "pk_live_0D6F4DE8C1F3E37C",
