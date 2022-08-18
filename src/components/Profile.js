@@ -1,12 +1,39 @@
-import React, { state, useState } from "react";
+import React, { state, useState, useMemo } from "react";
 import TopBar from "./TopBar";
 import FeedContainer from "./Feeds/FeedContainer";
 import NewPost from "./Feeds/NewPost";
 import LeftSidebar from "./LeftSidebar";
 import { Link } from "react-router-dom";
+import env from 'react-dotenv';
+import axios from 'axios';
 
 const Profile = () => {
+
   const [isActive, setActive] = useState("home");
+  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
+  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [givenname, setgivenname] = useState();
+  const [profilepic, setprofilepic] = useState();
+  const [name, setname] = useState();
+
+  useMemo(() => {
+    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    
+      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+      .then((response) => {
+            console.log(`${JSON.stringify(response.data.picture)}`)
+            for(let data of response.data) {
+              let _givenname = data.given_name + " " + data.family_name;
+              setgivenname(_givenname);
+              setname(data.nickname)
+              setprofilepic(data.picture);
+            }
+      })
+      .catch(function(error) {
+        console.log(`GET user profile data error :: ${error}`)
+      })
+    
+  },[userid, useremail]);
 
   return (
     <>
@@ -18,7 +45,7 @@ const Profile = () => {
             <div className="card profile-card px-4 pt-4 border-0 shadow-sm">
               <div className="cover-profile">
                 <img
-                  src="./assets/images/profile_pic1.png"
+                  src={profilepic}
                   className="profile-pic rounded-circle"
                 />
               </div>
@@ -29,13 +56,15 @@ const Profile = () => {
                       <table>
                         <tr>
                           <td>
-                            <h5 className="card-title w-800 d-inline-block">
-                              Joe Chris <br />
-                              <small className="funge-color">@Joe Chris</small>
+                            <h5 class="card-title w-800 d-inline-block">
+                              {givenname} <br />
+                              <small className="funge-color">{name}</small>
+
                             </h5>
                           </td>
                           <td className="align-top">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                             <Link
                               to="/edit_profile"
                               className="btn btn-primary edit-profile-btn px-3"
@@ -46,15 +75,10 @@ const Profile = () => {
                         </tr>
                         <tr>
                           <td colSpan={2} className="pt-2">
-                            <p className="card-text">
-                              Joined November 2021 | Floor{" "}
-                              <b>
-                                <img src="./assets/images/Ethereum.png" /> 3.75
-                              </b>{" "}
-                              | Volume&nbsp;
-                              <b>
-                                <img src="./assets/images/Ethereum.png" /> 3.75
-                              </b>
+                            <p class="card-text">
+                              Floor <b><i class="fab fa-ethereum funge-color"></i> 3.75</b> | Volume
+                              <b><i class="fab fa-ethereum funge-color"></i> 3.75</b>
+
                             </p>
                           </td>
                         </tr>

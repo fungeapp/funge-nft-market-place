@@ -1,14 +1,45 @@
-import React, { state, useState } from "react";
-import TopBar from "./TopBar";
-import FeedContainer from "./Feeds/FeedContainer";
-import NewPost from "./Feeds/NewPost";
-import MakeAPost from "./Feeds/MakeAPost";
-import LeftSidebar from "./LeftSidebar";
-import DailyChallenge from "./Feeds/DailyChallenge";
-import RecentNews from "./Feeds/RecentNews";
+import React, { state, useState, useEffect, useMemo } from 'react';
+import TopBar from './TopBar';
+import FeedContainer from './Feeds/FeedContainer';
+import NewPost from './Feeds/NewPost';
+import FeedPost from './Feeds/FeedPost';
+import LeftSidebar from './LeftSidebar';
+import env from 'react-dotenv';
+import axios from 'axios';
+
 
 const Feeds = () => {
+  const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
+  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
+  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [posts, setposts] = useState([]);
+  const [loadpost, setloadpost] = useState([])
+  
+  useEffect(() => {
+    setisloading(true);
+    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+    if(userid !== 'undefined') {
+      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+      .then((response) => {
+          response.data.forEach( post => {
+            let text = post.post_content
+            console.log(text)
+            setposts(text)
+          })
+      })
+      /*.then((data) => {
+        const posts = [];
+        for(const postitem in data) {
+          console.log(`Post Content :: ${postitem}`)
+        }
+        setisloading(false);
+      })*/
+      .catch(function(error) {
+        console.log(`GET user post error :: ${error}`)
+      })
+    }
+  },[]);
 
   return (
     <>
@@ -18,14 +49,10 @@ const Feeds = () => {
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
             <NewPost />
-            <FeedContainer />
+            <FeedPost text={posts} />
           </div>
           <div className="col-md-4 mt-4 max-550">
-            <MakeAPost/>
-            <br />
-            <DailyChallenge/>
-            <br />
-            <RecentNews/>
+            
             <div className="card funge-card mt-4">
               <div className="container">
                 <div className="row pt-2">
