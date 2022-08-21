@@ -1,22 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopNavBarV0 from './LandingPage/TopNavBarV0';
 import FooterV0 from './LandingPage/FooterV0';
-import axios from 'axios';
-import env from 'react-dotenv';
 
 const LandingPageV0 = () => {
 
     const navigate = useNavigate();
-    const [registeredemail, setregisteredemail] = useState();
-
-    const registerEmail = (e) => {
-        console.log(registeredemail);
-        axios.post(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users//register/${registeredemail}`)
-        .then(response => {
-                console.log(`registered ${response}`)
-        })
-    }
 
     return (
         <>
@@ -46,11 +35,8 @@ const LandingPageV0 = () => {
                                             <p className="text-black-50">
                                                 Enter your Email to continue
                                             </p>
-                                            <input type="text" className="login-input mb-4 w-100" placeholder="Email" onChange={(e) => setregisteredemail(e.target.value)}  />
-                                            <button className='btn btn-primary w-100'  
-                                                onClick={(e) => registerEmail(e)}>
-                                                Subscribe
-                                            </button>
+                                            <input type="text" className="login-input mb-4 w-100" placeholder="Email" />
+                                            <button className='btn btn-primary w-100'>Subscribe</button>
                                             <br />
                                             <br />
                                             <br />
@@ -87,8 +73,8 @@ const LandingPageV0 = () => {
                         <div className='col-md-4 sticky-top align-self-start'>
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
-                                <span className='funge-color w-600'>Collector Spotlight</span>
-                                <h2 className="collection_heading w-600 mt-3 mb-3">
+                                <span className='funge-color w-700'>Collector Spotlight</span>
+                                <h2 className="collection_heading w-600 mt-3 mb-4">
                                     Robust Social Features
                                 </h2>
                                 <p className='sub-heading small'>Use our wide range of social tools to find & connect with users who are passionate about NFTs. Create eye-catching content, keep up with current trends, and mint NFTs all within one social feed built specifically for the blockchain community.
@@ -122,7 +108,7 @@ const LandingPageV0 = () => {
                         <div className='col-md-4 sticky-top align-self-start'>
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
-                                <span className='funge-color w-600'>Trader Spotlight</span>
+                                <span className='funge-color w-700'>Trader Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3">
                                     Powerful NFT Tools & Solutions
                                 </h2>
@@ -158,7 +144,7 @@ const LandingPageV0 = () => {
                         <div className='col-md-4 sticky-top align-self-start'>
                             <div className='card funge-card mt-5 px-0'>
                                 <br />
-                                <span className='funge-color w-600'>Reward Spotlight</span>
+                                <span className='funge-color w-700'>Reward Spotlight</span>
                                 <h2 className="collection_heading w-600 mt-3 mb-3 fs-30px">
                                     Engagement Incentives
                                 </h2>
@@ -193,8 +179,8 @@ const LandingPageV0 = () => {
 
             <section>
                 <div className='container py-5'>
-                    <div className='row'>
-                        <div className='col-12 py-5'>
+                    <div className='row justify-content-center'>
+                        <div className='col-10 py-5'>
                             <p className='tools-heading text-center py-5'>
                                 Tools designed for the growing wave of forward-thinking creators, innovators, and traders.
                             </p>
@@ -213,8 +199,8 @@ const LandingPageV0 = () => {
                                             <div className='col-md-6 col-sm-12'>
                                                 <div className='feature1'>
                                                     <div className='py-5 px-2'>
-                                                        <br/>
-                                                        <br/>
+                                                        <br />
+                                                        <br />
                                                         <h2 className='badge rounded-pill funge-bgcolor px-3 py-2 fs-6 w-600'>Coming Soon</h2>
                                                         <h2 className="collection_heading w-600 my-3">
                                                             Commmunity Builder
@@ -228,98 +214,106 @@ const LandingPageV0 = () => {
                                             </div>
                                             <div className='col-md-6 col-sm-12 p-0'>
                                                 <div className='container p-0'>
-                                                    <div className='row community-feature my-4'>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row pb-3 border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Voice hat rooms</p>
-                                                                    <span className='sub-heading fs-11px'>Set up and manage your business</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row pb-3 border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/user-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Voice hat rooms</p>
-                                                                    <span className='sub-heading fs-11px'>Set up and manage your business</span>
+                                                    <div className='row community-feature'>
+                                                        <div className='col-md-6 col-sm-12 container px-3 mt-4'>
+                                                            <div className='row pb-3 border-bottom mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/user-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Voice hat rooms</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div className='row community-feature my-4'>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row pb-3 border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/livestream-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Live streaming</p>
-                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row pb-3 border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/livestream-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>File sharing</p>
-                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
+                                                        <div className='col-md-6 col-sm-12 container px-3 mt-4'>
+                                                            <div className='row pb-3 border-bottom mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/user-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Voice hat rooms</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className='row community-feature my-4'>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row pb-3 border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Configurable bots</p>
-                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
+                                                    <div className='row community-feature'>
+                                                        <div className='col-md-6 col-sm-12 container px-3 mt-4'>
+                                                            <div className='row pb-3 border-bottom mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/livestream-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Live streaming</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row pb-3 border-bottom'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/configurebot-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Events Calendar</p>
-                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
+                                                        <div className='col-md-6 col-sm-12 container px-3 mt-4'>
+                                                            <div className='row pb-3 border-bottom mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/livestream-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>File sharing</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className='row community-feature my-4'>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
-                                                                </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Push Notifications</p>
-                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
+                                                    <div className='row community-feature'>
+                                                        <div className='col-md-6 col-sm-12 container px-3 mt-4'>
+                                                            <div className='row pb-3 border-bottom mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/configurebot-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Configurable bots</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-md-6 col-sm-12 container px-3'>
-                                                            <div className='row'>
-                                                                <div className='col-3 p-1'>
-                                                                    <img src='./assets/images/pushnoti-icon.png' className='img-fluid' />
+                                                        <div className='col-md-6 col-sm-12 container px-3 mt-4'>
+                                                            <div className='row pb-3 border-bottom mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/configurebot-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Events Calendar</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
-                                                                <div className='col-9 p-1'>
-                                                                    <p className='fs-13px fw-bold mb-0'>Internal trading &amp; giveaways</p>
-                                                                    <span className='sub-heading fs-11px'>Gravida gravida nisi, magna blandit</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='row community-feature'>
+                                                        <div className='col-md-6 col-sm-12 px-3 my-4'>
+                                                            <div className='row mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/pushnoti-icon.png' className='img-fluid' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Push Notifications</p></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className='col-md-6 col-sm-12 px-3 my-4'>
+                                                            <div className='row mx-1'>
+                                                                <div className='col-12'>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><img src='./assets/images/pushnoti-icon.png' /></td>
+                                                                            <td><p className='fs-13px fw-bold mb-0 ps-3'>Internal trading &amp; giveaways</p></td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -410,7 +404,7 @@ const LandingPageV0 = () => {
             <section className="collection my-5 py-5">
                 <div className='container'>
                     <div className='row justify-content-center'>
-                        <div className='col-md-12 text-center'>
+                        <div className='col-md-12 text-center mb-3'>
                             <h2 className="collection_heading w-800">
                                 Our Company Principles
                             </h2>
@@ -418,13 +412,13 @@ const LandingPageV0 = () => {
                         <div className='col-sm-12 col-md-6 text-center'>
                             <p className='sub-heading'>Taking care of our commmunity is at the core of everything we do.
                                 <br />
-                                <br />  
-                                <br />  
+                                <br />
+                                <br />
                             </p>
                         </div>
                         <div className='col-md-12 text-center mt-4'>
                             <div className='row'>
-                                <div className='col-md-3'>
+                                <div className='col-md-3 ps-0-desktop'>
                                     <div className='card card-travelya'>
                                         <div className='card-body'>
                                             <div className='travelya-icon my-4'>
@@ -457,7 +451,7 @@ const LandingPageV0 = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-md-3'>
+                                <div className='col-md-3 pe-0-desktop'>
                                     <div className='card card-travelya'>
                                         <div className='card-body'>
                                             <div className='travelya-icon my-4'>
@@ -475,17 +469,17 @@ const LandingPageV0 = () => {
                 </div>
             </section>
 
-            <section className="collection my-5">
-                <div className='container-fluid'>
+            <section className="collection my-5 pb-5">
+                <div className='container'>
                     <div className='row justify-content-center'>
-                        <div className='col-md-5 my-4 ps-4'>
+                        <div className='col-md-6 my-4 ps-4'>
                             <br />
                             <br />
                             <br />
-                            <h2 className="collection_heading w-800 mt-3 mb-3">
+                            <h2 className="w-800 mt-3 mb-3">
                                 Built on planet earth, <br />for planet earth
                             </h2>
-                            <p className='pe-4'>Being earth-conscious and taking responsibility for
+                            <p className='pe-4 max-width-500'>Being earth-conscious and taking responsibility for
                                 climate change is at the core of who we are and what
                                 we do.
                                 <br />
@@ -494,14 +488,14 @@ const LandingPageV0 = () => {
                                 counterbalancing the entirety of our CO2 footprint
                                 for a net-zero output.
                             </p>
-                            <p className='mt-4'><a href='#' className='funge-link me-4'><u>Our mission</u> > </a> | <a href='#' className='funge-link ms-4'><u>Our vision</u> > </a>
+                            <p className='mt-4'><a href='#' className='funge-link me-4'><u>Our mission</u></a> | <a href='#' className='funge-link ms-4'><u>Our vision</u></a>
                                 <br />
                                 <br />
                                 <img src='./assets/images/climate.png' width={100} />
                             </p>
                         </div>
                         <div className='col-md-6 mt-5 text-center section-thumb'>
-                            <img className='img-fluid mt-4' width={1400} src='./assets/videos/eco_funge_section_low.gif' />
+                            <img className='img-fluid mt-4' src='./assets/videos/eco_funge_section_low.gif' />
                         </div>
                     </div>
                 </div>
@@ -521,7 +515,7 @@ const LandingPageV0 = () => {
                     </div>
                     <div className='row mt-5 pt-5 justify-content-center'>
                         <div className='col-md-7 col-sm-12 py-5'>
-                            <h2 className='w-800'>The Funge community token</h2>
+                            <h2 className='w-800 blue-heading'>The Funge community token</h2>
                             <p>
                                 We’re putting the future of Funge and the power of
                                 the creator economy in the hands of our community.
@@ -541,7 +535,7 @@ const LandingPageV0 = () => {
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-md-12 text-center'>
-                            <h2 className="collection_heading w-800">
+                            <h2 className="collection_heading w-800 blue-heading">
                                 Token Usage
                             </h2>
                         </div>
@@ -559,7 +553,7 @@ const LandingPageV0 = () => {
                                             <div className='travelya-icon my-4'>
                                                 <img className='img-fluid' src='./assets/icon/tag.svg' />
                                             </div>
-                                            <p className='fw-bold'>Staking</p>
+                                            <p className='fw-bold blue-heading'>Staking</p>
                                             <p className='sub-heading'>Stake your $FUNGE to help us validate the blockchain and earn rewards of up to 445% APY.</p>
                                         </div>
                                     </div>
@@ -570,7 +564,7 @@ const LandingPageV0 = () => {
                                             <div className='travelya-icon my-4'>
                                                 <img className='img-fluid' src='./assets/icon/security.svg' />
                                             </div>
-                                            <p className='fw-bold'>In-App Purchases</p>
+                                            <p className='fw-bold blue-heading'>In-App Purchases</p>
                                             <p className='sub-heading'>Use your tokens for any purchase on the Funge App.
                                                 <br />
                                                 <br />
@@ -584,7 +578,7 @@ const LandingPageV0 = () => {
                                             <div className='travelya-icon my-4'>
                                                 <img className='img-fluid' src='./assets/icon/medal.svg' />
                                             </div>
-                                            <p className='fw-bold'>Trading Rewards</p>
+                                            <p className='fw-bold blue-heading'>Trading Rewards</p>
                                             <p className='sub-heading'> $FUNGE token holders are granted access to our  launchpad where they can develop and launch their own NFT projects. </p>
                                         </div>
                                     </div>
@@ -597,18 +591,18 @@ const LandingPageV0 = () => {
                 <br />
             </section>
 
-            <section className='tokenomics py-5'>
+            <section className='tokenomics py-5' id='tokenomics'>
                 <div className='container mt-5'>
-                    <h1 className='w-800 text-center my-4'>Tokenomics</h1>
+                    <h1 className='w-800 text-center my-4 dark-blue-heading'>Tokenomics</h1>
                     <br />
                     <br />
                     <br />
                     <div className='row'>
-                        <div className='col-md-6 col-sm-12 ps-4'>
-                            <h2 className='w-600'>Funge Token Allocation</h2>
-                            <p className='mt-4 w-600'>Total Supply: 100,000,000</p>
+                        <div className='col-md-6 col-sm-12 ps-5'>
+                            <h2 className='w-700 fs-30px ps-3 blue-heading'>Funge Token Allocation</h2>
+                            <p className='mt-4 w-600 fs-20px ps-3' style={{ color: '#064E3B' }}>Total Supply: 100,000,000</p>
                             <br />
-                            <p>
+                            <p className='ps-3'>
                                 <b>8%</b> Seed Stage 1 (800k) <br />
                                 <b>7%</b> Seed Stage 2 (700k) <br />
                                 <b>6%</b> Public IDO (600k) <br />
@@ -632,32 +626,32 @@ const LandingPageV0 = () => {
 
             <section className='ourteam my-5 py-5'>
                 <div className='container'>
-                    <h1 className='w-800 text-center mb-4'>Meet Our Team</h1>
+                    <h1 className='w-800 text-center mt-2 mb-4 dark-blue-heading'>Meet Our Team</h1>
                     <br />
                     <br />
                     <br />
-                    <div className='row mb-5 px-3'>
-                        <div className='col-12'>
-                            <span className='badge funge-bg-success rounded-pill py-2 px-3 my-2 w-600'>SPEAKERS</span>
-                            <h2 className='w-700'>TheFutureTalks Speakers</h2>
-                        </div>
-                    </div>
                     <div className='row justify-content-center'>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0 px-0'>
                             <div className='card funge-card speaker-card'>
                                 <div className='card-image-top'>
                                     <img src='./assets/images/speaker1.png' className='img-fluid' />
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Claudio Giglieri</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Co-creator of Skype </td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Investor at Sebo Digital Ventures</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0 px-0'>
                             <br />
                             <br />
                             <div className='card funge-card speaker-card'>
@@ -666,28 +660,37 @@ const LandingPageV0 = () => {
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Elsie Mendoza</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; VP of BukaDagang <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-founder at Slack <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>VP of BukaDagang</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Co-founder at Slack</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <div className='card funge-card speaker-card'>
                                 <div className='card-image-top'>
                                     <img src='./assets/images/speaker3.png' className='img-fluid' />
                                 </div>
-                                <div className='card-body p-0'>
-                                    <h2 className='w-700'>Philip Castro</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; CEO at Berkarya <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
-                                    </p>
-                                </div>
+                                <table>
+                                    <tr>
+                                        <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                        <td className='ps-3'>CEO at Berkarya</td>
+                                    </tr>
+                                    <tr>
+                                        <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                        <td className='ps-3'>Investor at Sebo Digital Ventures</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <br />
                             <br />
                             <div className='card funge-card speaker-card'>
@@ -696,30 +699,42 @@ const LandingPageV0 = () => {
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Carrie Angela</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Founder of Nike</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Investor at BukaDagang</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='row justify-content-center'>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <div className='card funge-card speaker-card'>
                                 <div className='card-image-top'>
                                     <img src='./assets/images/speaker1.png' className='img-fluid' />
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Claudio Giglieri</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Co-creator of Skype </td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Investor at Sebo Digital Ventures</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <br />
                             <br />
                             <div className='card funge-card speaker-card'>
@@ -728,28 +743,40 @@ const LandingPageV0 = () => {
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Elsie Mendoza</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; VP of BukaDagang <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-founder at Slack <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>VP of BukaDagang</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Co-founder at Slack</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <div className='card funge-card speaker-card'>
                                 <div className='card-image-top'>
                                     <img src='./assets/images/speaker3.png' className='img-fluid' />
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Philip Castro</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; CEO at Berkarya <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>CEO at Berkarya</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Investor at Sebo Digital Ventures</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <br />
                             <br />
                             <div className='card funge-card speaker-card'>
@@ -758,40 +785,61 @@ const LandingPageV0 = () => {
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Carrie Angela</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Founder of Nike</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Investor at BukaDagang</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='row justify-content-center'>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <div className='card funge-card speaker-card'>
                                 <div className='card-image-top'>
                                     <img src='./assets/images/speaker1.png' className='img-fluid' />
                                 </div>
                                 <div className='card-body p-0'>
                                     <h2 className='w-700'>Claudio Giglieri</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Co-creator of Skype <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at Sebo Digital Ventures <br />
-                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Co-creator of Skype </td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Investor at Sebo Digital Ventures</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-3 col-sm-6'>
+                        <div className='col-md-1'>
+
+                        </div>
+                        <div className='col-md-3 col-sm-6 px-0'>
                             <div className='card funge-card speaker-card'>
                                 <div className='card-image-top'>
-                                    <img src='./assets/images/speaker4.png' className='img-fluid' />
+                                    <img src='./assets/images/speaker2.png' className='img-fluid' />
                                 </div>
                                 <div className='card-body p-0'>
-                                    <h2 className='w-700'>Carrie Angela</h2>
-                                    <p>
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Founder of Nike <br />
-                                        <i className="fa fa-check funge-text-success"></i> &nbsp; Investor at BukaDagang <br />
-                                    </p>
+                                    <h2 className='w-700'>Elsie Mendoza</h2>
+                                    <table>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>VP of BukaDagang</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='align-text-top'><i className="fa fa-check funge-text-success"></i></td>
+                                            <td className='ps-3'>Co-founder at Slack</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -801,7 +849,7 @@ const LandingPageV0 = () => {
 
             <section className='ourplan my-5 py-5'>
                 <div className='container'>
-                    <h1 className='w-800 text-center mb-4'>Our plan for the future</h1>
+                    <h1 className='w-800 text-center mb-4 dark-blue-heading'>Our plan for the future</h1>
                     <br />
                     <br />
                     <div className='row'>
@@ -841,7 +889,7 @@ const LandingPageV0 = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="accordion mb-3" id="faq-accord3">
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingOne">
@@ -850,6 +898,41 @@ const LandingPageV0 = () => {
                                         </button>
                                     </h2>
                                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq-accord3">
+                                        <div className="accordion-body">
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="accordion mb-3" id="faq-accord4">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                            Q2 2021
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq-accord4">
+                                        <div className="accordion-body">
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                            You can pay with credit. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="accordion mb-3" id="faq-accord5">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                            Q2 2021
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faq-accord5">
                                         <div className="accordion-body">
                                             You can pay with credit. <br />
                                             You can pay with credit. <br />

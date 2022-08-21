@@ -14,7 +14,6 @@ import Wallet from "./components/Wallet";
 
 
 function App() {
-  //Setup page routers
   const { loginWithPopup, loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   return (
     <div className="App">

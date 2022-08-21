@@ -19,7 +19,7 @@ const TopNavBar = () => {
                                     src="./assets/images/funge-logo-horizontal.png"
                                     alt=""
                                     className="img-fluid"
-                                    width={150}
+                                    width={130}
                                 />
                             </a>
 
