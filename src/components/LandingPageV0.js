@@ -57,8 +57,8 @@ const LandingPageV0 = () => {
             </section>
             <section className='mt-5'>
                 <div className='container'>
-                    <div className='row'>
-                        <div className='col-12 mt-5'>
+                    <div className='row justify-content-md-center'>
+                        <div className='col-md-10 mt-5'>
                             <p className='unlock-heading p-4 mt-4 text-center'>
                                 Funge is an all-in-one solution for the blockchain community, bringing together NFT trading and social media, into one comprehensive platform.
                             </p>
