@@ -6,6 +6,7 @@ import LeftSidebar from "./LeftSidebar";
 import { Link } from "react-router-dom";
 import env from 'react-dotenv';
 import axios from 'axios';
+import User from './User'
 
 const Profile = () => {
 
@@ -57,7 +58,7 @@ const Profile = () => {
                         <tr>
                           <td>
                             <h5 class="card-title w-800 d-inline-block">
-                              {givenname} <br />
+                              {givenname} <User /> <br />
                               <small className="funge-color">{name}</small>
 
                             </h5>

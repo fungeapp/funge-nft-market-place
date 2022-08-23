@@ -1,5 +1,5 @@
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
-import { useEffect, useHistory, useState } from 'react';
+import React, { useEffect, useHistory, useState, createContext } from 'react';
 import env from 'react-dotenv';
 import { 
     TextField,
@@ -23,10 +23,12 @@ import {
 } from '@mui/material';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
 import Web3 from 'web3/dist/web3.min.js'
-import { Magic } from 'magic-sdk';
+import { Magic, RPCError } from 'magic-sdk';
 import { OAuthExtension } from '@magic-ext/oauth';
 import axios from 'axios';
-
+import { instanceOf } from 'prop-types';
+import User from './User'
+export const UserContext = React.createContext();
 
 const ProfileLogin = (props) => {
 
@@ -43,11 +45,14 @@ const ProfileLogin = (props) => {
     });
     const [email, setemail] = useState();
     const [phone, setphone] = useState();
-
-    
+    const [dataprofile, setdataprofile] = useState();
     useEffect(() => {
         
     });
+
+    const UserProvider = ( ({children}) => {
+            
+    })
 
     const emailAddress = async (e) => {
         console.log(`By email ${email}`)
@@ -58,23 +63,26 @@ const ProfileLogin = (props) => {
             console.log(`email exist ${exist}`)
             if(!exist) {
                 //insert nothing else to do if email already exist.
-                axios({
-                    method: 'post',
-                    url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
-                    data: {
-                            "given_name": "",
-                            "family_name": "",
-                            "phonenumber":"",
-                            "nickname": "",
-                            "name": "",
-                            "picture": "",
-                            "locale": "en",
-                            "updated_at": "",
-                            "email": email,
-                            "email_verified": false,
-                            "sub": ""
-                    }
+                setdataprofile({
+                    "given_name": "",
+                    "family_name": "",
+                    "phonenumber":"",
+                    "nickname": "",
+                    "name": "",
+                    "picture": "",
+                    "locale": "en",
+                    "updated_at": "",
+                    "email": email,
+                    "email_verified": false,
+                    "sub": ""
                 })
+                .then(
+                    axios({
+                        method: 'post',
+                        url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
+                        data: dataprofile
+                    })
+                )
             }
             return email
         })
@@ -93,6 +101,7 @@ const ProfileLogin = (props) => {
                 saveUserProfile(response.data[0]);
             })
         })
+        
     }
 
     const phoneNumber = async (e) => {
@@ -198,6 +207,9 @@ const ProfileLogin = (props) => {
                         </DialogContent>
                         
                     </Dialog>
+                    <UserContext.Provider value={dataprofile}>
+                        <User />
+                    </UserContext.Provider>
                 </>
         );
     
