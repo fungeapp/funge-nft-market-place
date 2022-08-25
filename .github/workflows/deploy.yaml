@@ -33,13 +33,9 @@ jobs:
           sudo npm i https-browserify --save
           sudo npm i os-browserify --save
           sudo npm run build 2>&1 | tee npm-build.out
-          
-    - name: Deploy
-      run: |
-        pwd
-        sleep 60s 
-        AWS_EC2_METADATA_DISABLED=true aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
-          
+          pwd
+          sleep 10s 
+          AWS_EC2_METADATA_DISABLED=true aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
 #jobs:
 #  deploy:
      # runs-on: ubuntu-latest
