@@ -2,7 +2,7 @@ name: Build and Deploy React App using AWS SSM Send-Command
 on:
   push:
     branches:
-      - main-v0
+      - test-branch
 jobs:
   build-job:
     name: Build New Landing Page
@@ -16,7 +16,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
-        comment: Deploy the main-v0 branch
+        comment: Deploy the test-branch
         working-directory: /var/www/html/fungeapp.com/funge-nft-market-place
         command: |
           sudo rm npm-*.out
@@ -34,4 +34,35 @@ jobs:
           sudo npm i os-browserify --save
           sudo npm run build 2>&1 | tee npm-build.out
           sudo nginx -t
-          sudo systemctl restart nginx
+          sudo systemctl restart nginx    
+    - name: Deploy
+      run: aws s3 sync ./build s3://www.fungeapp.com
+          
+#jobs:
+#  deploy:
+     # runs-on: ubuntu-latest
+     # steps:
+     # - uses: actions/checkout@v2
+     # - name: Cache modules
+     #   uses: actions/cache@v1
+     #   id: yarn-cache
+     #   with:
+     #     path: node_modules
+     #     key:${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+     #     restore-keys: ${{ runner.os }}-yarn-
+     # - name: Configure AWS credentials
+     #   uses: aws-actions/configure-aws-credentials@v1
+     #   with:
+     #     aws-access-key-id:${{ secrets.AWS_ACCESS_KEY_ID }}
+     #     aws-secret-access-key:${{ secrets.AWS_SECRET_ACCESS_KEY }}
+     #     aws-region: ap-northeast-2
+     # - name: Use Node.js 12.x
+     #   uses: actions/setup-node@v1
+     #   with:
+     #     node-version: 12.x
+     # - name: Install dependencies
+     #   run: yarn
+     # - name: Build
+     #   run: yarn build
+     # - name: Deploy
+     #   run: aws s3 sync ./build s3://www.fungeapp.com
