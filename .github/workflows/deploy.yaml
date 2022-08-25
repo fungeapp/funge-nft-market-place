@@ -2,7 +2,7 @@ name: Build and Deploy React App using AWS SSM Send-Command
 on:
   push:
     branches:
-      - test-branch
+      - main-v0
 jobs:
   build-job:
     name: Build New Landing Page
@@ -16,74 +16,22 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
-        comment: Deploy the test-branch
-        working-directory: /var/www/html/cdn.fungeapp.com/
+        comment: Deploy the main-v0 branch
+        working-directory: /var/www/html/fungeapp.com/funge-nft-market-place
         command: |
           sudo rm npm-*.out
           sudo git stash
-          sudo git pull origin test-branch
-          sudo mv /var/www/html/cdn.fungeapp.com/node_modules/react-scripts/config/webpack.config.js /var/www/html/cdn.fungeapp.com/tmp/.
+          sudo git pull origin main-v0
+          sudo mv /var/www/html/fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/webpack.config.js /var/www/html/fungeapp.com/funge-nft-market-place/tmp/.
           sudo rm -rf node_modules
           sudo rm -rf build
           sudo npm install  2>&1 | tee npm-install.out
-          sudo mv /var/www/html/cdn.fungeapp.com/tmp/webpack.config.js /var/www/html/cdn.fungeapp.com/node_modules/react-scripts/config/.
+          sudo mv /var/www/html/fungeapp.com/funge-nft-market-place/tmp/webpack.config.js /var/www/html/fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/.
           sudo npm i stream-browserify --save
           sudo npm i crypto-browserify --save
           sudo npm i stream-http --save
           sudo npm i https-browserify --save
           sudo npm i os-browserify --save
           sudo npm run build 2>&1 | tee npm-build.out
-          pwd
-        #  sleep 240s
-        #  AWS_EC2_METADATA_DISABLED=true 
-        #  aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
-    - name: Deploy static site to S3 bucket
-      run: aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
-  
-#  deploy-job:
-#    name: Deploying Build Artifacts on S3
-#    runs-on: ubuntu-latest
-
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: AWS SSM Send Command
-#      uses: peterkimzz/aws-ssm-send-command@1.0.1
-#      with:
-#        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID  }}
-#        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
-#        aws-region: us-west-1
-#        instance-ids: ${{ secrets.INSTANCE_ID  }}
-#        comment: Deploy Build Artifacts on S3 Bucket
-#        working-directory: /var/www/html/cdn.fungeapp.com/build
-#      run: |
-#        pwd
-#        sleep 60s
-#        AWS_EC2_METADATA_DISABLED=true aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
-# jobs:
-#  deploy:
-#      runs-on: ubuntu-latest
-#      steps:
-#      - uses: actions/checkout@v2
-#      - name: Cache modules
-#        uses: actions/cache@v1
-#        id: yarn-cache
-#        with:
-#          path: node_modules
-#          key:${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-#          restore-keys: ${{ runner.os }}-yarn-
-#      - name: Configure AWS credentials
-#        uses: aws-actions/configure-aws-credentials@v1
-#        with:
-#          aws-access-key-id:${{ secrets.AWS_ACCESS_KEY_ID }}
-#          aws-secret-access-key:${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#          aws-region: ap-northeast-2
-#      - name: Use Node.js 12.x
-#        uses: actions/setup-node@v1
-#        with:
-#          node-version: 12.x
-#      - name: Install dependencies
-#        run: yarn
-#      - name: Build
-#        run: yarn build
-#      - name: Deploy
-#        run: aws s3 sync ./build s3://www.fungeapp.com
+          sudo nginx -t
+          sudo systemctl restart nginx
