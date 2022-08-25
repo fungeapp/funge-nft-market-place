@@ -21,7 +21,7 @@ jobs:
         command: |
           sudo rm npm-*.out
           sudo git stash
-          sudo git pull origin main-v0
+          sudo git pull origin test-branch
           sudo mv /var/www/html/cdn.fungeapp.com/node_modules/react-scripts/config/webpack.config.js /var/www/html/cdn.fungeapp.com/tmp/.
           sudo rm -rf node_modules
           sudo rm -rf build
