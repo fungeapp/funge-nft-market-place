@@ -39,5 +39,6 @@ jobs:
       uses: jakejarvis/wait-action@master
       with:
         time: '100s'
+        shell: bash
         command: |
           sudo /var/www/html/cdn.fungeapp.com/s3-sync.sh
