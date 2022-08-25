@@ -44,7 +44,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-and-deploy": "npm run build && s3cmd sync build/* s3://www.fungeapp.com && echo '🚀  Deployed!'"
+    "deploy": "aws s3 sync build/ s3://www.fungeapp.com"
   },
   "eslintConfig": {
     "extends": [
