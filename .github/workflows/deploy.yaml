@@ -2,7 +2,7 @@ name: Build and Deploy React App using AWS SSM Send-Command
 on:
   push:
     branches:
-      - test.branch
+      - test-branch
 jobs:
   build-job:
     name: Build New Landing Page
@@ -17,16 +17,16 @@ jobs:
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
         comment: Deploy the test-branch
-        working-directory: /var/www/html/cdn.fungeapp.com/
+        working-directory: /var/www/html/cdn.fungeapp.com/funge-nft-market-place
         command: |
           sudo rm npm-*.out
           sudo git stash
           sudo git pull origin test-branch
-          sudo mv /var/www/html/cdn.fungeapp.com/node_modules/react-scripts/config/webpack.config.js /var/www/html/cdn.fungeapp.com/tmp/.
+          sudo mv /var/www/html/cdn,fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/webpack.config.js /var/www/html/cdn.fungeapp.com/funge-nft-market-place/tmp/.
           sudo rm -rf node_modules
           sudo rm -rf build
           sudo npm install  2>&1 | tee npm-install.out
-          sudo mv /var/www/html/cdn.fungeapp.com/tmp/webpack.config.js /var/www/html/cdn.fungeapp.com/node_modules/react-scripts/config/.
+          sudo mv /var/www/html/cdn.fungeapp.com/funge-nft-market-place/tmp/webpack.config.js /var/www/html/cdn.fungeapp.com/funge-nft-market-place/node_modules/react-scripts/config/.
           sudo npm i stream-browserify --save
           sudo npm i crypto-browserify --save
           sudo npm i stream-http --save
