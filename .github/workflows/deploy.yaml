@@ -17,7 +17,7 @@ jobs:
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
         comment: Deploy the test-branch
-        working-directory: /var/www/html/cdn.fungeapp.com/
+        working-directory: /var/www/html/cdn.fungeapp.com
         command: |
           sudo rm npm-*.out
           sudo git stash
