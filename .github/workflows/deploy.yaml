@@ -35,3 +35,5 @@ jobs:
           sudo npm run build 2>&1 | tee npm-build.out
           sudo nginx -t
           sudo systemctl restart nginx
+          sleep 100s
+          sudo ./s3-sync.sh
