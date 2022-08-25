@@ -44,13 +44,11 @@ jobs:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
-        args: --acl public-read --follow-symlinks --delete
-      env:
         AWS_S3_BUCKET: www.fungeapp.com
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
         AWS_REGION: 'us-west-1'
     - name: Deploy to S3 bucket
-    - run: aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
+      run: aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com --exclude 'venv/*' --exclude '.aws-sam/*' --exclude '.git/*' --exclude '.gitignore'
 
       #clude '.aws-sam/*' --exclude '.git/*' --exclude '.gitignore'
