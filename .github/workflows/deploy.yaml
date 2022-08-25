@@ -6,7 +6,7 @@ on:
 jobs:
   build-job:
     name: Build New Landing Page
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
     - name: AWS SSM Send Command
@@ -36,7 +36,7 @@ jobs:
           sudo nginx -t
           sudo systemctl restart nginx    
     - name: Deploy
-      run: aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
+      run: AWS_EC2_METADATA_DISABLED=true aws s3 sync /var/www/html/cdn.fungeapp.com/build s3://www.fungeapp.com
           
 #jobs:
 #  deploy:
