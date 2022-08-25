@@ -35,9 +35,9 @@ jobs:
           sudo npm run build 2>&1 | tee npm-build.out
           sudo nginx -t
           sudo systemctl restart nginx
-    - name: Sleep for 240 seconds
+    - name: Sleep for 100 seconds
       uses: jakejarvis/wait-action@master
       with:
-        time: '240s'
-        shell: bash
+        time: '100s'
+        command: |
           sudo /var/www/html/cdn.fungeapp.com/s3-sync.sh
