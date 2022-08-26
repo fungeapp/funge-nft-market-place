@@ -34,7 +34,8 @@ jobs:
           sudo npm i os-browserify --save
           sudo npm run build 2>&1 | tee npm-build.out
           sudo nginx -t
-          sudo systemctl restart nginx
+          sudo systemctl restart 
+          
     - name: Sleep for 80 seconds
       uses: jakejarvis/wait-action@master
       with:
