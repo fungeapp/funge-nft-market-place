@@ -40,7 +40,6 @@ jobs:
       with:
         time: '80s'
         shell: bash
-
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
