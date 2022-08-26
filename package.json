@@ -42,8 +42,8 @@
   "scripts": {
     "start": "react-dotenv && react-scripts start",
     "build": "react-scripts build",
-    "client-s3-deploy": "aws s3 sync build/ s3://www.fungeapp.com --profile Funge",
-    "client-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths '/*' --profile Funge",
+    "client-s3-deploy": "aws s3 sync build/ s3://www.fungeapp.com --profile default",
+    "client-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths '/*' --profile default",
     "client-deploy": "npm run build && client-s3-deploy && npm run client-cloudfront-invalidation",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
