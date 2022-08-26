@@ -36,10 +36,10 @@ jobs:
           sudo nginx -t
           sudo systemctl restart 
           
-    - name: Sleep for 65 seconds
+    - name: Sleep for 80 seconds
       uses: jakejarvis/wait-action@master
       with:
-        time: '65s'
+        time: '80s'
         shell: bash
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
