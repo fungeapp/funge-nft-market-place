@@ -27,8 +27,8 @@ import { Magic, RPCError } from 'magic-sdk';
 import { OAuthExtension } from '@magic-ext/oauth';
 import axios from 'axios';
 import { instanceOf } from 'prop-types';
-import User from './User'
-export const UserContext = React.createContext();
+import { profileData } from './UserProfile'
+
 
 const ProfileLogin = (props) => {
 
@@ -46,43 +46,33 @@ const ProfileLogin = (props) => {
     const [email, setemail] = useState();
     const [phone, setphone] = useState();
     const [dataprofile, setdataprofile] = useState();
-    useEffect(() => {
-        
-    });
-
-    const UserProvider = ( ({children}) => {
-            
-    })
-
+    
     const emailAddress = async (e) => {
         console.log(`By email ${email}`)
         //save email info alread
         axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/exist/${email}`)
         .then(response => {
             let exist = response.data
-            console.log(`email exist ${exist}`)
+            console.log(`email exist ${exist} :: ${email}`)
             if(!exist) {
                 //insert nothing else to do if email already exist.
-                setdataprofile({
-                    "given_name": "",
-                    "family_name": "",
-                    "phonenumber":"",
-                    "nickname": "",
-                    "name": "",
-                    "picture": "",
-                    "locale": "en",
-                    "updated_at": "",
-                    "email": email,
-                    "email_verified": false,
-                    "sub": ""
-                })
-                .then(
-                    axios({
+                //profile data
+                profileData.given_name = ""
+                profileData.family_name = ""
+                profileData.phonenumber = ""
+                profileData.nickname = ""
+                profileData.name = ""
+                profileData.picture = ""
+                profileData.locale = "en"
+                profileData.updated_at = ""
+                profileData.email = email
+                profileData.email_verified = false
+                console.log(`profileData ${profileData.email}`)
+                axios({
                         method: 'post',
                         url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
-                        data: dataprofile
+                        data: profileData
                     })
-                )
             }
             return email
         })
@@ -97,7 +87,7 @@ const ProfileLogin = (props) => {
         .then(email => {
             axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${email}`)
             .then(response => {
-                //console.log(`profile ${response.data[0].id}`)
+                console.log(`profile ${response.data[0].id}`)
                 saveUserProfile(response.data[0]);
             })
         })
@@ -207,9 +197,7 @@ const ProfileLogin = (props) => {
                         </DialogContent>
                         
                     </Dialog>
-                    <UserContext.Provider value={dataprofile}>
-                        <User />
-                    </UserContext.Provider>
+                    
                 </>
         );
     
