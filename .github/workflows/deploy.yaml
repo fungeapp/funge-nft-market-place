@@ -41,7 +41,9 @@ jobs:
       with:
         time: '80s'
         shell: bash
-        
+        command: |
+        sudo /var/www/html/cdn.fungeapp.com/s3-sync.sh
+
  #   - uses: actions/checkout@master
  #   - uses: jakejarvis/s3-sync-action@master
  #     with:
