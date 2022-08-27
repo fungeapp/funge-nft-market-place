@@ -49,7 +49,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
         aws-region: us-west-1
         instance-ids: ${{ secrets.INSTANCE_ID  }}
-        comment: Deploy the test-branch
+        comment: Deploy to S3
         working-directory: /var/www/html/cdn.fungeapp.com
         command: |
           npm run client-deploy
