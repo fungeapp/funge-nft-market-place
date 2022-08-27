@@ -53,6 +53,7 @@ jobs:
         working-directory: /var/www/html/cdn.fungeapp.com
         command: |
           cd /var/www/html/cdn.fungeapp.com
+          sudo mkdir testing-2
           npm run client-deploy
         
  #   - uses: actions/checkout@master
