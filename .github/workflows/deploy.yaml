@@ -52,7 +52,7 @@ jobs:
         comment: Deploy the test-branch
         working-directory: /var/www/html/cdn.fungeapp.com
         command: |
-          sudo npm run client-deploy
+          sudo mkdir test-dir
         
 
  #   - uses: actions/checkout@master
