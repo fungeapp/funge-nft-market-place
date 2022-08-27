@@ -41,7 +41,7 @@ jobs:
       with:
         time: '65s'
         shell: bash
-    steps:
+    - name: Deploy to S3
       - uses: actions/checkout@v3
       - run: sudo npm run client-deploy
         
