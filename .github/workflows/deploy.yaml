@@ -55,7 +55,6 @@ jobs:
           cd /var/www/html/cdn.fungeapp.com
           npm run client-deploy
         
-
  #   - uses: actions/checkout@master
  #   - uses: jakejarvis/s3-sync-action@master
  #     with:
