@@ -52,9 +52,8 @@ jobs:
         comment: Deploy the test-branch
         working-directory: /var/www/html/cdn.fungeapp.com
         command: |
-          sudo mkdir /var/www/html/cdn.fungeapp.com/test-cdn
           npm run client-deploy
-        
+      
  #   - uses: actions/checkout@master
  #   - uses: jakejarvis/s3-sync-action@master
  #     with:
