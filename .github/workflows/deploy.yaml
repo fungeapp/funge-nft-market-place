@@ -41,7 +41,9 @@ jobs:
       with:
         time: '65s'
         shell: bash
-        run: sudo mkdir testing
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo npm run client-deploy
         
 
  #   - uses: actions/checkout@master
