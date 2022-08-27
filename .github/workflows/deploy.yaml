@@ -36,12 +36,12 @@ jobs:
           sudo nginx -t
           sudo systemctl restart
     #     sudo /var/www/html/cdn.fungeapp.com/s3-sync.sh
-    - name: Sleep for 80 seconds
+    - name: Sleep for 65 seconds
       uses: jakejarvis/wait-action@master
       with:
         time: '65s'
         shell: bash
-        run: npm run client-deploy
+        run: sudo mkdir testing
         
 
  #   - uses: actions/checkout@master
