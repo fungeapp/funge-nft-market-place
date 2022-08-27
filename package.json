@@ -42,7 +42,7 @@
   "scripts": {
     "start": "react-dotenv && react-scripts start",
     "build": "react-scripts build",
-    "client-s3-deploy": "aws s3 sync build/ s3://www.fungeapp.com --profile default",
+    "client-s3-deploy": "aws s3 sync build/ s3://www.fungeapp.com --profile funge-admin",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
