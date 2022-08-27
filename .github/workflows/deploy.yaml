@@ -39,8 +39,9 @@ jobs:
     - name: Sleep for 80 seconds
       uses: jakejarvis/wait-action@master
       with:
-        time: '80s'
+        time: '65s'
         shell: bash
+        run: npm run client-deploy
         
 
  #   - uses: actions/checkout@master
