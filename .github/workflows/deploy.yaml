@@ -85,7 +85,7 @@ jobs:
       # Copy build to s3
       - name: Deploy to S3
         run: npm run client-deploy
-        working-directory: build-artifact
+        working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place
     
     
     
