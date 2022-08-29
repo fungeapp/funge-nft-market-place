@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: build-artifact
-        path: build
+        path: ./build
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,6 +59,6 @@ jobs:
 
       - name: Create Cloudfront Invalidation
         run: |
-          DISTRIBUTION_ID=<distribution-id>
-          aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /*
+          DISTRIBUTION_ID= E3QRIALGM07SYH
+          aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
         working-directory: build-artifact
