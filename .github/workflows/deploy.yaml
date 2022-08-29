@@ -85,9 +85,9 @@ jobs:
       # Copy build to s3
       - name: Deploy to S3
         command: |
-        pwd
-        ls -ltr
-        npm run client-deploy
+          pwd
+          ls -ltr
+          npm run client-deploy
 
  #     - uses: actions/checkout@v2
  #     - name: AWS SSM Send Command
