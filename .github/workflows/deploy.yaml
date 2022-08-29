@@ -84,6 +84,7 @@ jobs:
 
       # Copy build to s3
       - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@master
         command: |
           pwd
           ls -ltr
