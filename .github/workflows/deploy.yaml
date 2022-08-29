@@ -90,13 +90,13 @@ jobs:
           ls -ltr
           S3_BUCKET=s3://www.fungeapp.com
           aws s3 sync build/ s3://www.fungeapp.com
-        working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place/
+        working-directory: build-artifact
 
       - name: Create Cloudfront Invalidation
         run: |
           DISTRIBUTION_ID=E3QRIALGM07SYH
           aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
-        working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place/
+        working-directory: build-artifact
 
       # Copy build to s3
       #- name: Deploy to S3
