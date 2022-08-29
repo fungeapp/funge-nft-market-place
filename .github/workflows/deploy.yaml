@@ -89,7 +89,7 @@ jobs:
           pwd
           ls -ltr
           S3_BUCKET=s3://www.fungeapp.com
-          aws s3 sync build/ s3://www.fungeapp.com
+          aws s3 sync . s3://www.fungeapp.com
         working-directory: build-artifact
 
       - name: Create Cloudfront Invalidation
