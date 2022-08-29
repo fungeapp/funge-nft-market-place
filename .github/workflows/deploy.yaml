@@ -84,13 +84,20 @@ jobs:
 
       # Copy build to s3
       - name: Deploy to S3
-        run: |
-          S3_BUCKET=s3://www.fungeapp.com
-          aws s3 sync . $S3_BUCKET --acl private
+        run: npm run client-deploy
         working-directory: build-artifact
-
-      - name: Create Cloudfront Invalidation
-        run: |
-          DISTRIBUTION_ID= E3QRIALGM07SYH
-          aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
-        working-directory: build-artifact
+    
+    
+    
+    #    run: |
+    #      pwd
+    #      ls -ltr
+    #      S3_BUCKET=s3://www.fungeapp.com
+    #      aws s3 sync . $S3_BUCKET --acl private
+    #    working-directory: build-artifact
+#
+    #  - name: Create Cloudfront Invalidation
+    #    run: |
+    #      DISTRIBUTION_ID= E3QRIALGM07SYH
+    #      aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
+    #    working-directory: build-artifact
