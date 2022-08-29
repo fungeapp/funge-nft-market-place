@@ -89,7 +89,7 @@ jobs:
           pwd
           ls -ltr
           S3_BUCKET=s3://www.fungeapp.com
-          aws s3 sync /home/runner/work/funge-nft-market-place/funge-nft-market-place/build $S3_BUCKET --acl private
+          aws s3 sync build/ s3://www.fungeapp.com
         working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place/
 
       - name: Create Cloudfront Invalidation
