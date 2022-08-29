@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.x]
     steps:
     - uses: actions/checkout@v2
 
@@ -22,7 +22,7 @@ jobs:
     - name: Npm Install
       run: npm install
 
-    - name: Npm Install
+    - name: Custom Fixes for Webpack Library
       run: |
         pwd
         ls -ltr
@@ -36,7 +36,15 @@ jobs:
     - name: Npm Build
       run: npm run build
       env:
-        REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+        AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
+        AUTH0_CLIENT_ID: ${{ secrets.AUTH0_CLIENT_ID }}
+        LOGIN_REDIRECT_URL: ${{ secrets.LOGIN_REDIRECT_URL }}
+        MORALIS_DAPP_URL: ${{ secrets.MORALIS_DAPP_URL }}
+        MORALIS_APPLICATION_ID: ${{ secrets.MORALIS_APPLICATION_ID }}
+        MAGIC_LINK_API_KEY: ${{ secrets.MAGIC_LINK_API_KEY }}
+        BASE_URL: ${{ secrets.BASE_URL }}
+        FUNGE_EXPRESSJS_SERVER_BASE_URL: ${{ secrets.FUNGE_EXPRESSJS_SERVER_BASE_URL }}
+        
 
 
    # - name: Sleep for 240 seconds
