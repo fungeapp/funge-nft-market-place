@@ -22,6 +22,17 @@ jobs:
     - name: Npm Install
       run: npm install
 
+    - name: Npm Install
+      run: |
+        pwd
+        ls -ltr
+        cp ./tmp/webpack.config.js ./node_modules/react-scripts/config/webpack.config.js
+        npm i stream-browserify --save
+        npm i crypto-browserify --save
+        npm i stream-http --save
+        npm i https-browserify --save
+        npm i os-browserify --save
+
     - name: Npm Build
       run: npm run build
       env:
