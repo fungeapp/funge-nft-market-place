@@ -1,11 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TopNavBarV0 from './LandingPage/TopNavBarV0';
 import FooterV0 from './LandingPage/FooterV0';
+import { 
+    TextField,
+    Button, 
+    Avatar, 
+    List, 
+    ListItem, 
+    ListItemAvatar, 
+    ListItemText,
+    DialogTitle, 
+    Dialog, 
+    DialogContent,
+    Grid,
+    Typography,
+    IconButton,
+    Divider, 
+    FormControlLabel,
+    Colors,
+    Checkbox,
+    DialogActions,
+} from '@mui/material';
+import env from 'react-dotenv';
+import axios from 'axios'
 
 const LandingPageV0 = () => {
 
     const navigate = useNavigate();
+    const [emailaddress, setemailaddress] = useState();
+    const [registrationstatus, setregistrationstatus] = useState("Enter your Email to continue")
+
+    const registerEmailAddress = async (e) => {
+        setregistrationstatus("registering.....")
+        console.log(`register ${emailaddress}`)
+        axios({
+            method: 'post',
+            url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/register/${emailaddress}`,
+        })
+        .then( response => {
+            console.log(`${JSON.stringify(response)}`)
+            setregistrationstatus("You're on the Waitlist.  You may close this window")
+        })
+    }
 
     return (
         <>
@@ -34,10 +71,10 @@ const LandingPageV0 = () => {
                                             <div className="modal-body px-5">
                                                 <h4 className="w-700">Join the Waitlist</h4>
                                                 <p className="text-black-50">
-                                                    Enter your Email to continue
+                                                    {registrationstatus}
                                                 </p>
-                                                <input type="text" className="login-input mb-4 w-100" placeholder="Email" />
-                                                <button className='btn btn-primary w-100'>Subscribe</button>
+                                                <input type="text" className="login-input mb-4 w-100" placeholder="Email" onChange={(e) => setemailaddress(e.target.value)} />
+                                                <button className='btn btn-primary w-100' onClick={(e) => registerEmailAddress(e)}>Subscribe</button>
                                                 <br />
                                                 <br />
                                                 <br />
