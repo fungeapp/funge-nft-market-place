@@ -31,7 +31,12 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: build-artifact
-        path: ./build
+        path: build
+    - name: Sleep for 240 seconds
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '240s'
+        shell: bash
 
   deploy:
     runs-on: ubuntu-latest
