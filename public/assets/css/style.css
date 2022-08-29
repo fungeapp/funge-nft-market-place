@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'StabilGortesk';
+    src: local("StailGortesk"), url('../font/StabilGroteskTrial-Regular.otf');
+  }
+
+body{
+    font-family: 'StabilGortesk' !important;
+}
+
 .bg-body {
     background-color: #ffffff !important;
 }
@@ -55,8 +64,20 @@ a.funge-link {
     font-size: 16px !important;
 }
 
+.fs-18px {
+    font-size: 18px !important;
+}
+
 .fs-20px {
     font-size: 20px !important;
+}
+
+.fs-21px {
+    font-size: 21px !important;
+}
+
+.fs-22px {
+    font-size: 22px !important;
 }
 
 .fs-30px {
@@ -65,6 +86,19 @@ a.funge-link {
 
 .fs-40px {
     font-size: 40px !important;
+}
+
+.fs-52px {
+    font-size: 60px !important;
+}
+
+.fs-60px {
+    font-size: 60px !important;
+}
+
+.bullet-ring-color{
+    color: #71AFAC;
+    opacity: 0.3;
 }
 
 .dark-blue-heading{
@@ -76,6 +110,9 @@ a.funge-link {
 
 .max-width-500{
     max-width: 500px;
+}
+.our-company{
+   margin-top: 35px;
 }
 
 button.post-primary-btn {
@@ -89,13 +126,15 @@ button.post-primary-btn {
 }
 
 ul.funge-list{
-    padding-left: 1.4rem;
+    margin-left:1.5rem;
 }
 
-.funge-list li::marker {
-    font-size: 24px;
-    color: #71AFAC;
+ul.funge-list li span.item-text{
+    position: relative;
+    left: -14px;
+    top: 3px;
 }
+
 
 /* bootstrap accordion start */
 .accordion-button:not(.collapsed) {
@@ -146,11 +185,13 @@ ul.funge-list{
 .font-40 {
     font-size: 40px !important;
 }
+.fontNFT {
+    font-size: 18px;
+}
 
 .font-24 {
     font-size: 24px !important;
 }
-
 .w-400 {
     font-weight: 400 !important;
 }
@@ -185,8 +226,7 @@ ul.funge-list{
 }
 
 .unlock-heading {
-    font-family: Inter;
-    font-size: 2.6rem;
+    font-size: 52px;
     font-weight: 600;
     line-height: 64px;
     letter-spacing: 0px;
@@ -194,8 +234,7 @@ ul.funge-list{
 }
 
 .tools-heading {
-    font-family: Inter;
-    font-size: 2.8rem;
+    font-size: 53px;
     font-weight: 600;
     line-height: 56px;
     letter-spacing: 0px;
@@ -313,6 +352,12 @@ ul.funge-list{
 
 .speaker-card h2{
     color: #183B56;
+}
+
+.speaker-card img{
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: rgb(0 0 0 / 7%) 0px 35px 16px -1px;
 }
 
 
@@ -482,22 +527,7 @@ ul.funge-list{
 
 /* globle class media query end */
 /* globle class  end*/
-body {
-    font-family: 'Inter', sans-serif !important;
-}
 
-/* header style start  */
-/* .header::before {
-    content: '';
-    background: #F2F9F9;
-    background-image: url(../images/01_Hero_Section_01_009_wBg_wo_cards.png);
-    width: 100%;
-    background-size: cover;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-} */
 section#hiro {
     content: '';
     background: #F2F9F9;
@@ -679,6 +709,14 @@ button.btn.waitlist-btn {
     padding-left: 30px !important;
     padding-right: 30px !important;
     height: 45px;
+}
+button.btn.waitlist-btn-lg {
+    border-radius: 8px !important;
+    height: 58px;
+    min-width: 300px;
+    font-size: 16px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }
 
 .hiro_contant .d-flex .btn {
@@ -1155,6 +1193,12 @@ button.btn.waitlist-btn {
         margin-top: 50px;
     }
 
+}
+
+
+.hiro_heading {
+    /* margin-top: 80px !important; */
+    font-size: 54px !important;
 }
 
 
@@ -3023,7 +3067,6 @@ ul.pattern .color3 {
 }
 
 .main_home_content .top-collections .collaction_1 .collactin_info .ETH_info h5 {
-    font-family: Inter;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -9993,7 +10036,7 @@ ul.pattern .color3 {
 }
 
 .pie_img{
-    width: 400px;
+    width: 685px;
     height: 400px;
     margin-top: 30px;
 }
@@ -10013,7 +10056,8 @@ ul.pattern .color3 {
 }
 
 .footer-seprator {
-    margin: 40px 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     border: 1px solid #E3E4E4;
 }
 
@@ -10038,7 +10082,7 @@ ul.pattern .color3 {
     border: 1px solid #E7E8EA !important;
     border-radius: 12px !important;
     margin-right: 5px;
-    width: 350px !important;
+    width: 335px !important;
     height: 50px;
 }
 
@@ -10085,10 +10129,11 @@ ul.pattern .color3 {
     box-shadow: #0F172A;
 }
 
-.card-travelya .sub-heading {
+.card-travelya .sub-heading .font-18 {
     font-size: 12.5px;
     font-weight: 400;
     line-height: 24px;
+  
 }
 
 /* Free Trial Section Start */
@@ -10147,7 +10192,6 @@ ul.pattern .color3 {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #374151;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

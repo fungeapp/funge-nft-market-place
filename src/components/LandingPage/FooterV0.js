@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className='funge-footer container-fluid'>
+            <div className='funge-footer container-fluid col-11'>
                 <div className="row icon-row justify-content-center">
                     <div className="col-sm-12 col-md-2 text-center">
                         <i className="fa-brands fa-twitter"></i> <span className="logo-text ms-1">Twitter</span>
@@ -20,13 +20,14 @@ const Footer = () => {
                     <div className="col-sm-12 col-md-2 text-center">
                         <i className="fa-brands fa-slack"></i> <span className="logo-text ms-1">Slack</span>
                     </div>
-                    <div className="col-sm-4 col-md-2 text-center">
+                    <div className="col-sm-12 col-md-2 text-center">
                         <i className="fa-brands fa-reddit-alien"></i> <span className="logo-text ms-1">Reddit</span>
                     </div>
-                    <div className="col-sm-4 col-md-2 text-center">
+                    <div className="col-sm-12 col-md-2 text-center">
                         <i className="fa-brands fa-youtube"></i> <span className="logo-text ms-1">Youtube</span>
                     </div>
                 </div>
+                <hr className='footer-seprator' />
                 <div className='row my-5 justify-content-center'>
                     <div className='col-md-6 mt-3'>
                         <p className='w-600 mb-3'>Earn more with Funge Token</p>
@@ -37,27 +38,24 @@ const Footer = () => {
                             <a className='funge-link' href='#'>Learn More</a>
                         </p>
                     </div>
-                    <div className='col-md-5 mt-3'>
+                    <div className='col-md-5 mt-3 pe-0'>
                         <p className='w-600 mb-3'>Signup for our newsletter</p>
-                        <div className="row g-3 align-items-center">
+                        <div className="row g-3 align-items-center justify-content-between">
                             <div className="col-auto p-0">
                                 <input type="text" className="form-control footer-signup" placeholder='Enter your email here'/>
                             </div>
-                            <div className="col-auto">
+                            <div className="col-auto p-0">
                             <button type='button' className='btn btn-primary waitlist-btn'>Sign Up</button>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-                <hr className='footer-seprator' />
                 <div className="row justify-content-center p-4">
-                    <div className="col-md-3 col-sm-12">
+                    <div className="col-md-4 col-sm-12">
                         <FungeLogo/>
-                        <p className="pt-3">There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
+                        <p className="pt-3 pe-5">There are many variations of passages of Lorem Ipsum available, but the majority believable.</p>
                     </div>
-                    <div className='col-md-1' style={{maxWidth:50}}></div>
+                    {/* <div className='col-md-1' style={{maxWidth:50}}></div> */}
                     <div className="col-md-2 col-sm-12">
                         <h5>Funge</h5>
                         <div className="d-flex flex-column footer-funge-links">
@@ -95,7 +93,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='col-md-12'>
-                        <small className='mx-4'>©2020 Funge. All Rights Reserved</small>
+                        <small className=''>©2020 Funge. All Rights Reserved</small>
                     </div>
                 </div>
             </div>
