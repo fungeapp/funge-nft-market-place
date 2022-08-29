@@ -98,6 +98,7 @@ jobs:
           aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
         working-directory: build-artifact
 
+
       # Copy build to s3
       #- name: Deploy to S3
       #  command: |npm run client-deploy
