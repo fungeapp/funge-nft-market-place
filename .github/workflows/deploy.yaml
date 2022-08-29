@@ -36,6 +36,7 @@ jobs:
     - name: Npm Build
       run: npm run build
       env:
+        process.env.CI: false
         AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
         AUTH0_CLIENT_ID: ${{ secrets.AUTH0_CLIENT_ID }}
         LOGIN_REDIRECT_URL: ${{ secrets.LOGIN_REDIRECT_URL }}
