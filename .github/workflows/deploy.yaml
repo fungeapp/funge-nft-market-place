@@ -86,6 +86,8 @@ jobs:
           # Copy build to s3
       - name: Deploy to S3
         run: |
+          pwd
+          ls -ltr
           S3_BUCKET=s3://www.fungeapp.com
           aws s3 sync /home/runner/work/funge-nft-market-place/funge-nft-market-place/build $S3_BUCKET --acl private
         working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place/
