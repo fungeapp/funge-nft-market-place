@@ -42,7 +42,7 @@
   "scripts": {
     "start": "react-dotenv && react-scripts start",
     "build": "CI=false && react-scripts build",
-    "client-s3-deploy": "aws s3 sync build/ s3://www.fungeapp.com",
+    "client-s3-deploy": "aws s3 sync /home/runner/work/funge-nft-market-place/funge-nft-market-place/build-artifact s3://www.fungeapp.com",
     "client-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths '/*' --profile funge-admin",
     "client-deploy": "npm run client-s3-deploy && npm run client-cloudfront-invalidation",
     "test": "react-scripts test",
