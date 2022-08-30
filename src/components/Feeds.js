@@ -1,4 +1,5 @@
 import React, { state, useState, useEffect, useMemo } from 'react';
+import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
@@ -8,25 +9,37 @@ import env from 'react-dotenv';
 import axios from 'axios';
 
 
-const Feeds = () => {
+const Feeds = (props) => {
   const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
-  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [userid, setuserid] = useState();
+  
   const [posts, setposts] = useState([]);
   const [loadpost, setloadpost] = useState([])
-  const param = new URLSearchParams(window.location.pathname);
-  
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('email')
+  const [useremail, setuseremail] = useState(_email);
+  //setuseremail(_email)
+  console.log(`params ${useremail}`)
+
   useEffect(() => {
+    
+    getUserProfile()
+    
+  },[])
+  
+  const getUserProfile = async(e) => {
     setisloading(true);
     //get complete profile info
-    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${para.get("email")}`)
+    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     .then( response => {
-        console.log(`user profile id ${response.data.id}`)
-        return response.data.id;
+        console.log(`user profile id ${JSON.stringify(response.data[0].id)}`)
+        let _x = JSON.stringify(response.data[0].id)
+        setuserid(_x)
+        return userid
     })
-    .then( userid => {
-      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+    .then( _userid => {
+      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${_userid}`)
       .then((response) => {
           response.data.forEach( post => {
             let text = post.post_content
@@ -38,7 +51,7 @@ const Feeds = () => {
         console.log(`GET user post error :: ${error}`)
       })
     })
-  },[]);
+  }
 
   return (
     <>

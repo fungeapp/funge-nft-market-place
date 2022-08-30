@@ -82,7 +82,7 @@ const ProfileLogin = (props) => {
                 showUI: true,
                 redirectURI: `${env.BASE_URL}/feeds?email=${email}`
             })
-            //return email;
+            return email;
         })
     }
 
