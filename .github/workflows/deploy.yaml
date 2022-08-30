@@ -82,13 +82,15 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
+      - name: Show current dir
+        run: pwd
+
+      - name: Show list dir
+        run: ls -ltr
 
       # Copy build to s3
       - name: Deploy to S3
-        run: |
-          pwd
-          ls -ltr
-          npm run client-deploy
+        run: npm run client-deploy
         working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place
     #      S3_BUCKET=s3://www.fungeapp.com
     #     aws s3 sync . s3://www.fungeapp.com
