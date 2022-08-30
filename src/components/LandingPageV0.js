@@ -24,6 +24,7 @@ import {
 } from "@mui/material";
 import env from "react-dotenv";
 import axios from "axios";
+import Entry from "./LandingPage/Entry";
 
 const LandingPageV0 = () => {
   const navigate = useNavigate();
@@ -51,76 +52,45 @@ const LandingPageV0 = () => {
       <TopNavBarV0 />
       <section id="hiro" className="v0">
         <img className="backgroundImage" src="assets/images/Background.svg" />
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-6 hiro_col_left">
-              <div className="">
-                <p className="section_pera v0 mt-5">
-                  Your Gateway to the Creative Economy
-                </p>
-                <h2 className="section_heading hiro_heading">
-                  Trade, connect and earn like never before.
-                </h2>
-                <br />
+        <Entry onClick={() => $("#waitListModal").modal("toggle")} />
+        <div
+          className="modal fade phoneModal"
+          id="waitListModal"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabIndex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header border-0">
                 <button
-                  className="btn btn-primary w-600 waitlist-btn-lg"
-                  data-bs-toggle="modal"
-                  data-bs-target="#waitListModal"
-                >
-                  Join the Waitlist
-                </button>
-                <div
-                  className="modal fade phoneModal"
-                  id="waitListModal"
-                  data-bs-backdrop="static"
-                  data-bs-keyboard="false"
-                  tabIndex="-1"
-                  aria-labelledby="staticBackdropLabel"
-                  aria-hidden="true"
-                >
-                  <div className="modal-dialog">
-                    <div className="modal-content">
-                      <div className="modal-header border-0">
-                        <button
-                          type="button"
-                          className="btn-close funge-modal-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div className="modal-body px-5">
-                        <h4 className="w-700">Join the Waitlist</h4>
-                        <p className="text-black-50">{registrationstatus}</p>
-                        <input
-                          type="text"
-                          className="login-input mb-4 w-100"
-                          placeholder="Email"
-                          onChange={(e) => setemailaddress(e.target.value)}
-                        />
-                        <button
-                          className="btn btn-primary w-100"
-                          onClick={(e) => registerEmailAddress(e)}
-                        >
-                          Subscribe
-                        </button>
-                        <br />
-                        <br />
-                        <br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  type="button"
+                  className="btn-close funge-modal-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
-            </div>
-            <div className="col-sm-12 col-md-5 hiro_col_right d-none d-md-block">
-              <p className="section_pera v0 text-center position-relative">
-                <img src="./assets/images/hiro1.png" />
-                <img
-                  src="./assets/images/hiro2.png"
-                  className="position-absolute"
-                  style={{ bottom: 4, right: -60 }}
+              <div className="modal-body px-5">
+                <h4 className="w-700">Join the Waitlist</h4>
+                <p className="text-black-50">{registrationstatus}</p>
+                <input
+                  type="text"
+                  className="login-input mb-4 w-100"
+                  placeholder="Email"
+                  onChange={(e) => setemailaddress(e.target.value)}
                 />
-              </p>
+                <button
+                  className="btn btn-primary w-100"
+                  onClick={(e) => registerEmailAddress(e)}
+                >
+                  Subscribe
+                </button>
+                <br />
+                <br />
+                <br />
+              </div>
             </div>
           </div>
         </div>
