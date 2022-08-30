@@ -19,19 +19,21 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+# Install NPM Package Manager
+
     - name: Npm Install
       run: npm install
 
     - name: Custom Fixes for Webpack Library
       run: |
-        pwd
-        ls -ltr
         cp ./tmp/webpack.config.js ./node_modules/react-scripts/config/webpack.config.js
         npm i stream-browserify --save
         npm i crypto-browserify --save
         npm i stream-http --save
         npm i https-browserify --save
         npm i os-browserify --save
+
+  # Run NPM build
 
     - name: Npm Build
       run: npm run build
@@ -44,14 +46,6 @@ jobs:
         MAGIC_LINK_API_KEY: ${{ secrets.MAGIC_LINK_API_KEY }}
         BASE_URL: ${{ secrets.BASE_URL }}
         FUNGE_EXPRESSJS_SERVER_BASE_URL: ${{ secrets.FUNGE_EXPRESSJS_SERVER_BASE_URL }}
-        
-
-
-   # - name: Sleep for 240 seconds
-   #   uses: jakejarvis/wait-action@master
-   #   with:
-   #     time: '240s'
-   #     shell: bash
 
     - name: Share artifact inside workflow
       uses: actions/upload-artifact@v1
@@ -63,45 +57,33 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-  # get build artifact
-      - name: Get artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: build-artifact
-          
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
-      # Copy build to s3
-      - name: Deploy to S3
-        run: aws s3 sync . s3://www.fungeapp.com
-        working-directory: build-artifact
 
-      - name: Create Cloudfront Invalidation
-        run: |
-          DISTRIBUTION_ID=E3QRIALGM07SYH
-          aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
-        working-directory: build-artifact
+    # Get build artifact
 
+    - name: Get artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: build-artifact
 
-      # Copy build to s3
-      #- name: Deploy to S3
-      #  command: |npm run client-deploy
+    # Configuring AWS Credentials
 
-    #  - uses: actions/checkout@v2
-    #  - name: AWS SSM Send Command
-    #    uses: jakejarvis/s3-sync-action@master
-    #    with:
-    #      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-    #      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID  }}
-    #      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
-    #      aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
-    #      comment: Deploy to S3
-    #      working-directory: /home/runner/work/funge-nft-market-place/funge-nft-market-place
-    #      command: |
-    #        pwd
-    #        ls -ltr
-    #        npm run client-deploy
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+    # Copy build to s3
+
+    - name: Deploy to S3
+      run: aws s3 sync . s3://www.fungeapp.com
+      working-directory: build-artifact
+
+    # Creating AWS CloudFront Invalidation
+
+    - name: Create Cloudfront Invalidation
+      run: |
+        DISTRIBUTION_ID=E3QRIALGM07SYH
+        aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
+      working-directory: build-artifact
