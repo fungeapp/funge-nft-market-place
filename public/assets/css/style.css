@@ -227,9 +227,9 @@ ul.funge-list li span.item-text {
 .unlock-heading {
   font-size: 52px;
   font-weight: 600;
-  line-height: 64px;
+  line-height: 71.5px;
   letter-spacing: 0px;
-  color: #183b56;
+  color: #000;
 }
 
 .tools-heading {
