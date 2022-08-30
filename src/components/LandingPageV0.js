@@ -52,7 +52,7 @@ const LandingPageV0 = () => {
       <TopNavBarV0 />
       <section id="hiro" className="v0">
         <img className="backgroundImage" src="assets/images/Background.svg" />
-        <Entry onClick={() => $("#waitListModal").modal("toggle")} />
+        <Entry />
         <div
           className="modal fade phoneModal"
           id="waitListModal"

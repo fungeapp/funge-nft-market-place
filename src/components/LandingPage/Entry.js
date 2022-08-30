@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Entry = ({ onClick }) => {
+const Entry = () => {
   return (
     <>
       <Wrapper>
@@ -11,7 +11,9 @@ const Entry = ({ onClick }) => {
           <br />
           like never before.
         </Subtitle>
-        <Button onClick={onClick}>Join The Waitlist</Button>
+        <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
+          Join The Waitlist
+        </Button>
         <ImagesWrapper>
           <BrowserImage src="assets/images/Browser.svg" />
           <MobileImage src="assets/images/Mobile.svg" />
