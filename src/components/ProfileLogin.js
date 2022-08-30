@@ -80,18 +80,10 @@ const ProfileLogin = (props) => {
             magic.auth.loginWithMagicLink({
                 email: email,
                 showUI: true,
-                redirectURI: `${env.BASE_URL}/feeds`
+                redirectURI: `${env.BASE_URL}/feeds?email=${email}`
             })
-            return email;
+            //return email;
         })
-        .then(email => {
-            axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${email}`)
-            .then(response => {
-                console.log(`profile ${response.data[0].id}`)
-                saveUserProfile(response.data[0]);
-            })
-        })
-        
     }
 
     const phoneNumber = async (e) => {

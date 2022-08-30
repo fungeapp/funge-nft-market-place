@@ -15,11 +15,17 @@ const Feeds = () => {
   const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
   const [posts, setposts] = useState([]);
   const [loadpost, setloadpost] = useState([])
+  const param = new URLSearchParams(window.location.pathname);
   
   useEffect(() => {
     setisloading(true);
-    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
-    if(userid !== 'undefined') {
+    //get complete profile info
+    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${para.get("email")}`)
+    .then( response => {
+        console.log(`user profile id ${response.data.id}`)
+        return response.data.id;
+    })
+    .then( userid => {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
       .then((response) => {
           response.data.forEach( post => {
@@ -28,17 +34,10 @@ const Feeds = () => {
             setposts(text)
           })
       })
-      /*.then((data) => {
-        const posts = [];
-        for(const postitem in data) {
-          console.log(`Post Content :: ${postitem}`)
-        }
-        setisloading(false);
-      })*/
       .catch(function(error) {
         console.log(`GET user post error :: ${error}`)
       })
-    }
+    })
   },[]);
 
   return (
