@@ -53,12 +53,6 @@ jobs:
    #     time: '240s'
    #     shell: bash
 
-    - name: Show current dir
-      run: pwd
-
-    - name: Show current dir
-      run: ls -ltr  
-
     - name: Share artifact inside workflow
       uses: actions/upload-artifact@v1
       with:
@@ -74,13 +68,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: build-artifact
-
-      - name: Show current dir
-        run: pwd
-
-      - name: Show list dir
-        run: ls -ltr
-
+          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
