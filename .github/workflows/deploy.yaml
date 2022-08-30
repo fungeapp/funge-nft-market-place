@@ -89,7 +89,7 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
       # Copy build to s3
       - name: Deploy to S3
-          aws s3 sync . s3://www.fungeapp.com
+        run: aws s3 sync . s3://www.fungeapp.com
         working-directory: build-artifact
 
       - name: Create Cloudfront Invalidation
