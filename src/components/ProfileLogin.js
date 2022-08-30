@@ -49,7 +49,7 @@ const ProfileLogin = (props) => {
     
     const emailAddress = async (e) => {
         console.log(`By email ${email}`)
-        //save email info alread
+        //save email info already
         axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/exist/${email}`)
         .then(response => {
             let exist = response.data
@@ -122,15 +122,7 @@ const ProfileLogin = (props) => {
     };
 
     
-    /*const login = async () => {
-        console.log(`login triggered ${email}`)
-        await magic.oauth.loginWithRedirect({
-            email: email,
-            showUI: true,
-            redirectURI: "https://dev.fungeapp.com/profile"
-        });
-    }*/
-
+    
         return(
             <>
             {isAuthenticated && btnText === 'Sign-In' ?
