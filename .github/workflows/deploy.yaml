@@ -5,6 +5,7 @@ on:
     branches:
       - test-branch
 
+  # Starting Build Process      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,8 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-# Install NPM Package Manager
-
+  # Install NPM Package Manager
     - name: Npm Install
       run: npm install
 
@@ -34,7 +34,6 @@ jobs:
         npm i os-browserify --save
 
   # Run NPM build
-
     - name: Npm Build
       run: npm run build
       env:
@@ -58,15 +57,13 @@ jobs:
     needs: build
     steps:
 
-    # Get build artifact
-
+  # Get build artifact
     - name: Get artifact
       uses: actions/download-artifact@v1
       with:
         name: build-artifact
 
-    # Configuring AWS Credentials
-
+  # Configuring AWS Credentials
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -74,14 +71,12 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
-    # Copy build to s3
-
+  # Copy build to s3
     - name: Deploy to S3
       run: aws s3 sync . s3://www.fungeapp.com
       working-directory: build-artifact
 
-    # Creating AWS CloudFront Invalidation
-
+  # Creating AWS CloudFront Invalidation
     - name: Create Cloudfront Invalidation
       run: |
         DISTRIBUTION_ID=E3QRIALGM07SYH
