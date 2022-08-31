@@ -2,29 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TopNavBarV0 from "./LandingPage/TopNavBarV0";
 import FooterV0 from "./LandingPage/FooterV0";
-import {
-  TextField,
-  Button,
-  Avatar,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  DialogTitle,
-  Dialog,
-  DialogContent,
-  Grid,
-  Typography,
-  IconButton,
-  Divider,
-  FormControlLabel,
-  Colors,
-  Checkbox,
-  DialogActions,
-} from "@mui/material";
 import env from "react-dotenv";
 import axios from "axios";
 import Entry from "./LandingPage/Entry";
+import Description from "./LandingPage/Description";
+import ImageDescription from "./LandingPage/ImageDescription";
 
 const LandingPageV0 = () => {
   const navigate = useNavigate();
@@ -95,246 +77,43 @@ const LandingPageV0 = () => {
           </div>
         </div>
       </section>
-      <section className="mt-5">
-        <div className="container">
-          <div className="row justify-content-md-center">
-            <div className="col-md-11 mt-5">
-              <p className="unlock-heading p-4 mt-5 ">
-                Funge is an all-in-one solution for the blockchain community,
-                bringing together NFT trading and social media, into one
-                comprehensive platform.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="collection">
-        <div className="container">
-          <div className="row pt-5 pb-3 justify-content-around">
-            <div className="col-md-5 sticky-top align-self-start">
-              <div className="card funge-card mt-5 px-0">
-                <br />
-                <span className="funge-color w-700">Collector Spotlight</span>
-                <h2 className="collection_heading w-600 mt-3 mb-4">
-                  Robust Social Features
-                </h2>
-                <p className="sub-heading small">
-                  Use our wide range of social tools to find & connect with
-                  users who are passionate about NFTs. Create eye-catching
-                  content, keep up with current trends, and mint NFTs all within
-                  one social feed built specifically for the blockchain
-                  community.
-                  <br />
-                  <div className="my-5">
-                    <ul className="fa-ul funge-list">
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Stay up-to-date with trending NFT discussions and
-                          topics
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Connect with fellow users through built-in direct
-                          messaging
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Mint verified NFTs from your social feed with ease
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  <br />
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 ps-5 mt-5 section-thumb">
-              <div className="card funge-card funge-bggrey my-4 p-5">
-                <img
-                  className="img-fluid"
-                  src="./assets/images/robust_parallax.png"
-                />
-              </div>
-              <div className="card funge-card funge-bggrey my-4 p-5">
-                <img
-                  className="img-fluid"
-                  src="./assets/images/robust_parallax.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="collection">
-        <div className="container">
-          <div className="row pt-5 pb-3 justify-content-around">
-            <div className="col-md-5 sticky-top align-self-start">
-              <div className="card funge-card mt-5 px-0 fs-20px">
-                <br />
-                <span className="funge-color w-700">Trader Spotlight</span>
-                <h2 className="collection_heading w-600 mt-3 mb-3">
-                  Powerful NFT Tools & Solutions
-                </h2>
-                <p className="sub-heading small">
-                  A complete and comprehensive toolset for all your NFT needs.
-                  Explore the limits of Web3 with our feature-packed
-                  peer-to-peer trading tools, cross-platform transactions, live
-                  NFT analytics, and more.
-                  <br />
-                  <div className="my-5 fs-18px">
-                    <ul className="fa-ul funge-list">
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Advanced market insights, analytics, and alerts{" "}
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Compare floor prices across different platforms
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">Conduct private sales </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">Batch buy multiple NFT’s</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <br />
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 ps-5 mt-5 section-thumb">
-              <div className="card funge-card funge-bggrey my-4 p-5">
-                <img
-                  className="img-fluid"
-                  src="./assets/images/robust_parallax.png"
-                />
-              </div>
-              <div className="card funge-card funge-bggrey my-4 p-5">
-                <img
-                  className="img-fluid"
-                  src="./assets/images/robust_parallax.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="collection">
-        <div className="container">
-          <div className="row pt-5 pb-3 justify-content-around">
-            <div className="col-md-5 sticky-top align-self-start">
-              <div className="card funge-card mt-5 px-0">
-                <br />
-                <span className="funge-color w-700">Reward Spotlight</span>
-                <h2 className="collection_heading w-600 mt-3 mb-3 fs-30px">
-                  Engagement Incentives
-                </h2>
-                <p className="sub-heading small">
-                  Our Tokenomics system turns users into owners by rewarding
-                  them for creating valuable content and participating on the
-                  platform.
-                  <br />
-                  <div className="my-5">
-                    <ul className="fa-ul funge-list">
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Earn tokens when the community engages with your
-                          content
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Receive $FUNGE rewards for every NFT you trade
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Stake $FUNGE tokens and receive up to 445% APY
-                        </span>
-                      </li>
-                      <li>
-                        <span class="fa-li fa-stack">
-                          <i class="fa-regular fa-circle fa-stack-1x fs-21px bullet-ring-color"></i>
-                          <i class="fa-solid fa-circle fa-stack-1x fs-12px funge-color"></i>
-                        </span>
-                        <span class="item-text">
-                          Earn additional commission for every friend you refer
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 ps-5 mt-5 section-thumb">
-              <div className="card funge-card funge-bggrey my-4 p-5">
-                <img
-                  className="img-fluid"
-                  src="./assets/images/robust_parallax.png"
-                />
-              </div>
-              <div className="card funge-card funge-bggrey mt-4 p-5">
-                <img
-                  className="img-fluid"
-                  src="./assets/images/robust_parallax.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Description />
+      <ImageDescription
+        title={"Collector Spotlight"}
+        subtitle={"Robust Social Features"}
+        description={
+          "Use our wide range of social tools to find & connect with users who are passionate about NFTs. Create eye-catching content, keep up with current trends, and mint NFTs all within one social feed built specifically for the blockchain community."
+        }
+        list1={"Stay up-to-date with trending NFT discussions and topics"}
+        list2={"Connect with fellow users through built-in direct messaging"}
+        list3={"Mint verified NFTs from your social feed with ease"}
+        image1={"assets/images/LandingPage1.png"}
+        image2={"assets/images/LandingPage2.png"}
+      />
+      <ImageDescription
+        title={"Trader Spotlight"}
+        subtitle={"Powerful NFT Tools & Solutions"}
+        description={
+          "A complete and comprehensive tool set for all your NFT needs. Explore the limits of Web3 with our feature-packed peer-to-peer trading tools, cross-platform transactions, liveNFT analytics, and more."
+        }
+        list1={"Advanced market insights, analytics, and alerts"}
+        list2={"Compare floor prices across different platforms"}
+        list3={"Conduct private sales"}
+        list4={"Batch buy multiple NFT’s"}
+        image1={"assets/images/LandingPage3.png"}
+      />
+      <ImageDescription
+        title={"Reward Spotlight"}
+        subtitle={"Engagement Incentives"}
+        description={
+          "Our Tokenomics system turns users into owners by rewarding them for creating valuable content and participating on the platform."
+        }
+        list1={"Earn tokens when the community engages with your content"}
+        list2={"Receive $FUNGE rewards for every NFT you trade"}
+        list3={"Stake $FUNGE tokens and receive up to 445% APY"}
+        list4={"Earn additional commission for every friend you refer"}
+        image1={"assets/images/LandingPage4.png"}
+      />
 
       <section>
         <div className="container py-5">
