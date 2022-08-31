@@ -13,14 +13,13 @@ const Feeds = (props) => {
   const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
   const [userid, setuserid] = useState();
-  
   const [posts, setposts] = useState([]);
   const [loadpost, setloadpost] = useState([])
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
   const [useremail, setuseremail] = useState(_email);
   console.log(`params ${useremail}`)
-  
+  let userprops;  
 
   useEffect(() => {
     getUserProfile()
@@ -37,7 +36,8 @@ const Feeds = (props) => {
         setuserid(_x)
         console.log(`user id ${_x}`)
         setProfileSession(response.data[0]);
-        console.log(`Profile Info ${profileData.id}`)
+        //save profile session in session storage
+        sessionStorage.setItem("userprofile", JSON.stringify(userprops))
         return _x
     })
     .then( _userid => {
@@ -55,8 +55,25 @@ const Feeds = (props) => {
     })
   }
 
-  const setProfileSession = async(sessionData) => (
-    //console.log(`sessionData ${JSON.stringify(sessionData)}`)
+  const setProfileSession = async(sessionData) => {
+    userprops = {
+      id : sessionData.id,
+      given_name : sessionData.given_name,
+      family_name : sessionData.family_name,
+      phonenumber : sessionData.phonenumber,
+      nickname : sessionData.nickname,
+      name : sessionData.name,
+      picture : sessionData.picture,
+      locale : "en",
+      updated_at : "",
+      email : sessionData.email,
+      email_verified : sessionData.email_verified,
+      sub : ""
+    }
+  }
+
+  /*const setProfileSession = async(sessionData) => (
+    
     profileData.id = sessionData.id,
     profileData.given_name = sessionData.given_name,
     profileData.family_name = sessionData.family_name,
@@ -69,7 +86,7 @@ const Feeds = (props) => {
     profileData.email = sessionData.email,
     profileData.email_verified = sessionData.email_verified,
     profileData.sub = ""
-  )
+  )*/
 
   return (
     <>
@@ -78,7 +95,7 @@ const Feeds = (props) => {
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
-            <NewPost profile={profileData} />
+            <NewPost />
             <FeedPost text={posts} />
           </div>
           <div className="col-md-4 mt-4 max-550">

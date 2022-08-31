@@ -26,9 +26,14 @@ import {
 } from '@mui/material';
 
 const EditProfile = () => {
+
+  let _sessionUserProfile = sessionStorage.getItem("userprofile")
+  let sessionUserProfile = JSON.parse(_sessionUserProfile)
+  console.log(`Edit Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
-  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [userid, setuserid] = useState( sessionUserProfile.id );
+  const [useremail, setuseremail] = useState( sessionUserProfile.email );
   const [givenname, setgivenname] = useState();
   const [bio, setbio] = useState();
   const [profilepic, setprofilepic] = useState();

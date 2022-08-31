@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 const LeftSidebar = (props) => {
 
   const [isActive,setActive] = useState(props.myState);
+  
+  let _sessionUserProfile = sessionStorage.getItem("userprofile")
+  let sessionUserProfile = JSON.parse(_sessionUserProfile)
+  console.log(`SideBar Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
 
   return (
     <>

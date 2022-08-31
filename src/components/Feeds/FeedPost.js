@@ -4,6 +4,10 @@ import axios from 'axios';
 
 const FeedPost = (props) => {
 
+    let _sessionUserProfile = sessionStorage.getItem("userprofile")
+    let sessionUserProfile = JSON.parse(_sessionUserProfile)
+    console.log(`Feeds Post Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+
     const PostOffer = (props) => {
 
         if (props.offer) {
