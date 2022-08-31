@@ -1,4 +1,5 @@
 import React, { state, useState, useEffect, useMemo } from 'react';
+import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
@@ -6,21 +7,41 @@ import FeedPost from './Feeds/FeedPost';
 import LeftSidebar from './LeftSidebar';
 import env from 'react-dotenv';
 import axios from 'axios';
+import {profileData} from './UserProfile'
 
-
-const Feeds = () => {
+const Feeds = (props) => {
   const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
-  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [userid, setuserid] = useState();
+  
   const [posts, setposts] = useState([]);
   const [loadpost, setloadpost] = useState([])
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('email')
+  const [useremail, setuseremail] = useState(_email);
+  console.log(`params ${useremail}`)
   
+
   useEffect(() => {
+    getUserProfile()
+  },[])
+  
+
+  const getUserProfile = async(e) => {
     setisloading(true);
-    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
-    if(userid !== 'undefined') {
-      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+    //get complete profile info
+    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    .then( response => {
+        let elem = response.data[0]
+        let _x = elem.id
+        setuserid(_x)
+        console.log(`user id ${_x}`)
+        setProfileSession(response.data[0]);
+        console.log(`Profile Info ${profileData.id}`)
+        return _x
+    })
+    .then( _userid => {
+      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${_userid}`)
       .then((response) => {
           response.data.forEach( post => {
             let text = post.post_content
@@ -28,18 +49,27 @@ const Feeds = () => {
             setposts(text)
           })
       })
-      /*.then((data) => {
-        const posts = [];
-        for(const postitem in data) {
-          console.log(`Post Content :: ${postitem}`)
-        }
-        setisloading(false);
-      })*/
       .catch(function(error) {
         console.log(`GET user post error :: ${error}`)
       })
-    }
-  },[]);
+    })
+  }
+
+  const setProfileSession = async(sessionData) => (
+    //console.log(`sessionData ${JSON.stringify(sessionData)}`)
+    profileData.id = sessionData.id,
+    profileData.given_name = sessionData.given_name,
+    profileData.family_name = sessionData.family_name,
+    profileData.phonenumber = sessionData.phonenumber,
+    profileData.nickname = sessionData.nickname,
+    profileData.name = sessionData.name,
+    profileData.picture = sessionData.picture,
+    profileData.locale = "en",
+    profileData.updated_at = "",
+    profileData.email = sessionData.email,
+    profileData.email_verified = sessionData.email_verified,
+    profileData.sub = ""
+  )
 
   return (
     <>
@@ -48,7 +78,7 @@ const Feeds = () => {
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
-            <NewPost />
+            <NewPost profile={profileData} />
             <FeedPost text={posts} />
           </div>
           <div className="col-md-4 mt-4 max-550">

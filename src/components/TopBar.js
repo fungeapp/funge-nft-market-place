@@ -19,11 +19,16 @@ const TopBar = (props) => {
     setWalletModalShow(false)
   }
 
+  /***
+   * 
+   * //{(!wallet.isActive || walletModalShow) //&& (
+        //<ConnectModal handleClose={closeConnectModal} />
+      //)}
+   */
+
   return (
     <>
-      {(!wallet.isActive || walletModalShow) && (
-        <ConnectModal handleClose={closeConnectModal} />
-      )}
+      
       <div className="header">
         <div className="my_nav">
           <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">

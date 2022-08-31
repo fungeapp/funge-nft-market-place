@@ -33,9 +33,9 @@ function App() {
           <Route path="wallet" element={<Wallet />} />
           <Route path="login" element={<Login />} />
           <Route path="feeds" element={
-              <MetaMaskProvider>
+              //<MetaMaskProvider>
               <Feeds />
-              </MetaMaskProvider>
+              //</MetaMaskProvider>
           } />
         </Routes>
       </BrowserRouter>

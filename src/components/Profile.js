@@ -6,6 +6,7 @@ import LeftSidebar from "./LeftSidebar";
 import { Link } from "react-router-dom";
 import env from 'react-dotenv';
 import axios from 'axios';
+//import User from './UserProfile'
 
 const Profile = () => {
 
@@ -33,7 +34,7 @@ const Profile = () => {
         console.log(`GET user profile data error :: ${error}`)
       })
     
-  },[userid, useremail]);
+  },[]);
 
   return (
     <>

@@ -25,6 +25,7 @@ import axios from 'axios';
 const NewPost = (props) => {
 
     const [postcontent, setpostcontent] = useState();
+    const [userProfile, setuserprofile] = useState(props.profile)
 
     useEffect(() => {
         //get profile info based on localstorage
@@ -32,8 +33,9 @@ const NewPost = (props) => {
     });
 
     const savePost = async (e) => {
-        let sessionUserId = localStorage.getItem("user_id");
-        let sessionEmail = localStorage.getItem("user_email")
+        let sessionUserId = userProfile.id;
+        let sessionEmail = userProfile.email
+        console.log(`New Post ${sessionUserId} :: ${sessionEmail}`)
         
             axios({
                     method: 'post',
@@ -54,7 +56,7 @@ const NewPost = (props) => {
                     <div className="container-fluid p-0">
                         <div className="row">
                             <div className="col-md-1 mt-3 my-2">
-                                <img src="./assets/images/nft-5.png" className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
+                                <img src={userProfile.picture} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
                             </div>
                             <div className="col-md-11 my-2 align-self-end">
 

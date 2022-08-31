@@ -1,5 +1,5 @@
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
-import { useEffect, useHistory, useState } from 'react';
+import React, { useEffect, useHistory, useState, createContext } from 'react';
 import env from 'react-dotenv';
 import { 
     TextField,
@@ -23,9 +23,11 @@ import {
 } from '@mui/material';
 import MaterialIcon, {colorPalette} from 'material-icons-react';
 import Web3 from 'web3/dist/web3.min.js'
-import { Magic } from 'magic-sdk';
+import { Magic, RPCError } from 'magic-sdk';
 import { OAuthExtension } from '@magic-ext/oauth';
 import axios from 'axios';
+import { instanceOf } from 'prop-types';
+import { profileData } from './UserProfile'
 
 
 const ProfileLogin = (props) => {
@@ -43,38 +45,34 @@ const ProfileLogin = (props) => {
     });
     const [email, setemail] = useState();
     const [phone, setphone] = useState();
-
+    const [dataprofile, setdataprofile] = useState();
     
-    useEffect(() => {
-        
-    });
-
     const emailAddress = async (e) => {
         console.log(`By email ${email}`)
-        //save email info alread
+        //save email info already
         axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/exist/${email}`)
         .then(response => {
             let exist = response.data
-            console.log(`email exist ${exist}`)
+            console.log(`email exist ${exist} :: ${email}`)
             if(!exist) {
                 //insert nothing else to do if email already exist.
+                //profile data
+                profileData.given_name = ""
+                profileData.family_name = ""
+                profileData.phonenumber = ""
+                profileData.nickname = ""
+                profileData.name = ""
+                profileData.picture = ""
+                profileData.locale = "en"
+                profileData.updated_at = ""
+                profileData.email = email
+                profileData.email_verified = false
+                console.log(`profileData ${profileData.email}`)
                 axios({
-                    method: 'post',
-                    url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
-                    data: {
-                            "given_name": "",
-                            "family_name": "",
-                            "phonenumber":"",
-                            "nickname": "",
-                            "name": "",
-                            "picture": "",
-                            "locale": "en",
-                            "updated_at": "",
-                            "email": email,
-                            "email_verified": false,
-                            "sub": ""
-                    }
-                })
+                        method: 'post',
+                        url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
+                        data: profileData
+                    })
             }
             return email
         })
@@ -82,16 +80,9 @@ const ProfileLogin = (props) => {
             magic.auth.loginWithMagicLink({
                 email: email,
                 showUI: true,
-                redirectURI: `${env.BASE_URL}/feeds`
+                redirectURI: `${env.BASE_URL}/feeds?email=${email}`
             })
             return email;
-        })
-        .then(email => {
-            axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${email}`)
-            .then(response => {
-                //console.log(`profile ${response.data[0].id}`)
-                saveUserProfile(response.data[0]);
-            })
         })
     }
 
@@ -123,15 +114,7 @@ const ProfileLogin = (props) => {
     };
 
     
-    /*const login = async () => {
-        console.log(`login triggered ${email}`)
-        await magic.oauth.loginWithRedirect({
-            email: email,
-            showUI: true,
-            redirectURI: "https://dev.fungeapp.com/profile"
-        });
-    }*/
-
+    
         return(
             <>
             {isAuthenticated && btnText === 'Sign-In' ?
@@ -198,6 +181,7 @@ const ProfileLogin = (props) => {
                         </DialogContent>
                         
                     </Dialog>
+                    
                 </>
         );
     
