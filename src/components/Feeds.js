@@ -8,7 +8,6 @@ import LeftSidebar from './LeftSidebar';
 import env from 'react-dotenv';
 import axios from 'axios';
 
-
 const Feeds = (props) => {
   const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
@@ -19,24 +18,25 @@ const Feeds = (props) => {
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
   const [useremail, setuseremail] = useState(_email);
-  //setuseremail(_email)
   console.log(`params ${useremail}`)
+  
 
   useEffect(() => {
-    
     getUserProfile()
-    
   },[])
   
+
   const getUserProfile = async(e) => {
     setisloading(true);
     //get complete profile info
     axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     .then( response => {
-        console.log(`user profile id ${JSON.stringify(response.data[0].id)}`)
-        let _x = JSON.stringify(response.data[0].id)
+        let elem = response.data[0]
+        let _x = elem.id
         setuserid(_x)
-        return userid
+        console.log(`user id ${_x}`)
+        setProfileSession(response.data[0]);
+        return _x
     })
     .then( _userid => {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${_userid}`)
@@ -51,6 +51,11 @@ const Feeds = (props) => {
         console.log(`GET user post error :: ${error}`)
       })
     })
+  }
+
+  const setProfileSession = async(sessionData) => {
+    console.log(`sessionData ${JSON.stringify(sessionData)}`)
+    
   }
 
   return (
