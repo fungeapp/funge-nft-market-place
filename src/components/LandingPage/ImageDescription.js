@@ -18,7 +18,7 @@ const ImageDescription = ({
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
         <Description>{description}</Description>
-        <ul className="fa-ul funge-list">
+        <ul className="fa-ul funge-list font-face-thin">
           <li
             className="d-flex align-items-center"
             style={{ marginBottom: 20 }}
@@ -101,6 +101,7 @@ const Description = styled.p`
   color: #000;
   line-height: 1.7;
   margin-bottom: 40px;
+  font-family: "StabilGorteskThin";
 `;
 
 const Image = styled.img``;

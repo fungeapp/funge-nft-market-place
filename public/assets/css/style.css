@@ -3,6 +3,28 @@
   src: local("StailGortesk"), url("../font/StabilGroteskTrial-Regular.otf");
 }
 
+@font-face {
+  font-family: "StabilGorteskBold";
+  src: local("StailGortesk"), url("../font/StabilGroteskTrial-Bold.otf");
+}
+
+@font-face {
+  font-family: "StabilGorteskThin";
+  src: local("StailGortesk"), url("../font/StabilGroteskTrial-Thin.otf");
+}
+
+.font-face-reg {
+  font-family: "StabilGortesk";
+ }
+
+.font-face-bold {
+  font-family: "StabilGorteskBold";
+ }
+
+.font-face-thin {
+  font-family: "StabilGorteskThin";
+ }
+
 body {
   font-family: "StabilGortesk" !important;
 }

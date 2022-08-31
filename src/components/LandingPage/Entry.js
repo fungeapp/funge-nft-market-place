@@ -43,10 +43,11 @@ const Title = styled.p`
 
 const Subtitle = styled.p`
   font-size: 72px;
-  font-weight: 700;
+  font-weight: bold;
   color: #fff;
   line-height: 93.6px;
   text-align: center;
+  font-family: "StabilGorteskBold";
 `;
 
 const Button = styled.button`
@@ -54,7 +55,7 @@ const Button = styled.button`
   background-color: #fff;
   border-radius: 48px;
   font-size: 18px;
-  font-weight: 700;
+  font-family: "StabilGorteskBold";
   color: #000;
   border: none;
   margin-top: 37.6px;
