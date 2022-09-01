@@ -8,6 +8,7 @@ import ImageDescription from "./LandingPage/ImageDescription";
 import CommunityBuilder from "./LandingPage/CommunityBuilder";
 import TalentMarketPlace from "./LandingPage/TalentMarketPlace";
 import Principles from "./LandingPage/Principles";
+import BuiltOnPlanetEarth from "./LandingPage/BuiltOnPlanetEarth";
 
 const LandingPageV0 = () => {
   return (
@@ -54,46 +55,7 @@ const LandingPageV0 = () => {
       <CommunityBuilder />
       <TalentMarketPlace />
       <Principles />
-      <section className="collection my-5 pb-5">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-6 my-4 ps-4">
-              <br />
-              <br />
-              <br />
-              <h2 className="w-800 mt-3 mb-3">
-                Built on planet earth, <br />
-                for planet earth
-              </h2>
-              <p className="pe-4 max-width-500">
-                Being earth-conscious and taking responsibility for climate
-                change is at the core of who we are and what we do.
-                <br />
-                <br />
-                That’s why we are 100% carbon neutral, counterbalancing the
-                entirety of our CO2 footprint for a net-zero output.
-              </p>
-              <p className="mt-4">
-                <a href="#" className="funge-link me-4">
-                  <u>Our mission</u>
-                </a>{" "}
-                |{" "}
-                <a href="#" className="funge-link ms-4">
-                  <u>Our vision</u>
-                </a>
-                <br />
-                <br />
-              </p>
-            </div>
-            <div className="col-md-6 mt-5 text-center section-thumb">
-              <img
-                className="img-fluid mt-4"
-                src="./assets/videos/eco_funge_section_low.gif"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <BuiltOnPlanetEarth />
 
       <section className="rare mt-5 py-5">
         <div className="container-fluid">
