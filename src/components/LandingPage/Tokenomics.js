@@ -50,6 +50,7 @@ export default Tokenomics;
 
 const Wrapper = styled.div`
   margin: 0 160px;
+  margin-bottom: 200px;
 `;
 
 const Title = styled.p`
