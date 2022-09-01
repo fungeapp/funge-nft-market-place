@@ -26,7 +26,7 @@ const Entry = () => {
   return (
     <>
       <Wrapper>
-        <BackgroundImage src="assets/images/Background.svg" />
+        <BackgroundImage src="assets/images/Background.png" />
         <Title>Your gateway to the creative economy</Title>
         <Subtitle>
           Trade, Connect and Earn
@@ -37,8 +37,8 @@ const Entry = () => {
           Join The Waitlist
         </Button>
         <ImagesWrapper>
-          <BrowserImage src="assets/images/Browser.svg" />
-          <MobileImage src="assets/images/Mobile.svg" />
+          <BrowserImage src="assets/images/Browser.png" />
+          <MobileImage src="assets/images/Mobile.png" />
         </ImagesWrapper>
       </Wrapper>
       <div
