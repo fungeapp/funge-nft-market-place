@@ -4,26 +4,32 @@
 }
 
 @font-face {
+  font-family: "StabilGorteskMedium";
+  src: local("StabilGorteskMedium"),
+    url("../font/StabilGroteskTrial-Medium.otf");
+}
+
+@font-face {
   font-family: "StabilGorteskBold";
-  src: local("StailGortesk"), url("../font/StabilGroteskTrial-Bold.otf");
+  src: local("StabilGorteskBold"), url("../font/StabilGroteskTrial-Bold.otf");
 }
 
 @font-face {
   font-family: "StabilGorteskThin";
-  src: local("StailGortesk"), url("../font/StabilGroteskTrial-Thin.otf");
+  src: local("StabilGorteskThin"), url("../font/StabilGroteskTrial-Thin.otf");
 }
 
 .font-face-reg {
   font-family: "StabilGortesk";
- }
+}
 
 .font-face-bold {
   font-family: "StabilGorteskBold";
- }
+}
 
 .font-face-thin {
   font-family: "StabilGorteskThin";
- }
+}
 
 body {
   font-family: "StabilGortesk" !important;
@@ -65,6 +71,9 @@ a.funge-link {
   color: #5a7184 !important;
 }
 
+.fs-10px {
+  font-size: 10px !important;
+}
 .fs-11px {
   font-size: 11px !important;
 }
@@ -550,14 +559,6 @@ section#hiro {
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
-}
-
-.backgroundImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
 }
 
 /* header style end */

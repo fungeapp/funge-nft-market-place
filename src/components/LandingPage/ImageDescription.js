@@ -77,10 +77,17 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
-  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 50px;
 `;
 
-const Right = styled.div``;
+const Right = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
 
 const Title = styled.p`
   font-size: 16px;
