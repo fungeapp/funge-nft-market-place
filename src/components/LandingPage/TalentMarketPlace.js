@@ -6,7 +6,7 @@ const TalentMarketPlace = () => {
     <Wrapper>
       <Container>
         <div className="col-sm-12 col-md-6 text-center">
-          <img src="./assets/images/TalentMarketPlace.png" />
+          <img src="assets/images/TalentMarketPlace.png" />
         </div>
         <div className="col-sm-8 col-md-4">
           <div className="feature1">
@@ -38,7 +38,7 @@ const TalentMarketPlace = () => {
           </div>
         </div>
         <div className="col-sm-12 col-md-6 text-center">
-          <img src="./assets/images/InHouseWallet.png" />
+          <img src="assets/images/InHouseWallet.png" />
         </div>
       </Container>
       <BackgroundImage src="assets/images/RightBackground.png" />
