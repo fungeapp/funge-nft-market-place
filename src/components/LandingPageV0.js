@@ -9,6 +9,7 @@ import CommunityBuilder from "./LandingPage/CommunityBuilder";
 import TalentMarketPlace from "./LandingPage/TalentMarketPlace";
 import Principles from "./LandingPage/Principles";
 import BuiltOnPlanetEarth from "./LandingPage/BuiltOnPlanetEarth";
+import FungeCommunity from "./LandingPage/FungeCommunity";
 
 const LandingPageV0 = () => {
   return (
@@ -56,45 +57,7 @@ const LandingPageV0 = () => {
       <TalentMarketPlace />
       <Principles />
       <BuiltOnPlanetEarth />
-
-      <section className="rare mt-5 py-5">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 text-center">
-              <img
-                src="./assets/videos/token_section.gif"
-                width={1000}
-                className="img-fluid"
-              />
-              <p className="para">
-                <br />
-                INTRODUCING
-                <h4 className="w-600 mt-2">
-                  <span>$</span> FUNGE
-                </h4>
-              </p>
-            </div>
-          </div>
-          <div className="row mt-5 pt-5 justify-content-center">
-            <div className="col-md-7 col-sm-12 py-5">
-              <h2 className="w-800 blue-heading mb-4">
-                The Funge community token
-              </h2>
-              <p>
-                We’re putting the future of Funge and the power of the creator
-                economy in the hands of our community. With $FUNGE, you have
-                access to exclusive holder benefits and rewards tailored for you
-                to grow and develop as an artist or innovator. By holding our
-                token, you are more than just a user - you become a part-owner
-                of the platform.
-              </p>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
-      </section>
-
+      <FungeCommunity />
       <section className="collection mb-5 py-5 rare">
         <div className="container">
           <div className="row justify-content-center">
