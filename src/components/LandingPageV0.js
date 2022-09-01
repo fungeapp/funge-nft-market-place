@@ -10,6 +10,7 @@ import TalentMarketPlace from "./LandingPage/TalentMarketPlace";
 import Principles from "./LandingPage/Principles";
 import BuiltOnPlanetEarth from "./LandingPage/BuiltOnPlanetEarth";
 import FungeCommunity from "./LandingPage/FungeCommunity";
+import TokenUsage from "./LandingPage/TokenUsage";
 
 const LandingPageV0 = () => {
   return (
@@ -58,85 +59,7 @@ const LandingPageV0 = () => {
       <Principles />
       <BuiltOnPlanetEarth />
       <FungeCommunity />
-      <section className="collection mb-5 py-5 rare">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-12 text-center">
-              <h2 className="collection_heading w-800 blue-heading">
-                Token Usage
-              </h2>
-            </div>
-            <div className="col-sm-12 col-md-6 text-center">
-              <p className="sub-heading">
-                There are multiple ways you can benefit from <br />
-                holding and using the $FUNGE token.
-                <br />
-              </p>
-            </div>
-            <div className="col-md-12 text-center mt-4">
-              <div className="row justify-content-center">
-                <div className="col-md-3">
-                  <div className="card card-travelya">
-                    <div className="card-body">
-                      <div className="travelya-icon my-4">
-                        <img
-                          className="img-fluid"
-                          src="./assets/icon/tag.svg"
-                        />
-                      </div>
-                      <p className="fw-bold blue-heading">Staking</p>
-                      <p className="sub-heading">
-                        Stake your $FUNGE to help us validate the blockchain and
-                        earn rewards of up to 445% APY.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="card card-travelya">
-                    <div className="card-body">
-                      <div className="travelya-icon my-4">
-                        <img
-                          className="img-fluid"
-                          src="./assets/icon/security.svg"
-                        />
-                      </div>
-                      <p className="fw-bold blue-heading">In-App Purchases</p>
-                      <p className="sub-heading">
-                        Use your tokens for any purchase on the Funge App.
-                        <br />
-                        <br />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="card card-travelya">
-                    <div className="card-body">
-                      <div className="travelya-icon my-4">
-                        <img
-                          className="img-fluid"
-                          src="./assets/icon/medal.svg"
-                        />
-                      </div>
-                      <p className="fw-bold blue-heading">Trading Rewards</p>
-                      <p className="sub-heading">
-                        {" "}
-                        $FUNGE token holders are granted access to our launchpad
-                        where they can develop and launch their own NFT
-                        projects.{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
-      </section>
-
+      <TokenUsage />
       <section className="tokenomics py-5" id="tokenomics">
         <div className="container my-5">
           <h1 className="w-800 text-center mb-4 mt-5 dark-blue-heading">
