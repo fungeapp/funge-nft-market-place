@@ -6,6 +6,7 @@ import Entry from "./LandingPage/Entry";
 import Description from "./LandingPage/Description";
 import ImageDescription from "./LandingPage/ImageDescription";
 import CommunityBuilder from "./LandingPage/CommunityBuilder";
+import TalentMarketPlace from "./LandingPage/TalentMarketPlace";
 
 const LandingPageV0 = () => {
   return (
@@ -50,94 +51,7 @@ const LandingPageV0 = () => {
         image1={"assets/images/LandingPage4.png"}
       />
       <CommunityBuilder />
-
-      <section id="features-section">
-        <div className="container">
-          <br />
-          <br />
-          <div className="row justify-content-center">
-            <div className="col-11">
-              <div className="card feature-card">
-                <div className="card-body">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-sm-12 col-md-6 text-center">
-                        <div className="p-5">
-                          <img
-                            src="./assets/images/talentGraph.png"
-                            className="img-fluid ms-3"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6">
-                        <div className="feature1">
-                          <br />
-                          <br />
-                          <br />
-                          <br />
-                          <div className="p-4">
-                            <h2 className="collection_heading w-600 my-3">
-                              Talent Marketplace
-                            </h2>
-                            <p className="sub-heading">
-                              Funge talent marketplace is the fastest and most
-                              efficient way to source top Web3 talent. Seek and
-                              hire experts in smart contract development, web
-                              design, tokenomics creation, discord management,
-                              marketing, and more.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div className="row justify-content-center">
-            <div className="col-11">
-              <div className="card feature-card">
-                <div className="card-body">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-sm-12 col-md-6 p-0">
-                        <div className="feature1">
-                          <br />
-                          <br />
-                          <br />
-                          <br />
-                          <div className="py-4 pe-4">
-                            <h2 className="collection_heading w-600 my-3">
-                              In-house Wallet
-                            </h2>
-                            <p className="sub-heading pe-4">
-                              No need to hold multiple wallets to store and
-                              manage your tokens. Each user receives a built-in
-                              Funge wallet that allows them easily monitor, send
-                              and receive their crypto assets.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 text-center">
-                        <div className="p-5">
-                          <img
-                            src="./assets/images/talentGraph.png"
-                            className="img-fluid ms-3"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TalentMarketPlace />
       <section className="collection my-5 py-5">
         <div className="container">
           <div className="row justify-content-center">
