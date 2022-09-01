@@ -115,6 +115,10 @@ a.funge-link {
   font-size: 30px !important;
 }
 
+.fs-36px {
+  font-size: 36px !important;
+}
+
 .fs-40px {
   font-size: 40px !important;
 }
@@ -144,6 +148,7 @@ a.funge-link {
 }
 .our-company {
   margin-top: 35px;
+  font-size: 36px !important;
 }
 
 button.post-primary-btn {

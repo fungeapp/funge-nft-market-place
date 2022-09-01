@@ -63,7 +63,7 @@ const Container = styled.div`
 
 const BackgroundImage = styled.img`
   position: absolute;
-  top: -200px;
+  top: -350px;
   right: 0;
   z-index: -1;
 `;
