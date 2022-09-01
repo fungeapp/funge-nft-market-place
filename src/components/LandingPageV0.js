@@ -11,6 +11,7 @@ import Principles from "./LandingPage/Principles";
 import BuiltOnPlanetEarth from "./LandingPage/BuiltOnPlanetEarth";
 import FungeCommunity from "./LandingPage/FungeCommunity";
 import TokenUsage from "./LandingPage/TokenUsage";
+import Tokenomics from "./LandingPage/Tokenomics";
 
 const LandingPageV0 = () => {
   return (
@@ -60,62 +61,7 @@ const LandingPageV0 = () => {
       <BuiltOnPlanetEarth />
       <FungeCommunity />
       <TokenUsage />
-      <section className="tokenomics py-5" id="tokenomics">
-        <div className="container my-5">
-          <h1 className="w-800 text-center mb-4 mt-5 dark-blue-heading">
-            Tokenomics
-          </h1>
-          <br />
-          <br />
-          <br />
-          <div className="row">
-            <div className="col-md-6 col-sm-12 ps-5">
-              <h2 className="w-700 fs-30px ps-3 blue-heading">
-                Funge Token Allocation
-              </h2>
-              <p
-                className="mt-4 w-600 fs-20px ps-3"
-                style={{ color: "#064E3B" }}
-              >
-                Total Supply: 100,000,000
-              </p>
-              <br />
-              <p className="ps-3">
-                <b>8%</b>Seed Stage 1 (800k) <br />
-                <br />
-                <b>7%</b>Seed Stage 2 (700k) <br />
-                <br />
-                <b>6%</b>Public IDO (600k) <br />
-                <br />
-                <b>5%</b>Market Making (500k) <br />
-                <br />
-                <b>12%</b>Marketing (1.2 Million) <br />
-                <br />
-                <b>12%</b>Artist Incentives (1.2 Million) <br />
-                <br />
-                <b>10%</b>Exchange Listing (1 Million) <br />
-                <br />
-                <b>12%</b>Private Reserve (1.2 Million) <br />
-                <br />
-                <b>12%</b>Team (1.2 Million) <br />
-                <br />
-                <b>3%</b>KOL's (300k) <br />
-                <br />
-                <b>4%</b>Advisors (400k) <br />
-                <br />
-                <b>9%</b>Community Allocation (900k) <br />
-              </p>
-            </div>
-            <div className="col-md-6 col-sm-12 text-center">
-              <img
-                src="./assets/images/pie-w.png"
-                className="img-fluid pie_img"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Tokenomics />
       <section className="ourteam my-5 py-5">
         <div className="container">
           <h1 className="w-800 text-center mt-2 mb-4 dark-blue-heading">
