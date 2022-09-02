@@ -14,6 +14,7 @@ import TokenUsage from "./LandingPage/TokenUsage";
 import Tokenomics from "./LandingPage/Tokenomics";
 import MeetOurTeam from "./LandingPage/MeetOurTeam";
 import OurPlanForTheFuture from "./LandingPage/OurPlanForTheFuture";
+import GrowYourBrand from "./LandingPage/GrowYourBrand";
 
 const LandingPageV0 = () => {
   return (
@@ -66,26 +67,7 @@ const LandingPageV0 = () => {
       <Tokenomics />
       <MeetOurTeam />
       <OurPlanForTheFuture />
-      <section className="free-trial">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 text-center">
-              <h2 className="w-600">
-                Grow your brand
-                <br />
-                presence on social media.
-              </h2>
-              <p className="sub-heading mt-3">
-                Try Ehya free for 14 days. No credit card required.
-              </p>
-              <br />
-              <button className="btn btn-primary w-600 waitlist-btn">
-                Sign Up for Free Trial
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GrowYourBrand />
       <FooterV0 />
     </>
   );
