@@ -23,38 +23,38 @@ const ImageDescription = ({
             className="d-flex align-items-center"
             style={{ marginBottom: 20 }}
           >
-            <span class="fa-li fa-stack" style={{ marginRight: 10 }}>
+            <span class="fa-li fa-stack">
               <i class="fa-solid fa-circle fa-stack-1x fs-18px funge-color"></i>
             </span>
-            <span class="item-text w-400 fs-18px">{list1}</span>
+            <ListItem class="item-text w-400">{list1}</ListItem>
           </li>
           <li
             className="d-flex align-items-center"
             style={{ marginBottom: 20 }}
           >
-            <span class="fa-li fa-stack" style={{ marginRight: 10 }}>
+            <span class="fa-li fa-stack">
               <i class="fa-solid fa-circle fa-stack-1x fs-18px funge-color"></i>
             </span>
-            <span class="item-text w-400 fs-18px">{list2}</span>
+            <ListItem class="item-text w-400">{list2}</ListItem>
           </li>
           <li
             className="d-flex align-items-center"
             style={{ marginBottom: 20 }}
           >
-            <span class="fa-li fa-stack" style={{ marginRight: 10 }}>
+            <span class="fa-li fa-stack">
               <i class="fa-solid fa-circle fa-stack-1x fs-18px funge-color"></i>
             </span>
-            <span class="item-text w-400 fs-18px">{list3}</span>
+            <ListItem class="item-text w-400">{list3}</ListItem>
           </li>
           {list4 ? (
             <li
               className="d-flex align-items-center"
               style={{ marginBottom: 20 }}
             >
-              <span class="fa-li fa-stack" style={{ marginRight: 10 }}>
+              <span class="fa-li fa-stack">
                 <i class="fa-solid fa-circle fa-stack-1x fs-18px funge-color"></i>
               </span>
-              <span class="item-text w-400 fs-18px">{list4}</span>
+              <ListItem class="item-text w-400">{list4}</ListItem>
             </li>
           ) : null}
         </ul>
@@ -74,6 +74,15 @@ const Wrapper = styled.div`
   flex-direction: row;
   margin: 0 200px;
   margin-bottom: 235px;
+  @media (max-width: 1024px) {
+    margin: 0 100px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    margin: 0 20px;
+    margin-bottom: 32px;
+  }
 `;
 
 const Left = styled.div`
@@ -93,6 +102,7 @@ const Title = styled.p`
   font-size: 16px;
   font-weight: 700;
   color: #71afac;
+  font-family: "StabilGorteskBold";
 `;
 
 const Subtitle = styled.p`
@@ -100,6 +110,13 @@ const Subtitle = styled.p`
   font-weight: 600;
   color: #000;
   letter-spacing: 0.2;
+  font-family: "StabilGorteskMedium";
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 
 const Description = styled.p`
@@ -109,6 +126,30 @@ const Description = styled.p`
   line-height: 1.7;
   margin-bottom: 40px;
   font-family: "StabilGorteskThin";
+  @media (max-width: 1024px) {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 425px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 `;
 
-const Image = styled.img``;
+const ListItem = styled.span`
+  font-size: 18px;
+  margin-left: 10px;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media (max-width: 425px) {
+    font-size: 12px;
+    margin-left: 0;
+  }
+`;
+
+const Image = styled.img`
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`;
