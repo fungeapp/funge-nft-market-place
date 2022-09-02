@@ -43,6 +43,7 @@ const BackgroundImage = styled.img`
   top: -650px;
   left: 0;
   z-index: -1;
+  width: 100%;
 `;
 
 const Title = styled.p`

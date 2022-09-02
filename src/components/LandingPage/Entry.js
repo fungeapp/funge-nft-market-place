@@ -94,11 +94,11 @@ const BackgroundImage = styled.img`
   left: 0;
   right: 0;
   z-index: -1;
+  width: 100%;
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
