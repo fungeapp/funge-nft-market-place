@@ -48,7 +48,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 250px;
   @media (max-width: 1024px) {
   }
@@ -82,7 +82,7 @@ const Image = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  width: 28%;
+  width: 35%;
   @media (max-width: 1024px) {
   }
   @media (max-width: 425px) {

@@ -60,8 +60,8 @@ const LandingPageV0 = () => {
       />
       <CommunityBuilder />
       <TalentMarketPlace />
-      {/* <Principles />
-      <BuiltOnPlanetEarth />
+      <Principles />
+      {/* <BuiltOnPlanetEarth />
       <FungeCommunity />
       <TokenUsage />
       <Tokenomics />

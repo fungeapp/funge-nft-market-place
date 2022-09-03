@@ -3,25 +3,16 @@ import styled from "styled-components";
 
 const Principles = () => {
   return (
-    <section className="collection my-5 py-5 position-relative">
+    <Wrapper>
       <BackgroundImage src="assets/images/LeftBackground2.png" />
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-md-12 text-center mb-3 pt-5">
-            <h2 className="collection_heading w-800 our-company ">
-              Our Company Principles
-            </h2>
-          </div>
-          <div className="col-sm-12 col-md-6 text-center">
-            <p className="sub-heading fs-18px">
-              Taking care of our commmunity is at the core of everything we do.
-              <br />
-              <br />
-              <br />
-            </p>
-          </div>
+          <Title>Our Company Principles</Title>
+          <Subtitle>
+            Taking care of our commmunity is at the core of everything we do.
+          </Subtitle>
           <div className="col-md-12 text-center mt-4">
-            <div className="row">
+            <Container className="row">
               <div
                 className="col-md-3 ps-0-desktop"
                 style={{ display: "flex", flex: 1 }}
@@ -31,12 +22,12 @@ const Principles = () => {
                     <div className="travelya-icon my-4">
                       <img className="img-fluid" src="./assets/icon/tag.svg" />
                     </div>
-                    <p className="fw-bold">Customer Satisfaction</p>
-                    <p className="sub-heading">
+                    <CardTitle>Customer Satisfaction</CardTitle>
+                    <CardDescription>
                       We aim to place endless NFT solutions at the power of your
                       fingertips and provide you with an exceptional user
                       experience.
-                    </p>
+                    </CardDescription>
                   </div>
                 </div>
               </div>
@@ -49,12 +40,12 @@ const Principles = () => {
                         src="./assets/icon/security.svg"
                       />
                     </div>
-                    <p className="fw-bold">Transparency</p>
-                    <p className="sub-heading">
+                    <CardTitle>Transparency</CardTitle>
+                    <CardDescription>
                       We take pride in being honest and open about our
                       operations as we prioritize building long-lasting trust
                       with our userbase and partners.
-                    </p>
+                    </CardDescription>
                   </div>
                 </div>
               </div>
@@ -67,12 +58,12 @@ const Principles = () => {
                         src="./assets/icon/medal.svg"
                       />
                     </div>
-                    <p className="fw-bold">Accessibility</p>
-                    <p className="sub-heading">
+                    <CardTitle>Accessibility</CardTitle>
+                    <CardDescription>
                       We focus on building a simple and intuitive platform, so
                       anyone can get a chance to explore and thrive in the word
                       of NFTs.
-                    </p>
+                    </CardDescription>
                   </div>
                 </div>
               </div>
@@ -88,27 +79,91 @@ const Principles = () => {
                         src="./assets/icon/thumb.svg"
                       />
                     </div>
-                    <p className="fw-bold">Security</p>
-                    <p className="sub-heading">
+                    <CardTitle>Security</CardTitle>
+                    <CardDescription>
                       We implement state-of-the-art protocols to mitigate
                       security risks and keep the network safe for everyone.
-                    </p>
+                    </CardDescription>
                   </div>
                 </div>
               </div>
-            </div>
+            </Container>
           </div>
         </div>
       </div>
-    </section>
+    </Wrapper>
   );
 };
 
 export default Principles;
 
+const Wrapper = styled.div`
+  position: relative;
+  margin-top: 200px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    padding: 0 10px;
+    margin-top: 140px;
+  }
+`;
+
 const BackgroundImage = styled.img`
   position: absolute;
-  top: -150px;
+  top: -250px;
   left: 0;
   z-index: -1;
+`;
+
+const Title = styled.p`
+  font-size: 36px;
+  font-family: "StabilGorteskBold";
+  line-height: 48px;
+  letter-spacing: 0.2px;
+  color: #183b56;
+  text-align: center;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
+`;
+
+const Subtitle = styled.p`
+  font-size: 18px;
+  line-height: 32px;
+  color: #5a7184;
+  text-align: center;
+  margin-bottom: 50px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 60px;
+    margin-bottom: 17px;
+  }
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+`;
+
+const CardTitle = styled.p`
+  font-size: 20px;
+  font-family: "StabilGorteskBold";
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #183b56;
+`;
+
+const CardDescription = styled.p`
+  font-size: 14px;
+  line-height: 24px;
 `;
