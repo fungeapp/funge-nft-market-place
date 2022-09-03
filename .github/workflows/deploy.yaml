@@ -81,5 +81,3 @@ jobs:
       run: |
         DISTRIBUTION_ID=E3QRIALGM07SYH
         aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
-      working-directory: build-artifact
-      
