@@ -14,247 +14,54 @@ const CommunityBuilder = () => {
           <h2 className="badge rounded-pill funge-bgcolor px-3 py-2 fs-10px w-600">
             COMING SOON
           </h2>
-          <h2 className="collection_heading fs-40px w-600 my-3">
-            Commmunity Builder
-          </h2>
-          <p className="sub-heading fs-18px pe-4">
+          <Title>Commmunity Builder</Title>
+          <Description>
             We're launching a VoIP and instant messaging social platform where
             you can find and share ideas in private chats or on community
             channels using voice, video calls, text messages and other media.
-          </p>
+          </Description>
         </div>
         <div className="col-md-6 col-sm-12 p-0">
-          <div className="container p-0">
-            <div className="row community-feature">
-              <div className="col-md-6 col-sm-12 container ps-2">
-                <div
-                  className="row pb-3 border ms-2 me-3"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/user-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            Voice chat rooms
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-sm-12 container ps-2">
-                <div
-                  className="row pb-3 border ms-2 me-3"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/user-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            Video calls
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row community-feature">
-              <div className="col-md-6 col-sm-12 container ps-2 mt-4">
-                <div
-                  className="row pb-3 border ms-2 me-3"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/livestream-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            Live streaming
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-sm-12 container ps-2 mt-4">
-                <div
-                  className="row pb-3 border ms-2 me-3"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/livestream-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            File sharing
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row community-feature">
-              <div className="col-md-6 col-sm-12 container ps-2 mt-4">
-                <div
-                  className="row pb-3 border ms-2 me-3"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/pushnoti-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            Push Notifications
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-sm-12 container ps-2 mt-4">
-                <div
-                  className="row pb-3 border ms-2 me-3"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/pushnoti-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-13px fw-bold mb-0 ps-3">
-                            Internal trading &amp; giveaways
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row community-feature">
-              <div className="col-md-6 col-sm-12 ps-2 my-4">
-                <div
-                  className="row ms-2 border"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img
-                            src="./assets/images/configurebot-icon.png"
-                            className="img-fluid"
-                          />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            Configure bots
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-sm-12 ps-2 my-4">
-                <div
-                  className="row mx-2 border"
-                  style={{
-                    borderRadius: 12,
-                    padding: 16,
-                    width: 328,
-                  }}
-                >
-                  <div className="col-12 ps-0">
-                    <table>
-                      <tr>
-                        <td>
-                          <img src="./assets/images/configurebot-icon.png" />
-                        </td>
-                        <td>
-                          <p className="fs-14px fw-bold mb-0 ps-3">
-                            Events calender
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <RowWrapper>
+            <Card>
+              <Image src="./assets/images/user-icon.png" />
+              <CardText>Voice chat rooms</CardText>
+            </Card>
+            <Card>
+              <Image src="./assets/images/user-icon.png" />
+              <CardText> Video calls</CardText>
+            </Card>
+          </RowWrapper>
+          <RowWrapper>
+            <Card>
+              <Image src="./assets/images/livestream-icon.png" />
+              <CardText> Live streaming</CardText>
+            </Card>
+            <Card>
+              <Image src="./assets/images/livestream-icon.png" />
+              <CardText> File sharing</CardText>
+            </Card>
+          </RowWrapper>
+          <RowWrapper>
+            <Card>
+              <Image src="./assets/images/pushnoti-icon.png" />
+              <CardText> Push Notifications</CardText>
+            </Card>
+            <Card>
+              <Image src="./assets/images/pushnoti-icon.png" />
+              <CardText> Internal trading &amp; giveaways</CardText>
+            </Card>
+          </RowWrapper>
+          <RowWrapper>
+            <Card>
+              <Image src="./assets/images/configurebot-icon.png" />
+              <CardText> Configure bots</CardText>
+            </Card>
+            <Card>
+              <Image src="./assets/images/configurebot-icon.png" />
+              <CardText> Events calender</CardText>
+            </Card>
+          </RowWrapper>
         </div>
       </Container>
     </Wrapper>
@@ -267,6 +74,14 @@ const Wrapper = styled.div`
   padding: 0 187px;
   position: relative;
   padding-top: 150px;
+  @media (max-width: 1024px) {
+    padding: 0 100px;
+    padding-top: 150px;
+  }
+  @media (max-width: 425px) {
+    padding: 0 20px;
+    padding-top: 100px;
+  }
 `;
 
 const Text = styled.p`
@@ -274,6 +89,13 @@ const Text = styled.p`
   font-weight: 600;
   color: #000;
   text-align: center;
+  font-family: "StabilGorteskMedium";
+  @media (max-width: 1024px) {
+    font-size: 50px;
+  }
+  @media (max-width: 425px) {
+    font-size: 30px;
+  }
 `;
 
 const BackgroundImage = styled.img`
@@ -281,6 +103,12 @@ const BackgroundImage = styled.img`
   top: -300px;
   left: 0;
   z-index: -1;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    width: 50%;
+    top: -100px;
+  }
 `;
 
 const Container = styled.div`
@@ -288,4 +116,88 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 500px;
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+`;
+
+const Title = styled.p`
+  font-size: 40px;
+  letter-spacing: 0.2px;
+  font-family: "StabilGorteskMedium";
+  line-height: 52px;
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 18px;
+  line-height: 32px;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media (max-width: 425px) {
+    width: 75%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
+const RowWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-right: 30px;
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
+  @media (max-width: 425px) {
+    width: 50%;
+    padding: 8px;
+    margin-right: 15px;
+  }
+`;
+
+const Image = styled.img`
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+  }
+`;
+
+const CardText = styled.p`
+  font-size: 14px;
+  font-family: "StabilGorteskBold";
+  letter-spacing: 0.2px;
+  margin-bottom: -4px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    margin-bottom: -1.5px;
+  }
 `;
