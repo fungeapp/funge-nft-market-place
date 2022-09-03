@@ -19,11 +19,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Delete Artifacts
-      uses: kolpav/purge-artifacts-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: actions/upload-artifact
 
   # Install NPM Package Manager
     - name: Npm Install
@@ -86,3 +81,4 @@ jobs:
       run: |
         DISTRIBUTION_ID=E3QRIALGM07SYH
         aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
+      working-directory: build-artifact
