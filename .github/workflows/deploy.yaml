@@ -20,6 +20,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Purge Artifacts
+      uses: kolpav/purge-artifacts-action@v1
+
   # Install NPM Package Manager
     - name: Npm Install
       run: npm install
