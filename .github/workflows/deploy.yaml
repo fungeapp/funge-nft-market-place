@@ -21,9 +21,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Delete Artifacts
       uses: kolpav/purge-artifacts-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          expire-in: 7days # Setting this to 0 will delete all artifacts
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        expire-in: 7days # Setting this to 0 will delete all artifacts
 
   # Install NPM Package Manager
     - name: Npm Install
