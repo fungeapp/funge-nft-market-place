@@ -25,14 +25,15 @@ import axios from 'axios';
 const NewPost = (props) => {
 
     const [postcontent, setpostcontent] = useState();
-    let _sessionUserProfile = sessionStorage.getItem("userprofile")
-    let sessionUserProfile = JSON.parse(_sessionUserProfile)
-    console.log(`New Post Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
-
+    const [sessionUserProfile, setSessionUserProfile] = useState();
+    
     useEffect(() => {
         //get profile info based on session storage
-
-    });
+        let _sessionUserProfile = sessionStorage.getItem("userprofile")
+        let Profile = JSON.parse(_sessionUserProfile)
+        setSessionUserProfile(Profile)
+        console.log(`New Post Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email} :: ${sessionUserProfile.picture}`)
+    },[]);
 
     const savePost = async (e) => {
         let sessionUserId = sessionUserProfile.id;
@@ -50,7 +51,7 @@ const NewPost = (props) => {
                     }
             })
     }
-
+//<img src={sessionUserProfile.picture} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
     return (
         <>
             <div className="card funge-card shadow-sm my-4">
@@ -58,7 +59,7 @@ const NewPost = (props) => {
                     <div className="container-fluid p-0">
                         <div className="row">
                             <div className="col-md-1 mt-3 my-2">
-                                <img src={sessionUserProfile.picture} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
+                            <img src={sessionUserProfile.picture} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
                             </div>
                             <div className="col-md-11 my-2 align-self-end">
 

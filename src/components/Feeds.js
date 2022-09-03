@@ -18,7 +18,7 @@ const Feeds = (props) => {
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
   const [useremail, setuseremail] = useState(_email);
-  console.log(`params ${useremail}`)
+  //console.log(`params ${useremail}`)
   let userprops;  
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Feeds = (props) => {
         let elem = response.data[0]
         let _x = elem.id
         setuserid(_x)
-        console.log(`user id ${_x}`)
+        //console.log(`user id ${_x}`)
         setProfileSession(response.data[0]);
         //save profile session in session storage
         sessionStorage.setItem("userprofile", JSON.stringify(userprops))
@@ -45,7 +45,7 @@ const Feeds = (props) => {
       .then((response) => {
           response.data.forEach( post => {
             let text = post.post_content
-            console.log(text)
+            //console.log(text)
             setposts(text)
           })
       })
@@ -72,21 +72,7 @@ const Feeds = (props) => {
     }
   }
 
-  /*const setProfileSession = async(sessionData) => (
-    
-    profileData.id = sessionData.id,
-    profileData.given_name = sessionData.given_name,
-    profileData.family_name = sessionData.family_name,
-    profileData.phonenumber = sessionData.phonenumber,
-    profileData.nickname = sessionData.nickname,
-    profileData.name = sessionData.name,
-    profileData.picture = sessionData.picture,
-    profileData.locale = "en",
-    profileData.updated_at = "",
-    profileData.email = sessionData.email,
-    profileData.email_verified = sessionData.email_verified,
-    profileData.sub = ""
-  )*/
+  
 
   return (
     <>
@@ -95,7 +81,7 @@ const Feeds = (props) => {
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
-            <NewPost />
+          <NewPost />
             <FeedPost text={posts} />
           </div>
           <div className="col-md-4 mt-4 max-550">

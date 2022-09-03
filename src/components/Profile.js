@@ -12,7 +12,7 @@ const Profile = () => {
 
   let _sessionUserProfile = sessionStorage.getItem("userprofile")
   let sessionUserProfile = JSON.parse(_sessionUserProfile)
-  console.log(`Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+  //console.log(`Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
 
   const [isActive, setActive] = useState("home");
   const [userid, setuserid] = useState( sessionUserProfile.id );
@@ -22,11 +22,11 @@ const Profile = () => {
   const [name, setname] = useState();
 
   useMemo(() => {
-    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    //console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
-            console.log(`${JSON.stringify(response.data.picture)}`)
+            //console.log(`${JSON.stringify(response.data.picture)}`)
             for(let data of response.data) {
               let _givenname = data.given_name + " " + data.family_name;
               setgivenname(_givenname);

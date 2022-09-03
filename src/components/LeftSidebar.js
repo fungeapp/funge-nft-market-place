@@ -7,7 +7,7 @@ const LeftSidebar = (props) => {
   
   let _sessionUserProfile = sessionStorage.getItem("userprofile")
   let sessionUserProfile = JSON.parse(_sessionUserProfile)
-  console.log(`SideBar Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+  //console.log(`SideBar Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
 
   return (
     <>

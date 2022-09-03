@@ -46,14 +46,32 @@ const ProfileLogin = (props) => {
     const [email, setemail] = useState();
     const [phone, setphone] = useState();
     const [dataprofile, setdataprofile] = useState();
+    let userprops; 
     
+    const setProfileSession = async(sessionData) => {
+        userprops = {
+          id : sessionData.data.id,
+          given_name : sessionData.data.given_name,
+          family_name : sessionData.data.family_name,
+          phonenumber : sessionData.data.phonenumber,
+          nickname : sessionData.data.nickname,
+          name : sessionData.data.name,
+          picture : sessionData.data.picture,
+          locale : "en",
+          updated_at : "",
+          email : sessionData.data.email,
+          email_verified : sessionData.data.email_verified,
+          sub : ""
+        }
+      }
+
     const emailAddress = async (e) => {
-        console.log(`By email ${email}`)
+        //console.log(`By email ${email}`)
         //save email info already
         axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/exist/${email}`)
         .then(response => {
             let exist = response.data
-            console.log(`email exist ${exist} :: ${email}`)
+            //console.log(`email exist ${exist} :: ${email}`)
             if(!exist) {
                 //insert nothing else to do if email already exist.
                 //profile data
@@ -67,13 +85,26 @@ const ProfileLogin = (props) => {
                 profileData.updated_at = ""
                 profileData.email = email
                 profileData.email_verified = false
-                console.log(`profileData ${profileData.email}`)
+                //console.log(`profileData ${profileData.email}`)
                 axios({
                         method: 'post',
                         url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/save`,
                         data: profileData
-                    })
+                })
+                .then( newrecord => {
+                       console.log(`New User ${JSON.stringify(newrecord)}`) 
+                       setProfileSession(newrecord)
+                       sessionStorage.setItem("userprofile", JSON.stringify(newrecord))
+                })
             }
+            else {
+                //put user info into session storage
+                axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${email}`)
+                .then( response => {
+                    setProfileSession(response)
+                })
+            }
+            
             return email
         })
         .then( email => {
@@ -88,7 +119,7 @@ const ProfileLogin = (props) => {
 
     const phoneNumber = async (e) => {
         //e.preventDefault();
-        console.log(`By phone ${phone}`);
+        //console.log(`By phone ${phone}`);
         const DID = await magic.auth.loginWithSMS({
             phoneNumber: `+${phone}`,
             redirectURI: `${env.BASE_URL}/feeds`
@@ -97,7 +128,7 @@ const ProfileLogin = (props) => {
 
     const saveUserProfile = async(response) => {
             //save localStorage for session management.  Magic opens to a new tab so sessionStorage is not persisted after email verification
-            console.log(`Profile ${response.id} :: ${email} :: ${response.picture} :: ${response.email} :: ${response.nickname}`)
+            //console.log(`Profile ${response.id} :: ${email} :: ${response.picture} :: ${response.email} :: ${response.nickname}`)
             //need to improve for user session management, Wang currently working on this
             localStorage.setItem("user_id", response.id)
             localStorage.setItem('user_email',email)

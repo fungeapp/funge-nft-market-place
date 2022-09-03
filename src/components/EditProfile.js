@@ -29,7 +29,7 @@ const EditProfile = () => {
 
   let _sessionUserProfile = sessionStorage.getItem("userprofile")
   let sessionUserProfile = JSON.parse(_sessionUserProfile)
-  console.log(`Edit Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+  //console.log(`Edit Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
 
   const [isActive, setActive] = useState("home");
   const [userid, setuserid] = useState( sessionUserProfile.id );
@@ -41,16 +41,16 @@ const EditProfile = () => {
   const [username, setusername] = useState();
 
   useEffect(() => {
-    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    //console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
-            console.log(`${JSON.stringify(response.data.username)}`)
+            //console.log(`${JSON.stringify(response.data.username)}`)
             for(let data of response.data) {
               let _givenname = data.given_name + " " + data.family_name;
               setgivenname(_givenname);
               setname(data.nickname)
-              setprofilepic(data.picture);
+              setprofilepic( data.picture );
               setbio(data.bio)
               setusername(data.username)
             }
@@ -59,17 +59,26 @@ const EditProfile = () => {
         console.log(`GET user profile data error :: ${error}`)
       })
     
-  },[userid, useremail]);
+  },[]);
 
   const updateProfile = async (e) => {
+    e.preventDefault();
+    console.log(`Update Profile ${profilepic} :: ${bio} :: ${username}`)
     axios({
       method: 'post',
       url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/update`,
       data: {
-          "username": username,
-          "bio": {bio}
+          "id" : sessionUserProfile.id,
+          "email" : sessionUserProfile.email,
+          "email_verfied" : sessionUserProfile.email_verfied,
+          "family_name" : sessionUserProfile.family_name,
+          "lcoal" : sessionUserProfile.locale,
+          "username": {username},
+          "phonenumber" : sessionUserProfile.phonenumber,
+          "picture" : {profilepic},
+          "bio": {bio},
       }
-})
+    })
 
   }
 
@@ -211,6 +220,7 @@ const EditProfile = () => {
                             aria-label="maximum height"
                             placeholder="Maximum 4 rows"
                             defaultValue={bio}
+                            onChange={(e) => setbio(e.target.value)}
                             style={{ width: 200 }}
                           />
 

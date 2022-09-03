@@ -9,7 +9,7 @@ const TopBar = (props) => {
   const wallet = useWeb3React()
   const [walletModalShow, setWalletModalShow] = useState(false)
 
-  console.log(wallet.isActive);
+  //console.log(wallet.isActive);
 
   const openConnectModal = () => {
     setWalletModalShow(true)
