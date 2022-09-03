@@ -63,12 +63,12 @@ const LandingPageV0 = () => {
       <Principles />
       <BuiltOnPlanetEarth />
       <FungeCommunity />
-      {/* <TokenUsage />
+      <TokenUsage />
       <Tokenomics />
       <MeetOurTeam />
       <OurPlanForTheFuture />
       <GrowYourBrand />
-      <FooterV0 /> */}
+      <FooterV0 />
     </>
   );
 };
