@@ -23,7 +23,7 @@ jobs:
       uses: kolpav/purge-artifacts-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        expire-in: 7days # Setting this to 0 will delete all artifacts
+        path: actions/upload-artifact
 
   # Install NPM Package Manager
     - name: Npm Install
@@ -86,4 +86,3 @@ jobs:
       run: |
         DISTRIBUTION_ID=E3QRIALGM07SYH
         aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
-        
