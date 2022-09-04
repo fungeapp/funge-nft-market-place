@@ -51,6 +51,12 @@ export default Tokenomics;
 const Wrapper = styled.div`
   margin: 0 160px;
   margin-bottom: 200px;
+  @media (max-width: 1024px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 425px) {
+    margin: 0 20px;
+  }
 `;
 
 const Title = styled.p`
@@ -58,6 +64,12 @@ const Title = styled.p`
   font-family: "StabilGorteskBold";
   text-align: center;
   margin-bottom: 70px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
 `;
 
 const Card = styled.div`
@@ -69,6 +81,15 @@ const Card = styled.div`
   box-shadow: 0px 64px 94px rgba(0, 0, 0, 0.05);
   background-color: #fff;
   padding: 50px 0 50px 50px;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column-reverse;
+    border: 0px solid #e1e1e1;
+    padding: 0;
+    box-shadow: none;
+  }
 `;
 
 const Left = styled.div`
@@ -80,6 +101,13 @@ const CardTitle = styled.p`
   font-family: "StabilGorteskMedium";
   letter-spacing: 0.2px;
   margin-bottom: 44px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 19px;
+    text-align: center;
+  }
 `;
 
 const CardSubtitle = styled.p`
@@ -87,11 +115,25 @@ const CardSubtitle = styled.p`
   font-family: "StabilGorteskMedium";
   color: #71afac;
   margin-bottom: 49px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 19px;
+    text-align: center;
+  }
 `;
 
 const Text = styled.p`
   font-size: 20px;
   display: flex;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+  }
 `;
 
 const BoldText = styled.p`
@@ -100,5 +142,11 @@ const BoldText = styled.p`
 `;
 
 const Image = styled.img`
-  /* height: 499px; */
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 `;

@@ -66,6 +66,11 @@ const Title = styled.p`
   font-size: 36px;
   font-family: "StabilGorteskBold";
   letter-spacing: 0.2px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 28px;
+  }
 `;
 
 const CardTitle = styled.p`
@@ -76,4 +81,9 @@ const CardTitle = styled.p`
 
 const CardDescription = styled.p`
   font-size: 14px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    margin: 0 80px;
+  }
 `;

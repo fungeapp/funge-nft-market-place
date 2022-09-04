@@ -94,16 +94,22 @@ const BackgroundImage = styled.img`
   left: 0;
   right: 0;
   z-index: -1;
+  width: 100%;
+  @media (max-width: 1024px) {
+    height: 150%;
+  }
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 214.4px;
+  @media (max-width: 425px) {
+    padding-top: 100px;
+  }
 `;
 
 const Title = styled.p`
@@ -111,6 +117,10 @@ const Title = styled.p`
   font-weight: 500;
   color: #fff;
   line-height: 48px;
+  @media (max-width: 425px) {
+    font-size: 12px;
+    line-height: 24px;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -120,6 +130,10 @@ const Subtitle = styled.p`
   line-height: 93.6px;
   text-align: center;
   font-family: "StabilGorteskBold";
+  @media (max-width: 425px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 `;
 
 const Button = styled.button`
@@ -131,18 +145,38 @@ const Button = styled.button`
   color: #000;
   border: none;
   margin-top: 37.6px;
+  @media (max-width: 425px) {
+    margin-top: 24px;
+    padding: 13.2px 54.5px;
+    font-size: 14px;
+  }
 `;
 
 const ImagesWrapper = styled.div`
   position: relative;
   margin-top: 85.8px;
   margin-left: -170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1024px) {
+    margin-top: 38px;
+    margin-left: -30px;
+  }
 `;
 
-const BrowserImage = styled.img``;
+const BrowserImage = styled.img`
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+`;
 
 const MobileImage = styled.img`
   position: absolute;
   bottom: 0;
   right: -190px;
+  @media (max-width: 1024px) {
+    width: 30%;
+    right: 0;
+  }
 `;
