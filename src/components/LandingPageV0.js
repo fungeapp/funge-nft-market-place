@@ -68,7 +68,7 @@ const LandingPageV0 = () => {
       <MeetOurTeam />
       <OurPlanForTheFuture />
       <GrowYourBrand />
-      {/* <FooterV0 /> */}
+      <FooterV0 />
     </>
   );
 };
