@@ -4,7 +4,7 @@ import styled from "styled-components";
 const GrowYourBrand = () => {
   return (
     <section className="free-trial position-relative">
-      <BackgroundImage src="assets/images/CTA.png" />
+      <BackgroundImage />
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 text-center">
@@ -57,6 +57,7 @@ const BackgroundImage = styled.img`
   left: 0;
   z-index: -1;
   width: 100%;
+  content: url("assets/images/CTA.png");
   @media (max-width: 1024px) {
   }
   @media (max-width: 425px) {
