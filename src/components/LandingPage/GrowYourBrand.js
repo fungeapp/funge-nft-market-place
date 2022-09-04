@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const GrowYourBrand = () => {
   return (
-    <section className="free-trial">
+    <section className="free-trial position-relative">
+      <BackgroundImage src="assets/images/CTA.png" />
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 text-center">
@@ -33,9 +34,33 @@ const Title = styled.p`
   font-family: "StabilGorteskBold";
   letter-spacing: 0.2px;
   color: #183b56;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 30px;
+  }
 `;
 
 const Subtitle = styled.p`
   font-size: 18px;
   color: #5a7184;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 16px;
+  }
+`;
+
+const BackgroundImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    top: 250px;
+    content: url("assets/images/CTA1.png");
+  }
 `;

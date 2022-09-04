@@ -67,8 +67,8 @@ const LandingPageV0 = () => {
       <Tokenomics />
       <MeetOurTeam />
       <OurPlanForTheFuture />
-      {/* <GrowYourBrand />
-      <FooterV0 /> */}
+      <GrowYourBrand />
+      {/* <FooterV0 /> */}
     </>
   );
 };
