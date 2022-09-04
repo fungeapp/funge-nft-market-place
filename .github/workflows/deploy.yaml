@@ -3,7 +3,7 @@ name: Frontend Cloudfront Deployment
 on:
   push:
     branches:
-      - test-branch
+      - cdn-landingpage
 
   # Starting Build Process      
 jobs:
@@ -83,4 +83,3 @@ jobs:
         aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
       working-directory: build-artifact
 
-      
