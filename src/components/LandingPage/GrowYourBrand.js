@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 const GrowYourBrand = () => {
   return (
-    <section className="free-trial position-relative">
+    <section
+      className="position-relative"
+      style={{ height: 400, paddingTop: 100, paddingBottom: 100 }}
+    >
       <BackgroundImage />
       <div className="container-fluid">
         <div className="row">
