@@ -65,10 +65,10 @@ const LandingPageV0 = () => {
       <FungeCommunity />
       <TokenUsage />
       <Tokenomics />
-      {/* <MeetOurTeam />
+      <MeetOurTeam />
       <OurPlanForTheFuture />
       <GrowYourBrand />
-      <FooterV0 /> */}
+      <FooterV0 />
     </>
   );
 };
