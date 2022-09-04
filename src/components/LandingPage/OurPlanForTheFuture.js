@@ -6,9 +6,7 @@ const OurPlanForTheFuture = () => {
     <section className="ourplan my-5 py-5">
       <div className="container">
         <Title>Our plan for the future</Title>
-        <br />
-        <br />
-        <div className="row">
+        <Wrapper className="row">
           <div className="col-11 mx-auto">
             <div className="accordion mb-3" id="faq-accord1">
               <div className="accordion-item">
@@ -30,11 +28,8 @@ const OurPlanForTheFuture = () => {
                 >
                   <div className="accordion-body">
                     <Text>You can pay with credit.</Text>
-                    <br />
                     <Text>You can pay with credit.</Text>
-                    <br />
                     <Text>You can pay with credit.</Text>
-                    <br />
                     <Text>You can pay with credit.</Text>
                   </div>
                 </div>
@@ -61,11 +56,8 @@ const OurPlanForTheFuture = () => {
                 >
                   <div className="accordion-body">
                     <Text>You can pay with credit.</Text>
-                    <br />
                     <Text>You can pay with credit.</Text>
-                    <br />
                     <Text>You can pay with credit.</Text>
-                    <br />
                     <Text>You can pay with credit.</Text>
                   </div>
                 </div>
@@ -91,9 +83,9 @@ const OurPlanForTheFuture = () => {
                   data-bs-parent="#faq-accord3"
                 >
                   <div className="accordion-body">
-                    <Text>You can pay with credit.</Text> <br />
-                    <Text>You can pay with credit.</Text> <br />
-                    <Text>You can pay with credit.</Text> <br />
+                    <Text>You can pay with credit.</Text>
+                    <Text>You can pay with credit.</Text>
+                    <Text>You can pay with credit.</Text>
                     <Text>You can pay with credit.</Text>
                   </div>
                 </div>
@@ -118,9 +110,9 @@ const OurPlanForTheFuture = () => {
                   data-bs-parent="#faq-accord4"
                 >
                   <div className="accordion-body">
-                    <Text>You can pay with credit.</Text> <br />
-                    <Text>You can pay with credit.</Text> <br />
-                    <Text>You can pay with credit.</Text> <br />
+                    <Text>You can pay with credit.</Text>
+                    <Text>You can pay with credit.</Text>
+                    <Text>You can pay with credit.</Text>
                     <Text>You can pay with credit.</Text>
                   </div>
                 </div>
@@ -146,16 +138,16 @@ const OurPlanForTheFuture = () => {
                   data-bs-parent="#faq-accord5"
                 >
                   <div className="accordion-body">
-                    <Text>You can pay with credit.</Text> <br />
-                    <Text>You can pay with credit.</Text> <br />
-                    <Text>You can pay with credit.</Text> <br />
+                    <Text>You can pay with credit.</Text>
+                    <Text>You can pay with credit.</Text>
+                    <Text>You can pay with credit.</Text>
                     <Text>You can pay with credit.</Text>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </div>
     </section>
   );
@@ -167,6 +159,21 @@ const Title = styled.p`
   font-family: "StabilGorteskBold";
   font-size: 60px;
   text-align: center;
+  margin-bottom: 80px;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+`;
+
+const Wrapper = styled.div`
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    padding: 0 25px;
+  }
 `;
 
 const Button = styled.button`
@@ -179,4 +186,9 @@ const Button = styled.button`
 const Text = styled.p`
   font-size: 18px;
   color: #5a7184;
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 425px) {
+    font-size: 14px;
+  }
 `;
