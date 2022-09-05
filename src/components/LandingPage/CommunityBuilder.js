@@ -10,18 +10,20 @@ const CommunityBuilder = () => {
         innovators, and traders.
       </Text>
       <Container>
-        <div className="col-md-4 col-sm-8 p-0">
-          <h2 className="badge rounded-pill funge-bgcolor px-3 py-2 fs-10px w-600">
-            COMING SOON
-          </h2>
+        <ColumnWrapper>
+          <div>
+            <h2 className="badge rounded-pill funge-bgcolor px-3 py-2 fs-10px w-600">
+              COMING SOON
+            </h2>
+          </div>
           <Title>Commmunity Builder</Title>
           <Description>
             We're launching a VoIP and instant messaging social platform where
             you can find and share ideas in private chats or on community
             channels using voice, video calls, text messages and other media.
           </Description>
-        </div>
-        <div className="col-md-6 col-sm-12 p-0">
+        </ColumnWrapper>
+        <ColumnWrapper>
           <RowWrapper>
             <Card>
               <Image src="./assets/images/user-icon.png" />
@@ -62,7 +64,7 @@ const CommunityBuilder = () => {
               <CardText> Events calender</CardText>
             </Card>
           </RowWrapper>
-        </div>
+        </ColumnWrapper>
       </Container>
     </Wrapper>
   );
@@ -71,90 +73,71 @@ const CommunityBuilder = () => {
 export default CommunityBuilder;
 
 const Wrapper = styled.div`
-  padding: 0 187px;
   position: relative;
-  padding-top: 150px;
-  @media (max-width: 1024px) {
-    padding: 0 100px;
-    padding-top: 150px;
-  }
-  @media (max-width: 425px) {
-    padding: 0 20px;
-    padding-top: 100px;
-  }
-`;
-
-const Text = styled.p`
-  font-size: 60px;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  font-family: "StabilGorteskMedium";
-  @media (max-width: 1024px) {
-    font-size: 50px;
-  }
-  @media (max-width: 425px) {
-    font-size: 30px;
-  }
 `;
 
 const BackgroundImage = styled.img`
+  width: 25%;
   position: absolute;
   top: -300px;
   left: 0;
   z-index: -1;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    width: 50%;
+  @media (max-width: 768px) {
+    width: 30%;
     top: -100px;
+  }
+`;
+
+const Text = styled.p`
+  font-size: 3vw;
+  font-family: "StabilGorteskMedium";
+  color: #000;
+  text-align: center;
+  padding: 10vw 14vw;
+  margin-bottom: 0;
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 500px;
-  @media (max-width: 1024px) {
-    justify-content: space-between;
-  }
-  @media (max-width: 425px) {
+  justify-content: space-between;
+  padding: 0 10vw;
+  @media (max-width: 768px) {
     flex-direction: column;
-    margin-top: 100px;
+    padding: 0 7vw;
   }
 `;
 
+const ColumnWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
 const Title = styled.p`
-  font-size: 40px;
+  font-size: 2vw;
   letter-spacing: 0.2px;
   font-family: "StabilGorteskMedium";
-  line-height: 52px;
-  @media (max-width: 1024px) {
-    font-size: 30px;
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     font-size: 20px;
   }
 `;
 
 const Description = styled.p`
-  font-size: 18px;
-  line-height: 32px;
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-  @media (max-width: 425px) {
-    width: 75%;
+  font-size: 1.2vw;
+  width: 80%;
+  @media (max-width: 768px) {
     font-size: 14px;
-    line-height: 20px;
   }
 `;
 
 const RowWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 const Card = styled.div`
@@ -163,25 +146,21 @@ const Card = styled.div`
   align-items: center;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 16px;
-  margin-right: 30px;
-  @media (max-width: 1024px) {
-    width: 50%;
-  }
-  @media (max-width: 425px) {
+  padding: 1vw;
+  margin-left: 15px;
+  @media (max-width: 768px) {
     width: 50%;
     padding: 8px;
+    margin-left: 0;
     margin-right: 15px;
   }
 `;
 
 const Image = styled.img`
-  width: 48px;
-  height: 48px;
+  width: 3vw;
+  height: 3vw;
   margin-right: 16px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     width: 24px;
     height: 24px;
     margin-right: 7px;
@@ -189,15 +168,12 @@ const Image = styled.img`
 `;
 
 const CardText = styled.p`
-  font-size: 14px;
+  font-size: 0.8vw;
   font-family: "StabilGorteskBold";
   letter-spacing: 0.2px;
-  margin-bottom: -4px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  margin-bottom: 0;
+  @media (max-width: 768px) {
     font-size: 10px;
     letter-spacing: 0.1px;
-    margin-bottom: -1.5px;
   }
 `;

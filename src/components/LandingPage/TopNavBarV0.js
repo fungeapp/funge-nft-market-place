@@ -82,7 +82,12 @@ const TopNavBar = () => {
                 </ul>
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <Button className="btn btn-primary ">Beta Trial</Button>
+                    <Button
+                      data-bs-toggle="modal"
+                      data-bs-target="#waitListModal"
+                    >
+                      Beta Trial
+                    </Button>
                   </li>
                 </ul>
               </div>
@@ -103,11 +108,11 @@ const Link = styled.a`
 `;
 
 const Button = styled.button`
-  background-color: #fff !important;
+  background-color: #fff;
   border-radius: 48px;
-  border-width: 0 !important;
+  border-width: 0;
   font-size: 16.8px;
   font-family: "StabilGorteskBold";
   color: #000;
-  padding: 10.8px 21.6px !important;
+  padding: 10.8px 21.6px;
 `;

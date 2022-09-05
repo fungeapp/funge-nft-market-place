@@ -575,6 +575,7 @@ section#hiro {
   position: absolute !important;
   background: transparent !important;
   box-shadow: none !important;
+  z-index: 1000;
 }
 
 .main_header .my_nav .navbar-expand-lg .navbar-collapse {

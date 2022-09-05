@@ -5,92 +5,52 @@ const Principles = () => {
   return (
     <Wrapper>
       <BackgroundImage src="assets/images/LeftBackground2.png" />
-      <div className="container">
-        <div className="row justify-content-center">
-          <Title>Our Company Principles</Title>
-          <Subtitle>
-            Taking care of our commmunity is at the core of everything we do.
-          </Subtitle>
-          <div className="col-md-12 text-center mt-4">
-            <Container className="row">
-              <div
-                className="col-md-3 ps-0-desktop"
-                style={{ display: "flex", flex: 1 }}
-              >
-                <div className="card card-travelya">
-                  <div className="card-body">
-                    <div className="travelya-icon my-4">
-                      <img className="img-fluid" src="./assets/icon/tag.svg" />
-                    </div>
-                    <CardTitle>Customer Satisfaction</CardTitle>
-                    <CardDescription>
-                      We aim to place endless NFT solutions at the power of your
-                      fingertips and provide you with an exceptional user
-                      experience.
-                    </CardDescription>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3" style={{ display: "flex", flex: 1 }}>
-                <div className="card card-travelya">
-                  <div className="card-body">
-                    <div className="travelya-icon my-4">
-                      <img
-                        className="img-fluid"
-                        src="./assets/icon/security.svg"
-                      />
-                    </div>
-                    <CardTitle>Transparency</CardTitle>
-                    <CardDescription>
-                      We take pride in being honest and open about our
-                      operations as we prioritize building long-lasting trust
-                      with our userbase and partners.
-                    </CardDescription>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3" style={{ display: "flex", flex: 1 }}>
-                <div className="card card-travelya">
-                  <div className="card-body">
-                    <div className="travelya-icon my-4">
-                      <img
-                        className="img-fluid"
-                        src="./assets/icon/medal.svg"
-                      />
-                    </div>
-                    <CardTitle>Accessibility</CardTitle>
-                    <CardDescription>
-                      We focus on building a simple and intuitive platform, so
-                      anyone can get a chance to explore and thrive in the word
-                      of NFTs.
-                    </CardDescription>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-md-3 pe-0-desktop"
-                style={{ display: "flex", flex: 1 }}
-              >
-                <div className="card card-travelya">
-                  <div className="card-body">
-                    <div className="travelya-icon my-4">
-                      <img
-                        className="img-fluid"
-                        src="./assets/icon/thumb.svg"
-                      />
-                    </div>
-                    <CardTitle>Security</CardTitle>
-                    <CardDescription>
-                      We implement state-of-the-art protocols to mitigate
-                      security risks and keep the network safe for everyone.
-                    </CardDescription>
-                  </div>
-                </div>
-              </div>
-            </Container>
+      <Title>Our Company Principles</Title>
+      <Subtitle>
+        Taking care of our commmunity is at the core of everything we do.
+      </Subtitle>
+      <Container>
+        <Card>
+          <div className="travelya-icon my-4">
+            <img className="img-fluid" src="./assets/icon/tag.svg" />
           </div>
-        </div>
-      </div>
+          <CardTitle>Customer Satisfaction</CardTitle>
+          <CardDescription>
+            We are dedicated is to providing our users with innovative NFT
+            solutions and world-class customer service.
+          </CardDescription>
+        </Card>
+        <Card>
+          <div className="travelya-icon my-4">
+            <img className="img-fluid" src="./assets/icon/security.svg" />
+          </div>
+          <CardTitle>Transparency</CardTitle>
+          <CardDescription>
+            We pride ourselves on being honest and open about our operations,
+            prioritizing the building of trust with our userbase and partners.
+          </CardDescription>
+        </Card>
+        <Card>
+          <div className="travelya-icon my-4">
+            <img className="img-fluid" src="./assets/icon/medal.svg" />
+          </div>
+          <CardTitle>Accessibility</CardTitle>
+          <CardDescription>
+            Funge is built to be accessible and useful to all types of users,
+            from novices who are unfamiliar with NFTs to experts in the field.
+          </CardDescription>
+        </Card>
+        <Card noMargin>
+          <div className="travelya-icon my-4">
+            <img className="img-fluid" src="./assets/icon/thumb.svg" />
+          </div>
+          <CardTitle>Security</CardTitle>
+          <CardDescription>
+            We implement state-of-the-art protocols to mitigate security risks
+            and keep the network safe for everyone.
+          </CardDescription>
+        </Card>
+      </Container>
     </Wrapper>
   );
 };
@@ -99,71 +59,89 @@ export default Principles;
 
 const Wrapper = styled.div`
   position: relative;
-  margin-top: 200px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    padding: 0 10px;
-    margin-top: 140px;
+  padding: 0 10vw;
+  padding-top: 10vw;
+  @media (max-width: 768px) {
+    padding: 0 7vw;
+    padding-top: 10vw;
   }
 `;
 
 const BackgroundImage = styled.img`
   position: absolute;
-  top: -250px;
+  top: 500px;
   left: 0;
   z-index: -1;
+  @media (max-width: 768px) {
+    top: 0;
+  }
 `;
 
 const Title = styled.p`
-  font-size: 36px;
+  font-size: 2vw;
   font-family: "StabilGorteskBold";
-  line-height: 48px;
   letter-spacing: 0.2px;
   color: #183b56;
   text-align: center;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     font-size: 20px;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 1.2vw;
   color: #5a7184;
   text-align: center;
-  margin-bottom: 50px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    font-size: 14px;
-    line-height: 22px;
-    padding: 0 60px;
-    margin-bottom: 17px;
+  margin-bottom: 4vw;
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
 
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 15px;
+  padding-bottom: 30px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0px 64px 94px rgba(0, 0, 0, 0.05);
+  margin-right: ${(props) => (props.noMargin ? 0 : 20)}px;
+  background-color: #fff;
+  @media (max-width: 1024px) {
+    padding-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: ${(props) => (props.noMargin ? 0 : 20)}px;
+    padding: 5vw 10vw;
+  }
+`;
+
 const CardTitle = styled.p`
-  font-size: 20px;
+  font-size: 1vw;
   font-family: "StabilGorteskBold";
-  line-height: 24px;
   letter-spacing: 0.2px;
   color: #183b56;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const CardDescription = styled.p`
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.8vw;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;

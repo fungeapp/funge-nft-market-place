@@ -5,8 +5,10 @@ const TalentMarketPlace = () => {
   return (
     <Wrapper>
       <Container reverse>
-        <Image src="assets/images/TalentMarketPlace.png" />
-        <TextWrapper>
+        <ImageWrapper>
+          <Image src="assets/images/TalentMarketPlace.png" />
+        </ImageWrapper>
+        <TextWrapper marginLeft>
           <Title>Talent Marketplace</Title>
           <Description>
             Funge talent marketplace is the fastest and most efficient way to
@@ -25,7 +27,9 @@ const TalentMarketPlace = () => {
             monitor, send and receive their crypto assets.
           </Description>
         </TextWrapper>
-        <Image src="assets/images/InHouseWallet.png" />
+        <ImageWrapper>
+          <Image src="assets/images/InHouseWallet.png" />
+        </ImageWrapper>
       </Container>
       <BackgroundImage src="assets/images/RightBackground.png" />
     </Wrapper>
@@ -36,11 +40,9 @@ export default TalentMarketPlace;
 
 const Wrapper = styled.div`
   position: relative;
-  padding: 0 100px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    padding: 0 20px;
+  padding: 0 10vw;
+  @media (max-width: 768px) {
+    padding: 0 7vw;
   }
 `;
 
@@ -49,70 +51,60 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 250px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  padding-top: 10vw;
+  @media (max-width: 768px) {
     flex-direction: ${(props) => (props.reverse ? "column-reverse" : "column")};
-    margin-top: 100px;
     align-items: flex-start;
   }
 `;
 
 const BackgroundImage = styled.img`
+  width: 25%;
   position: absolute;
-  top: -350px;
+  top: 200px;
   right: 0;
   z-index: -1;
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
+    width: 30%;
+    top: 100px;
   }
-  @media (max-width: 425px) {
-    width: 50%;
-    top: -200px;
-  }
+`;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  flex: 1;
 `;
 
 const Image = styled.img`
-  width: 60%;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    width: 100%;
-  }
+  width: 100%;
 `;
 
 const TextWrapper = styled.div`
-  width: 35%;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: ${(props) => (props.marginLeft ? 50 : 0)}px;
+  padding-right: ${(props) => (props.marginLeft ? 0 : 50)}px;
+  @media (max-width: 768px) {
     width: 80%;
+    padding-left: 10px;
   }
 `;
 
 const Title = styled.p`
   font-family: "StabilGorteskMedium";
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 2vw;
   letter-spacing: 0.2px;
-  @media (max-width: 1024px) {
-    font-size: 30px;
-    line-height: 42px;
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     font-size: 20px;
   }
 `;
 
 const Description = styled.p`
-  font-size: 18px;
-  line-height: 32px;
-  @media (max-width: 1024px) {
-    font-size: 16px;
-    line-height: 28px;
-  }
-  @media (max-width: 425px) {
+  font-size: 1.2vw;
+  width: 80%;
+  @media (max-width: 768px) {
     font-size: 14px;
-    line-height: 20px;
+    width: 100%;
   }
 `;
