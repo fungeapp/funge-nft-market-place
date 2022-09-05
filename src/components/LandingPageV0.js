@@ -21,7 +21,7 @@ const LandingPageV0 = () => {
     <>
       <TopNavBarV0 />
       <Entry />
-      <Description />
+      {/* <Description />
       <ImageDescription
         title={"Collector Spotlight"}
         subtitle={"Robust Social Features"}
@@ -68,7 +68,7 @@ const LandingPageV0 = () => {
       <MeetOurTeam />
       <OurPlanForTheFuture />
       <GrowYourBrand />
-      <FooterV0 />
+      <FooterV0 /> */}
     </>
   );
 };

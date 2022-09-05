@@ -36,10 +36,10 @@ const Entry = () => {
         <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
           Join The Waitlist
         </Button>
-        <ImagesWrapper>
+        {/* <ImagesWrapper>
           <BrowserImage src="assets/images/Browser.png" />
           <MobileImage src="assets/images/Mobile.png" />
-        </ImagesWrapper>
+        </ImagesWrapper> */}
       </Wrapper>
       <div
         className="modal fade phoneModal"
@@ -94,9 +94,9 @@ const BackgroundImage = styled.img`
   left: 0;
   right: 0;
   z-index: -1;
-  width: 100%;
-  @media (max-width: 1024px) {
-    height: 150%;
+  width: 100vw;
+  @media (max-width: 768px) {
+    height: 100vh;
   }
 `;
 
@@ -106,28 +106,23 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 214.4px;
-  @media (max-width: 425px) {
-    padding-top: 100px;
-  }
+  padding-top: clamp(100px, 12vw, 214.4px);
 `;
 
 const Title = styled.p`
-  font-size: 36px;
+  font-size: 2.3vw;
   font-weight: 500;
   color: #fff;
-  line-height: 48px;
   @media (max-width: 425px) {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 16px;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 72px;
+  font-size: 4.5vw;
   font-weight: bold;
   color: #fff;
-  line-height: 93.6px;
+  line-height: 6vw;
   text-align: center;
   font-family: "StabilGorteskBold";
   @media (max-width: 425px) {
