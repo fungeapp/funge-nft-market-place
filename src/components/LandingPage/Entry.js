@@ -36,10 +36,7 @@ const Entry = () => {
         <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
           Join The Waitlist
         </Button>
-        {/* <ImagesWrapper>
-          <BrowserImage src="assets/images/Browser.png" />
-          <MobileImage src="assets/images/Mobile.png" />
-        </ImagesWrapper> */}
+        <Image src="assets/images/EntryImg.png" />
       </Wrapper>
       <div
         className="modal fade phoneModal"
@@ -106,7 +103,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: clamp(100px, 12vw, 214.4px);
+  padding-top: clamp(100px, 11vw, 214.4px);
 `;
 
 const Title = styled.p`
@@ -139,39 +136,19 @@ const Button = styled.button`
   font-family: "StabilGorteskBold";
   color: #000;
   border: none;
-  margin-top: 37.6px;
+  margin-top: 2vw;
   @media (max-width: 425px) {
-    margin-top: 24px;
     padding: 13.2px 54.5px;
     font-size: 14px;
   }
 `;
 
-const ImagesWrapper = styled.div`
-  position: relative;
-  margin-top: 85.8px;
-  margin-left: -170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 1024px) {
-    margin-top: 38px;
-    margin-left: -30px;
-  }
-`;
-
-const BrowserImage = styled.img`
-  @media (max-width: 1024px) {
-    width: 80%;
-  }
-`;
-
-const MobileImage = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: -190px;
-  @media (max-width: 1024px) {
-    width: 30%;
-    right: 0;
+const Image = styled.img`
+  width: 80%;
+  padding-left: 30px;
+  margin-top: 5vw;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 10px;
   }
 `;
