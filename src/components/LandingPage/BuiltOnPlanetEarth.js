@@ -3,57 +3,71 @@ import styled from "styled-components";
 
 const BuiltOnPlanetEarth = () => {
   return (
-    <section className="collection my-5 pb-5">
-      <div className="container">
-        <div className="row align-items-center ">
-          <div className="col-md-7 my-4 ps-4">
-            <br />
-            <br />
-            <br />
-            <Title>
-              Built on planet earth, <br />
-              for planet earth
-            </Title>
-            <Description>
-              Being earth-conscious and taking responsibility for climate change
-              is at the core of who we are and what we do.
-              <br />
-              <br />
-              That’s why we are 100% carbon neutral, counterbalancing the
-              entirety of our CO2 footprint for a net-zero output.
-            </Description>
-          </div>
-
-          <GIF src="./assets/videos/eco_funge_section_low.gif" />
-        </div>
+    <Wrapper>
+      <div>
+        <Title>
+          Built on planet earth, <br />
+          for planet earth
+        </Title>
+        <Description>
+          Being earth-conscious and taking responsibility for climate change is
+          at the core of who we are and what we do.
+          <br />
+          <br />
+          That’s why we are 100% carbon neutral, counterbalancing the entirety
+          of our CO2 footprint for a net-zero output.
+        </Description>
       </div>
-    </section>
+      <GIF src="./assets/videos/eco_funge_section_low.gif" />
+    </Wrapper>
   );
 };
 
 export default BuiltOnPlanetEarth;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 10vw;
+  padding-top: 10vw;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 7vw;
+    padding-top: 10vw;
+  }
+`;
+
 const Title = styled.p`
   font-family: "StabilGorteskBold";
-  font-size: 52px;
+  font-size: 3vw;
   letter-spacing: 0.2px;
-  line-height: 52px;
-  @media (max-width: 1024px) {
+  line-height: 3vw;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
   }
   @media (max-width: 425px) {
-    font-size: 20px;
-    line-height: 25px;
+    text-align: start;
   }
 `;
 
 const Description = styled.p`
-  font-size: 25px;
-  line-height: 34px;
-  @media (max-width: 1024px) {
+  font-size: 1.4vw;
+  width: 80%;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 14px;
+    margin: auto;
   }
   @media (max-width: 425px) {
-    font-size: 14px;
-    line-height: 20px;
+    text-align: start;
+    margin: 0;
+    width: 80%;
   }
 `;
 
@@ -64,6 +78,8 @@ const GIF = styled.img`
   object-position: center;
   margin-top: 50px;
   @media (max-width: 1024px) {
+    width: 324px;
+    height: 474px;
   }
   @media (max-width: 425px) {
     height: 423px;

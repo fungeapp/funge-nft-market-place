@@ -1,88 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import env from "react-dotenv";
-import axios from "axios";
 
 const Entry = () => {
-  const [emailaddress, setemailaddress] = useState();
-  const [registrationstatus, setregistrationstatus] = useState(
-    "Enter your Email to continue"
-  );
-
-  const registerEmailAddress = async (e) => {
-    setregistrationstatus("registering.....");
-    console.log(`register ${emailaddress}`);
-    axios({
-      method: "post",
-      url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/register/${emailaddress}`,
-    }).then((response) => {
-      console.log(`${JSON.stringify(response)}`);
-      setregistrationstatus(
-        "You're on the Waitlist.  You may close this window"
-      );
-    });
-  };
-
   return (
-    <>
-      <Wrapper>
-        <BackgroundImage src="assets/images/Background.png" />
-        <Title>Your gateway to the creative economy</Title>
-        <Subtitle>
-          Trade, Connect and Earn
-          <br />
-          like never before.
-        </Subtitle>
-        <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
-          Join The Waitlist
-        </Button>
-        <ImagesWrapper>
-          <BrowserImage src="assets/images/Browser.png" />
-          <MobileImage src="assets/images/Mobile.png" />
-        </ImagesWrapper>
-      </Wrapper>
-      <div
-        className="modal fade phoneModal"
-        id="waitListModal"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                type="button"
-                className="btn-close funge-modal-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body px-5">
-              <h4 className="w-700">Join the Waitlist</h4>
-              <p className="text-black-50">{registrationstatus}</p>
-              <input
-                type="text"
-                className="login-input mb-4 w-100"
-                placeholder="Email"
-                onChange={(e) => setemailaddress(e.target.value)}
-              />
-              <button
-                className="btn btn-primary w-100"
-                onClick={(e) => registerEmailAddress(e)}
-              >
-                Subscribe
-              </button>
-              <br />
-              <br />
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <Wrapper>
+      <BackgroundImage src="assets/images/Background.png" />
+      <Title>Your gateway to the creative economy</Title>
+      <Subtitle>
+        Trade, Connect and Earn
+        <br />
+        like never before.
+      </Subtitle>
+      <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
+        Join The Waitlist
+      </Button>
+      <Image src="assets/images/EntryImg.png" />
+    </Wrapper>
   );
 };
 
@@ -94,9 +27,9 @@ const BackgroundImage = styled.img`
   left: 0;
   right: 0;
   z-index: -1;
-  width: 100%;
-  @media (max-width: 1024px) {
-    height: 150%;
+  width: 100vw;
+  @media (max-width: 768px) {
+    height: 100vh;
   }
 `;
 
@@ -106,28 +39,23 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 214.4px;
-  @media (max-width: 425px) {
-    padding-top: 100px;
-  }
+  padding-top: clamp(100px, 11vw, 214.4px);
 `;
 
 const Title = styled.p`
-  font-size: 36px;
+  font-size: 2.3vw;
   font-weight: 500;
   color: #fff;
-  line-height: 48px;
   @media (max-width: 425px) {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 16px;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 72px;
+  font-size: 4.5vw;
   font-weight: bold;
   color: #fff;
-  line-height: 93.6px;
+  line-height: 6vw;
   text-align: center;
   font-family: "StabilGorteskBold";
   @media (max-width: 425px) {
@@ -144,39 +72,19 @@ const Button = styled.button`
   font-family: "StabilGorteskBold";
   color: #000;
   border: none;
-  margin-top: 37.6px;
+  margin-top: 2vw;
   @media (max-width: 425px) {
-    margin-top: 24px;
     padding: 13.2px 54.5px;
     font-size: 14px;
   }
 `;
 
-const ImagesWrapper = styled.div`
-  position: relative;
-  margin-top: 85.8px;
-  margin-left: -170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 1024px) {
-    margin-top: 38px;
-    margin-left: -30px;
-  }
-`;
-
-const BrowserImage = styled.img`
-  @media (max-width: 1024px) {
-    width: 80%;
-  }
-`;
-
-const MobileImage = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: -190px;
-  @media (max-width: 1024px) {
-    width: 30%;
-    right: 0;
+const Image = styled.img`
+  width: 80%;
+  padding-left: 30px;
+  margin-top: 5vw;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 10px;
   }
 `;

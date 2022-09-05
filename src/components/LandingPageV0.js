@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import env from "react-dotenv";
+import axios from "axios";
+
 import TopNavBarV0 from "./LandingPage/TopNavBarV0";
 import FooterV0 from "./LandingPage/FooterV0";
 
@@ -17,6 +20,25 @@ import OurPlanForTheFuture from "./LandingPage/OurPlanForTheFuture";
 import GrowYourBrand from "./LandingPage/GrowYourBrand";
 
 const LandingPageV0 = () => {
+  const [emailaddress, setemailaddress] = useState();
+  const [registrationstatus, setregistrationstatus] = useState(
+    "Enter your Email to continue"
+  );
+
+  const registerEmailAddress = async (e) => {
+    setregistrationstatus("registering.....");
+    console.log(`register ${emailaddress}`);
+    axios({
+      method: "post",
+      url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/register/${emailaddress}`,
+    }).then((response) => {
+      console.log(`${JSON.stringify(response)}`);
+      setregistrationstatus(
+        "You're on the Waitlist.  You may close this window"
+      );
+    });
+  };
+
   return (
     <>
       <TopNavBarV0 />
@@ -47,6 +69,7 @@ const LandingPageV0 = () => {
         image1={"assets/images/LandingPage3.png"}
       />
       <ImageDescription
+        noMarginBottom
         title={"Reward Spotlight"}
         subtitle={"Engagement Incentives"}
         description={
@@ -62,6 +85,7 @@ const LandingPageV0 = () => {
       <TalentMarketPlace />
       <Principles />
       <BuiltOnPlanetEarth />
+      {/* Start here */}
       <FungeCommunity />
       <TokenUsage />
       <Tokenomics />
@@ -69,6 +93,47 @@ const LandingPageV0 = () => {
       <OurPlanForTheFuture />
       <GrowYourBrand />
       <FooterV0 />
+      <div
+        className="modal fade phoneModal"
+        id="waitListModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabIndex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                type="button"
+                className="btn-close funge-modal-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body px-5">
+              <h4 className="w-700">Join the Waitlist</h4>
+              <p className="text-black-50">{registrationstatus}</p>
+              <input
+                type="text"
+                className="login-input mb-4 w-100"
+                placeholder="Email"
+                onChange={(e) => setemailaddress(e.target.value)}
+              />
+              <button
+                className="btn btn-primary w-100"
+                onClick={(e) => registerEmailAddress(e)}
+              >
+                Subscribe
+              </button>
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
