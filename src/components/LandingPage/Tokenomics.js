@@ -40,7 +40,9 @@ const Tokenomics = () => {
             <BoldText>12%</BoldText>Reserve - (12,000,000)
           </Text>
         </Left>
-        <Image src="./assets/images/Tokenomics.png" />
+        <Right>
+          <Image src="./assets/images/Tokenomics.png" />
+        </Right>
       </Card>
     </Wrapper>
   );
@@ -49,25 +51,21 @@ const Tokenomics = () => {
 export default Tokenomics;
 
 const Wrapper = styled.div`
-  margin: 0 160px;
-  margin-bottom: 200px;
-  @media (max-width: 1024px) {
-    margin: 0 50px;
-  }
-  @media (max-width: 425px) {
-    margin: 0 20px;
+  padding: 0 10vw;
+  padding-top: 8vw;
+  @media (max-width: 768px) {
+    padding: 0 7vw;
+    padding-top: 8vw;
   }
 `;
 
 const Title = styled.p`
-  font-size: 60px;
+  font-size: 3vw;
   font-family: "StabilGorteskBold";
   text-align: center;
-  margin-bottom: 70px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    font-size: 30px;
+  margin-bottom: 4vw;
+  @media (max-width: 768px) {
+    font-size: 20px;
     margin-bottom: 30px;
   }
 `;
@@ -81,10 +79,7 @@ const Card = styled.div`
   box-shadow: 0px 64px 94px rgba(0, 0, 0, 0.05);
   background-color: #fff;
   padding: 50px 0 50px 50px;
-  @media (max-width: 1024px) {
-    flex-direction: column-reverse;
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column-reverse;
     border: 0px solid #e1e1e1;
     padding: 0;
@@ -96,40 +91,38 @@ const Left = styled.div`
   flex: 1;
 `;
 
+const Right = styled.div`
+  flex: 2;
+`;
+
 const CardTitle = styled.p`
-  font-size: 40px;
+  font-size: 2vw;
   font-family: "StabilGorteskMedium";
   letter-spacing: 0.2px;
-  margin-bottom: 44px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    font-size: 20px;
-    margin-bottom: 19px;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 20px;
     text-align: center;
   }
 `;
 
 const CardSubtitle = styled.p`
-  font-size: 32px;
+  font-size: 1.5vw;
   font-family: "StabilGorteskMedium";
   color: #71afac;
-  margin-bottom: 49px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    font-size: 20px;
-    margin-bottom: 19px;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 20px;
     text-align: center;
   }
 `;
 
 const Text = styled.p`
-  font-size: 20px;
+  font-size: 1.1vw;
   display: flex;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     font-size: 14px;
     text-align: center;
     justify-content: center;
@@ -142,11 +135,8 @@ const BoldText = styled.p`
 `;
 
 const Image = styled.img`
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-  @media (max-width: 425px) {
-    width: 100%;
-    margin-bottom: 50px;
+  width: 100%;
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
   }
 `;

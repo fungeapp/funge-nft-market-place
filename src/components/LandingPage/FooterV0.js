@@ -120,10 +120,8 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.div`
-  @media (max-width: 1024px) {
-  }
   @media (max-width: 425px) {
-    margin-top: 300px;
+    margin-top: 400px;
   }
 `;
 
@@ -131,8 +129,6 @@ const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 1024px) {
-  }
   @media (max-width: 425px) {
     flex-direction: column;
   }
@@ -141,8 +137,6 @@ const SocialWrapper = styled.div`
 const RowWrapper = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: 1024px) {
-  }
   @media (max-width: 425px) {
     margin-bottom: ${(props) => (props.last ? 0 : 40)}px;
   }
@@ -157,10 +151,12 @@ const SocialMedia = styled.span`
 `;
 
 const Title = styled.p`
-  font-size: 16px;
+  font-size: 0.9vw;
   font-family: "StabilGorteskBold";
-  line-height: 20.8px;
-  @media (max-width: 1024px) {
+  line-height: 1.1vw;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 20.8px;
   }
   @media (max-width: 425px) {
     text-align: start;
@@ -168,11 +164,13 @@ const Title = styled.p`
 `;
 
 const Description = styled.p`
-  font-size: 14px;
-  line-height: 22.4px;
+  font-size: 0.8vw;
+  line-height: 1.1vw;
   letter-spacing: 0.1px;
   font-family: "StabilGorteskThin";
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 22.4px;
   }
   @media (max-width: 425px) {
     text-align: start;
@@ -190,35 +188,40 @@ const SignUpWrapper = styled.div`
 `;
 
 const FungeWrapper = styled.div`
-  @media (max-width: 1024px) {
-  }
   @media (max-width: 425px) {
     text-align: start;
   }
 `;
 
 const FungeDescription = styled.p`
-  font-size: 18px;
-  line-height: 28.8px;
+  font-size: 1vw;
+  line-height: 1.4vw;
   letter-spacing: 0.1px;
   font-family: "StabilGorteskThin";
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 28.8px;
   }
   @media (max-width: 425px) {
     text-align: start;
   }
 `;
 
-const Conatiner = styled.div``;
-
 const LinkTitle = styled.p`
-  font-size: 18px;
+  font-size: 1vw;
   font-family: "StabilGorteskBold";
-  line-height: 28px;
+  line-height: 1.4vw;
   letter-spacing: 0.35px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 `;
 
 const StyledLink = styled(Link)`
-  font-size: 14px;
+  font-size: 0.8vw;
   letter-spacing: 0.35px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;

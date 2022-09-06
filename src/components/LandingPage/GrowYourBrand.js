@@ -3,10 +3,7 @@ import styled from "styled-components";
 
 const GrowYourBrand = () => {
   return (
-    <section
-      className="position-relative"
-      style={{ height: 400, paddingTop: 100, paddingBottom: 100 }}
-    >
+    <Wrapper>
       <BackgroundImage />
       <div className="container-fluid">
         <div className="row">
@@ -26,30 +23,31 @@ const GrowYourBrand = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Wrapper>
   );
 };
 
 export default GrowYourBrand;
 
+const Wrapper = styled.div`
+  position: relative;
+  padding: 7vw 0;
+`;
+
 const Title = styled.p`
-  font-size: 40px;
+  font-size: 2vw;
   font-family: "StabilGorteskBold";
   letter-spacing: 0.2px;
   color: #183b56;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    font-size: 30px;
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 18px;
+  font-size: 1.2vw;
   color: #5a7184;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     font-size: 16px;
   }
 `;
@@ -61,8 +59,6 @@ const BackgroundImage = styled.img`
   z-index: -1;
   width: 100%;
   content: url("assets/images/CTA.png");
-  @media (max-width: 1024px) {
-  }
   @media (max-width: 425px) {
     top: 250px;
     content: url("assets/images/CTA1.png");
