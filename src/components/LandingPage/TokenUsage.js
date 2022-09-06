@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TokenUsage = () => {
   return (
-    <section className="collection mb-5 py-5">
+    <section>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-12 text-center">
@@ -33,8 +33,6 @@ const TokenUsage = () => {
                   <CardTitle>In-App Purchases</CardTitle>
                   <CardDescription>
                     Use your tokens for any purchase on the Funge App.
-                    <br />
-                    <br />
                   </CardDescription>
                 </div>
               </div>
@@ -54,8 +52,6 @@ const TokenUsage = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
     </section>
   );
 };
@@ -63,27 +59,27 @@ const TokenUsage = () => {
 export default TokenUsage;
 
 const Title = styled.p`
-  font-size: 36px;
+  font-size: 2vw;
   font-family: "StabilGorteskBold";
   letter-spacing: 0.2px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    font-size: 28px;
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
 const CardTitle = styled.p`
-  font-size: 20px;
+  font-size: 1vw;
   font-family: "StabilGorteskBold";
   letter-spacing: 0.2px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const CardDescription = styled.p`
-  font-size: 14px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    margin: 0 80px;
+  font-size: 0.8vw;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 0 10vw;
   }
 `;

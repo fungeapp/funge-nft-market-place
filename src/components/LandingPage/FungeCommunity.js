@@ -22,8 +22,6 @@ const FungeCommunity = () => {
           </Description>
         </TextWrapper>
       </div>
-      <br />
-      <br />
     </Wrapper>
   );
 };
@@ -32,31 +30,21 @@ export default FungeCommunity;
 
 const Wrapper = styled.div`
   position: relative;
-  padding-top: 400px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
-    padding-top: 100px;
-  }
+  padding: 15vw 0;
 `;
 
 const BackgroundImage = styled.img`
   position: absolute;
-  top: -600px;
+  top: -35vw;
   left: 0;
   z-index: -1;
   width: 100%;
-  @media (max-width: 1024px) {
-    top: -200px;
-  }
-  @media (max-width: 425px) {
-    top: -100px;
-  }
 `;
 
 const Image = styled.img`
-  @media (max-width: 1024px) {
-    width: 100%;
+  width: 65%;
+  @media (max-width: 768px) {
+    width: 80%;
   }
   @media (max-width: 425px) {
     width: 100%;
@@ -64,38 +52,30 @@ const Image = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  margin: 0 200px;
-  margin-top: 185px;
-  @media (max-width: 1024px) {
-    margin: 0 100px;
-    margin-top: 185px;
-  }
-  @media (max-width: 425px) {
-    margin: 0 50px;
-    margin-top: 50px;
+  margin: 0 18vw;
+  margin-top: 10vw;
+  @media (max-width: 768px) {
+    margin: 0 7vw;
+    margin-top: 10vw;
   }
 `;
 
 const Title = styled.p`
-  font-size: 51px;
+  font-size: 3vw;
   font-family: "StabilGorteskBold";
   text-align: center;
-  line-height: 66.3px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  line-height: 4vw;
+  @media (max-width: 768px) {
     font-size: 20px;
     line-height: 26px;
   }
 `;
 
 const Description = styled.p`
-  font-size: 25px;
+  font-size: 1.4vw;
   text-align: center;
-  line-height: 40px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 425px) {
+  line-height: 2.3vw;
+  @media (max-width: 768px) {
     font-size: 14px;
     line-height: 20px;
   }

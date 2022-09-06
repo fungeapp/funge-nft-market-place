@@ -7,7 +7,7 @@
 .endles,
 .footer_top,
 .new_login .new_sign_up {
-    background: #001413 !important;
+  background: #001413 !important;
 }
 
 .hiro_heading,
@@ -43,11 +43,11 @@ tr,
 .footer .footer_info h6,
 .new_sign_up h2,
 .new_sign_up p {
-    color: white !important;
+  color: white !important;
 }
 
 .place_bid_box .icon_btn svg path {
-    fill: white;
+  fill: white;
 }
 
 .hiro_slider .place_bid_box,
@@ -56,13 +56,12 @@ tr,
 .footer_top .top_resources,
 .endless-possibilities .gray_box,
 .footer {
-    background: #081D25;
+  background: #081d25;
 }
 
 .new_login .new_sign_up .nav-item .active {
-    color: #71AFAC !important;
+  color: #71afac !important;
 }
-
 
 /*--------------------------------------------------
 [1. index home page end  ]
@@ -72,576 +71,835 @@ tr,
 --------------------------------------------------*/
 
 .sign-up .bg-light {
-    background-color: #001413 !important;
-    height: 100vh !important;
+  background-color: #001413 !important;
+  height: 100vh !important;
 }
 
 .sign-up {
-    background: #081D25;
+  background: #081d25;
 
-    height: 100vh !important;
+  height: 100vh !important;
 }
 
 .sign-up .form_section .modal-dialog .btn-close {
-    color: white !important;
+  color: white !important;
 }
 
 .sign-up .modal {
-    background: #00000021;
-
+  background: #00000021;
 }
 
 .sign-up .card {
-    background: #081D25;
+  background: #081d25;
 }
 
 .sign-up .card .card_heading {
-    color: white;
+  color: white;
 }
 
 .sign-up .card .card_pera {
-    color: #9CA3AF;
+  color: #9ca3af;
 }
 
 .sign-up .card .d-flex .ETH {
-    color: white;
+  color: white;
 }
 
 .sign-up .card .d-flex .rating {
-    color: #19976A;
+  color: #19976a;
 }
 
 .sign-up .card_botom_text {
-    color: white;
+  color: white;
 }
 
 .sign-up .bg-white {
-    background-color: #081D25 !important;
+  background-color: #081d25 !important;
 }
 
 .sign-up .carousel-indicators [data-bs-target] {
-    background-color: #E8EBEC !important;
+  background-color: #e8ebec !important;
 }
 
 .sign-up .carousel-indicators .active {
-    background-color: #BCE0DF !important;
+  background-color: #bce0df !important;
 }
 
 .sign-up .form .form_heading {
-    color: white;
+  color: white;
 }
 
 .sign-up .form_section .form_devder span {
-    color: #71AFAC !important;
+  color: #71afac !important;
 }
 
 .sign-up .form-control {
-    background: #001413;
-    border: 1px solid #E7E8EA;
+  background: #001413;
+  border: 1px solid #e7e8ea;
 }
 
 .sign-up .form-control::placeholder {
-    color: #A0A1AB !important;
+  color: #a0a1ab !important;
 }
 
-
 .sign-up .form_section .form .model_btn {
-    border: 1px solid #D1D5DB !important;
-    color: white !important;
+  border: 1px solid #d1d5db !important;
+  color: white !important;
 }
 
 .sign-up .form_section .modal-content {
-    background: #081D25;
+  background: #081d25;
 }
 
 .sign-up .form_section .modal-dialog .modal_heading {
-    color: white;
+  color: white;
 }
 
-
 .sign-up .phone_verification_modal .number {
-    color: white;
+  color: white;
 }
 
 .sign-up .phone_verification_modal .phone_icon_2 {
-    background: #001413;
+  background: #001413;
 }
 
 .sign-up .modal_pera span {
-    color: white;
+  color: white;
 }
 
 .sign-up .modal-body .input-group {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 /*--------------------------------------------------
 [2. login and sign up  end 28-2-2022  ]
 --------------------------------------------------*/
 
-
-
-
-
-
 /*--------------------------------------------------
 [3. main home page  end 2-3-2022  ]
 --------------------------------------------------*/
 
-
 .main_home_content .challenge {
-    background: #081D25;
+  background: #081d25;
 }
 
 .main_home_content {
-    background: #001413 !important;
+  background: #001413 !important;
 }
 
 .main_home_content .challenge .content h3 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .challenge .content p {
-    color: white;
+  color: white;
 }
 
 .main_home_content .challenge .content a {
-    color: #71AFAC;
+  color: #71afac;
 }
 
 .main_home_content .challenge .icon {
-    background: #0D3642;
+  background: #0d3642;
 }
 
-
 .main_home_content .more h3 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .more h3::before {
-    background: #A1AEB2;
-
+  background: #a1aeb2;
 }
 
 .main_home_content .more a {
-    color: white;
+  color: white;
 }
 
 .main_home_content .more .right_arrow svg path {
-    fill: white;
+  fill: white;
 }
 
-
 .main_home_content .up-to-date {
-    background: #081D25;
+  background: #081d25;
 }
 
 .main_home_content .up-to-date h3 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .up-to-date a {
-    color: #71AFAC;
+  color: #71afac;
 }
 
 .main_home_content .up-to-date .content h5 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .artists {
-    background: #0D3642;
+  background: #0d3642;
 }
 
 .main_home_content .artists h3 {
-    color: white;
+  color: white;
 }
-
 
 .main_home_content .artists .artists_info h5 {
-    color: white;
+  color: white;
 }
-
 
 .main_home_content .write_post {
-    background: #081D25;
+  background: #081d25;
 }
 
-
 .main_home_content .full_post {
-    background: #081D25;
+  background: #081d25;
 }
 
 .main_home_content .full_post .back {
-    color: white;
-
+  color: white;
 }
 
 .main_home_content .full_post h3 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .full_post .more_option svg path {
-    fill: white;
+  fill: white;
 }
 
-
 .main_home_content .full_post .place_bid {
-    background: transparent;
+  background: transparent;
 }
 
 .main_home_content .full_post .place_bid .offer h6 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .full_post .place_bid .offer h5 {
-    color: white;
+  color: white;
 }
 
-
 .main_home_content .full_post .place_bid .last {
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .main_home_content .full_post p {
-    color: white;
+  color: white;
 }
 
 .main_home_content .full_post .who_like p {
-    color: white;
+  color: white;
 }
 
-
 .main_home_content .full_post .re_post_on_my_profile {
-    border: 0.8px solid #D0D7D9;
+  border: 0.8px solid #d0d7d9;
 }
 
 .main_home_content .full_post .like .icon_btn svg path {
-    fill: white;
+  fill: white;
 }
 
 .main_home_content .full_post .comment .icon_btn svg path {
-    stroke: white;
+  stroke: white;
 }
 
 .main_home_content .full_post .comment .icon_btn {
-    color: white;
+  color: white;
 }
 
 .main_home_content .full_post .share .icon_btn svg path {
-    fill: white;
+  fill: white;
 }
 
 .main_home_content .full_post .re-post .icon_btn svg path {
-    stroke: white;
+  stroke: white;
 }
 
-
 .main_home_content .top-collections {
-    background:
-        #081D25;
-
+  background: #081d25;
 }
 
 .main_home_content .top-collections a {
-    color: #71AFAC;
+  color: #71afac;
 }
 
 .main_home_content .top-collections h3 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .top-collections .collaction_1 h2 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .top-collections .collaction_1 .collactin_info h3 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .top-collections .collaction_1 .collactin_info .ETH_info h4 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .write_post .box {
-    background: transparent;
+  background: transparent;
 }
 
-@media(max-width:425px) {
+@media (max-width: 425px) {
+  .main_home_content .write_post .box .form-control {
+    background: #0d3642;
+  }
 
-    .main_home_content .write_post .box .form-control {
-        background: #0D3642;
-    }
-
-    .main_home_content .write_post .box {
-        background-color: transparent;
-        padding: 0;
-
-    }
-
+  .main_home_content .write_post .box {
+    background-color: transparent;
+    padding: 0;
+  }
 }
-
-
 
 /* main_home_content section end */
 
-
 /* click on comment section style start  */
 .main_home_content .full_post .comment_click_section {
-    border-top: 2px solid #d0d7d942;
+  border-top: 2px solid #d0d7d942;
 }
 
 .main_home_content .full_post .comment_click_section .card-body {
-
-    border-left: 2px solid #d0d7d942;
+  border-left: 2px solid #d0d7d942;
 }
 
 .main_home_content .full_post .comment_click_section .card-body .write_comment {
-    border-bottom: 2px solid #d0d7d942;
+  border-bottom: 2px solid #d0d7d942;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .write_comment .box {
-    background: #0D3642;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .write_comment
+  .box {
+  background: #0d3642;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .write_comment .comment_fuction .btn-primary:hover {
-    background-color: transparent !important;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .write_comment
+  .comment_fuction
+  .btn-primary:hover {
+  background-color: transparent !important;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .comment_replay {
-    border-bottom: 2px solid #d0d7d942;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .comment_replay {
+  border-bottom: 2px solid #d0d7d942;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .comment_replay .user_profile_icon .user_info h3 {
-    color: white;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .comment_replay
+  .user_profile_icon
+  .user_info
+  h3 {
+  color: white;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .comment_replay .user_profile_icon .user_info h4 {
-    color: white;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .comment_replay
+  .user_profile_icon
+  .user_info
+  h4 {
+  color: white;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .comment_replay .user_profile_icon .user_info span {
-    color: #71AFAC;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .comment_replay
+  .user_profile_icon
+  .user_info
+  span {
+  color: #71afac;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .comment_replay .user_replay {
-    color: white;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .comment_replay
+  .user_replay {
+  color: white;
 }
 
-.main_home_content .full_post .comment_click_section .card-body .comment_replay .user_replay {
-    color: white;
+.main_home_content
+  .full_post
+  .comment_click_section
+  .card-body
+  .comment_replay
+  .user_replay {
+  color: white;
 }
 
-@media(max-width:425px) {
-    .main_home_content .full_post .comment_click_section .card-body .write_comment .box {
-        background-color: transparent;
-    }
+@media (max-width: 425px) {
+  .main_home_content
+    .full_post
+    .comment_click_section
+    .card-body
+    .write_comment
+    .box {
+    background-color: transparent;
+  }
 
-    .main_home_content .full_post .comment_click_section .card-body .write_comment .box form {
-        background-color: #0D3642;
-    }
+  .main_home_content
+    .full_post
+    .comment_click_section
+    .card-body
+    .write_comment
+    .box
+    form {
+    background-color: #0d3642;
+  }
 }
 
 /* click on comment section style end*/
 
-
-
 /* more option section style start 10-3-2022  */
 
 .main_home_content .full_post .more_option_drop_down {
-    background: #0D3642;
+  background: #0d3642;
 }
 
 .main_home_content .full_post .more_option_drop_down .more_option_content h2 {
-    color: white;
+  color: white;
 }
 
 .main_home_content .full_post .more_option_drop_down .more_option_content p {
-    color: white;
+  color: white;
 }
 
 .main_home_content .full_post .more_option:focus {
-    background-color: #0D3642;
-    border-radius: 100px;
-    padding: 5px;
+  background-color: #0d3642;
+  border-radius: 100px;
+  padding: 5px;
 }
 
 /* more option section style end */
 
-
 /* new header  */
 .main_home_content .returning_user_home_header {
-    background: #081D25;
+  background: #081d25;
 }
 
-.main_home_content .returning_user_home_header .navbar .language .btn-secondary {
-    background: #0D3642 !important;
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .language
+  .btn-secondary {
+  background: #0d3642 !important;
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .input-group .form-control {
-    background: #0D3642;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .input-group
+  .form-control {
+  background: #0d3642;
 }
 
-.main_home_content .returning_user_home_header .navbar .input-group .input-group-text {
-    background: #0D3642;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .input-group
+  .input-group-text {
+  background: #0d3642;
 }
 
-.main_home_content .returning_user_home_header .navbar .input-group .input-group-text svg path {
-    stroke: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .input-group
+  .input-group-text
+  svg
+  path {
+  stroke: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .input-group .input-group-text svg circle {
-    stroke: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .input-group
+  .input-group-text
+  svg
+  circle {
+  stroke: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .language .btn-secondary svg path {
-    fill: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .language
+  .btn-secondary
+  svg
+  path {
+  fill: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .menu .dropdown .btn-secondary {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .menu
+  .dropdown
+  .btn-secondary {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .menu .dropdown .btn-secondary:focus {
-    color: #0D3642 !important;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .menu
+  .dropdown
+  .btn-secondary:focus {
+  color: #0d3642 !important;
 }
 
-.main_home_content .returning_user_home_header .navbar .menu .dropdown .btn-secondary:hover {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .menu
+  .dropdown
+  .btn-secondary:hover {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .profile .dropdown .btn-secondary {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .dropdown
+  .btn-secondary {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .profile .dropdown .btn-secondary svg path {
-    fill: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .dropdown
+  .btn-secondary
+  svg
+  path {
+  fill: white;
 }
 
 .main_home_content .returning_user_home_header .navbar .menu .dropdown-menu {
-    background: #0D3642 !important;
-    color: white;
+  background: #0d3642 !important;
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .menu .dropdown-menu .menu_list a {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .menu
+  .dropdown-menu
+  .menu_list
+  a {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .menu .dropdown-menu .menu_list svg path {
-    fill: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .menu
+  .dropdown-menu
+  .menu_list
+  svg
+  path {
+  fill: white;
 }
 
 .main_home_content .returning_user_home_header .navbar .menu .dropdown-menu h2 {
-    color: white;
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .menu .dropdown-menu .join_community_section h3 {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .menu
+  .dropdown-menu
+  .join_community_section
+  h3 {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .icon .settings .dropdown-menu {
-    background-color: #081d25 !important;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .dropdown-menu {
+  background-color: #081d25 !important;
 }
 
-.main_home_content .returning_user_home_header .navbar .icon .settings .setting_more_option_content h2,
-.main_home_content .returning_user_home_header .navbar .icon .settings .setting_more_option_content p {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .setting_more_option_content
+  h2,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .setting_more_option_content
+  p {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .icon .settings .dropdown-menu .user_profile {
-    background: #0d3642;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .dropdown-menu
+  .user_profile {
+  background: #0d3642;
 }
 
-.main_home_content .returning_user_home_header .navbar .icon .settings .dropdown-menu .user_profile h2,
-.main_home_content .returning_user_home_header .navbar .icon .settings .dropdown-menu .user_profile p {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .dropdown-menu
+  .user_profile
+  h2,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .dropdown-menu
+  .user_profile
+  p {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .icon .settings .dropdown-menu hr {
-    background: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .icon
+  .settings
+  .dropdown-menu
+  hr {
+  background: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu {
-    background: #0D3642;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu {
+  background: #0d3642;
 }
 
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu h2,
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu .tab-content .all_content h3,
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu .tab-content .all_content h6 {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu
+  h2,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu
+  .tab-content
+  .all_content
+  h3,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu
+  .tab-content
+  .all_content
+  h6 {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu .nav-pills .nav-link {
-    color: white !important;
-    background: #081D25;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu
+  .nav-pills
+  .nav-link {
+  color: white !important;
+  background: #081d25;
 }
 
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu .nav-pills .nav-item .active {
-    background: white;
-    color: black !important;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu
+  .nav-pills
+  .nav-item
+  .active {
+  background: white;
+  color: black !important;
 }
 
-.main_home_content .returning_user_home_header .navbar .notification .dropdown-menu .more_icon path {
-    fill: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .notification
+  .dropdown-menu
+  .more_icon
+  path {
+  fill: white;
 }
-
-
 
 .main_home_content .returning_user_home_header .navbar .profile .dropdown-menu {
-    background-color: #081d25 !important;
+  background-color: #081d25 !important;
 }
 
-.main_home_content .returning_user_home_header .navbar .profile .setting_more_option_content h2,
-.main_home_content .returning_user_home_header .navbar .profile .setting_more_option_content p {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .setting_more_option_content
+  h2,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .setting_more_option_content
+  p {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .profile .dropdown-menu .user_profile {
-    background: #0d3642;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .dropdown-menu
+  .user_profile {
+  background: #0d3642;
 }
 
-.main_home_content .returning_user_home_header .navbar .profile .dropdown-menu .user_profile h2,
-.main_home_content .returning_user_home_header .navbar .profile .dropdown-menu .user_profile p {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .dropdown-menu
+  .user_profile
+  h2,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .dropdown-menu
+  .user_profile
+  p {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .profile .dropdown-menu hr {
-    background: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .profile
+  .dropdown-menu
+  hr {
+  background: white;
 }
 
 .main_home_content .returning_user_home_header .navbar .message .dropdown-menu {
-    background: #0D3642;
+  background: #0d3642;
 }
 
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu h2,
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu .tab-content .all_content h3,
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu .tab-content .all_content h6,
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu .tab-content .all_content p {
-    color: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  h2,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  .tab-content
+  .all_content
+  h3,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  .tab-content
+  .all_content
+  h6,
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  .tab-content
+  .all_content
+  p {
+  color: white;
 }
 
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu .nav-pills .nav-link {
-    color: white !important;
-    background: #081D25;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  .nav-pills
+  .nav-link {
+  color: white !important;
+  background: #081d25;
 }
 
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu .nav-pills .nav-item .active {
-    background: white;
-    color: black !important;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  .nav-pills
+  .nav-item
+  .active {
+  background: white;
+  color: black !important;
 }
 
-.main_home_content .returning_user_home_header .navbar .message .dropdown-menu .more_icon path {
-    fill: white;
+.main_home_content
+  .returning_user_home_header
+  .navbar
+  .message
+  .dropdown-menu
+  .more_icon
+  path {
+  fill: white;
 }
 
 /* new header  */
-
 
 /*--------------------------------------------------
 [3. main home page  end   ]
 --------------------------------------------------*/
-
 
 /*--------------------------------------------------
 [3. profile page start  15-3-2022    ]
@@ -650,7 +908,7 @@ tr,
 .profile_content .profile_box,
 .profile_content .main_content .folder_collaction,
 .profile_content .main_content .wallet-address {
-    background: #081D25;
+  background: #081d25;
 }
 
 .profile_content .main_content .wallet-address h3,
@@ -667,59 +925,59 @@ tr,
 .profile_content .profile_box .follow_info .Following span,
 .profile_content .profile_box .quick_profile_info h4,
 .profile_content .profile_box .follow_info .follower span {
-    color: white;
+  color: white;
 }
 
 .profile_content .main_content .wallet-address .folder {
-    background: #0D3642;
+  background: #0d3642;
 }
 
-@media(max-width:767px) {
-    .profile_content .mobile_box {
-        background-color: #001413;
-    }
+@media (max-width: 768px) {
+  .profile_content .mobile_box {
+    background-color: #001413;
+  }
 
-    .main_content .profile_box .back {
-        color: white !important;
-    }
+  .main_content .profile_box .back {
+    color: white !important;
+  }
 
-    .main_content .profile_box .back figure svg path {
-        fill: white;
-    }
+  .main_content .profile_box .back figure svg path {
+    fill: white;
+  }
 
-    .profile_content .profile_box .mobile_box .follow_info_mobile p {
-        color: white;
-    }
+  .profile_content .profile_box .mobile_box .follow_info_mobile p {
+    color: white;
+  }
 
-    .profile_content .profile_box .mobile_box .follow_info_mobile .bg-light {
-        background: #081D25 !important;
-    }
+  .profile_content .profile_box .mobile_box .follow_info_mobile .bg-light {
+    background: #081d25 !important;
+  }
 
-    .profile_content .profile_box .mobile_box .follow_info_mobile .flor_vol h2 {
-        color: white;
-    }
+  .profile_content .profile_box .mobile_box .follow_info_mobile .flor_vol h2 {
+    color: white;
+  }
 
-    .profile_content .profile_box .mobile_box .follow_info_mobile .flor_vol h3 {
-        color: white;
-    }
+  .profile_content .profile_box .mobile_box .follow_info_mobile .flor_vol h3 {
+    color: white;
+  }
 
-    .profile_content .main_content {
-        background-color: #0D3642;
-    }
+  .profile_content .main_content {
+    background-color: #0d3642;
+  }
 
-    .profile_content .profile_box,
-    .profile_content .main_content .folder_collaction,
-    .profile_content .main_content .wallet-address {
-        background: transparent;
-    }
+  .profile_content .profile_box,
+  .profile_content .main_content .folder_collaction,
+  .profile_content .main_content .wallet-address {
+    background: transparent;
+  }
 
-    .profile_content .main_content .mobile_social_media {
-        background-color: #001413;
-    }
+  .profile_content .main_content .mobile_social_media {
+    background-color: #001413;
+  }
 
-    .profile_content .main_content .activity_info .nav-pills .nav-link {
-        background: #001413;
-    }
+  .profile_content .main_content .activity_info .nav-pills .nav-link {
+    background: #001413;
+  }
 }
 
 /*--------------------------------------------------
@@ -730,84 +988,83 @@ tr,
 [4. search page start    ]
 --------------------------------------------------*/
 .main_home_content .search_section {
-    background: #081D25;
+  background: #081d25;
 }
 
 .main_home_content .search_section .nft_listing .nft_details p {
-    color: white;
+  color: white;
 }
 
 .main_home_content .search_section .nav-pills {
-    background: #001413;
+  background: #001413;
 }
 
 .main_home_content .search_section .nav-pills .nav-item .nav-link {
-    color: white;
+  color: white;
 }
 
 /*--------------------------------------------------
 [4. search page end    ]
 --------------------------------------------------*/
 
-
 /*--------------------------------------------------
 [5. create post modal start    ]
 --------------------------------------------------*/
 
 .create_post_model .modal .modal-content {
-    background: #0D3642;
-    color: white;
+  background: #0d3642;
+  color: white;
 }
 
 .create_post_model .modal .modal-body .nft_post {
-    background: #081D25;
+  background: #081d25;
 }
 
 .create_post_model .modal .modal-body .nft_post h3 {
-    color: white;
+  color: white;
 }
 
 .create_post_model .modal .edite_post h3 {
-    color: white;
+  color: white;
 }
 
 .create_post_model .modal .edite_post .form-select {
-    background: transparent;
-    color: white;
+  background: transparent;
+  color: white;
 }
 
 .create_post_model .modal .edite_post .form-control {
-    background: transparent;
+  background: transparent;
 }
 
 .create_post_model .modal .edite_post .type_of_sell h3 {
-    color: white;
+  color: white;
 }
 
 .create_post_model .modal .post_review h3,
 .create_post_model .modal .post_review p {
-    color: white;
+  color: white;
 }
 
 .create_post_model .modal .post_review .btn-primary,
 .create_post_model .modal .post_review .btn-secondary {
-    color: white !important;
+  color: white !important;
 }
 
 .create_post_model .modal .back .icon_btn {
-    color: white !important;
+  color: white !important;
 }
 
 .create_post_model .modal .back .icon_btn path {
-    fill: white;
+  fill: white;
 }
 
 .create_post_model .modal button svg path {
-    fill: white;
+  fill: white;
 }
 
 .create_post_model .modal .select_folder .btn-secondary {
-    color: white !important;
+  color: white !important;
 }
 
 /*--------------------------------------------------
@@ -821,76 +1078,100 @@ tr,
 .explore .filter_heading h4,
 .explore .archive_heading,
 .explore .archive_heading span {
-    color: white;
+  color: white;
 }
 
 .explore .filter_btn_row .btn-secondary {
-    background: #71AFAC !important;
-    color: white;
-    border: none;
+  background: #71afac !important;
+  color: white;
+  border: none;
 }
 
 .explore .filter_btn_row .btn-secondary:focus {
-    color: black;
-    border: none;
+  color: black;
+  border: none;
 }
 
 .explore .filter_btn_row .dropdown .dropdown-menu {
-    background-color: #0D3642;
-    box-shadow: none;
+  background-color: #0d3642;
+  box-shadow: none;
 }
 
 .explore .filter_btn_row .dropdown .dropdown-menu .collection .input-group {
-    background: transparent;
+  background: transparent;
 }
 
 .explore .filter_btn_row .dropdown .dropdown-menu .collection .form-control {
-    background: transparent;
+  background: transparent;
 }
 
-.explore .filter_btn_row .dropdown .dropdown-menu .collection .input-group-text {
-    background: transparent;
+.explore
+  .filter_btn_row
+  .dropdown
+  .dropdown-menu
+  .collection
+  .input-group-text {
+  background: transparent;
 }
 
-.explore .filter_btn_row .dropdown .dropdown-menu .collection .input-group-text svg path {
-    stroke: white;
+.explore
+  .filter_btn_row
+  .dropdown
+  .dropdown-menu
+  .collection
+  .input-group-text
+  svg
+  path {
+  stroke: white;
 }
 
-.explore .filter_btn_row .dropdown .dropdown-menu .collection .input-group-text svg circle {
-    stroke: white;
+.explore
+  .filter_btn_row
+  .dropdown
+  .dropdown-menu
+  .collection
+  .input-group-text
+  svg
+  circle {
+  stroke: white;
 }
 
 .explore .filter_btn_row .dropdown .dropdown-menu .collection .scroll {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .explore .filter_btn_row .dropdown .dropdown-menu .collection .scroll h2 {
-    color: white;
+  color: white;
 }
 
 .explore .filter_btn_row .dropdown .dropdown-menu .date_range button {
-    background: #081D25;
-    color: white;
+  background: #081d25;
+  color: white;
 }
 
-.explore .filter_btn_row .dropdown .dropdown-menu .form-check .form-check-label {
-    color: white !important;
+.explore
+  .filter_btn_row
+  .dropdown
+  .dropdown-menu
+  .form-check
+  .form-check-label {
+  color: white !important;
 }
 
 .explore .nft_box {
-    background-color: #0D3642;
+  background-color: #0d3642;
 }
 
 .explore .nft_box .profile_name h2 {
-    color: white;
+  color: white;
 }
 
 .explore .nft_box .nft_details h2 {
-    color: white;
+  color: white;
 }
 
 .explore .nft_box .nft_details h4 {
-    color: white;
+  color: white;
 }
 
 /*--------------------------------------------------
@@ -905,7 +1186,7 @@ tr,
 .nft_detials .right_side .sales,
 .nft_detials .right_side .tab_section,
 .new_explore_page .item_listing .item {
-    background-color: #081D25;
+  background-color: #081d25;
 }
 
 .nft_detials .full_img .icon .icon_btn,
@@ -938,89 +1219,155 @@ tr,
 .nft_detials .right_side .tab_section .offer .offer_info span,
 .nft_detials .right_side .tab_section .offer .table tbody tr td h3,
 .nft_detials .right_side .tab_section .activity_tab .tab-content .sale h2,
-.nft_detials .right_side .tab_section .activity_tab .tab-content .sale_info .info h3,
-.nft_detials .right_side .tab_section .activity_tab .tab-content .sale_info .info h2,
-.nft_detials .right_side .tab_section .activity_tab .tab-content .sale_info .info_2 h5,
-.nft_detials .right_side .tab_section .activity_tab .tab-content .sale_info .info h4,
-.nft_detials .right_side .tab_section .activity_tab .tab-content .sale_info .info_2 h6,
-.nft_detials .right_side .tab_section .tab-content .price_history .dropdown .btn-secondary,
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .tab-content
+  .sale_info
+  .info
+  h3,
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .tab-content
+  .sale_info
+  .info
+  h2,
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .tab-content
+  .sale_info
+  .info_2
+  h5,
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .tab-content
+  .sale_info
+  .info
+  h4,
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .tab-content
+  .sale_info
+  .info_2
+  h6,
+.nft_detials
+  .right_side
+  .tab_section
+  .tab-content
+  .price_history
+  .dropdown
+  .btn-secondary,
 .explore .icon_btn,
 .new_explore_page .item_listing .heading {
-
-    color: white;
+  color: white;
 }
 
 .nft_detials .right_side .tab_section .nav-pills .nav-item .active {
-
-    color: #71AFAC;
-
+  color: #71afac;
 }
 
 .nft_detials .full_img .icon .icon_btn svg path {
-    stroke: white;
+  stroke: white;
 }
 
 .nft_detials .right_side .nft_info .icon_btn svg path {
-    fill: white;
+  fill: white;
 }
 
 .nft_detials .right_side .tab_section .properties .col-bg {
-    background-color: #3E5E68;
+  background-color: #3e5e68;
 }
 
 .nft_detials .left_side .comment_section .input_aria {
-    background-color: #0D3642;
+  background-color: #0d3642;
 }
 
 .nft_detials .left_side .comment_section .input_aria .form-control {
-    color: white;
+  color: white;
 }
 
-.nft_detials .left_side .comment_section .input_aria .form-control::placeholder {
-    color: white;
+.nft_detials
+  .left_side
+  .comment_section
+  .input_aria
+  .form-control::placeholder {
+  color: white;
 }
 
 .nft_detials .full_img .icon .icon_row .mobile_title {
-    color: white;
+  color: white;
 }
 
 .nft_detials .right_side .tab_section .tag a {
-    background-color: #3E5E68;
-    color: white;
+  background-color: #3e5e68;
+  color: white;
 }
 
-.nft_detials .right_side .tab_section .activity_tab .nav-pills .nav-item .nav-link {
-    color: white;
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .nav-pills
+  .nav-item
+  .nav-link {
+  color: white;
 }
 
-.nft_detials .right_side .tab_section .activity_tab .nav-pills .nav-item .active {
-    color: white;
-    background-color: #71AFAC;
-    border: 1px solid transparent;
+.nft_detials
+  .right_side
+  .tab_section
+  .activity_tab
+  .nav-pills
+  .nav-item
+  .active {
+  color: white;
+  background-color: #71afac;
+  border: 1px solid transparent;
 }
 
 .nft_detials .full_img .back svg path {
-    fill: white;
+  fill: white;
 }
 
 .nft_detials .full_img .back h3 {
-    color: white;
+  color: white;
 }
 
 .nft_detials .left_side .offcanvas-bottom {
-    background-color: #0D3642;
+  background-color: #0d3642;
 }
 
 .nft_detials .left_side .all_commetn h2 {
-    color: white;
+  color: white;
 }
 
-.nft_detials .left_side .offcanvas-bottom .offcanvas-body .comment_section .input_aria .form-control {
-    background-color: #3E5E68;
+.nft_detials
+  .left_side
+  .offcanvas-bottom
+  .offcanvas-body
+  .comment_section
+  .input_aria
+  .form-control {
+  background-color: #3e5e68;
 }
 
-.nft_detials .left_side .offcanvas-bottom .offcanvas-body .comment_section .input_aria .form-control::placeholder {
-    color: white;
+.nft_detials
+  .left_side
+  .offcanvas-bottom
+  .offcanvas-body
+  .comment_section
+  .input_aria
+  .form-control::placeholder {
+  color: white;
 }
 
 /*--------------------------------------------------
@@ -1033,7 +1380,7 @@ tr,
 
 .wallet_page .left_box,
 .wallet_page .right_box {
-    background-color: #081D25;
+  background-color: #081d25;
 }
 
 .wallet_page .market_value h3,
@@ -1052,56 +1399,68 @@ tr,
 .wallet_page .manage_wallet_modal .qr_modal_body .qr_box h4,
 .wallet_page .right_box .polgon_sectoin h2,
 .wallet_page .right_box .polgon_sectoin p {
-    color: white;
+  color: white;
 }
 
 .wallet_page .center_box .tab_section .box,
 .wallet_page .manage_wallet_modal .qr_modal_body .price,
 .wallet_page .manage_wallet_modal .qr_modal_body .qr_box,
 .wallet_page .right_box .polgon_sectoin {
-    background-color: #3E5E68;
+  background-color: #3e5e68;
 }
 
-@media(max-width:767px) {
-    .wallet_page .center_box .tab_section .box {
-        background: transparent;
-    }
+@media (max-width: 768px) {
+  .wallet_page .center_box .tab_section .box {
+    background: transparent;
+  }
 }
 
 .wallet_page .manage_wallet_modal .search_sectio .input-group {
-    background: #3E5E68;
-    border: none;
+  background: #3e5e68;
+  border: none;
 }
 
-.wallet_page .manage_wallet_modal .search_sectio .input-group .form-control::placeholder {
-    color: white;
+.wallet_page
+  .manage_wallet_modal
+  .search_sectio
+  .input-group
+  .form-control::placeholder {
+  color: white;
 }
 
 .wallet_page .manage_wallet_modal .search_sectio .input-group .form-control {
-    color: white;
+  color: white;
 }
 
-.wallet_page .manage_wallet_modal .search_sectio .input-group .input-group-text svg circle,
-.wallet_page .manage_wallet_modal .search_sectio .input-group .input-group-text svg path {
-    stroke: white;
+.wallet_page
+  .manage_wallet_modal
+  .search_sectio
+  .input-group
+  .input-group-text
+  svg
+  circle,
+.wallet_page
+  .manage_wallet_modal
+  .search_sectio
+  .input-group
+  .input-group-text
+  svg
+  path {
+  stroke: white;
 }
-
 
 .wallet_page .center_box .tab_section .box:focus {
-    background-color: #71AFAC;
+  background-color: #71afac;
 }
 
 .wallet_page .center_box .tab_section .manage_wallet {
-    background: transparent;
-    color: white;
+  background: transparent;
+  color: white;
 }
-
-
 
 /*--------------------------------------------------
 [8. explore wallet page  end ]
 --------------------------------------------------*/
-
 
 /*--------------------------------------------------
 [9.  individual_crupto page   start ]
@@ -1128,50 +1487,50 @@ tr,
 .wallet_page .transaction_summary .transaction_info h4,
 .wallet_page .transaction_summary .transaction_info h5,
 .wallet_page .successfully h6 {
-    color: white;
+  color: white;
 }
 
 .wallet_page .crupto_detail_qr_code .price {
-    color: white;
-    background: #3E5E68;
+  color: white;
+  background: #3e5e68;
 }
 
 .wallet_page .crupto_detail_qr_code .qr_box,
 .wallet_page .center_box .crupto_detail .main_price_box,
 .wallet_page .withdrow .withdrow_details,
 .wallet_page .withdrow .wallet_address .input-group {
-    background: #3E5E68;
+  background: #3e5e68;
 }
 
 .wallet_page .withdrow .wallet_address .input-group .form-control::placeholder {
-    color: white;
+  color: white;
 }
 
 .wallet_page .center_box .crupto_detail .main_price_box .price_info_box {
-    background-color: #71AFAC;
+  background-color: #71afac;
 }
 
 .wallet_page .center_box .dropdown .btn-secondary {
-    background-color: #71AFAC !important;
-    color: white;
+  background-color: #71afac !important;
+  color: white;
 }
 
 .wallet_page .center_box .dropdown .btn-secondary:focus {
-    background-color: #71AFAC !important;
-    color: white;
+  background-color: #71afac !important;
+  color: white;
 }
 
 .wallet_page .center_box .dropdown .btn-secondary:hover {
-    background-color: #71AFAC !important;
-    color: white;
+  background-color: #71afac !important;
+  color: white;
 }
 
 .wallet_page .center_box .dropdown .btn-secondary svg path {
-    fill: white;
+  fill: white;
 }
 
 .wallet_page .center_box .crupto_detail .back button svg path {
-    fill: white;
+  fill: white;
 }
 
 /*--------------------------------------------------
@@ -1195,17 +1554,17 @@ tr,
 .articals_page .heading,
 .artical_detail .artical_review h2,
 .artical_detail .artical_review h3 {
-    color: white;
+  color: white;
 }
 
 .top_resources .post_box .post_bottom_info svg path {
-    fill: white;
+  fill: white;
 }
 
 .articals_page .tab_section .nav-pills,
 .articals_page .search,
 .articals_page .artical_review {
-    background-color: #3E5E68;
+  background-color: #3e5e68;
 }
 
 /*--------------------------------------------------
@@ -1216,9 +1575,8 @@ tr,
 --------------------------------------------------*/
 .daily_challenges .daily_challange_list,
 .daily_challenges .navigation {
-    background: #081D25;
+  background: #081d25;
 }
-
 
 .daily_challenges .navigation .nav .nav-link,
 .daily_challenges .Leaderboard h2,
@@ -1230,21 +1588,21 @@ tr,
 .daily_challenges .your_reward .reward_box h3,
 .daily_challenges .your_reward_header p,
 .daily_challenges .daily_challange_list ul li .info h2 {
-    color: white;
+  color: white;
 }
 
 .daily_challenges .right_arrow path {
-    fill: white;
+  fill: white;
 }
 
 .daily_challenges .your_reward .reward_box,
 .daily_challenges .mobile_tab .nav-pills .nav-link {
-    background-color: transparent;
-    color: white;
+  background-color: transparent;
+  color: white;
 }
 
 .daily_challenges .level {
-    background: #0D3642;
+  background: #0d3642;
 }
 
 .setting_page .setting .heading,
@@ -1260,11 +1618,11 @@ tr,
 .setting_page .setting_info .setting_content .switch p,
 .setting_page .setting_info .setting_content .privacy_policy h1,
 .setting_page .setting_info .setting_content .privacy_policy p {
-    color: white;
+  color: white;
 }
 
 .setting_page .setting_info .setting_content {
-    background: #081D25;
+  background: #081d25;
 }
 
 .setting_page .setting_info .setting_content .form_section .form-control,
@@ -1273,18 +1631,26 @@ tr,
 .collaction_page .profile_box .btn-group .btn-1,
 .collaction_page .profile_box .btn-group .btn-2,
 .collaction_page .collaction_list .fillter_aria .price .form-control {
-    background-color: #3E5E68 !important;
-    color: white;
+  background-color: #3e5e68 !important;
+  color: white;
 }
 
-.setting_page .setting_info .setting_content .form_section .form-control::placeholder,
-.setting_page .setting_info .setting_content .help_center .form-control::placeholder {
-    color: white;
+.setting_page
+  .setting_info
+  .setting_content
+  .form_section
+  .form-control::placeholder,
+.setting_page
+  .setting_info
+  .setting_content
+  .help_center
+  .form-control::placeholder {
+  color: white;
 }
 
 .setting_page .setting_info .setting_content .accordion .accordion-item,
 .setting_page .setting_info .setting_content .accordion .accordion-button {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 .collaction_page .profile_box h2,
@@ -1297,20 +1663,20 @@ tr,
 .collaction_page .profile_box .filter_btn_row .dropdown .btn-secondary,
 .collaction_page .collaction_list .fillter_aria .status .icon_btn,
 .collaction_page .collaction_list .fillter_aria .price .button_grop h3 {
-    color: white;
+  color: white;
 }
 
 .collaction_page .profile_box .input-group .input-group-text svg circle {
-    stroke: white;
+  stroke: white;
 }
 
 .collaction_page .profile_box .input-group .input-group-text svg path {
-    stroke: white;
+  stroke: white;
 }
 
 .collaction_page .collaction_list .fillter_aria .status,
 .collaction_page .collaction_list .fillter_aria .status .card-body {
-    background: #0D3642;
+  background: #0d3642;
 }
 
 /*--------------------------------------------------
@@ -1319,7 +1685,7 @@ tr,
 
 /* new home page start */
 .main_home_content .returning_user_home_header {
-    border: none;
+  border: none;
 }
 
 .new_home .left_menu_btn,
@@ -1357,22 +1723,19 @@ tr,
 .Edite_profile_page .edite_profile,
 .Edite_profile_page .setting_links,
 .new_login .sign_up .sign_up_btn {
-    background: #0D3642 !important;
+  background: #0d3642 !important;
 }
 
 .main_home_content .returning_user_home_header {
-    border: none !important;
+  border: none !important;
 }
 
 .creator_page .tranding_Creator {
-    background: transparent;
+  background: transparent;
 }
 
-
-
-
 .cart_off_canvas .btn-close {
-    filter: brightness(0) invert(1)
+  filter: brightness(0) invert(1);
 }
 
 .new_explore_page .top_collcation h2,
@@ -1417,7 +1780,12 @@ tr,
 .main_home_content .make_post h4,
 .new_home .left_menu_btn .accordion-body a,
 .new_home .notificaiton_module .notification .notification_info h2,
-.new_home .notificaiton_module .notification .notification_info .notification_details h6,
+.new_home
+  .notificaiton_module
+  .notification
+  .notification_info
+  .notification_details
+  h6,
 .new_home .notificaiton_module .top_collaction h2,
 .new_home .notificaiton_module .top_collaction .collcation_info h3,
 .new_home .notificaiton_module .top_collaction .collcation_info h4,
@@ -1471,38 +1839,37 @@ tr,
 .manage_wallet .qr_code_section .copy .icon_btn,
 .manage_wallet .qr_code_section .code h3,
 .manage_wallet .successfully_second h2 {
-    color: white !important;
+  color: white !important;
 }
 
-
 .manage_wallet .qr_code_section .qr_img path {
-    fill: white;
+  fill: white;
 }
 
 .wallet_page .curent_balance_section h4 {
-    border-right: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .wallet_page .right_box .token_Section section {
-    border-top: 1px solid white;
+  border-top: 1px solid white;
 }
 
 .wallet_page .select_netwokr_drop_down .btn-secondary {
-    background: #71AFAC !important;
+  background: #71afac !important;
 }
 
 .profile_content .main_content .wallet-address .icon_btn svg path {
-    fill: white;
+  fill: white;
 }
 
 .cart_off_canvas .item .info .price h5,
 .cart_off_canvas .full_price_info h4,
 .cart_off_canvas .total h5 {
-    color: #71AFAC;
+  color: #71afac;
 }
 
 .new_explore_page .collaction_info h5 {
-    border-left: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .new_home .notificaiton_module .notification .nav-item .active,
@@ -1532,68 +1899,77 @@ tr,
 .follower_modal .input-group,
 .Edite_profile_page .social_media .input-group,
 .Edite_profile_page .edite_profile .input_box .form-control {
-    background: #71afac3d !important;
+  background: #71afac3d !important;
 }
 
 .follower_modal .input-group .input-group-text svg path {
-    stroke: white;
+  stroke: white;
 }
 
 .Edite_profile_page .social_media .input-group .input-group-text svg path {
-    fill: white;
+  fill: white;
 }
 
 .Edite_profile_page .social_media .input-group .form-control::placeholder,
 .Edite_profile_page .edite_profile .input_box .form-control {
-    color: white;
+  color: white;
 }
 
 .follower_modal .input-group .input-group-text svg circle {
-    stroke: white;
+  stroke: white;
 }
 
 .follower_modal .input-group .form-control::placeholder {
-    color: white !important;
+  color: white !important;
 }
-
 
 .new_explore_page .tranding_Creator .creator_info,
 .manage_wallet .qr_code_section .code,
 .manage_wallet .qr_code_section .info {
-    background: #71afac3d;
-    border: none;
+  background: #71afac3d;
+  border: none;
 }
 
 .create_post_model .nft_post svg path {
-    fill: white;
+  fill: white;
 }
 
-
 .new_home .left_menu_btn .icon_btn .arrow path {
-    fill: white;
+  fill: white;
 }
 
 .main_home_content .write_post .box .form-control::placeholder {
-    color: white;
+  color: white;
 }
 
 .main_home_content .post_switch .search .input-group {
-    background: #0d3642;
-    border: none;
+  background: #0d3642;
+  border: none;
 }
 
-.main_home_content .post_switch .search .input-group .input-group-text svg circle,
-.main_home_content .post_switch .search .input-group .input-group-text svg path {
-    stroke: white;
+.main_home_content
+  .post_switch
+  .search
+  .input-group
+  .input-group-text
+  svg
+  circle,
+.main_home_content
+  .post_switch
+  .search
+  .input-group
+  .input-group-text
+  svg
+  path {
+  stroke: white;
 }
 
 .main_home_content .make_post a {
-    background: #081D25;
+  background: #081d25;
 }
 
 .main_home_content .make_post a .arrow path {
-    fill: white;
+  fill: white;
 }
-
 
 /* new home end */
