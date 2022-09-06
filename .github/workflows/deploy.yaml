@@ -7,11 +7,6 @@ on:
 
   # Starting Build Process      
 jobs:
-    - name: Clear artifacts
-      uses: kolpav/purge-artifacts-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        expire-in: 0day
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -19,7 +14,7 @@ jobs:
         node-version: [16.x]
     steps:
     - uses: actions/checkout@v2
-
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -87,4 +82,3 @@ jobs:
         DISTRIBUTION_ID=E3QRIALGM07SYH
         aws cloudfront create-invalidation --distribution-id E3QRIALGM07SYH --paths /*
       working-directory: build-artifact
-
