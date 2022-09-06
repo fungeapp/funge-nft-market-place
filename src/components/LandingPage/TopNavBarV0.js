@@ -15,12 +15,7 @@ const TopNavBar = () => {
           <nav className="navbar container-fluid navbar-expand-lg bg-white shadow-sm navbar-light">
             <div className="container-fluid">
               <a className="navbar-brand" href="#">
-                <img
-                  src="assets/images/FungeLogoW.svg"
-                  alt=""
-                  className="img-fluid"
-                  width={130}
-                />
+                <Logo src="assets/images/FungeLogoW.svg" alt="" />
               </a>
 
               <button
@@ -49,35 +44,23 @@ const TopNavBar = () => {
                   style={{ width: "80%" }}
                 >
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
-                      HOME
-                    </Link>
+                    <Link href="#">HOME</Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
-                      FEATURES
-                    </Link>
+                    <Link href="#">FEATURES</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
-                      SUSTAINBILITY
-                    </Link>
+                    <Link href="#">SUSTAINBILITY</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
-                      TOKENOMICS
-                    </Link>
+                    <Link href="#">TOKENOMICS</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
-                      TEAM
-                    </Link>
+                    <Link href="#">TEAM</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#">
-                      ROADMAP
-                    </Link>
+                    <Link href="#">ROADMAP</Link>
                   </li>
                 </ul>
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -101,17 +84,25 @@ const TopNavBar = () => {
 
 export default TopNavBar;
 
+const Logo = styled.img`
+  width: 7vw;
+  @media (max-width: 768px) {
+    width: 130px;
+  }
+`;
+
 const Link = styled.a`
-  font-size: 17.5px;
+  font-size: 1vw;
   font-family: "StabilGorteskBold";
   color: #fff !important;
+  text-decoration: none;
 `;
 
 const Button = styled.button`
   background-color: #fff;
   border-radius: 48px;
   border-width: 0;
-  font-size: 16.8px;
+  font-size: 1vw;
   font-family: "StabilGorteskBold";
   color: #000;
   padding: 10.8px 21.6px;
