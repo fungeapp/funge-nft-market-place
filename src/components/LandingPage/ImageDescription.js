@@ -116,8 +116,8 @@ const RowWrapper = styled.div`
 `;
 
 const Dot = styled.div`
-  width: 18px;
-  height: 18px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 100px;
   background-color: #71afac;
   margin-right: 10px;
