@@ -75,7 +75,7 @@ jobs:
     - name: Deploy to S3
       run: aws s3 sync . s3://www.fungeapp.com
       working-directory: build-artifact
-      
+
 
   # Creating AWS CloudFront Invalidation
     - name: Create Cloudfront Invalidation
