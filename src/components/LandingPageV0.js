@@ -18,7 +18,7 @@ const LandingPageV0 = () => {
                                 Your Gateway to the Creative Economy
                             </p>
                             <h2 className="section_heading hiro_heading">
-                                Trade, connect and earn like never before.
+                                tESTING PAGE - 1
                             </h2>
                             <br />
                             <button className="btn btn-primary w-600 waitlist-btn px-5" data-bs-toggle="modal" data-bs-target="#waitListModal">
