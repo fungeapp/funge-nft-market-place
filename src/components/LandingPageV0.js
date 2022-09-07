@@ -18,7 +18,11 @@ const LandingPageV0 = () => {
                                 Your Gateway to the Creative Economy
                             </p>
                             <h2 className="section_heading hiro_heading">
+<<<<<<< HEAD
                                 tESTING PAGE - 1
+=======
+                                Testing Changes - 1
+>>>>>>> dca028efe47caa25d5861f33e92c67cd9a3ec4fe
                             </h2>
                             <br />
                             <button className="btn btn-primary w-600 waitlist-btn px-5" data-bs-toggle="modal" data-bs-target="#waitListModal">
