@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
 import axios from 'axios'
@@ -12,37 +12,14 @@ const TopBar = (props) => {
   const [walletModalShow, setWalletModalShow] = useState(false)
   const [useremail, setuseremail] = useState(props.email)
   const [userprops, setuserprops] = useState();
+  const [profilepic, setprofilepic] = useState();
+  const [walletaddresses, setwalletaddresses] = useState([])
 
-  console.log(`TopBar ${useremail}`)
-  console.log(wallet.isActive);
-  
-  const setProfileSession = async(sessionData) => {
-    let _userprops = {
-      id : sessionData.data.id,
-      given_name : sessionData.data.given_name,
-      family_name : sessionData.data.family_name,
-      phonenumber : sessionData.data.phonenumber,
-      nickname : sessionData.data.nickname,
-      name : sessionData.data.name,
-      picture : sessionData.data.picture,
-      locale : "en",
-      updated_at : "",
-      email : sessionData.data.email,
-      email_verified : sessionData.data.email_verified,
-      sub : ""
-    }
-    setuserprops(_userprops)
-    console.log(`userprops ${JSON.parse(userprops.picture)}`)
-}
-
-  useEffect(() => {
+  useMemo(() => {
     axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     .then( response => {
-      setProfileSession(response)
+      setprofilepic(response.data[0].picture)
     })
-    .then(
-      console.log(`${userprops}`)
-    )
   },[])
 
   const openConnectModal = () => {
@@ -178,7 +155,7 @@ const TopBar = (props) => {
 
                   <li className="nav-item">
                     <img
-                      src="https://lh3.googleusercontent.com/a-/AOh14GgAuFh3SrQ5fprcURrR1l4OVeHwMbg9uNfSaaWg6k8=s96-c"
+                      src={profilepic}
                       className="rounded-circle me-3"
                       alt="Cinque Terre"
                       width="25"

@@ -1,12 +1,17 @@
-import React,{state, useState} from 'react';
+import React,{state, useState, useMemo} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import env from 'react-dotenv';
 
 const LeftSidebar = (props) => {
 
   const [isActive,setActive] = useState(props.myState);
   const [useremail, setuseremail] = useState(props.email)
   
-  
+  useMemo(() => {
+    
+  },[])
+
   return (
     <>
       <div className="position-absolute flex-shrink-0 p-3 bg-white pt-5 min-vh-100 left_sidebar shadow-sm" style={{ maxWidth: 280 }}>

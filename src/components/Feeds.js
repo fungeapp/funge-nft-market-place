@@ -18,11 +18,15 @@ const Feeds = (props) => {
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
   const [useremail, setuseremail] = useState(_email);
-  console.log(`params ${useremail}`)
   let userprops;  
 
   useEffect(() => {
     getUserProfile()
+    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${userid}`)
+    .then( response => {
+      
+    })
+
   },[])
   
 
@@ -34,7 +38,6 @@ const Feeds = (props) => {
         let elem = response.data[0]
         let _x = elem.id
         setuserid(_x)
-        //console.log(`user id ${_x}`)
         setProfileSession(response.data[0]);
         //save profile session in session storage
         sessionStorage.setItem("userprofile", JSON.stringify(userprops))
@@ -45,7 +48,6 @@ const Feeds = (props) => {
       .then((response) => {
           response.data.forEach( post => {
             let text = post.post_content
-            //console.log(text)
             setposts(text)
           })
       })
@@ -81,9 +83,8 @@ const Feeds = (props) => {
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
+            <NewPost email={useremail} />
             
-            
-          
           </div>
           <div className="col-md-4 mt-4 max-550">
             
