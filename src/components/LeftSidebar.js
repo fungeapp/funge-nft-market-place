@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 const LeftSidebar = (props) => {
 
   const [isActive,setActive] = useState(props.myState);
+  const [useremail, setuseremail] = useState(props.email)
   
-  let _sessionUserProfile = sessionStorage.getItem("userprofile")
-  let sessionUserProfile = JSON.parse(_sessionUserProfile)
-  //console.log(`SideBar Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
-
+  
   return (
     <>
       <div className="position-absolute flex-shrink-0 p-3 bg-white pt-5 min-vh-100 left_sidebar shadow-sm" style={{ maxWidth: 280 }}>

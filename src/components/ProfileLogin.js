@@ -1,5 +1,6 @@
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import React, { useEffect, useHistory, useState, createContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import env from 'react-dotenv';
 import { 
     TextField,
@@ -34,6 +35,7 @@ const ProfileLogin = (props) => {
 
     //const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
     //const {authenticate, isAuthenticated, isAuthenticating, user, account, logout} = useMoralis();
+    const navigate = useNavigate();
     let web3 = new Web3();
     const {btnText} = props;
     const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -63,7 +65,7 @@ const ProfileLogin = (props) => {
           email_verified : sessionData.data.email_verified,
           sub : ""
         }
-      }
+    }
 
     const emailAddress = async (e) => {
         //console.log(`By email ${email}`)

@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
+import axios from 'axios'
+import env from 'react-dotenv';
 
 //local dependencies
 import ConnectModal from './Wallet/ConnectModal'
@@ -8,8 +10,40 @@ import ConnectModal from './Wallet/ConnectModal'
 const TopBar = (props) => {
   const wallet = useWeb3React()
   const [walletModalShow, setWalletModalShow] = useState(false)
+  const [useremail, setuseremail] = useState(props.email)
+  const [userprops, setuserprops] = useState();
 
-  //console.log(wallet.isActive);
+  console.log(`TopBar ${useremail}`)
+  console.log(wallet.isActive);
+  
+  const setProfileSession = async(sessionData) => {
+    let _userprops = {
+      id : sessionData.data.id,
+      given_name : sessionData.data.given_name,
+      family_name : sessionData.data.family_name,
+      phonenumber : sessionData.data.phonenumber,
+      nickname : sessionData.data.nickname,
+      name : sessionData.data.name,
+      picture : sessionData.data.picture,
+      locale : "en",
+      updated_at : "",
+      email : sessionData.data.email,
+      email_verified : sessionData.data.email_verified,
+      sub : ""
+    }
+    setuserprops(_userprops)
+    console.log(`userprops ${JSON.parse(userprops.picture)}`)
+}
+
+  useEffect(() => {
+    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    .then( response => {
+      setProfileSession(response)
+    })
+    .then(
+      console.log(`${userprops}`)
+    )
+  },[])
 
   const openConnectModal = () => {
     setWalletModalShow(true)
@@ -18,6 +52,7 @@ const TopBar = (props) => {
   const closeConnectModal = () => {
     setWalletModalShow(false)
   }
+
 
   /***
    * 
@@ -143,7 +178,7 @@ const TopBar = (props) => {
 
                   <li className="nav-item">
                     <img
-                      src="./assets/images/nft-5.png"
+                      src="https://lh3.googleusercontent.com/a-/AOh14GgAuFh3SrQ5fprcURrR1l4OVeHwMbg9uNfSaaWg6k8=s96-c"
                       className="rounded-circle me-3"
                       alt="Cinque Terre"
                       width="25"

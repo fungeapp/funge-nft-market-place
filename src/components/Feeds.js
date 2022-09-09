@@ -18,7 +18,7 @@ const Feeds = (props) => {
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
   const [useremail, setuseremail] = useState(_email);
-  //console.log(`params ${useremail}`)
+  console.log(`params ${useremail}`)
   let userprops;  
 
   useEffect(() => {
@@ -76,13 +76,14 @@ const Feeds = (props) => {
 
   return (
     <>
-      <TopBar />
-      <LeftSidebar myState="home" />
+      <TopBar email={useremail} />
+      <LeftSidebar myState="home" email={useremail}  />
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
-          <NewPost />
-            <FeedPost text={posts} />
+            
+            
+          
           </div>
           <div className="col-md-4 mt-4 max-550">
             
