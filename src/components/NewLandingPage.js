@@ -4,6 +4,9 @@ import CommunityToken from "./NewLandingPage/CommunityToken";
 import Description from "./NewLandingPage/Description";
 import Entry from "./NewLandingPage/Entry";
 import ImageDescriptions from "./NewLandingPage/ImageDescriptions";
+import OurPlanForTheFuture from "./NewLandingPage/OurPlanForTheFuture";
+import Tokenomics from "./NewLandingPage/Tokenomics";
+import TokenUsage from "./NewLandingPage/TokenUsage";
 import ToolsCarousel from "./NewLandingPage/ToolsCarousel";
 
 const NewLandingPage = () => {
@@ -14,6 +17,9 @@ const NewLandingPage = () => {
       <ImageDescriptions />
       <ToolsCarousel />
       <CommunityToken />
+      <TokenUsage />
+      <Tokenomics />
+      <OurPlanForTheFuture />
     </Wrapper>
   );
 };
