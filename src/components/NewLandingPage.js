@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CommunityToken from "./NewLandingPage/CommunityToken";
 import Description from "./NewLandingPage/Description";
 import Entry from "./NewLandingPage/Entry";
 import ImageDescriptions from "./NewLandingPage/ImageDescriptions";
@@ -12,6 +13,7 @@ const NewLandingPage = () => {
       <Description />
       <ImageDescriptions />
       <ToolsCarousel />
+      <CommunityToken />
     </Wrapper>
   );
 };

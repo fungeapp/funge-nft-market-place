@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   border: 2px solid red;
   padding: 0 0 10.5vw 6vw;
   @media (max-width: 425px) {
-    padding: 0 35px 10.5vw 35px;
+    padding: 0 6vw 10.5vw 6vw;
   }
 `;
 
