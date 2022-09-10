@@ -28,6 +28,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 17vw 0 19vw 6vw;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const Container = styled.div`
@@ -35,6 +38,9 @@ const Container = styled.div`
   flex: 1;
   flex-direction: column;
   margin-bottom: ${(props) => (props.marginBottom ? 5 : 0)}vw;
+  @media (max-width: 425px) {
+    align-items: center;
+  }
 `;
 
 const Title = styled.p`
@@ -42,7 +48,8 @@ const Title = styled.p`
   color: #000;
   margin-bottom: 0;
   @media (max-width: 425px) {
-    font-size: 18px;
+    font-size: 12px;
+    text-align: center;
   }
 `;
 
@@ -51,7 +58,8 @@ const Subtitle = styled.p`
   font-family: "StabilGorteskBold";
   color: #000;
   @media (max-width: 425px) {
-    font-size: 24px;
+    font-size: 20px;
+    text-align: center;
   }
 `;
 
@@ -65,8 +73,8 @@ const Button = styled.button`
   border: none;
   width: fit-content;
   @media (max-width: 425px) {
-    padding: 14px 96px;
-    font-size: 18px;
+    padding: 8px 40px;
+    font-size: 14px;
   }
 `;
 

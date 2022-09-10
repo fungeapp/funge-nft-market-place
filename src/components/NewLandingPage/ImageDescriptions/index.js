@@ -30,8 +30,8 @@ const ImageDescriptions = () => {
           "Conduct private sales",
           "Batch buy multiple NFT’s",
         ]}
-        video1={"assets/videos/Video02.mp4"}
-        video2={"assets/videos/Video03.mp4"}
+        video1={"assets/videos/Video03.mp4"}
+        video2={"assets/videos/Video02.mp4"}
       />
       <SingleImageDescription
         title={"Rewards Spotlight"}
@@ -45,7 +45,7 @@ const ImageDescriptions = () => {
           "Stake $FUNGE tokens and receive up to 445% APY",
           "Earn additional commission for every friend you refer",
         ]}
-        video1={"assets/videos/Video04.mp4"}
+        video1={"assets/videos/Video05.mp4"}
       />
     </Wrapper>
   );
@@ -54,6 +54,6 @@ const ImageDescriptions = () => {
 export default ImageDescriptions;
 
 const Wrapper = styled.div`
-  border: 1px solid red;
+  border: 2px solid blue;
   padding: 0 6vw;
 `;

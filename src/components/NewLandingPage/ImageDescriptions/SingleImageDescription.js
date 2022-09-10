@@ -16,7 +16,7 @@ const SingleImageDescription = ({
 
   return (
     <Wrapper noMarginBottom={noMarginBottom}>
-      <Container className="col-md-5 sticky-top align-self-start">
+      <Container className="sticky-top align-self-start">
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
         <Description>{description}</Description>
@@ -66,18 +66,27 @@ export default SingleImageDescription;
 const Wrapper = styled.div`
   display: flex;
   padding-bottom: ${(props) => (props.noMarginBottom ? 0 : 6)}vw;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  @media (max-width: 425px) {
+    position: relative;
+  }
 `;
 
 const RowWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: ${(props) => (props.noMarginBottom ? 0 : 1.8)}vw;
+  @media (max-width: 425px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Title = styled.p`
@@ -86,6 +95,10 @@ const Title = styled.p`
   color: #71afac;
   margin-bottom: 0.5vw;
   text-transform: uppercase;
+  @media (max-width: 425px) {
+    font-size: 16px;
+    margin-bottom: 9px;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -94,6 +107,10 @@ const Subtitle = styled.p`
   color: #000;
   letter-spacing: 0.2px;
   margin-bottom: 0.8vw;
+  @media (max-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
 `;
 
 const Description = styled.p`
@@ -102,6 +119,11 @@ const Description = styled.p`
   color: #000;
   margin-bottom: 1.8vw;
   white-space: pre-wrap;
+  @media (max-width: 425px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    white-space: normal;
+  }
 `;
 
 const ListItem = styled.p`
@@ -110,6 +132,9 @@ const ListItem = styled.p`
   color: #000;
   letter-spacing: 0.2px;
   margin-bottom: 0;
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
 `;
 
 const Dot = styled.div`
@@ -118,6 +143,11 @@ const Dot = styled.div`
   border-radius: 100%;
   background-color: #71afac;
   margin-right: 1.1vw;
+  @media (max-width: 425px) {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
 `;
 
 const VideoWrapper = styled.div`
@@ -137,10 +167,17 @@ const PlayWrapper = styled.div`
   height: 82%;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  @media (max-width: 425px) {
+    border-radius: 5px;
+  }
 `;
 
 const Play = styled.img`
   width: 6vw;
   height: 6vw;
   object-fit: contain;
+  @media (max-width: 425px) {
+    width: 48px;
+    height: 48px;
+  }
 `;

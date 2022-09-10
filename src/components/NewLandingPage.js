@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Description from "./NewLandingPage/Description";
 import Entry from "./NewLandingPage/Entry";
 import ImageDescriptions from "./NewLandingPage/ImageDescriptions";
+import ToolsCarousel from "./NewLandingPage/ToolsCarousel";
 
 const NewLandingPage = () => {
   return (
@@ -10,6 +11,7 @@ const NewLandingPage = () => {
       <Entry />
       <Description />
       <ImageDescriptions />
+      <ToolsCarousel />
     </Wrapper>
   );
 };
