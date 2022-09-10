@@ -40,7 +40,6 @@ const TokenUsage = () => {
 export default TokenUsage;
 
 const Wrapper = styled.div`
-  border: 2px solid black;
   padding: 0 6vw;
 `;
 

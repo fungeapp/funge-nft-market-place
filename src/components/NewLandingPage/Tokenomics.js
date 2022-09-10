@@ -51,7 +51,6 @@ const Tokenomics = () => {
 export default Tokenomics;
 
 const Wrapper = styled.div`
-  border: 2px solid purple;
   padding: 0 6vw;
   padding-top: 10vw;
 `;

@@ -54,6 +54,5 @@ const ImageDescriptions = () => {
 export default ImageDescriptions;
 
 const Wrapper = styled.div`
-  border: 2px solid blue;
   padding: 0 6vw;
 `;

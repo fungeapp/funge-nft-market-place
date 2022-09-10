@@ -23,7 +23,6 @@ const CommunityToken = () => {
 export default CommunityToken;
 
 const Wrapper = styled.div`
-  border: 2px solid green;
   padding: 8vw 6vw;
 `;
 
@@ -49,7 +48,6 @@ const Subtitle = styled.p`
 `;
 
 const ImageWrapper = styled.div`
-  border: 1px solid red;
   position: relative;
   display: flex;
   align-items: center;

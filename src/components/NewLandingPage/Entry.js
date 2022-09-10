@@ -24,7 +24,6 @@ const Entry = () => {
 export default Entry;
 
 const Wrapper = styled.div`
-  border: 2px solid black;
   display: flex;
   align-items: center;
   padding: 17vw 0 19vw 6vw;

@@ -58,7 +58,6 @@ const ToolsCarousel = () => {
 export default ToolsCarousel;
 
 const Wrapper = styled.div`
-  border: 2px solid yellow;
   padding: 8vw 6vw;
   background-color: #f7f8fa;
 `;
@@ -92,7 +91,8 @@ const Subtitle = styled.p`
   margin-bottom: 0;
   cursor: pointer;
   @media (max-width: 425px) {
-    font-size: 20px;
+    font-size: 15px;
+    text-align: center;
   }
 `;
 
@@ -103,9 +103,8 @@ const Description = styled.p`
   white-space: pre-wrap;
   text-align: center;
   margin-bottom: 4vw;
-
   @media (max-width: 425px) {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 20px;
     white-space: normal;
   }
