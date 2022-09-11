@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+
+AOS.init();
 
 const Tokenomics = () => {
   return (
@@ -40,7 +44,13 @@ const Tokenomics = () => {
             <BoldText>12%</BoldText>Reserve - (12,000,000)
           </Text>
         </Left>
-        <Right>
+        <Right
+          data-aos="fade-left"
+          data-aos-offset="400"
+          data-aos-delay="400"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <Image src="./assets/images/Tokenomics.png" />
         </Right>
       </Card>

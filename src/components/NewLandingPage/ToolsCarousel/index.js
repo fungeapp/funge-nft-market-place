@@ -29,28 +29,45 @@ const ToolsCarousel = () => {
   };
 
   return (
-    <Wrapper data-aos="fade-up">
-      <Title>
-        Tools designed for the growing wave of forward-thinking creators,
-        innovators, and traders.
-      </Title>
-      <SubtitlesWrapper>
-        <Subtitle active={activeIndex === 0} onClick={() => setActiveIndex(0)}>
-          Talent Marketplace
-        </Subtitle>
-        <Line />
-        <Subtitle active={activeIndex === 1} onClick={() => setActiveIndex(1)}>
-          Community Builder
-        </Subtitle>
-        <Line />
-        <Subtitle active={activeIndex === 2} onClick={() => setActiveIndex(2)}>
-          Wallet Manager
-        </Subtitle>
-      </SubtitlesWrapper>
-      <Description data-aos="fade-in" data-aos-duration="2000">
-        {descriptions[activeIndex]}
-      </Description>
-      {renderComp()}
+    <Wrapper>
+      <div
+        data-aos="slide-up"
+        data-aos-offset="600"
+        data-aos-delay="400"
+        data-aos-duration="2000"
+        data-aos-mirror="false"
+      >
+        <Title>
+          Tools designed for the growing wave of forward-thinking creators,
+          innovators, and traders.
+        </Title>
+        <SubtitlesWrapper>
+          <Subtitle
+            active={activeIndex === 0}
+            onClick={() => setActiveIndex(0)}
+          >
+            Talent Marketplace
+          </Subtitle>
+          <Line />
+          <Subtitle
+            active={activeIndex === 1}
+            onClick={() => setActiveIndex(1)}
+          >
+            Community Builder
+          </Subtitle>
+          <Line />
+          <Subtitle
+            active={activeIndex === 2}
+            onClick={() => setActiveIndex(2)}
+          >
+            Wallet Manager
+          </Subtitle>
+        </SubtitlesWrapper>
+        <Description data-aos="fade-in" data-aos-duration="2000">
+          {descriptions[activeIndex]}
+        </Description>
+        {renderComp()}
+      </div>
     </Wrapper>
   );
 };

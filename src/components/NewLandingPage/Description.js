@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 const Description = () => {
   return (
-    <Wrapper>
+    <Wrapper
+      data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-delay="400"
+      data-aos-duration="1000"
+      data-aos-mirror="false"
+    >
       <Text>
         <BoldedText>FUNGE </BoldedText>
         is an all-in-one solution for the blockchain community, bringing
