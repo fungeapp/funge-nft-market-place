@@ -123,11 +123,6 @@ const ProfileLogin = (props) => {
         });
     }
 
-    const saveUserProfile = async(response) => {
-            localStorage.setItem("user_id", response.id)
-            localStorage.setItem('user_email',email)
-    }
-
     const handleDialogClose = () => {
         setOpen(false);
         /*setTerms(false);

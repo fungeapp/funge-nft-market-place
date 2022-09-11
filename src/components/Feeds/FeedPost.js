@@ -4,9 +4,12 @@ import axios from 'axios';
 
 const FeedPost = (props) => {
 
-    let _sessionUserProfile = sessionStorage.getItem("userprofile")
-    let sessionUserProfile = JSON.parse(_sessionUserProfile)
-    console.log(`Feeds Post Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+    const [useremail, setuseremail] = useState(props.email)
+    const [userid, setuserid] = useState()
+    const [isloading, setisloading] = useState()
+
+    useEffect(() => {
+    },[])
 
     const PostOffer = (props) => {
 
