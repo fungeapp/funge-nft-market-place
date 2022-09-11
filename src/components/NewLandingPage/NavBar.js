@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const NavBar = () => {
+  const [color, setColor] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
+
+  const changeColor = () => {
+    if (window.scrollY > 100) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
   return (
-    <Wrapper>
+    <Wrapper color={color}>
       <Logo src="assets/images/FungeLogoW.svg" />
       <Link>Home</Link>
       <Link>Features</Link>
@@ -21,11 +38,13 @@ export default NavBar;
 const Wrapper = styled.div`
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 2vw;
+  padding: 2vw 0 1vw 0;
+  background-color: ${(props) => (props.color ? "#fff" : "transparent")};
+  transition: all 2s;
 `;
 
 const Logo = styled.img`
