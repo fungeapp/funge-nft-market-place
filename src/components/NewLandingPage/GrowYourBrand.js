@@ -8,7 +8,9 @@ const GrowYourBrand = () => {
       <TextsWrapper>
         <Title>Stay informed about Funge</Title>
         <Subtitle>Try Ehya free for 14 days. No credit card required.</Subtitle>
-        <Button>Sign Up for Free Trial</Button>
+        <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
+          Sign Up for Free Trial
+        </Button>
       </TextsWrapper>
     </Wrapper>
   );

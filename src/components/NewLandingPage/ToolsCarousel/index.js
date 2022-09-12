@@ -33,7 +33,6 @@ const ToolsCarousel = () => {
       <div
         data-aos="slide-up"
         data-aos-offset="400"
-        data-aos-delay="400"
         data-aos-duration="2000"
         data-aos-mirror="false"
       >

@@ -12,7 +12,9 @@ const Entry = () => {
           <br />
           Earn like never before.
         </Subtitle>
-        <Button>Join the waitlist</Button>
+        <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
+          Join the waitlist
+        </Button>
       </Container>
       <Container>
         <MainImg src="assets/images/main.png" />
