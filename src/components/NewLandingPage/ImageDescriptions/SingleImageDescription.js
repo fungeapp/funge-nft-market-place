@@ -7,7 +7,6 @@ const SingleImageDescription = ({
   subtitle,
   description,
   items,
-  noMarginBottom,
   video1,
   video2,
 }) => {
@@ -15,7 +14,7 @@ const SingleImageDescription = ({
   const [isPlaying2, setIsPlaying2] = useState(false);
 
   return (
-    <Wrapper noMarginBottom={noMarginBottom}>
+    <Wrapper>
       <Container className="sticky-top align-self-start">
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
@@ -65,7 +64,6 @@ export default SingleImageDescription;
 
 const Wrapper = styled.div`
   display: flex;
-  padding-bottom: ${(props) => (props.noMarginBottom ? 0 : 6)}vw;
   @media (max-width: 425px) {
     flex-direction: column;
   }
@@ -75,8 +73,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding-top: 6vw;
   @media (max-width: 425px) {
     position: relative;
+    top: auto;
   }
 `;
 

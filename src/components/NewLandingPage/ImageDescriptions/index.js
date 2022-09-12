@@ -55,4 +55,5 @@ export default ImageDescriptions;
 
 const Wrapper = styled.div`
   padding: 0 6vw;
+  padding-bottom: 6vw;
 `;
