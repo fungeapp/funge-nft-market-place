@@ -32,7 +32,7 @@ const ToolsCarousel = () => {
     <Wrapper>
       <div
         data-aos="slide-up"
-        data-aos-offset="600"
+        data-aos-offset="400"
         data-aos-delay="400"
         data-aos-duration="2000"
         data-aos-mirror="false"

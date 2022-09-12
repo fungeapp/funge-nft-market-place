@@ -47,6 +47,8 @@ const ImageDescriptions = () => {
         ]}
         video1={"assets/videos/Video05.mp4"}
       />
+      <LeftBG src="assets/images/bgLeft1.png" />
+      <RightBG src="assets/images/bgRight1.png" />
     </Wrapper>
   );
 };
@@ -54,6 +56,23 @@ const ImageDescriptions = () => {
 export default ImageDescriptions;
 
 const Wrapper = styled.div`
+  position: relative;
   padding: 0 6vw;
   padding-bottom: 6vw;
+`;
+
+const LeftBG = styled.img`
+  position: absolute;
+  top: -4vw;
+  left: 0;
+  z-index: 0;
+  width: 5vw;
+`;
+
+const RightBG = styled.img`
+  position: absolute;
+  bottom: -4vw;
+  right: 0;
+  z-index: 0;
+  width: 10vw;
 `;

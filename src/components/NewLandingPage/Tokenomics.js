@@ -45,11 +45,11 @@ const Tokenomics = () => {
           </Text>
         </Left>
         <Right
-          data-aos="fade-left"
-          data-aos-offset="400"
-          data-aos-delay="400"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
+        // data-aos="fade-left"
+        // data-aos-offset="400"
+        // data-aos-delay="400"
+        // data-aos-easing="linear"
+        // data-aos-duration="1000"
         >
           <Image src="./assets/images/Tokenomics.png" />
         </Right>
