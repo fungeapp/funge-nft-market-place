@@ -1,4 +1,5 @@
-import React, { state, useState, useMemo } from "react";
+import React, { state, useState, useMemo, useLayoutEffect } from "react";
+import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from "./TopBar";
 import FeedContainer from "./Feeds/FeedContainer";
 import NewPost from "./Feeds/NewPost";
@@ -8,22 +9,18 @@ import env from 'react-dotenv';
 import axios from 'axios';
 //import User from './UserProfile'
 
-const Profile = () => {
-
-  let _sessionUserProfile = sessionStorage.getItem("userprofile")
-  let sessionUserProfile = JSON.parse(_sessionUserProfile)
-  //console.log(`Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
+const Profile = (props) => {
 
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState( sessionUserProfile.id );
-  const [useremail, setuseremail] = useState( sessionUserProfile.email );
+  const [userid, setuserid] = useState();
   const [givenname, setgivenname] = useState();
   const [profilepic, setprofilepic] = useState();
   const [name, setname] = useState();
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('email')
+  const [useremail, setuseremail] = useState(_email);
 
-  useMemo(() => {
-    //console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
-    
+  useLayoutEffect(() => {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
             //console.log(`${JSON.stringify(response.data.picture)}`)

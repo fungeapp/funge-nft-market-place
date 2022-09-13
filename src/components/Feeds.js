@@ -37,7 +37,8 @@ const Feeds = (props) => {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${id}`)
       .then(response => {
           response.data.map( post => {
-            _allposts.push(post.post_content)
+              console.log(`Post ${post.post_content}`)  
+              setallposts(<FeedPost text={post.post_content} />)
           })
       })
     })
@@ -53,7 +54,7 @@ const Feeds = (props) => {
           <div className="col-md-6 max-700">
             <NewPost email={useremail} />
             {
-              _allposts.map( data => console.log("data"))
+
             }
           </div>
           

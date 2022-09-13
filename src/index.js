@@ -12,6 +12,7 @@ import { metaMaskHooks, metaMask } from './wallet/connector'
 import { walletConnectHooks, walletConnect } from './wallet/connector'
 import { WalletContextProvider } from './contexts/WalletContext'
 
+
 const connectors = [
   [metaMask, metaMaskHooks],
   [walletConnect, walletConnectHooks],

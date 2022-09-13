@@ -26,7 +26,7 @@ const LeftSidebar = (props) => {
                     <li><Link to="/notifications" className={` ${isActive === "notifications" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</Link></li>
                     <li><Link to="/inbox" className={` ${isActive === "messages" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</Link></li>
                     <li><Link to="/saved" className={` ${isActive === "saved" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Saved</Link></li>
-                    <li><Link to="/profile" className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</Link></li>
+                    <li><Link to={`/profile?email=${useremail}`} className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</Link></li>
                   </ul>
                 </div>
               </li>

@@ -29,6 +29,7 @@ import { OAuthExtension } from '@magic-ext/oauth';
 import axios from 'axios';
 import { instanceOf } from 'prop-types';
 import { profileData } from './UserProfile'
+import { createSlice, configureStore} from '@reduxjs/toolkit'
 
 
 const ProfileLogin = (props) => {
