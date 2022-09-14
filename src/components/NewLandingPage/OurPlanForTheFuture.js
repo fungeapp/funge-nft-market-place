@@ -17,7 +17,7 @@ const OurPlanForTheFuture = () => {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Q2 2021
+                Q4 2022
               </Button>
               <div
                 id="collapseOne"
@@ -26,10 +26,13 @@ const OurPlanForTheFuture = () => {
                 data-bs-parent="#faq-accord1"
               >
                 <div className="accordion-body">
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
+                  <Text>Token Launch</Text>
+                  <Text>Private Seed Rounds 1 & 2</Text>
+                  <Text>API Integration For Credit Card Purchases</Text>
+                  <Text>Users Profiles</Text>
+                  <Text>Social Feed</Text>
+                  <Text>Wallet Manager</Text>
+                  <Text>Direct Messaging</Text>
                 </div>
               </div>
             </div>
@@ -45,7 +48,7 @@ const OurPlanForTheFuture = () => {
                 aria-expanded="true"
                 aria-controls="collapseTwo"
               >
-                Q2 2021
+                Q1 2023
               </Button>
               <div
                 id="collapseTwo"
@@ -54,10 +57,12 @@ const OurPlanForTheFuture = () => {
                 data-bs-parent="#faq-accord2"
               >
                 <div className="accordion-body">
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
+                  <Text>Staking</Text>
+                  <Text>NFT Marketplace</Text>
+                  <Text>Batch Buying</Text>
+                  <Text>Private Sales</Text>
+                  <Text>Reward System</Text>
+                  <Text>Talent Marketplace</Text>
                 </div>
               </div>
             </div>
@@ -73,7 +78,7 @@ const OurPlanForTheFuture = () => {
                 aria-expanded="true"
                 aria-controls="collapseThree"
               >
-                Q2 2021
+                Q2 2023
               </Button>
               <div
                 id="collapseThree"
@@ -82,10 +87,11 @@ const OurPlanForTheFuture = () => {
                 data-bs-parent="#faq-accord3"
               >
                 <div className="accordion-body">
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
+                  <Text>Beta Testing</Text>
+                  <Text>PR Press Release</Text>
+                  <Text>Advanced Analytics</Text>
+                  <Text>Community Manager</Text>
+                  <Text>Platform improvements</Text>
                 </div>
               </div>
             </div>
@@ -100,7 +106,7 @@ const OurPlanForTheFuture = () => {
                 aria-expanded="true"
                 aria-controls="collapseFour"
               >
-                Q2 2021
+                Q3 2023
               </Button>
               <div
                 id="collapseFour"
@@ -109,10 +115,12 @@ const OurPlanForTheFuture = () => {
                 data-bs-parent="#faq-accord4"
               >
                 <div className="accordion-body">
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
+                  <Text>Marketing campaigns</Text>
+                  <Text>NFT Project collaboration</Text>
+                  <Text>Partner acquisitions</Text>
+                  <Text>Exchange Listings</Text>
+                  <Text>Cross Platform Floor Prices</Text>
+                  <Text>Support for Solana NFT’s</Text>
                 </div>
               </div>
             </div>
@@ -127,7 +135,7 @@ const OurPlanForTheFuture = () => {
                 aria-expanded="true"
                 aria-controls="collapseFive"
               >
-                Q2 2021
+                Q4 2023
               </Button>
 
               <div
@@ -137,10 +145,12 @@ const OurPlanForTheFuture = () => {
                 data-bs-parent="#faq-accord5"
               >
                 <div className="accordion-body">
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
-                  <Text>You can pay with credit.</Text>
+                  <Text>Funge Platform Release</Text>
+                  <Text>Token Airdrops</Text>
+                  <Text>Voice Chat Rooms</Text>
+                  <Text>Media Outlet</Text>
+                  <Text>NFT asset generator</Text>
+                  <Text>Roadmap Update</Text>
                 </div>
               </div>
             </div>

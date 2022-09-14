@@ -123,6 +123,7 @@ const Text = styled.p`
   font-family: "Inter";
   display: flex;
   color: #000;
+  margin-bottom: 0;
   @media (max-width: 425px) {
     font-size: 14px;
     text-align: center;
