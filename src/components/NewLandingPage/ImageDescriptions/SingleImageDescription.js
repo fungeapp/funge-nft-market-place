@@ -45,6 +45,7 @@ const SingleImageDescription = ({
             height={"100%"}
             playing={isPlaying1}
             url={video1}
+            onEnded={() => setIsPlaying1(false)}
           />
           {!isPlaying1 && (
             <PlayWrapper>
@@ -59,6 +60,7 @@ const SingleImageDescription = ({
               height={"100%"}
               playing={isPlaying2}
               url={video2}
+              onEnded={() => setIsPlaying2(false)}
             />
             {!isPlaying2 && (
               <PlayWrapper>
@@ -85,7 +87,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 6vw 0 2vw 0;
+  padding: 6vw 0 4vw 0;
   @media (max-width: 425px) {
     position: relative;
     top: auto;
@@ -176,8 +178,8 @@ const PlayWrapper = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 83%;
-  height: 82%;
+  width: 84%;
+  height: 83%;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   @media (max-width: 425px) {
