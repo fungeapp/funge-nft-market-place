@@ -17,7 +17,19 @@ const SingleImageDescription = ({
     <Wrapper>
       <Container className="sticky-top align-self-start">
         <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
+        <Subtitle>
+          {subtitle.split(" ").map((el) => {
+            if (el === "&") {
+              return (
+                <Subtitle style={{ fontFamily: "InterBold" }}>
+                  &nbsp;&&nbsp;
+                </Subtitle>
+              );
+            } else {
+              return el + " ";
+            }
+          })}
+        </Subtitle>
         <Description>{description}</Description>
         {items.map((el, index) => (
           <RowWrapper noMarginBottom={items.length === index + 1}>
@@ -73,7 +85,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 6vw;
+  padding: 6vw 0 2vw 0;
   @media (max-width: 425px) {
     position: relative;
     top: auto;
@@ -102,6 +114,7 @@ const Title = styled.p`
 `;
 
 const Subtitle = styled.p`
+  display: flex;
   font-family: "StabilGorteskMedium";
   font-size: 2.2vw;
   color: #000;

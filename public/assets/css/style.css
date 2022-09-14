@@ -1,4 +1,14 @@
 @font-face {
+  font-family: "InterMedium";
+  src: local("InterMedium"), url("../font/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "InterBold";
+  src: local("InterBold"), url("../font/Inter-Bold.ttf");
+}
+
+@font-face {
   font-family: "StabilGorteskBold";
   src: local("StabilGorteskBold"), url("../font/StabilGroteskTrial-Bold.otf");
 }
@@ -11,7 +21,7 @@
 
 @font-face {
   font-family: "StabilGortesk";
-  src: local("StailGortesk"), url("../font/StabilGroteskTrial-Regular.otf");
+  src: local("StabilGortesk"), url("../font/StabilGroteskTrial-Regular.otf");
 }
 
 @font-face {
