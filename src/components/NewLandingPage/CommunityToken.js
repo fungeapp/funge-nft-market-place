@@ -23,7 +23,7 @@ const CommunityToken = () => {
 export default CommunityToken;
 
 const Wrapper = styled.div`
-  padding: 8vw 6vw;
+  padding: 10vw 6vw;
 `;
 
 const Title = styled.p`
@@ -56,14 +56,14 @@ const ImageWrapper = styled.div`
 `;
 
 const BackgroundImg = styled.img`
-  width: 70%;
+  width: 60%;
   @media (max-width: 425px) {
     width: 100%;
   }
 `;
 
 const Image = styled.img`
-  width: 90%;
+  width: 80%;
   position: absolute;
   @media (max-width: 425px) {
     width: 100%;

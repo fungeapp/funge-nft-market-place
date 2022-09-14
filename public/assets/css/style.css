@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("../font/Inter-Regular.ttf");
+}
+
+@font-face {
   font-family: "InterMedium";
   src: local("InterMedium"), url("../font/Inter-Medium.ttf");
 }

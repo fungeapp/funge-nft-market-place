@@ -120,6 +120,7 @@ const CardSubtitle = styled.p`
 
 const Text = styled.p`
   font-size: 1.1vw;
+  font-family: "Inter";
   display: flex;
   color: #000;
   @media (max-width: 425px) {
@@ -130,7 +131,7 @@ const Text = styled.p`
 `;
 
 const BoldText = styled.p`
-  font-family: "StabilGorteskBold";
+  font-family: "InterBold";
   margin-right: 5px;
 `;
 
