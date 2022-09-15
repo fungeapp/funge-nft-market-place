@@ -56,9 +56,8 @@ const NewLandingPage = () => {
         tabIndex="-1"
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
-        style={{ zIndex: 100000 }}
       >
-        <div className="modal-dialog">
+        <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header border-0">
               <button

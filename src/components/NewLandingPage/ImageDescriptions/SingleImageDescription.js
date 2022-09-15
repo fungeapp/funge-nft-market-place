@@ -88,6 +88,7 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   padding: 6vw 0 4vw 0;
+  z-index: 1000;
   @media (max-width: 425px) {
     position: relative;
     top: auto;
