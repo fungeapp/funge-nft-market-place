@@ -40,7 +40,7 @@ export default NavBar;
 const Wrapper = styled.div`
   position: sticky;
   top: 0;
-  z-index: 10000;
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: space-around;
