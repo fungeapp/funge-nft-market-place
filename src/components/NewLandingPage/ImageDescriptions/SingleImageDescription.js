@@ -15,7 +15,10 @@ const SingleImageDescription = ({
 
   return (
     <Wrapper>
-      <Container className="sticky-top align-self-start">
+      <Container
+        className="sticky-top align-self-start"
+        style={{ zIndex: 1000 }}
+      >
         <Title>{title}</Title>
         <Subtitle>
           {subtitle.split(" ").map((el) => {
@@ -88,7 +91,6 @@ const Container = styled.div`
   flex-direction: column;
   flex: 1;
   padding: 6vw 0 4vw 0;
-  z-index: 1000;
   @media (max-width: 425px) {
     position: relative;
     top: auto;
