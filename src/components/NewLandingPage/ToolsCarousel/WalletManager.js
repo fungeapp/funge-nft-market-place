@@ -21,6 +21,7 @@ const WalletManager = () => {
         style={{ borderRadius: 40, overflow: "hidden" }}
         playing={isPlaying}
         url={"assets/videos/Video04.mp4"}
+        onEnded={() => setIsPlaying(false)}
       />
       {!isPlaying && (
         <PlayWrapper>
@@ -48,8 +49,8 @@ const PlayWrapper = styled.div`
   justify-content: center;
   z-index: 1;
   margin-top: -5px;
-  width: 83%;
-  height: 82%;
+  width: 84%;
+  height: 83%;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   @media (max-width: 425px) {

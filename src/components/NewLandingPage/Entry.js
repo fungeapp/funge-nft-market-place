@@ -28,7 +28,7 @@ export default Entry;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 11vw 0 19vw 6vw;
+  padding: 11vw 0 21vw 6vw;
   @media (max-width: 425px) {
     flex-direction: column;
   }

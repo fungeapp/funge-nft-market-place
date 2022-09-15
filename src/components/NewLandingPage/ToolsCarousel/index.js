@@ -3,10 +3,6 @@ import styled from "styled-components";
 import CommunityBuilder from "./CommunityBuilder";
 import TalentMarketplace from "./TalentMarketplace";
 import WalletManager from "./WalletManager";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-
-AOS.init();
 
 const descriptions = [
   "Funge talent marketplace is the fastest and most efficient way to source top Web3 talent. Seek and hire experts in smart \ncontract development, web design, tokenomics creation, discord management, marketing, and more.",
@@ -30,43 +26,27 @@ const ToolsCarousel = () => {
 
   return (
     <Wrapper>
-      <div
-        data-aos="slide-up"
-        data-aos-offset="400"
-        data-aos-duration="2000"
-        data-aos-mirror="false"
-      >
-        <Title>
-          Tools designed for the growing wave of forward-thinking creators,
-          innovators, and traders.
-        </Title>
-        <SubtitlesWrapper>
-          <Subtitle
-            active={activeIndex === 0}
-            onClick={() => setActiveIndex(0)}
-          >
-            Talent Marketplace
-          </Subtitle>
-          <Line />
-          <Subtitle
-            active={activeIndex === 1}
-            onClick={() => setActiveIndex(1)}
-          >
-            Community Builder
-          </Subtitle>
-          <Line />
-          <Subtitle
-            active={activeIndex === 2}
-            onClick={() => setActiveIndex(2)}
-          >
-            Wallet Manager
-          </Subtitle>
-        </SubtitlesWrapper>
-        <Description data-aos="fade-in" data-aos-duration="2000">
-          {descriptions[activeIndex]}
-        </Description>
-        {renderComp()}
-      </div>
+      <Title>
+        Tools designed for the growing wave of forward-thinking creators,
+        innovators, and traders.
+      </Title>
+      <SubtitlesWrapper>
+        <Subtitle active={activeIndex === 0} onClick={() => setActiveIndex(0)}>
+          Talent Marketplace
+        </Subtitle>
+        <Line />
+        <Subtitle active={activeIndex === 1} onClick={() => setActiveIndex(1)}>
+          Community Builder
+        </Subtitle>
+        <Line />
+        <Subtitle active={activeIndex === 2} onClick={() => setActiveIndex(2)}>
+          Wallet Manager
+        </Subtitle>
+      </SubtitlesWrapper>
+      <Description data-aos="fade-in" data-aos-duration="2000">
+        {descriptions[activeIndex]}
+      </Description>
+      {renderComp()}
     </Wrapper>
   );
 };
@@ -74,7 +54,7 @@ const ToolsCarousel = () => {
 export default ToolsCarousel;
 
 const Wrapper = styled.div`
-  padding: 8vw 6vw;
+  padding: 10vw 6vw;
   background-color: #f7f8fa;
 `;
 
