@@ -29,13 +29,12 @@ import { OAuthExtension } from '@magic-ext/oauth';
 import axios from 'axios';
 import { instanceOf } from 'prop-types';
 import { profileData } from './UserProfile'
-import { createSlice, configureStore} from '@reduxjs/toolkit'
+import { useSelector, useDispatch } from '../node_modules/react-redux'
+import stateSlices, { updateSession } from '../stateSlices'
 
 
-const ProfileLogin = (props) => {
+let ProfileLogin = (props) => {
 
-    //const {loginWithPopup, loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
-    //const {authenticate, isAuthenticated, isAuthenticating, user, account, logout} = useMoralis();
     const navigate = useNavigate();
     let web3 = new Web3();
     const {btnText} = props;
@@ -49,23 +48,18 @@ const ProfileLogin = (props) => {
     const [email, setemail] = useState();
     const [phone, setphone] = useState();
     const [dataprofile, setdataprofile] = useState();
-    let userprops; 
-    
+    const dispatch = useDispatch();
+
     const setProfileSession = async(sessionData) => {
-        userprops = {
-          id : sessionData.data.id,
-          given_name : sessionData.data.given_name,
-          family_name : sessionData.data.family_name,
-          phonenumber : sessionData.data.phonenumber,
-          nickname : sessionData.data.nickname,
-          name : sessionData.data.name,
-          picture : sessionData.data.picture,
-          locale : "en",
-          updated_at : "",
-          email : sessionData.data.email,
-          email_verified : sessionData.data.email_verified,
-          sub : ""
+        
+        
+        //should use JWT to generate token
+        let session = {
+            token: "tokendata",
+            sessiondate: Date.now(),
+            userid: sessionData.id
         }
+        dispatch( stateSlices.updateSession( session ) );
     }
 
     const emailAddress = async (e) => {
@@ -94,7 +88,6 @@ const ProfileLogin = (props) => {
                 .then( newrecord => {
                        console.log(`New User ${JSON.stringify(newrecord)}`) 
                        setProfileSession(newrecord)
-                       sessionStorage.setItem("userprofile", JSON.stringify(newrecord))
                 })
             }
             else {
