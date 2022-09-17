@@ -22,12 +22,12 @@ const NavBar = () => {
   return (
     <Wrapper color={color}>
       <Logo src="assets/images/FungeLogoW.svg" />
-      <Link>Home</Link>
-      <Link>Features</Link>
-      <Link>Sustainability</Link>
-      <Link>Tokenomics</Link>
+      <Link href="#home">Home</Link>
+      <Link href="#features">Features</Link>
+      <Link href="#sustainability">Sustainability</Link>
+      <Link href="#tokenomics">Tokenomics</Link>
       <Link>Team</Link>
-      <Link>Roadmap</Link>
+      <Link href="#roadmap">Roadmap</Link>
       <Button data-bs-toggle="modal" data-bs-target="#waitListModal">
         Beta Trial
       </Button>
@@ -68,7 +68,12 @@ const Link = styled.a`
   font-family: "StabilGorteskMedium";
   color: #000;
   text-decoration: none;
+  transition: all 0.2s;
   cursor: pointer;
+  :hover {
+    color: #71afac;
+    transform: scale(1.2);
+  }
   @media (max-width: 425px) {
     display: none;
   }

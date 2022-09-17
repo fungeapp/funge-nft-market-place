@@ -4,7 +4,7 @@ import SingleImageDescription from "./SingleImageDescription";
 
 const ImageDescriptions = () => {
   return (
-    <Wrapper>
+    <Wrapper id="features">
       <SingleImageDescription
         title={"Collector Spotlight"}
         subtitle={"Robust Social Features"}

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Entry = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <BackgroundImg src="assets/images/bg.png" />
       <Container marginBottom>
         <Title>Your gateway to the creative economy</Title>

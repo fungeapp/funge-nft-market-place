@@ -7,7 +7,7 @@ AOS.init();
 
 const Tokenomics = () => {
   return (
-    <Wrapper>
+    <Wrapper id="tokenomics">
       <Title>Tokenomics</Title>
       <Card>
         <Left>

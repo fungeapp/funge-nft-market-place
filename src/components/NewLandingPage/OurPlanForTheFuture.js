@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const OurPlanForTheFuture = () => {
   return (
-    <OuterWrapper>
+    <OuterWrapper id="roadmap">
       <Title>Our plan for the future</Title>
       <Wrapper className="row">
         <div className="col-11 mx-auto">
