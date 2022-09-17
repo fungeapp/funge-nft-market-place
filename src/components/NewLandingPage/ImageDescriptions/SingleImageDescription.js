@@ -17,7 +17,7 @@ const SingleImageDescription = ({
     <Wrapper>
       <Container
         className="sticky-top align-self-start"
-        style={{ zIndex: 1000 }}
+        style={{ zIndex: 1000, paddingBottom: "6.5vw" }}
       >
         <Title>{title}</Title>
         <Subtitle>

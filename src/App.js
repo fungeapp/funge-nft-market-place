@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<NewLandingPage />} />
-          <Route path="*" element={<LandingPageV0 />} />
+          <Route path="*" element={<NewLandingPage />} />
           <Route path="v0" element={<LandingPageV0 />} />
           <Route path="v1" element={<LandingPage />} />
           <Route path="signin" element={<Signin />} />

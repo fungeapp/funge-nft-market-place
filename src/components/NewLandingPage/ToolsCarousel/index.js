@@ -25,7 +25,7 @@ const ToolsCarousel = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id="sustainability">
       <Title>
         Tools designed for the growing wave of forward-thinking creators,
         innovators, and traders.
