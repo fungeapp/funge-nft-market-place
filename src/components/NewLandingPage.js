@@ -15,6 +15,7 @@ import SocialMedia from "./NewLandingPage/SocialMedia";
 import Tokenomics from "./NewLandingPage/Tokenomics";
 import TokenUsage from "./NewLandingPage/TokenUsage";
 import ToolsCarousel from "./NewLandingPage/ToolsCarousel";
+import Footer from "./NewLandingPage/Footer";
 
 const NewLandingPage = () => {
   const [emailaddress, setemailaddress] = useState();
@@ -48,6 +49,7 @@ const NewLandingPage = () => {
       <OurPlanForTheFuture />
       <GrowYourBrand />
       <SocialMedia />
+      <Footer />
       <div
         className="modal fade phoneModal"
         id="waitListModal"

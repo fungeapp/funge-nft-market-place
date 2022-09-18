@@ -30,32 +30,25 @@ const items = [
 
 const SocialMedia = () => {
   return (
-    <OuterWrapper>
-      <Wrapper>
-        {items.map((item) => (
-          <ItemsWrapper>
-            <Icon src={item.icon} />
-            <Text>{item.text}</Text>
-          </ItemsWrapper>
-        ))}
-      </Wrapper>
-      <br />
-      <hr />
-    </OuterWrapper>
+    <Wrapper>
+      {items.map((item) => (
+        <ItemsWrapper>
+          <Icon src={item.icon} />
+          <Text>{item.text}</Text>
+        </ItemsWrapper>
+      ))}
+    </Wrapper>
   );
 };
 
 export default SocialMedia;
 
-const OuterWrapper = styled.div`
-  padding: 10vw 6vw;
-`;
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 7vw 12vw 4vw 12vw;
   @media (max-width: 425px) {
     flex-direction: column;
     justify-content: center;
