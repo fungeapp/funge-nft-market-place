@@ -66,20 +66,15 @@ const EditProfile = () => {
 
   const updateProfile = async (e) => {
     e.preventDefault();
-    console.log(`Update Profile  ${JSON.stringify(sessionpUserProfile)}`)
     let _sessionUserProfile = JSON.parse( sessionpUserProfile )
+    console.log(`parsed ${bio}::${profilepic}`)
     axios({
       method: 'post',
       url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/update`,
       data: {
           "id" : _sessionUserProfile.id,
           "email" : _sessionUserProfile.email,
-          "given_name" : {givenname},
-          "email_verfied" : _sessionUserProfile.email_verfied,
-          "family_name" : _sessionUserProfile.family_name,
-          "lcoal" : _sessionUserProfile.locale,
           "username": {username},
-          "phonenumber" : _sessionUserProfile.phonenumber,
           "picture" : {profilepic},
           "bio": {bio},
       }

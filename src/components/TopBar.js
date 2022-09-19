@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { useLocation, URLSearchParamsInit, Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core'
 import axios from 'axios'
 import env from 'react-dotenv';
@@ -10,10 +10,12 @@ import ConnectModal from './Wallet/ConnectModal'
 const TopBar = (props) => {
   const wallet = useWeb3React()
   const [walletModalShow, setWalletModalShow] = useState(false)
-  const [useremail, setuseremail] = useState(props.email)
   const [userprops, setuserprops] = useState();
   const [profilepic, setprofilepic] = useState();
   const [walletaddresses, setwalletaddresses] = useState([])
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('email')
+  const [useremail, setuseremail] = useState(_email);
 
   useMemo(() => {
     axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
@@ -31,13 +33,10 @@ const TopBar = (props) => {
   }
 
 
-  /***
-   * 
-   * //{(!wallet.isActive || walletModalShow) //&& (
-        //<ConnectModal handleClose={closeConnectModal} />
-      //)}
-   */
-
+  {(!wallet.isActive || walletModalShow) && (
+      <ConnectModal handleClose={closeConnectModal} />
+  )}
+  
   return (
     <>
       
