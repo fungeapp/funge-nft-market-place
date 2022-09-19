@@ -112,8 +112,12 @@ let ProfileLogin = (props) => {
                 showUI: true,
                 redirectURI: `${env.BASE_URL}/feeds?email=${email}`
             })
+            .then( magicresponse => 
+                console.log(`Magic response ${magicresponse}`)    
+            )
             return email;
         })
+        
     }
 
     const phoneNumber = async (e) => {

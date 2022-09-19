@@ -1,5 +1,7 @@
 import React, { state, useState, useEffect, useMemo, useLayoutEffect } from 'react';
 import { useLocation, URLSearchParamsInit } from 'react-router-dom';
+import { Magic, RPCError } from 'magic-sdk';
+import { OAuthExtension } from '@magic-ext/oauth';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
 import NewPost from './Feeds/NewPost';
@@ -8,19 +10,44 @@ import LeftSidebar from './LeftSidebar';
 import env from 'react-dotenv';
 import axios from 'axios';
 import {profileData} from './UserProfile'
+import { useMetaMask } from 'metamask-react';
+
 
 const Feeds = (props) => {
+  const [magickey, setMagicKey] = useState(env.MAGIC_LINK_API_KEY);
+  const magic = new Magic(magickey, {
+        extensions: [new OAuthExtension()]
+  });
   const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
   const [userid, setuserid] = useState();
   const [allposts, setallposts] = useState({data:[]});
+  
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
+  const _magiccredential = new URLSearchParams(search).get('magic_credential')
   const [useremail, setuseremail] = useState(_email);
+  const [magiccredential, setmagiccredential] = useState(_magiccredential);
+  const { status, connect, account, chainId, ethereum, addChain, switchChain } = useMetaMask();
   
   useLayoutEffect(() => {
-    getUserProfile()
+    //check magic credential token and see if in the current user session.  If none, return user to login
+    //call Magic's loginWithCredential using the token from magic_credential 
+    magic.auth.loginWithCredential(magiccredential)
+    .then( response =>
+      console.log(`Magic Login ${response}`)
+    )
+    .then(
+      getUserProfile()
+    )
+    
+    
   },[])
+
+  console.log(`${status} :: ${account} :: ${chainId}`)
+    if(status === "Connected") {
+      
+    }
   
   let _allposts = [];
 
