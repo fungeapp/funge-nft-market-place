@@ -1,4 +1,5 @@
-import React, { state, useState, useMemo } from "react";
+import React, { state, useState, useMemo, useLayoutEffect } from "react";
+import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from "./TopBar";
 import FeedContainer from "./Feeds/FeedContainer";
 import NewPost from "./Feeds/NewPost";
@@ -8,21 +9,21 @@ import env from 'react-dotenv';
 import axios from 'axios';
 //import User from './UserProfile'
 
-const Profile = () => {
+const Profile = (props) => {
 
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
-  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [userid, setuserid] = useState();
   const [givenname, setgivenname] = useState();
   const [profilepic, setprofilepic] = useState();
   const [name, setname] = useState();
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('email')
+  const [useremail, setuseremail] = useState(_email);
 
-  useMemo(() => {
-    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
-    
+  useLayoutEffect(() => {
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
-            console.log(`${JSON.stringify(response.data.picture)}`)
+            //console.log(`${JSON.stringify(response.data.picture)}`)
             for(let data of response.data) {
               let _givenname = data.given_name + " " + data.family_name;
               setgivenname(_givenname);
@@ -67,7 +68,7 @@ const Profile = () => {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             
                             <Link
-                              to="/edit_profile"
+                              to={`/edit_profile?useremail=${useremail}`}
                               className="btn btn-primary edit-profile-btn px-3"
                             >
                               Edit Profile

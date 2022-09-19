@@ -4,6 +4,13 @@ import axios from 'axios';
 
 const FeedPost = (props) => {
 
+    const [useremail, setuseremail] = useState(props.email)
+    const [userid, setuserid] = useState()
+    const [isloading, setisloading] = useState()
+
+    useEffect(() => {
+    },[])
+
     const PostOffer = (props) => {
 
         if (props.offer) {

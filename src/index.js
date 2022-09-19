@@ -11,6 +11,8 @@ import { Web3ReactProvider } from '@web3-react/core'
 import { metaMaskHooks, metaMask } from './wallet/connector'
 import { walletConnectHooks, walletConnect } from './wallet/connector'
 import { WalletContextProvider } from './contexts/WalletContext'
+import { Provider } from './node_modules/react-redux'
+import store from './store'
 
 const connectors = [
   [metaMask, metaMaskHooks],
@@ -22,7 +24,9 @@ root.render(
   <React.StrictMode>
     <Web3ReactProvider connectors={connectors}>
       <WalletContextProvider>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </WalletContextProvider>
     </Web3ReactProvider>
   </React.StrictMode>,

@@ -1,9 +1,16 @@
-import React,{state, useState} from 'react';
+import React,{state, useState, useMemo} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import env from 'react-dotenv';
 
 const LeftSidebar = (props) => {
 
   const [isActive,setActive] = useState(props.myState);
+  const [useremail, setuseremail] = useState(props.email)
+  
+  useMemo(() => {
+    
+  },[])
 
   return (
     <>
@@ -15,11 +22,11 @@ const LeftSidebar = (props) => {
                 </button>
                 <div className="collapse show" id="home-collapse">
                   <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><Link to="/feeds" className={` ${isActive === "home" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</Link></li>
-                    <li><Link to="/notifications" className={` ${isActive === "notifications" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</Link></li>
+                    <li><Link to={`/feeds?email=${useremail}`} className={` ${isActive === "home" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Home</Link></li>
+                    <li><Link to={`/notifications?email=${useremail}`} className={` ${isActive === "notifications" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Notifications</Link></li>
                     <li><Link to="/inbox" className={` ${isActive === "messages" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Messages</Link></li>
-                    <li><Link to="/saved" className={` ${isActive === "saved" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Saved</Link></li>
-                    <li><Link to="/profile" className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</Link></li>
+                    <li><Link to={`/saved?email=${useremail}`} className={` ${isActive === "saved" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Saved</Link></li>
+                    <li><Link to={`/profile?email=${useremail}`} className={` ${isActive === "profile" ? 'link-dark rounded active-link' : 'link-dark rounded'}`}>Profile</Link></li>
                   </ul>
                 </div>
               </li>

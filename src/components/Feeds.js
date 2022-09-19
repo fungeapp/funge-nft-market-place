@@ -1,4 +1,4 @@
-import React, { state, useState, useEffect, useMemo } from 'react';
+import React, { state, useState, useEffect, useMemo, useLayoutEffect } from 'react';
 import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from './TopBar';
 import FeedContainer from './Feeds/FeedContainer';
@@ -13,74 +13,51 @@ const Feeds = (props) => {
   const [isloading, setisloading] = useState()
   const [isActive, setActive] = useState("home");
   const [userid, setuserid] = useState();
-  
-  const [posts, setposts] = useState([]);
-  const [loadpost, setloadpost] = useState([])
+  const [allposts, setallposts] = useState({data:[]});
   const search = useLocation().search;
   const _email = new URLSearchParams(search).get('email')
   const [useremail, setuseremail] = useState(_email);
-  console.log(`params ${useremail}`)
   
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     getUserProfile()
   },[])
   
+  let _allposts = [];
 
-  const getUserProfile = async(e) => {
+  const getUserProfile = async() => {
     setisloading(true);
     //get complete profile info
     axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     .then( response => {
-        let elem = response.data[0]
-        let _x = elem.id
-        setuserid(_x)
-        console.log(`user id ${_x}`)
-        setProfileSession(response.data[0]);
-        console.log(`Profile Info ${profileData.id}`)
-        return _x
+        let elem = response.data[0].id
+        setuserid(elem)
+        return elem
     })
-    .then( _userid => {
-      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${_userid}`)
-      .then((response) => {
-          response.data.forEach( post => {
-            let text = post.post_content
-            console.log(text)
-            setposts(text)
+    .then( id => {
+      axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/${id}`)
+      .then(response => {
+          response.data.map( post => {
+              console.log(`Post ${post.post_content}`)  
+              setallposts(<FeedPost text={post.post_content} />)
           })
-      })
-      .catch(function(error) {
-        console.log(`GET user post error :: ${error}`)
       })
     })
   }
 
-  const setProfileSession = async(sessionData) => (
-    //console.log(`sessionData ${JSON.stringify(sessionData)}`)
-    profileData.id = sessionData.id,
-    profileData.given_name = sessionData.given_name,
-    profileData.family_name = sessionData.family_name,
-    profileData.phonenumber = sessionData.phonenumber,
-    profileData.nickname = sessionData.nickname,
-    profileData.name = sessionData.name,
-    profileData.picture = sessionData.picture,
-    profileData.locale = "en",
-    profileData.updated_at = "",
-    profileData.email = sessionData.email,
-    profileData.email_verified = sessionData.email_verified,
-    profileData.sub = ""
-  )
 
   return (
     <>
-      <TopBar />
-      <LeftSidebar myState="home" />
+      <TopBar email={useremail} />
+      <LeftSidebar myState="home" email={useremail}  />
       <div className="container-fluid main-div min-vh-100 ps-0">
         <div className="row justify-content-center mainbox">
           <div className="col-md-6 max-700">
-            <NewPost profile={profileData} />
-            <FeedPost text={posts} />
+            <NewPost email={useremail} />
+            {
+
+            }
           </div>
+          
           <div className="col-md-4 mt-4 max-550">
             
             <div className="card funge-card mt-4">

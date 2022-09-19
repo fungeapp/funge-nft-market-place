@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
+import axios from 'axios'
+import env from 'react-dotenv';
 
 //local dependencies
 import ConnectModal from './Wallet/ConnectModal'
@@ -8,8 +10,17 @@ import ConnectModal from './Wallet/ConnectModal'
 const TopBar = (props) => {
   const wallet = useWeb3React()
   const [walletModalShow, setWalletModalShow] = useState(false)
+  const [useremail, setuseremail] = useState(props.email)
+  const [userprops, setuserprops] = useState();
+  const [profilepic, setprofilepic] = useState();
+  const [walletaddresses, setwalletaddresses] = useState([])
 
-  console.log(wallet.isActive);
+  useMemo(() => {
+    axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    .then( response => {
+      setprofilepic(response.data[0].picture)
+    })
+  },[])
 
   const openConnectModal = () => {
     setWalletModalShow(true)
@@ -18,6 +29,7 @@ const TopBar = (props) => {
   const closeConnectModal = () => {
     setWalletModalShow(false)
   }
+
 
   /***
    * 
@@ -143,7 +155,7 @@ const TopBar = (props) => {
 
                   <li className="nav-item">
                     <img
-                      src="./assets/images/nft-5.png"
+                      src={profilepic}
                       className="rounded-circle me-3"
                       alt="Cinque Terre"
                       width="25"

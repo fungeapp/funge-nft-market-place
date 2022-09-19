@@ -1,4 +1,4 @@
-import React, { useEffect, useHistory, useState } from 'react';
+import React, { useEffect, useHistory, useState, useMemo } from 'react';
 import env from 'react-dotenv';
 import { 
     TextField,
@@ -25,30 +25,32 @@ import axios from 'axios';
 const NewPost = (props) => {
 
     const [postcontent, setpostcontent] = useState();
-    const [userProfile, setuserprofile] = useState(props.profile)
-
+    const [sessionUserProfile, setSessionUserProfile] = useState();
+    const [useremail, setuseremail] = useState(props.email)
+    const [profilepic, setprofilepic] = useState();
+    const [profileid, setprofileid] = useState();
+    
     useEffect(() => {
-        //get profile info based on localstorage
-
-    });
+        axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+        .then( response => {
+          setprofilepic(response.data[0].picture)
+          setprofileid(response.data[0].id)
+        })
+      },[])
 
     const savePost = async (e) => {
-        let sessionUserId = userProfile.id;
-        let sessionEmail = userProfile.email
-        console.log(`New Post ${sessionUserId} :: ${sessionEmail}`)
-        
             axios({
                     method: 'post',
                     url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/feeds/post/save`,
                     data: {
-                        "user_id": sessionUserId,
+                        "user_id": profileid,
                         "post_content": postcontent,
                         "post_date": "2016-06-23 19:10:25-07",
                         "post_tm": "2016-06-23 19:10:25-07"
                     }
             })
     }
-
+//<img src={sessionUserProfile.picture} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
     return (
         <>
             <div className="card funge-card shadow-sm my-4">
@@ -56,7 +58,7 @@ const NewPost = (props) => {
                     <div className="container-fluid p-0">
                         <div className="row">
                             <div className="col-md-1 mt-3 my-2">
-                                <img src={userProfile.picture} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
+                            <img src={profilepic} className="rounded-circle me-3" alt="Cinque Terre" width="30" height="30" />
                             </div>
                             <div className="col-md-11 my-2 align-self-end">
 

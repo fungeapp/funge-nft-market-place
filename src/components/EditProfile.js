@@ -1,4 +1,5 @@
 import React, { state, useState, useEffect } from "react";
+import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from "./TopBar";
 import LeftSidebar from "./LeftSidebar";
 import env from 'react-dotenv';
@@ -25,27 +26,34 @@ import {
   DialogActions,
 } from '@mui/material';
 
+
 const EditProfile = () => {
+
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('useremail')
+  const [useremail, setuseremail] = useState(_email);
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState(localStorage.getItem("user_id"));
-  const [useremail, setuseremail] = useState(localStorage.getItem("user_email"));
+  const [userid, setuserid] = useState();
   const [givenname, setgivenname] = useState();
   const [bio, setbio] = useState();
   const [profilepic, setprofilepic] = useState();
   const [name, setname] = useState();
-  const [username, setusername] = useState();
+  const [username, setusername] = useState(_email);
+  const [sessionpUserProfile, setsessionprofile] = useState();
 
   useEffect(() => {
     console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
-            console.log(`${JSON.stringify(response.data.username)}`)
+            console.log(`${JSON.stringify(response.data)}`)
+            setsessionprofile( JSON.stringify(response.data[0]) )
             for(let data of response.data) {
               let _givenname = data.given_name + " " + data.family_name;
+              setuserid( data.id )
               setgivenname(_givenname);
               setname(data.nickname)
-              setprofilepic(data.picture);
+              setprofilepic( data.picture );
               setbio(data.bio)
               setusername(data.username)
             }
@@ -54,17 +62,28 @@ const EditProfile = () => {
         console.log(`GET user profile data error :: ${error}`)
       })
     
-  },[userid, useremail]);
+  },[]);
 
   const updateProfile = async (e) => {
+    e.preventDefault();
+    console.log(`Update Profile  ${JSON.stringify(sessionpUserProfile)}`)
+    let _sessionUserProfile = JSON.parse( sessionpUserProfile )
     axios({
       method: 'post',
       url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/update`,
       data: {
-          "username": username,
-          "bio": {bio}
+          "id" : _sessionUserProfile.id,
+          "email" : _sessionUserProfile.email,
+          "given_name" : {givenname},
+          "email_verfied" : _sessionUserProfile.email_verfied,
+          "family_name" : _sessionUserProfile.family_name,
+          "lcoal" : _sessionUserProfile.locale,
+          "username": {username},
+          "phonenumber" : _sessionUserProfile.phonenumber,
+          "picture" : {profilepic},
+          "bio": {bio},
       }
-})
+    })
 
   }
 
@@ -206,6 +225,7 @@ const EditProfile = () => {
                             aria-label="maximum height"
                             placeholder="Maximum 4 rows"
                             defaultValue={bio}
+                            onChange={(e) => setbio(e.target.value)}
                             style={{ width: 200 }}
                           />
 
