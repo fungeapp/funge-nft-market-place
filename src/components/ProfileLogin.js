@@ -49,17 +49,23 @@ let ProfileLogin = (props) => {
     const [phone, setphone] = useState();
     const [dataprofile, setdataprofile] = useState();
     const dispatch = useDispatch();
-
+    let userprops; 
+    
     const setProfileSession = async(sessionData) => {
-        
-        
-        //should use JWT to generate token
-        let session = {
-            token: "tokendata",
-            sessiondate: Date.now(),
-            userid: sessionData.id
+        userprops = {
+          id : sessionData.data.id,
+          given_name : sessionData.data.given_name,
+          family_name : sessionData.data.family_name,
+          phonenumber : sessionData.data.phonenumber,
+          nickname : sessionData.data.nickname,
+          name : sessionData.data.name,
+          picture : sessionData.data.picture,
+          locale : "en",
+          updated_at : "",
+          email : sessionData.data.email,
+          email_verified : sessionData.data.email_verified,
+          sub : ""
         }
-        dispatch( stateSlices.updateSession( session ) );
     }
 
     const emailAddress = async (e) => {

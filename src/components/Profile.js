@@ -68,7 +68,7 @@ const Profile = (props) => {
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             
                             <Link
-                              to="/edit_profile"
+                              to={`/edit_profile?useremail=${useremail}`}
                               className="btn btn-primary edit-profile-btn px-3"
                             >
                               Edit Profile

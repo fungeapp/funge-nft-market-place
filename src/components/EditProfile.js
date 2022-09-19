@@ -1,4 +1,5 @@
 import React, { state, useState, useEffect } from "react";
+import { useLocation, URLSearchParamsInit } from 'react-router-dom';
 import TopBar from "./TopBar";
 import LeftSidebar from "./LeftSidebar";
 import env from 'react-dotenv';
@@ -25,29 +26,31 @@ import {
   DialogActions,
 } from '@mui/material';
 
+
 const EditProfile = () => {
 
-  let _sessionUserProfile = sessionStorage.getItem("userprofile")
-  let sessionUserProfile = JSON.parse(_sessionUserProfile)
-  //console.log(`Edit Profile ${sessionUserProfile.id} :: ${sessionUserProfile.email}`)
-
+  const search = useLocation().search;
+  const _email = new URLSearchParams(search).get('useremail')
+  const [useremail, setuseremail] = useState(_email);
   const [isActive, setActive] = useState("home");
-  const [userid, setuserid] = useState( sessionUserProfile.id );
-  const [useremail, setuseremail] = useState( sessionUserProfile.email );
+  const [userid, setuserid] = useState();
   const [givenname, setgivenname] = useState();
   const [bio, setbio] = useState();
   const [profilepic, setprofilepic] = useState();
   const [name, setname] = useState();
-  const [username, setusername] = useState();
+  const [username, setusername] = useState(_email);
+  const [sessionpUserProfile, setsessionprofile] = useState();
 
   useEffect(() => {
-    //console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
+    console.log(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
     
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
-            //console.log(`${JSON.stringify(response.data.username)}`)
+            console.log(`${JSON.stringify(response.data)}`)
+            setsessionprofile( JSON.stringify(response.data[0]) )
             for(let data of response.data) {
               let _givenname = data.given_name + " " + data.family_name;
+              setuserid( data.id )
               setgivenname(_givenname);
               setname(data.nickname)
               setprofilepic( data.picture );
@@ -63,18 +66,20 @@ const EditProfile = () => {
 
   const updateProfile = async (e) => {
     e.preventDefault();
-    console.log(`Update Profile ${profilepic} :: ${bio} :: ${username}`)
+    console.log(`Update Profile  ${JSON.stringify(sessionpUserProfile)}`)
+    let _sessionUserProfile = JSON.parse( sessionpUserProfile )
     axios({
       method: 'post',
       url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/update`,
       data: {
-          "id" : sessionUserProfile.id,
-          "email" : sessionUserProfile.email,
-          "email_verfied" : sessionUserProfile.email_verfied,
-          "family_name" : sessionUserProfile.family_name,
-          "lcoal" : sessionUserProfile.locale,
+          "id" : _sessionUserProfile.id,
+          "email" : _sessionUserProfile.email,
+          "given_name" : {givenname},
+          "email_verfied" : _sessionUserProfile.email_verfied,
+          "family_name" : _sessionUserProfile.family_name,
+          "lcoal" : _sessionUserProfile.locale,
           "username": {username},
-          "phonenumber" : sessionUserProfile.phonenumber,
+          "phonenumber" : _sessionUserProfile.phonenumber,
           "picture" : {profilepic},
           "bio": {bio},
       }
