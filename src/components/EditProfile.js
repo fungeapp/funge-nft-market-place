@@ -25,6 +25,7 @@ import {
   Checkbox,
   DialogActions,
 } from '@mui/material';
+//import { _useMoralisAuth } from "react-moralis/lib/hooks/core/useMoralis/_useMoralisAuth";
 
 
 const EditProfile = () => {
@@ -46,7 +47,7 @@ const EditProfile = () => {
     
       axios.get(`${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/${useremail}`)
       .then((response) => {
-            console.log(`${JSON.stringify(response.data)}`)
+            console.log(`useEffect ${JSON.stringify(response.data)}`)
             setsessionprofile( JSON.stringify(response.data[0]) )
             for(let data of response.data) {
               let _givenname = data.given_name + " " + data.family_name;
@@ -54,10 +55,14 @@ const EditProfile = () => {
               setgivenname(_givenname);
               setname(data.nickname)
               setprofilepic( data.picture );
+              let picture = encodeURIComponent(data.picture)
               setbio(data.bio)
               setusername(data.username)
             }
       })
+      .then(
+        //console.log(`useEffect ${bio}::${username}::${profilepic}`)
+      )
       .catch(function(error) {
         console.log(`GET user profile data error :: ${error}`)
       })
@@ -67,16 +72,38 @@ const EditProfile = () => {
   const updateProfile = async (e) => {
     e.preventDefault();
     let _sessionUserProfile = JSON.parse( sessionpUserProfile )
-    console.log(`parsed ${bio}::${profilepic}`)
+    console.log(`UpdateProfile 
+      ${_sessionUserProfile.id}::
+      ${_sessionUserProfile.email}::
+      ${_sessionUserProfile.given_name}::
+      ${_sessionUserProfile.family_name}::
+      ${_sessionUserProfile.phonenumber}::
+      ${_sessionUserProfile.nickname}::
+      ${_sessionUserProfile.name}::
+      ${_sessionUserProfile.picture}::
+      ${_sessionUserProfile.email_verified}::
+      ${_sessionUserProfile.sub}::
+      ${_sessionUserProfile.locale}::
+      ${bio}::
+      ${username}`
+    )
     axios({
       method: 'post',
       url: `${env.FUNGE_EXPRESSJS_SERVER_BASE_URL}/users/update`,
       data: {
-          "id" : _sessionUserProfile.id,
-          "email" : _sessionUserProfile.email,
-          "username": {username},
-          "picture" : {profilepic},
-          "bio": {bio},
+        "id" : _sessionUserProfile.id,
+        "email" : _sessionUserProfile.email,
+        "given_name" : _sessionUserProfile.given_name,
+        "family_name" : _sessionUserProfile.family_name,
+        "phonenumber" : _sessionUserProfile.phonenumber,
+        "nickname" : _sessionUserProfile.nickname,
+        "name" : _sessionUserProfile.name,
+        "picture" : _sessionUserProfile.picture,
+        "email_verfied" : _sessionUserProfile.email_verified,
+        "sub" : "",
+        "locale" : _sessionUserProfile.locale,
+        "bio" : bio,
+        "username" : username
       }
     })
 
