@@ -92,7 +92,7 @@ let ProfileLogin = (props) => {
                         data: profileData
                 })
                 .then( newrecord => {
-                       console.log(`New User ${JSON.stringify(newrecord)}`) 
+                       //console.log(`New User ${JSON.stringify(newrecord)}`) 
                        setProfileSession(newrecord)
                 })
             }
@@ -113,7 +113,7 @@ let ProfileLogin = (props) => {
                 redirectURI: `${env.BASE_URL}/feeds?email=${email}`
             })
             .then( magicresponse => 
-                console.log(`Magic response ${magicresponse}`)    
+                console.log(`Profile Login Magic response ${magicresponse}`)    
             )
             return email;
         })

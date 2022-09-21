@@ -45,9 +45,9 @@ const Feeds = (props) => {
   },[])
 
   console.log(`${status} :: ${account} :: ${chainId}`)
-    if(status === "Connected") {
-      
-    }
+  if(status === "notConnected" && typeof window.ethereum !== 'undefined') {
+      console.log('Metamask is installed')
+  }
   
   let _allposts = [];
 
